@@ -1,0 +1,685 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="ForumTopicCreated" href="forum_topic_created.html" /><link rel="prev" title="论坛主题" href="forum_topic.html" />
+
+    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+        <title>ForumTopicClosed - aiogram 3.4.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/stylesheets/extra.css?v=040759bd" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">aiogram 3.4.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">aiogram 3.4.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migration_2_to_3.html">Migration FAQ (2.x -&gt; 3.0)</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Bot API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bot.html">Bot</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../session/index.html">客户端会话</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端会话</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../session/custom_server.html">使用自定义API服务器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/base.html">底座</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/aiohttp.html">aiohttp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/middleware.html">客户端会话中间件</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">类型</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command.html">命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope.html">命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_all_chat_administrators.html">所有群组管理员命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_all_group_chats.html">所有群组命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_all_private_chats.html">所有私聊命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_chat.html">指定聊天命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_chat_administrators.html">指定群组管理员命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_chat_member.html">指定群组成员命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_command_scope_default.html">默认命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_description.html">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_name.html">名字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="callback_query.html">回调查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat.html">聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_administrator_rights.html">聊天管理员权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost.html">聊天助力</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力删除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源兑换码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">ChatBoostSourceGiveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">ChatBoostSourcePremium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">Chatboost已更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">ChatInviteLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">ChatJoinRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">ChatMemberAdministrator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">ChatMemberBanned</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">ChatMemberLeft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_member.html">ChatMemberMember</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_owner.html">ChatMemberOwner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_restricted.html">ChatMemberRestricted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_updated.html">ChatMemberUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_permissions.html">ChatPermissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_photo.html">聊天照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_shared.html">ChatShared</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact.html">联系人</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dice.html">骰子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="document.html">文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="external_reply_info.html">ExternalReplyInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file.html">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="force_reply.html">强力</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic.html">论坛主题</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">ForumTopicClosed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_created.html">ForumTopicCreated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_edited.html">ForumTopicEdited</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">Forumtopicreop打开</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">总forumtopichidden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">GeneralForumTopicUnhidden</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway.html">赠品</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">GiveawayCompleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">GiveawayCreated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">Giveawaywin胜者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inaccessible_message.html">无法访问消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_keyboard_button.html">InlineKeyboardButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_keyboard_markup.html">InlineKeyboardMarkup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_file.html">输入文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media.html">输入媒体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_animation.html">InputMediaAnimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_audio.html">InputMediaAudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_document.html">InputMediaDocument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体图像</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_video.html">InputMediaVideo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">KeyboardButtonPollType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">KeyboardButtonRequestChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">KeyboardButtonRequestUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">KeyboardButtonRequestUsers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="link_preview_options.html">LinkPreviewOptions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="location.html">位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="login_url.html">LoginUrl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maybe_inaccessible_message.html">可能无法访问消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu_button.html">菜单按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu_button_commands.html">MenuButtonCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu_button_default.html">MenuButtonDefault</a></li>
+<li class="toctree-l3"><a class="reference internal" href="menu_button_web_app.html">MenuButtonWebApp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message.html">信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_auto_delete_timer_changed.html">消息autodeletetimerchanged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_entity.html">MessageEntity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_id.html">MessageId</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_origin.html">MessageOrigin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_origin_channel.html">MessageOriginChannel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_origin_chat.html">MessageOriginChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_origin_hidden_user.html">MessageOriginHiddenUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_origin_user.html">MessageOriginUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_reaction_count_updated.html">MessageReactionCountUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="message_reaction_updated.html">MessageReactionUpdated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="photo_size.html">照片尺寸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poll.html">投票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poll_answer.html">PollAnswer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="poll_option.html">PollOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="proximity_alert_triggered.html">ProximityAlertTriggered</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reaction_count.html">反应计数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reaction_type.html">反应类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reaction_type_custom_emoji.html">ReactionTypeCustomEmoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reaction_type_emoji.html">ReactionTypeEmoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reply_keyboard_markup.html">ReplyKeyboardMarkup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reply_keyboard_remove.html">ReplyKeyboardRemove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reply_parameters.html">ReplyParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="story.html">故事</a></li>
+<li class="toctree-l3"><a class="reference internal" href="switch_inline_query_chosen_chat.html">瑞士</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text_quote.html">TextQuote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user.html">用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user_chat_boosts.html">UserChatBoosts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user_profile_photos.html">UserProfilePhotos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user_shared.html">UserShared</a></li>
+<li class="toctree-l3"><a class="reference internal" href="users_shared.html">UsersShared</a></li>
+<li class="toctree-l3"><a class="reference internal" href="venue.html">地点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video.html">视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_chat_ended.html">视频已终止</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_chat_participants_invited.html">视频参与者已邀请</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_chat_scheduled.html">VideoChatScheduled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_chat_started.html">VideoChatStarted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video_note.html">VideoNote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="voice.html">语音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_app_data.html">WebAppData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_app_info.html">WebAppInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="write_access_allowed.html">WriteAccessAllowed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chosen_inline_result.html">ChosenInlineResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query.html">InlineQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result.html">InlineQueryResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_article.html">InlineQueryResultArticle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_audio.html">结果提示</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_audio.html">InlineQueryResultCachedAudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_document.html">InlineQueryResultCachedDocument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_gif.html">InlineQueryResultCachedGif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_mpeg4_gif.html">InlineQueryResultCachedMpeg4Gif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_photo.html">InlineQueryResultCachedPhoto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_sticker.html">InlineQueryResultCachedSticker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_video.html">InlineQueryResultCachedVideo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_cached_voice.html">InlineQueryResultCachedVoice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_contact.html">InlineQueryResultContact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_document.html">InlineQueryResultDocument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_game.html">InlineQueryResultGame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_gif.html">InlineQueryResultGif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_location.html">InlineQueryResultLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_mpeg4_gif.html">InlineQueryResultMpeg4Gif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_photo.html">InlineQueryResultPhoto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_venue.html">InlineQueryResultVenue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_video.html">InlineQueryResultVideo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_result_voice.html">InlineQueryResultVoice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inline_query_results_button.html">InlineQueryResultsButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_contact_message_content.html">InputContactMessageContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_invoice_message_content.html">InputInvoiceMessageContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_location_message_content.html">InputLocationMessageContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_message_content.html">InputMessageContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_text_message_content.html">InputTextMessageContent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_venue_message_content.html">输入内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sent_web_app_message.html">SentWebAppMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_sticker.html">输入贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mask_position.html">MaskPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sticker.html">贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sticker_set.html">StickerSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encrypted_credentials.html">EncryptedCredentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encrypted_passport_element.html">EncryptedPassportElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_data.html">PassportData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error.html">PassportElementError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_data_field.html">PassportElementErrorDataField</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_file.html">PassportElementErrorFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_files.html">PassportElementErrorFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_front_side.html">Passporttelementerrorfront侧</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_reverse_side.html">PassportElementErrorReverseSide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_selfie.html">PassportElementErrorSelfie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_file.html">PassportElementErrorTranslationFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_files.html">PassportElementErrorTranslationFiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_unspecified.html">未指定的passporttelementerorunspecifi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_file.html">PassportFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="invoice.html">发票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="labeled_price.html">LabeledPrice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="order_info.html">OrderInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pre_checkout_query.html">PreCheckoutQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shipping_address.html">ShippingAddress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shipping_option.html">ShippingOption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shipping_query.html">ShippingQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="successful_payment.html">成功付款</a></li>
+<li class="toctree-l3"><a class="reference internal" href="update.html">更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webhook_info.html">WebhookInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="callback_game.html">CallbackGame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game.html">游戏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="game_high_score.html">游戏高分</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../methods/index.html">方法</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of 方法</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../methods/add_sticker_to_set.html">添加贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/create_new_sticker_set.html">createNewStickerSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_sticker_from_set.html">deleteStickerFromSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_sticker_set.html">deleteStickerSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_custom_emoji_stickers.html">getCustomEmojiStickers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_sticker_set.html">getStickerSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_sticker.html">发送贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_custom_emoji_sticker_set_thumbnail.html">setCustomEmojiStickerSetThumbnail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_emoji_list.html">setStickerEmojiList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_keywords.html">setStickerKeywords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_mask_position.html">setStickerMaskPosition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_position_in_set.html">setStickerPositionInSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_set_thumbnail.html">setStickerSetThumbnail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_set_title.html">setStickerSetTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/upload_sticker_file.html">uploadStickerFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/answer_callback_query.html">answerCallbackQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/approve_chat_join_request.html">批准echatjoinrequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/ban_chat_member.html">banChatMember</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/ban_chat_sender_chat.html">banChatSenderChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/close.html">关闭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/close_forum_topic.html">closeForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/close_general_forum_topic.html">closeGeneralForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/copy_message.html">copyMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/copy_messages.html">copyMessages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/create_chat_invite_link.html">createChatInviteLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/create_forum_topic.html">createForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/decline_chat_join_request.html">declineChatJoinRequest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_chat_photo.html">deleteChatPhoto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_chat_sticker_set.html">deleteChatStickerSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_forum_topic.html">deleteForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_my_commands.html">deleteMyCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_chat_invite_link.html">editChatInviteLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_forum_topic.html">editForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_general_forum_topic.html">editGeneralForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/export_chat_invite_link.html">exportChatInviteLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/forward_message.html">转发消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/forward_messages.html">转发消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_chat.html">getChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_administrators.html">getChatAdministrators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_member.html">getChatMember</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_member_count.html">getChatMemberCount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_menu_button.html">getChatMenuButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_file.html">getFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_forum_topic_icon_stickers.html">getForumTopicIconStickers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_me.html">getMe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_my_commands.html">getMyCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_my_default_administrator_rights.html">getMyDefaultAdministratorRights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_my_description.html">getMyDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_my_name.html">getMyName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_my_short_description.html">getMyShortDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_user_chat_boosts.html">getUserChatBoosts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_user_profile_photos.html">getUserProfilePhotos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/hide_general_forum_topic.html">hideGeneralForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/leave_chat.html">leaveChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/log_out.html">注销</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/pin_chat_message.html">pinChatMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/promote_chat_member.html">promoteChatMember</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/reopen_forum_topic.html">reopenForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/reopen_general_forum_topic.html">reopenGeneralForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/restrict_chat_member.html">restrictChatMember</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/revoke_chat_invite_link.html">revokeChatInviteLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_animation.html">sendAnimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_audio.html">sendAudio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_chat_action.html">sendChatAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_contact.html">sendContact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_dice.html">sendDice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_document.html">sendDocument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_location.html">发送位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_media_group.html">发送媒体组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_message.html">sendMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_photo.html">发送照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_poll.html">sendPoll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_venue.html">sendVenue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_video.html">sendVideo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_video_note.html">sendVideoNote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_voice.html">sendVoice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_administrator_custom_title.html">setChatAdministratorCustomTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_description.html">setChatDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_menu_button.html">setChatMenuButton</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_permissions.html">setChatPermissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_photo.html">设置照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_sticker_set.html">setChatStickerSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_chat_title.html">setChatTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_message_reaction.html">setMessageReaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_my_commands.html">setMyCommands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_my_default_administrator_rights.html">setMyDefaultAdministratorRights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_my_description.html">setMyDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_my_name.html">setMyName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_my_short_description.html">setMyShortDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unban_chat_member.html">unbanChatMember</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unban_chat_sender_chat.html">unbanChatSenderChat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unhide_general_forum_topic.html">unhideGeneralForumTopic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unpin_all_chat_messages.html">unpinAllChatMessages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unpin_all_forum_topic_messages.html">unpinAllForumTopicMessages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unpin_all_general_forum_topic_messages.html">unpinAllGeneralForumTopicMessages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/unpin_chat_message.html">unpinChatMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_message.html">deleteMessage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_messages.html">deleteMessages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_message_caption.html">editMessageCaption</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_message_live_location.html">editMessageLiveLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_message_media.html">editMessageMedia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_message_reply_markup.html">editMessageReplyMarkup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/edit_message_text.html">editMessageText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/stop_message_live_location.html">stopMessageLiveLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/stop_poll.html">停止轮询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/answer_inline_query.html">answerInlineQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/answer_web_app_query.html">answerWebAppQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_game_high_scores.html">getGameHighScores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_game.html">sendGame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_game_score.html">setGameScore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/answer_pre_checkout_query.html">answerPreCheckoutQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/answer_shipping_query.html">answerShippingQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/create_invoice_link.html">createInvoiceLink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/send_invoice.html">发送发票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/delete_webhook.html">deleteWebhook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_updates.html">getUpdates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_webhook_info.html">getWebhookInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_webhook.html">setWebhook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/set_passport_data_errors.html">setPassportDataErrors</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../enums/index.html">枚举</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of 枚举</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../enums/bot_command_scope_type.html">BotCommandScopeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/chat_action.html">ChatAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/chat_boost_source_type.html">ChatBoostSourceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/chat_member_status.html">ChatMemberStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/chat_type.html">聊天类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/content_type.html">内容类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/currency.html">货币</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/dice_emoji.html">DiceEmoji</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/encrypted_passport_element.html">EncryptedPassportElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/inline_query_result_type.html">InlineQueryResultType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/input_media_type.html">InputMediaType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/keyboard_button_poll_type.html">KeyboardButtonPollType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/mask_position_point.html">MaskPositionPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/menu_button_type.html">MenuButtonType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/message_entity_type.html">MessageEntityType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/message_origin_type.html">MessageOriginType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/parse_mode.html">ParseMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/passport_element_error_type.html">PassportElementErrorType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/poll_type.html">PollType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/reaction_type_type.html">ReactionTypeType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/sticker_format.html">StickerFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/sticker_type.html">StickerType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/topic_icon_color.html">拓扑图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/update_type.html">UpdateType</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../download_file.html">下载文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../upload_file.html">上传文件</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/router.html">路由器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/dispatcher.html">Dispatcher</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/dependency_injection.html">依赖注入</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../dispatcher/filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/filters/command.html">命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/filters/chat_member_updated.html">聊天成员更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/filters/magic_filters.html">Magic filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/filters/magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/filters/callback_data.html">回调数据工厂和过滤器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/filters/exception.html">例外情况</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/long_polling.html">长轮询</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/webhook.html">Webhook</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../dispatcher/finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/finite_state_machine/storages.html">Storages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/finite_state_machine/scene.html">场景向导</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/errors.html">错误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dispatcher/flags.html">标记</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../dispatcher/class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/base.html">BaseHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/callback_query.html">CallbackQueryHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/chosen_inline_result.html">ChosenInlineResultHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/error.html">ErrorHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/inline_query.html">InlineQueryHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/message.html">MessageHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/poll.html">PollHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/pre_checkout_query.html">PreCheckoutQueryHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/shipping_query.html">ShippingQueryHandler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../dispatcher/class_based_handlers/chat_member.html">ChatMemberHandler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../utils/index.html">工具</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of 工具</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/keyboard.html">键盘构建器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/i18n.html">国际化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/chat_action.html">聊天动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/web_app.html">WebApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/callback_answer.html">回调应答</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/formatting.html">格式化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/media_group.html">媒体组构建器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/deep_linking.html">深度链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="module-aiogram.types.forum_topic_closed">
+<span id="forumtopicclosed"></span><h1>ForumTopicClosed<a class="headerlink" href="#module-aiogram.types.forum_topic_closed" title="Link to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="aiogram.types.forum_topic_closed.ForumTopicClosed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.forum_topic_closed.</span></span><span class="sig-name descname"><span class="pre">ForumTopicClosed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/forum_topic_closed.html#ForumTopicClosed"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.forum_topic_closed.ForumTopicClosed" title="Link to this definition">#</a></dt>
+<dd><p>此对象表示有关在聊天中关闭的论坛主题的服务消息。目前没有信息。</p>
+<p>来源： <a class="reference external" href="https://core.telegram.org/bots/api#forumtopicclosed">https://core.telegram.org/bots/api#forumtopicclosed</a></p>
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="forum_topic_created.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">ForumTopicCreated</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="forum_topic.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">论坛主题</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, aiogram Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">ForumTopicClosed</a><ul>
+<li><a class="reference internal" href="#aiogram.types.forum_topic_closed.ForumTopicClosed"><code class="docutils literal notranslate"><span class="pre">ForumTopicClosed</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=dd0888fc"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>
