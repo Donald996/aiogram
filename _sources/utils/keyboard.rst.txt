@@ -80,7 +80,7 @@ Reply Keyboard
 .. autoclass:: aiogram.utils.keyboard.ReplyKeyboardBuilder
     :members: __init__, buttons, copy, export, add, row, adjust, from_markup, attach
 
-    .. method:: button(text: str, request_contact: Optional[bool] = None, request_location: Optional[bool] = None, request_poll: Optional[KeyboardButtonPollType] = None, **kwargs: Any) -> aiogram.utils.keyboard.ReplyKeyboardBuilder
+    .. method:: button(text: str, request_contact: Optional[bool] = None, request_location: Optional[bool] = None, request_poll: Optional[:class:`aiogram.types.keyboard_button_poll_type.KeyboardButtonPollType'] = None, **kwargs: Any) -> aiogram.utils.keyboard.ReplyKeyboardBuilder
         :noindex:
 
         Add new button to markup
