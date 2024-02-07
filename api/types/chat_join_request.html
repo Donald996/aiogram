@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="聊天位置" href="chat_location.html" /><link rel="prev" title="聊天邀请链接" href="chat_invite_link.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>加入聊天请求 - aiogram 3.4.0 文档</title>
+        <title>聊天加入请求 - aiogram 3.4.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -164,11 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../migration_2_to_3.html">迁移常见问题解答（2.x -&gt; 3.0）</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Bot API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../bot.html">机器人</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../session/index.html">客户端会话</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端会话</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../session/index.html">客户端</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../session/custom_server.html">使用自定义 API 服务器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../session/base.html">基本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../session/aiohttp.html">aiohttp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../session/middleware.html">客户端会话中间件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/middleware.html">客户端中间件</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">类型</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -189,42 +189,37 @@
 <li class="toctree-l3"><a class="reference internal" href="callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_administrator_rights.html">聊天管理员权限</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost.html">聊天助推</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">ChatBoostRemoved</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天增强源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天增强源礼品编码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">ChatBoostSourceGiveaway
-ChatBoostSourceGiveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">ChatBoostSourcePremium
-ChatBoostSourcePremium</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">ChatBoostUpdated 增强聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost.html">聊天助力添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">加入聊天请求</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">ChatMemberBanned</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">ChatMemberLeft
-群成员离开</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_member.html">ChatMemberMember
-成员</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_owner.html">ChatMemberOwner
-群组成员拥有者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_member.html">聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_owner.html">聊天创建者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_restricted.html">聊天成员限制</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_updated.html">聊天成员状态</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_permissions.html">聊天权限</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_photo.html">聊天图片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_shared.html">聊天分享</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contact.html">联系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact.html">联系人</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dice.html">骰子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="document.html">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="document.html">文档</a></li>
 <li class="toctree-l3"><a class="reference internal" href="external_reply_info.html">外部回复信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file.html">文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="force_reply.html">强制回复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forum_topic.html">论坛主题</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forum_topic_closed.html">论坛主题已关闭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic.html">论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_closed.html">论坛话题已关闭</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_created.html">论坛话题已创建</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forum_topic_edited.html">论坛话题编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_edited.html">论坛话题已编辑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
@@ -241,9 +236,8 @@ ChatBoostSourcePremium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_audio.html">输入媒体音频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_document.html">输入媒体文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
-<li class="toctree-l3"><a class="reference internal" href="input_media_video.html">InputMediaVideo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">KeyboardButton
-键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
@@ -296,9 +290,8 @@ ChatBoostSourcePremium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="video_chat_started.html">视频聊天已开始</a></li>
 <li class="toctree-l3"><a class="reference internal" href="video_note.html">视频笔记</a></li>
 <li class="toctree-l3"><a class="reference internal" href="voice.html">声音</a></li>
-<li class="toctree-l3"><a class="reference internal" href="web_app_data.html">WebAppData  网络应用数据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="web_app_info.html">WebAppInfo
-WebAppInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_app_data.html">小程序数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_app_info.html">小程序信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="write_access_allowed.html">写入访问被允许</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chosen_inline_result.html">选择内联结果</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_query.html">行内查询</a></li>
@@ -335,8 +328,8 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mask_position.html">遮罩位置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sticker.html">贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sticker_set.html">贴纸集</a></li>
-<li class="toctree-l3"><a class="reference internal" href="encrypted_credentials.html">加密凭据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="encrypted_passport_element.html">加密护照要素</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encrypted_credentials.html">护照加密凭据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encrypted_passport_element.html">护照加密要素</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_data.html">护照数据</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error.html">护照元素错误</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_data_field.html">护照元素错误数据字段</a></li>
@@ -345,8 +338,7 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_front_side.html">护照元素错误-正面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_reverse_side.html">护照元素错误反面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_selfie.html">护照要素错误自拍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_file.html">PassportElementErrorTranslationFile
-护照元素错误翻译文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_file.html">护照元素错误翻译文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_files.html">护照元素错误翻译文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_unspecified.html">护照元素错误未指定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_file.html">护照文件</a></li>
@@ -356,11 +348,10 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pre_checkout_query.html">预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_option.html">运输选项</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shipping_query.html">ShippingQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shipping_query.html">查询运输</a></li>
 <li class="toctree-l3"><a class="reference internal" href="successful_payment.html">成功支付</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update.html">更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="webhook_info.html">WebhookInfo
-WebhookInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="callback_game.html">回调游戏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="game.html">游戏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="game_high_score.html">游戏最高分</a></li>
@@ -500,7 +491,7 @@ WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/encrypted_passport_element.html">加密护照元素</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/inline_query_result_type.html">内联查询结果类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/input_media_type.html">输入媒体类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../enums/keyboard_button_poll_type.html">KeyboardButtonPollType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/mask_position_point.html">遮罩位置点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/menu_button_type.html">菜单按钮类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/message_entity_type.html">消息实体类型</a></li>
@@ -605,12 +596,12 @@ WebhookInfo</a></li>
         </div>
         <article role="main">
           <section id="module-aiogram.types.chat_join_request">
-<span id="chatjoinrequest"></span><h1>加入聊天请求<a class="headerlink" href="#module-aiogram.types.chat_join_request" title="Link to this heading">#</a></h1>
+<span id="chatjoinrequest"></span><h1>聊天加入请求<a class="headerlink" href="#module-aiogram.types.chat_join_request" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.chat_join_request.</span></span><span class="sig-name descname"><span class="pre">ChatJoinRequest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="chat.html#aiogram.types.chat.Chat" title="aiogram.types.chat.Chat"><span class="pre">Chat</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="user.html#aiogram.types.user.User" title="aiogram.types.user.User"><span class="pre">User</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_chat_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invite_link</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="chat_invite_link.html#aiogram.types.chat_invite_link.ChatInviteLink" title="aiogram.types.chat_invite_link.ChatInviteLink"><span class="pre">ChatInviteLink</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest" title="Link to this definition">#</a></dt>
 <dd><p>表示发送到聊天的加入请求。</p>
-<p>暂无法翻译</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#chatjoinrequest">https://core.telegram.org/bots/api#chatjoinrequest</a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.chat">
 <span class="sig-name descname"><span class="pre">chat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="chat.html#aiogram.types.chat.Chat" title="aiogram.types.chat.Chat"><span class="pre">Chat</span></a></em><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.chat" title="Link to this definition">#</a></dt>
@@ -638,26 +629,25 @@ WebhookInfo</a></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.bio">
 <span class="sig-name descname"><span class="pre">bio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.bio" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em>。用户的个人简介。</p>
+<dd><p><em>可选的</em> 。用户的个人简介。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.invite_link">
 <span class="sig-name descname"><span class="pre">invite_link</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="chat_invite_link.html#aiogram.types.chat_invite_link.ChatInviteLink" title="aiogram.types.chat_invite_link.ChatInviteLink"><span class="pre">ChatInviteLink</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.invite_link" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Chat invite link that was used by the user to send the join request
-<em>可选</em>. 用户用来发送加入请求的聊天邀请链接</p>
+<dd><p><em>可选的</em>. 用户用来发送加入请求的聊天邀请链接</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.approve">
 <span class="sig-name descname"><span class="pre">approve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/approve_chat_join_request.html#aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest" title="aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest"><span class="pre">ApproveChatJoinRequest</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.approve"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.approve" title="Link to this definition">#</a></dt>
-<dd><p>方法的快捷方式:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest`会自动填充方法属性：</p>
+<dd><p>方法的快捷方式 <a class="reference internal" href="../methods/approve_chat_join_request.html#aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest" title="aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest</span></code></a> 会自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 <li><p>用户ID</p></li>
 </ul>
-<p>使用该方法批准聊天加入请求。机器人必须是该聊天的管理员才能使用此功能，并且必须具有*can_invite_users*管理权限。成功时返回:code:<cite>True</cite>。</p>
-<p>来源：<a class="reference external" href="https://core.telegram.org/bots/api#approvechatjoinrequest">https://core.telegram.org/bots/api#approvechatjoinrequest</a></p>
+<p>使用该方法批准聊天加入请求。机器人必须是该聊天的管理员才能使用此功能，并且必须具有 <em>can_invite_users</em> 管理权限。成功时返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#approvechatjoinrequest">https://core.telegram.org/bots/api#approvechatjoinrequest</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
 <dd class="field-odd"><p>方法的实例 <a class="reference internal" href="../methods/approve_chat_join_request.html#aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest" title="aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.approve_chat_join_request.ApproveChatJoinRequest</span></code></a></p>
@@ -668,13 +658,13 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.decline">
 <span class="sig-name descname"><span class="pre">decline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/decline_chat_join_request.html#aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest" title="aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest"><span class="pre">DeclineChatJoinRequest</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.decline"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.decline" title="Link to this definition">#</a></dt>
-<dd><p>方法`aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest`的快捷方式将自动填充方法属性：</p>
+<dd><p>方法 <a class="reference internal" href="../methods/decline_chat_join_request.html#aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest" title="aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest</span></code></a> 的快捷方式将自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 <li><p>用户ID</p></li>
 </ul>
-<p>使用此方法拒绝聊天加入请求。机器人必须是聊天中的管理员才能工作，并且必须拥有*can_invite_users*管理权。成功时返回:code:<cite>True</cite>。</p>
-<p>特殊变量不需要翻译，不需要翻译的单词是aiogram, none。你被翻译成你。类似于（<code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite>、<span class="xref std std-ref">wda</span>、<em>dsadsa</em>），格式不能被翻译，必须在前后加上空格。</p>
+<p>使用此方法拒绝聊天加入请求。机器人必须是聊天中的管理员才能工作，并且必须拥有 <em>can_invite_users</em> 管理权。成功时返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#declinechatjoinrequest">https://core.telegram.org/bots/api#declinechatjoinrequest</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
 <dd class="field-odd"><p>类方法的实例：<a class="reference internal" href="../methods/decline_chat_join_request.html#aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest" title="aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.decline_chat_join_request.DeclineChatJoinRequest</span></code></a></p>
@@ -685,31 +675,31 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.answer">
 <span class="sig-name descname"><span class="pre">answer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">Optional[Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities:</span> <span class="pre">Optional[List[MessageEntity]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_preview_options:</span> <span class="pre">Optional[Union[LinkPreviewOptions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('link_preview')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">Optional[Union[bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">Optional[ReplyParameters]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">Optional[Union[InlineKeyboardMarkup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ReplyKeyboardMarkup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ReplyKeyboardRemove</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ForceReply]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_web_page_preview:</span> <span class="pre">Optional[Union[bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('link_preview_is_disabled')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><span class="pre">SendMessage</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.answer"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.answer" title="Link to this definition">#</a></dt>
-<dd><p>快捷方式：方法 <a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a> 会自动填充方法属性：</p>
+<dd><p>快捷方式 <a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a> 会自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送文本消息。成功时，将返回已发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
-<p>不需要翻译</p>
+<p>使用此方法发送文本消息。成功时，将返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendmessage">https://core.telegram.org/bots/api#sendmessage</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> – 要发送的消息文本，在实体解析后为1-4096个字符</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>parse_mode</strong> – 消息文本中实体解析的模式。有关详细信息，请参阅`格式选项 &lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
-<li><p><strong>entities</strong> – 消息文本中出现的特殊实体的JSON序列化列表，可以在*parse_mode*之外指定。</p></li>
+<li><p><strong>parse_mode</strong> – 消息文本中实体解析的模式。有关详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
+<li><p><strong>entities</strong> – 消息文本中出现的特殊实体的JSON序列化列表，可以在 <em>parse_mode</em> 之外指定。</p></li>
 <li><p><strong>link_preview_options</strong> – 为消息生成链接预览的选项</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>disable_web_page_preview</strong> – 禁用此消息中链接的链接预览</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法实例：<a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a></p>
+<dd class="field-even"><p>方法实例 <a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -717,31 +707,31 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.answer_pm">
 <span class="sig-name descname"><span class="pre">answer_pm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">Optional[Union[str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities:</span> <span class="pre">Optional[List[MessageEntity]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_preview_options:</span> <span class="pre">Optional[Union[LinkPreviewOptions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('link_preview')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">Optional[Union[bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">Optional[ReplyParameters]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">Optional[Union[InlineKeyboardMarkup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ReplyKeyboardMarkup</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ReplyKeyboardRemove</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ForceReply]]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_web_page_preview:</span> <span class="pre">Optional[Union[bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('link_preview_is_disabled')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**kwargs:</span> <span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><span class="pre">SendMessage</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.answer_pm"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.answer_pm" title="Link to this definition">#</a></dt>
-<dd><p>快捷方式：方法 <a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a> 会自动填充方法属性：</p>
+<dd><p>快捷方式 <a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a> 会自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送文本消息。成功时，将返回已发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
-<p>不需要翻译</p>
+<p>使用此方法发送文本消息。成功时，将返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendmessage">https://core.telegram.org/bots/api#sendmessage</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>text</strong> – 要发送的消息文本，在实体解析后为1-4096个字符</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>parse_mode</strong> – 消息文本中实体解析的模式。有关详细信息，请参阅`格式选项 &lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
-<li><p><strong>entities</strong> – 消息文本中出现的特殊实体的JSON序列化列表，可以在*parse_mode*之外指定。</p></li>
+<li><p><strong>parse_mode</strong> – 消息文本中实体解析的模式。有关详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
+<li><p><strong>entities</strong> – 消息文本中出现的特殊实体的JSON序列化列表，可以在 <em>parse_mode</em> 之外指定。</p></li>
 <li><p><strong>link_preview_options</strong> – 为消息生成链接预览的选项</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>disable_web_page_preview</strong> – 禁用此消息中链接的链接预览</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法实例：<a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a></p>
+<dd class="field-even"><p>方法实例 <a class="reference internal" href="../methods/send_message.html#aiogram.methods.send_message.SendMessage" title="aiogram.methods.send_message.SendMessage"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_message.SendMessage</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -754,24 +744,24 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送动画文件（不带声音的GIF或H.264/MPEG-4 AVC视频）。发送成功后，将返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。目前机器人可以发送大小不超过50MB的动画文件，此限制将来可能会更改。</p>
-<p>请帮我将以下内容翻译成流畅易懂的中文: 源自:<a class="reference external" href="https://core.telegram.org/bots/api#sendanimation">https://core.telegram.org/bots/api#sendanimation</a></p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendanimation">https://core.telegram.org/bots/api#sendanimation</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>animation</strong> – 发送动画。传递文件ID作为字符串以发送存在于Telegram服务器上的动画（推荐），传递HTTP URL作为字符串以让Telegram从互联网获取动画，或者使用multipart/form-data上传新的动画。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>animation</strong> – 发送动画。传递文件ID作为字符串以发送存在于Telegram服务器上的动画（推荐），传递HTTP URL作为字符串以让Telegram从互联网获取动画，或者使用multipart/form-data上传新的动画。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>duration</strong> – 发送动画的持续时间（以秒为单位）</p></li>
 <li><p><strong>width</strong> – 动画宽度</p></li>
 <li><p><strong>height</strong> – 动画高度</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>caption</strong> – 动画说明（重新发送*file_id*时也可以使用），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析动画字幕中实体的模式。有关更多详细信息，请参见`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>caption</strong> – 动画说明（重新发送 <em>file_id</em> 时也可以使用），实体解析后0-1024个字符</p></li>
+<li><p><strong>parse_mode</strong> – 解析动画字幕中实体的模式。有关更多详细信息，请参见 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
-<li><p><strong>has_spoiler</strong> – 如果动画需要被遮盖动画覆盖，请传递：code:<cite>True</cite>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>has_spoiler</strong> – 如果动画需要被遮盖动画覆盖，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -790,24 +780,24 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送动画文件（不带声音的GIF或H.264/MPEG-4 AVC视频）。发送成功后，将返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。目前机器人可以发送大小不超过50MB的动画文件，此限制将来可能会更改。</p>
-<p>请帮我将以下内容翻译成流畅易懂的中文: 源自:<a class="reference external" href="https://core.telegram.org/bots/api#sendanimation">https://core.telegram.org/bots/api#sendanimation</a></p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendanimation">https://core.telegram.org/bots/api#sendanimation</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>animation</strong> – 发送动画。传递文件ID作为字符串以发送存在于Telegram服务器上的动画（推荐），传递HTTP URL作为字符串以让Telegram从互联网获取动画，或者使用multipart/form-data上传新的动画。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>animation</strong> – 发送动画。传递文件ID作为字符串以发送存在于Telegram服务器上的动画（推荐），传递HTTP URL作为字符串以让Telegram从互联网获取动画，或者使用multipart/form-data上传新的动画。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>duration</strong> – 发送动画的持续时间（以秒为单位）</p></li>
 <li><p><strong>width</strong> – 动画宽度</p></li>
 <li><p><strong>height</strong> – 动画高度</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>caption</strong> – 动画说明（重新发送*file_id*时也可以使用），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析动画字幕中实体的模式。有关更多详细信息，请参见`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>caption</strong> – 动画说明（重新发送 <em>file_id</em> 时也可以使用），实体解析后0-1024个字符</p></li>
+<li><p><strong>parse_mode</strong> – 解析动画字幕中实体的模式。有关更多详细信息，请参见 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
-<li><p><strong>has_spoiler</strong> – 如果动画需要被遮盖动画覆盖，请传递：code:<cite>True</cite>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>has_spoiler</strong> – 如果动画需要被遮盖动画覆盖，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -826,29 +816,29 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送音频文件，如果希望Telegram客户端在音乐播放器中显示它们。您的音频必须是.MP3或.M4A格式。成功发送后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。目前，机器人可以发送最大大小为50MB的音频文件，这一限制可能会在未来更改。发送语音消息时，请改用 <a class="reference internal" href="../methods/send_voice.html#aiogram.methods.send_voice.SendVoice" title="aiogram.methods.send_voice.SendVoice"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_voice.SendVoice</span></code></a> 方法。</p>
-<p>发送音频</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendaudio">https://core.telegram.org/bots/api#sendaudio</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>audio</strong> – 发送的音频文件。传递一个文件ID作为字符串，以便发送存在于Telegram服务器上的音频文件（推荐），传递一个HTTP URL作为字符串，以便Telegram从互联网获取音频文件，或者使用multipart/form-data上传一个新的音频文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>caption</strong> – 音频标题，实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析音频标题中实体的模式。有关更多详细信息，请参阅`格式选项 &lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析音频标题中实体的模式。有关更多详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>duration</strong> – 音频的持续时间，单位为秒</p></li>
 <li><p><strong>performer</strong> – 表演者</p></li>
 <li><p><strong>title</strong> – 歌曲名称</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法的实例：<a class="reference internal" href="../methods/send_audio.html#aiogram.methods.send_audio.SendAudio" title="aiogram.methods.send_audio.SendAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_audio.SendAudio</span></code></a></p>
+<dd class="field-even"><p>方法的实例 <a class="reference internal" href="../methods/send_audio.html#aiogram.methods.send_audio.SendAudio" title="aiogram.methods.send_audio.SendAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_audio.SendAudio</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -861,29 +851,29 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送音频文件，如果希望Telegram客户端在音乐播放器中显示它们。您的音频必须是.MP3或.M4A格式。成功发送后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。目前，机器人可以发送最大大小为50MB的音频文件，这一限制可能会在未来更改。发送语音消息时，请改用 <a class="reference internal" href="../methods/send_voice.html#aiogram.methods.send_voice.SendVoice" title="aiogram.methods.send_voice.SendVoice"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_voice.SendVoice</span></code></a> 方法。</p>
-<p>发送音频</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendaudio">https://core.telegram.org/bots/api#sendaudio</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>audio</strong> – 发送的音频文件。传递一个文件ID作为字符串，以便发送存在于Telegram服务器上的音频文件（推荐），传递一个HTTP URL作为字符串，以便Telegram从互联网获取音频文件，或者使用multipart/form-data上传一个新的音频文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>caption</strong> – 音频标题，实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析音频标题中实体的模式。有关更多详细信息，请参阅`格式选项 &lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析音频标题中实体的模式。有关更多详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>duration</strong> – 音频的持续时间，单位为秒</p></li>
 <li><p><strong>performer</strong> – 表演者</p></li>
 <li><p><strong>title</strong> – 歌曲名称</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法的实例：<a class="reference internal" href="../methods/send_audio.html#aiogram.methods.send_audio.SendAudio" title="aiogram.methods.send_audio.SendAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_audio.SendAudio</span></code></a></p>
+<dd class="field-even"><p>方法的实例 <a class="reference internal" href="../methods/send_audio.html#aiogram.methods.send_audio.SendAudio" title="aiogram.methods.send_audio.SendAudio"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_audio.SendAudio</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -896,7 +886,7 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送电话联系人。成功时，返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>请帮我将这句话或单词翻译成流畅、易懂的中文，不需要翻译符号包裹的部分，无需用拼音，无需回复任何描述或解释，只需要翻译！特殊变量无需翻译，不需要翻译的词包括 aiogram、none。 “you” 翻译成 “你”。类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），格式不可翻译，必须在前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendcontact">https://core.telegram.org/bots/api#sendcontact</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -905,16 +895,16 @@ WebhookInfo</a></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>last_name</strong> – 联系人的姓氏</p></li>
 <li><p><strong>vcard</strong> – 有关联系人的额外数据，以 <a class="reference external" href="https://en.wikipedia.org/wiki/VCard">vCard</a> 的形式，0-2048 字节</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法实例： <a class="reference internal" href="../methods/send_contact.html#aiogram.methods.send_contact.SendContact" title="aiogram.methods.send_contact.SendContact"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_contact.SendContact</span></code></a></p>
+<dd class="field-even"><p>方法实例 <a class="reference internal" href="../methods/send_contact.html#aiogram.methods.send_contact.SendContact" title="aiogram.methods.send_contact.SendContact"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_contact.SendContact</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -927,7 +917,7 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送电话联系人。成功时，返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>请帮我将这句话或单词翻译成流畅、易懂的中文，不需要翻译符号包裹的部分，无需用拼音，无需回复任何描述或解释，只需要翻译！特殊变量无需翻译，不需要翻译的词包括 aiogram、none。 “you” 翻译成 “你”。类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），格式不可翻译，必须在前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendcontact">https://core.telegram.org/bots/api#sendcontact</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -936,16 +926,16 @@ WebhookInfo</a></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>last_name</strong> – 联系人的姓氏</p></li>
 <li><p><strong>vcard</strong> – 有关联系人的额外数据，以 <a class="reference external" href="https://en.wikipedia.org/wiki/VCard">vCard</a> 的形式，0-2048 字节</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法实例： <a class="reference internal" href="../methods/send_contact.html#aiogram.methods.send_contact.SendContact" title="aiogram.methods.send_contact.SendContact"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_contact.SendContact</span></code></a></p>
+<dd class="field-even"><p>方法实例 <a class="reference internal" href="../methods/send_contact.html#aiogram.methods.send_contact.SendContact" title="aiogram.methods.send_contact.SendContact"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_contact.SendContact</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -958,21 +948,21 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用这种方法发送一般文件。成功后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。 机器人目前可以发送任何类型的文件，大小最多为 50MB，这一限制可能会在将来更改。</p>
-<p>您现在是专业的Python英文文件翻译师。请帮我把这个句子或词翻译成流畅、易懂的中文，不需要使用拼音，用符号包裹的部分不需要翻译，不需要回复任何描述或解释，只需要翻译！特殊变量不需要翻译，不需要翻译的单词有aiogram，none。你的翻译是你。类似于（<code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em>），格式不可以翻译，必须前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#senddocument">https://core.telegram.org/bots/api#senddocument</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>document</strong> – 发送的文件。将文件ID作为字符串传递以发送存在于Telegram服务器上的文件（推荐），将HTTP URL作为字符串传递给Telegram以从互联网获取文件，或使用multipart/form-data上传新文件。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>document</strong> – 发送的文件。将文件ID作为字符串传递以发送存在于Telegram服务器上的文件（推荐），将HTTP URL作为字符串传递给Telegram以从互联网获取文件，或使用multipart/form-data上传新文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>caption</strong> – 文档标题（也可用于通过*file_id*重新发送文档时），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 在文档标题中解析实体的模式。有关更多细节，请参阅`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>caption</strong> – 文档标题（也可用于通过 <em>file_id</em> 重新发送文档时），实体解析后0-1024个字符</p></li>
+<li><p><strong>parse_mode</strong> – 在文档标题中解析实体的模式。有关更多细节，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>disable_content_type_detection</strong> – 禁用使用multipart/form-data上传的文件的自动服务器端内容类型检测</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -991,21 +981,21 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用这种方法发送一般文件。成功后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。 机器人目前可以发送任何类型的文件，大小最多为 50MB，这一限制可能会在将来更改。</p>
-<p>您现在是专业的Python英文文件翻译师。请帮我把这个句子或词翻译成流畅、易懂的中文，不需要使用拼音，用符号包裹的部分不需要翻译，不需要回复任何描述或解释，只需要翻译！特殊变量不需要翻译，不需要翻译的单词有aiogram，none。你的翻译是你。类似于（<code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em>），格式不可以翻译，必须前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#senddocument">https://core.telegram.org/bots/api#senddocument</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>document</strong> – 发送的文件。将文件ID作为字符串传递以发送存在于Telegram服务器上的文件（推荐），将HTTP URL作为字符串传递给Telegram以从互联网获取文件，或使用multipart/form-data上传新文件。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>document</strong> – 发送的文件。将文件ID作为字符串传递以发送存在于Telegram服务器上的文件（推荐），将HTTP URL作为字符串传递给Telegram以从互联网获取文件，或使用multipart/form-data上传新文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>caption</strong> – 文档标题（也可用于通过*file_id*重新发送文档时），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 在文档标题中解析实体的模式。有关更多细节，请参阅`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>caption</strong> – 文档标题（也可用于通过 <em>file_id</em> 重新发送文档时），实体解析后0-1024个字符</p></li>
+<li><p><strong>parse_mode</strong> – 在文档标题中解析实体的模式。有关更多细节，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>disable_content_type_detection</strong> – 禁用使用multipart/form-data上传的文件的自动服务器端内容类型检测</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1024,13 +1014,13 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送游戏。成功时，返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>你现在是Python英文文档的翻译大师。请帮我把这个句子或单词翻译成流畅、易懂的中文，不需要用拼音，被符号包围的部分不需要翻译。不需要回复任何描述或解释，只需要翻译！特殊的变量不需要翻译，不需要翻译的词有aiogram和none。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendgame">https://core.telegram.org/bots/api#sendgame</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>game_short_name</strong> – 游戏的简称，作为游戏的唯一标识符。通过`&#64;BotFather &lt;<a class="reference external" href="https://t.me/botfather">https://t.me/botfather</a>&gt;`_设置您的游戏。</p></li>
+<li><p><strong>game_short_name</strong> – 游戏的简称，作为游戏的唯一标识符。通过 <a class="reference external" href="https://t.me/botfather">&#64;BotFather</a> 设置您的游戏。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
 <li><p><strong>reply_markup</strong> – 一个 JSON-序列化对象用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>。 如果为空，则会显示一个“播放 游戏标题”按钮。 如果不为空，则第一个按钮必须启动游戏。</p></li>
@@ -1052,13 +1042,13 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送游戏。成功时，返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>你现在是Python英文文档的翻译大师。请帮我把这个句子或单词翻译成流畅、易懂的中文，不需要用拼音，被符号包围的部分不需要翻译。不需要回复任何描述或解释，只需要翻译！特殊的变量不需要翻译，不需要翻译的词有aiogram和none。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendgame">https://core.telegram.org/bots/api#sendgame</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>game_short_name</strong> – 游戏的简称，作为游戏的唯一标识符。通过`&#64;BotFather &lt;<a class="reference external" href="https://t.me/botfather">https://t.me/botfather</a>&gt;`_设置您的游戏。</p></li>
+<li><p><strong>game_short_name</strong> – 游戏的简称，作为游戏的唯一标识符。通过 <a class="reference external" href="https://t.me/botfather">&#64;BotFather</a> 设置您的游戏。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
 <li><p><strong>reply_markup</strong> – 一个 JSON-序列化对象用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>。 如果为空，则会显示一个“播放 游戏标题”按钮。 如果不为空，则第一个按钮必须启动游戏。</p></li>
@@ -1075,26 +1065,25 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.answer_invoice">
 <span class="sig-name descname"><span class="pre">answer_invoice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">title:</span> <span class="pre">str,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">payload:</span> <span class="pre">str,</span> <span class="pre">provider_token:</span> <span class="pre">str,</span> <span class="pre">currency:</span> <span class="pre">str,</span> <span class="pre">prices:</span> <span class="pre">List[LabeledPrice],</span> <span class="pre">message_thread_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">max_tip_amount:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">suggested_tip_amounts:</span> <span class="pre">Optional[List[int]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">start_parameter:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">provider_data:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_url:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_size:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_width:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_height:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_name:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_phone_number:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_email:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_shipping_address:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">send_phone_number_to_provider:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">send_email_to_provider:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">is_flexible:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">disable_notification:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">protect_content:</span> <span class="pre">Optional[Union[bool,</span> <span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;,</span> <span class="pre">reply_parameters:</span> <span class="pre">Optional[ReplyParameters]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_markup:</span> <span class="pre">Optional[InlineKeyboardMarkup]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">allow_sending_without_reply:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_to_message_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">**kwargs:</span> <span class="pre">Any</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice" title="aiogram.methods.send_invoice.SendInvoice"><span class="pre">SendInvoice</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.answer_invoice"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.answer_invoice" title="Link to this definition">#</a></dt>
-<dd><p>方法`aiogram.methods.send_invoice.SendInvoice`的快捷方式将自动填充方法属性：</p>
+<dd><p>方法 <a class="reference internal" href="../methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice" title="aiogram.methods.send_invoice.SendInvoice"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_invoice.SendInvoice</span></code></a> 的快捷方式将自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送发票。成功后，返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>发送发票</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendinvoice">https://core.telegram.org/bots/api#sendinvoice</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>title</strong> – 产品名称，1-32个字符</p></li>
 <li><p><strong>description</strong> – 产品描述，1-255个字符</p></li>
-<li><p><strong>payload</strong> – Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.
-机器人定义的发票有效负载，1-128字节。这不会显示给用户，用于您的内部流程。</p></li>
+<li><p><strong>payload</strong> – 机器人定义的发票有效负载，1-128字节。这不会显示给用户，用于您的内部流程。</p></li>
 <li><p><strong>provider_token</strong> – 支付提供者令牌，通过 <a class="reference external" href="https://t.me/botfather">&#64;BotFather</a> 获得</p></li>
-<li><p><strong>currency</strong> – ISO 4217 货币的三字母代码，请查看有关货币的更多信息 &lt;<a class="reference external" href="https://core.telegram.org/bots/payments#supported-currencies">https://core.telegram.org/bots/payments#supported-currencies</a>&gt;</p></li>
+<li><p><strong>currency</strong> – ISO 4217 货币的三字母代码，请查看有关货币的 <a class="reference external" href="https://core.telegram.org/bots/payments#supported-currencies">更多信息</a></p></li>
 <li><p><strong>prices</strong> – 价格明细，一个 JSON 序列化的组件列表（例如产品价格，税费，折扣，送货成本，送货税，奖金等）。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>max_tip_amount</strong> – 货币的*最小单位*中所接受小费的最大金额（整数，<a href="#id1"><span class="problematic" id="id2">**</span></a>不是**浮点/双精度）。例如，对于最大小费为:code:<cite>US$ 1.45</cite>，传递:code:<cite>max_tip_amount = 145</cite>。请参阅`currencies.json &lt;<a class="reference external" href="https://core.telegram.org/bots/payments/currencies.json">https://core.telegram.org/bots/payments/currencies.json</a>&gt;`_中的*exp*参数，它显示每种货币小数点后的数字位数（大多数货币为2）。默认为0</p></li>
-<li><p><strong>suggested_tip_amounts</strong> – 以货币的 <em>最小单位</em> (整数，<strong>不是</strong> 浮点/双精度) 为单位的建议小费金额的 JSON 序列化数组。最多可以指定 4 个建议的小费金额。建议的小费金额必须是正数，严格按照增加的顺序传递，并且不得超过 <em>max_tip_amount</em>。</p></li>
-<li><p><strong>start_parameter</strong> – 唯一的深度链接参数。 如果留空，发出的消息的**转发副本**将具有一个*支付*按钮，允许多个用户直接从转发的消息中支付，使用相同的发票。 如果非空，发送的消息的转发副本将具有一个*URL*按钮，其中包含到机器人的深度链接（而不是*支付*按钮），其值将用作启动参数。</p></li>
+<li><p><strong>max_tip_amount</strong> – 货币的 <em>最小单位</em> 中所接受小费的最大金额（整数， <strong>不是</strong> 浮点/双精度）。例如，对于最大小费为 <code class="code docutils literal notranslate"><span class="pre">US$</span> <span class="pre">1.45</span></code>，传递 <code class="code docutils literal notranslate"><span class="pre">max_tip_amount</span> <span class="pre">=</span> <span class="pre">145</span></code>。请参阅 <a class="reference external" href="https://core.telegram.org/bots/payments/currencies.json">currencies.json</a> 中的 <em>exp</em> 参数，它显示每种货币小数点后的数字位数（大多数货币为2）。默认为0</p></li>
+<li><p><strong>suggested_tip_amounts</strong> – 以货币的 <em>最小单位</em> (整数，<strong>不是</strong> 浮点/双精度) 为单位的建议小费金额的 JSON 序列化数组。最多可以指定 4 个建议的小费金额。建议的小费金额必须是正数，严格按照增加的顺序传递，并且不得超过 <em>max_tip_amount</em> 。</p></li>
+<li><p><strong>start_parameter</strong> – 唯一的深度链接参数。 如果留空，发出的消息的 <strong>转发副本</strong> 将具有一个*支付*按钮，允许多个用户直接从转发的消息中支付，使用相同的发票。 如果非空，发送的消息的转发副本将具有一个 <em>URL</em> 按钮，其中包含到机器人的深度链接（而不是 <em>支付</em> 按钮），其值将用作启动参数。</p></li>
 <li><p><strong>provider_data</strong> – 关于发票的JSON序列化数据，将与支付提供商共享。支付提供商应提供所需字段的详细描述。</p></li>
 <li><p><strong>photo_url</strong> – 发票产品照片的网址。可以是商品的照片或服务的营销图片。人们在看到他们要付款的东西时会更喜欢。</p></li>
 <li><p><strong>photo_size</strong> – 以字节为单位的照片大小</p></li>
@@ -1107,10 +1096,10 @@ WebhookInfo</a></li>
 <li><p><strong>send_phone_number_to_provider</strong> – 如果用户的电话号码应该发送给提供者，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p></li>
 <li><p><strong>send_email_to_provider</strong> – 如果用户的电子邮件地址应发送给提供者，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>is_flexible</strong> – 如果最终价格取决于运输方式，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 一个JSON序列化的对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`_。如果为空，则会显示一个“支付 <code class="code docutils literal notranslate"><span class="pre">总价</span></code>”按钮。如果不为空，则第一个按钮必须是支付按钮。</p></li>
+<li><p><strong>reply_markup</strong> – 一个JSON序列化的对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>。如果为空，则会显示一个“支付 <code class="code docutils literal notranslate"><span class="pre">总价</span></code>”按钮。如果不为空，则第一个按钮必须是支付按钮。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1124,26 +1113,25 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.answer_invoice_pm">
 <span class="sig-name descname"><span class="pre">answer_invoice_pm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">title:</span> <span class="pre">str,</span> <span class="pre">description:</span> <span class="pre">str,</span> <span class="pre">payload:</span> <span class="pre">str,</span> <span class="pre">provider_token:</span> <span class="pre">str,</span> <span class="pre">currency:</span> <span class="pre">str,</span> <span class="pre">prices:</span> <span class="pre">List[LabeledPrice],</span> <span class="pre">message_thread_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">max_tip_amount:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">suggested_tip_amounts:</span> <span class="pre">Optional[List[int]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">start_parameter:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">provider_data:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_url:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_size:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_width:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">photo_height:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_name:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_phone_number:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_email:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">need_shipping_address:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">send_phone_number_to_provider:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">send_email_to_provider:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">is_flexible:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">disable_notification:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">protect_content:</span> <span class="pre">Optional[Union[bool,</span> <span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;,</span> <span class="pre">reply_parameters:</span> <span class="pre">Optional[ReplyParameters]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_markup:</span> <span class="pre">Optional[InlineKeyboardMarkup]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">allow_sending_without_reply:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_to_message_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">**kwargs:</span> <span class="pre">Any</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice" title="aiogram.methods.send_invoice.SendInvoice"><span class="pre">SendInvoice</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.answer_invoice_pm"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.answer_invoice_pm" title="Link to this definition">#</a></dt>
-<dd><p>方法`aiogram.methods.send_invoice.SendInvoice`的快捷方式将自动填充方法属性：</p>
+<dd><p>方法 <a class="reference internal" href="../methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice" title="aiogram.methods.send_invoice.SendInvoice"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_invoice.SendInvoice</span></code></a> 的快捷方式将自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送发票。成功后，返回已发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>发送发票</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendinvoice">https://core.telegram.org/bots/api#sendinvoice</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>title</strong> – 产品名称，1-32个字符</p></li>
 <li><p><strong>description</strong> – 产品描述，1-255个字符</p></li>
-<li><p><strong>payload</strong> – Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.
-机器人定义的发票有效负载，1-128字节。这不会显示给用户，用于您的内部流程。</p></li>
+<li><p><strong>payload</strong> – 机器人定义的发票有效负载，1-128字节。这不会显示给用户，用于您的内部流程。</p></li>
 <li><p><strong>provider_token</strong> – 支付提供者令牌，通过 <a class="reference external" href="https://t.me/botfather">&#64;BotFather</a> 获得</p></li>
-<li><p><strong>currency</strong> – ISO 4217 货币的三字母代码，请查看有关货币的更多信息 &lt;<a class="reference external" href="https://core.telegram.org/bots/payments#supported-currencies">https://core.telegram.org/bots/payments#supported-currencies</a>&gt;</p></li>
+<li><p><strong>currency</strong> – ISO 4217 货币的三字母代码，请查看有关货币的 <a class="reference external" href="https://core.telegram.org/bots/payments#supported-currencies">更多信息</a></p></li>
 <li><p><strong>prices</strong> – 价格明细，一个 JSON 序列化的组件列表（例如产品价格，税费，折扣，送货成本，送货税，奖金等）。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>max_tip_amount</strong> – 货币的*最小单位*中所接受小费的最大金额（整数，<a href="#id1"><span class="problematic" id="id2">**</span></a>不是**浮点/双精度）。例如，对于最大小费为:code:<cite>US$ 1.45</cite>，传递:code:<cite>max_tip_amount = 145</cite>。请参阅`currencies.json &lt;<a class="reference external" href="https://core.telegram.org/bots/payments/currencies.json">https://core.telegram.org/bots/payments/currencies.json</a>&gt;`_中的*exp*参数，它显示每种货币小数点后的数字位数（大多数货币为2）。默认为0</p></li>
-<li><p><strong>suggested_tip_amounts</strong> – 以货币的 <em>最小单位</em> (整数，<strong>不是</strong> 浮点/双精度) 为单位的建议小费金额的 JSON 序列化数组。最多可以指定 4 个建议的小费金额。建议的小费金额必须是正数，严格按照增加的顺序传递，并且不得超过 <em>max_tip_amount</em>。</p></li>
-<li><p><strong>start_parameter</strong> – 唯一的深度链接参数。 如果留空，发出的消息的**转发副本**将具有一个*支付*按钮，允许多个用户直接从转发的消息中支付，使用相同的发票。 如果非空，发送的消息的转发副本将具有一个*URL*按钮，其中包含到机器人的深度链接（而不是*支付*按钮），其值将用作启动参数。</p></li>
+<li><p><strong>max_tip_amount</strong> – 货币的 <em>最小单位</em> 中所接受小费的最大金额（整数， <strong>不是</strong> 浮点/双精度）。例如，对于最大小费为 <code class="code docutils literal notranslate"><span class="pre">US$</span> <span class="pre">1.45</span></code>，传递 <code class="code docutils literal notranslate"><span class="pre">max_tip_amount</span> <span class="pre">=</span> <span class="pre">145</span></code>。请参阅 <a class="reference external" href="https://core.telegram.org/bots/payments/currencies.json">currencies.json</a> 中的 <em>exp</em> 参数，它显示每种货币小数点后的数字位数（大多数货币为2）。默认为0</p></li>
+<li><p><strong>suggested_tip_amounts</strong> – 以货币的 <em>最小单位</em> (整数，<strong>不是</strong> 浮点/双精度) 为单位的建议小费金额的 JSON 序列化数组。最多可以指定 4 个建议的小费金额。建议的小费金额必须是正数，严格按照增加的顺序传递，并且不得超过 <em>max_tip_amount</em> 。</p></li>
+<li><p><strong>start_parameter</strong> – 唯一的深度链接参数。 如果留空，发出的消息的 <strong>转发副本</strong> 将具有一个*支付*按钮，允许多个用户直接从转发的消息中支付，使用相同的发票。 如果非空，发送的消息的转发副本将具有一个 <em>URL</em> 按钮，其中包含到机器人的深度链接（而不是 <em>支付</em> 按钮），其值将用作启动参数。</p></li>
 <li><p><strong>provider_data</strong> – 关于发票的JSON序列化数据，将与支付提供商共享。支付提供商应提供所需字段的详细描述。</p></li>
 <li><p><strong>photo_url</strong> – 发票产品照片的网址。可以是商品的照片或服务的营销图片。人们在看到他们要付款的东西时会更喜欢。</p></li>
 <li><p><strong>photo_size</strong> – 以字节为单位的照片大小</p></li>
@@ -1156,10 +1144,10 @@ WebhookInfo</a></li>
 <li><p><strong>send_phone_number_to_provider</strong> – 如果用户的电话号码应该发送给提供者，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p></li>
 <li><p><strong>send_email_to_provider</strong> – 如果用户的电子邮件地址应发送给提供者，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>is_flexible</strong> – 如果最终价格取决于运输方式，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 一个JSON序列化的对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`_。如果为空，则会显示一个“支付 <code class="code docutils literal notranslate"><span class="pre">总价</span></code>”按钮。如果不为空，则第一个按钮必须是支付按钮。</p></li>
+<li><p><strong>reply_markup</strong> – 一个JSON序列化的对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>。如果为空，则会显示一个“支付 <code class="code docutils literal notranslate"><span class="pre">总价</span></code>”按钮。如果不为空，则第一个按钮必须是支付按钮。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1177,8 +1165,8 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送地图上的点。成功时，发送的:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>aiogram.types.message.Message`将会被返回。</p>
-<p>请帮我将这句话翻译成流畅、易懂的中文，不需要翻译符号包裹的部分，也不需要回复任何描述或解释，只需翻译！不需要翻译特殊变量，无需翻译的单词有 aiogram, none。 “Special variables don’t need to be translated, words that don’t need to be translated are aiogram, none. you translates to 你.” 类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），formats 不能被翻译，并且必须在前后加上空格。</p>
+<p>使用此方法发送地图上的点。成功时，发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a> 将会被返回。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendlocation">https://core.telegram.org/bots/api#sendlocation</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1186,13 +1174,13 @@ WebhookInfo</a></li>
 <li><p><strong>longitude</strong> – 位置的经度</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>horizontal_accuracy</strong> – 位置的不确定半径，单位为米；0-1500</p></li>
-<li><p><strong>live_period</strong> – 位置更新的时间段（请参阅`实时位置 &lt;<a class="reference external" href="https://telegram.org/blog/live-locations">https://telegram.org/blog/live-locations</a>&gt;`_，应该在60至86400之间）。</p></li>
+<li><p><strong>live_period</strong> – 位置更新的时间段（请参阅 <a class="reference external" href="https://telegram.org/blog/live-locations">实时位置</a>，应该在60至86400之间）。</p></li>
 <li><p><strong>heading</strong> – 对于实时位置，用户移动的方向，以度数表示。如果指定，必须在1和360之间。</p></li>
 <li><p><strong>proximity_alert_radius</strong> – 对于实时位置，关于接近另一个聊天成员的警报的最大距离，以米为单位。如果指定，必须在1到100000之间。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1210,8 +1198,8 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送地图上的点。成功时，发送的:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>aiogram.types.message.Message`将会被返回。</p>
-<p>请帮我将这句话翻译成流畅、易懂的中文，不需要翻译符号包裹的部分，也不需要回复任何描述或解释，只需翻译！不需要翻译特殊变量，无需翻译的单词有 aiogram, none。 “Special variables don’t need to be translated, words that don’t need to be translated are aiogram, none. you translates to 你.” 类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），formats 不能被翻译，并且必须在前后加上空格。</p>
+<p>使用此方法发送地图上的点。成功时，发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a> 将会被返回。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendlocation">https://core.telegram.org/bots/api#sendlocation</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1219,13 +1207,13 @@ WebhookInfo</a></li>
 <li><p><strong>longitude</strong> – 位置的经度</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>horizontal_accuracy</strong> – 位置的不确定半径，单位为米；0-1500</p></li>
-<li><p><strong>live_period</strong> – 位置更新的时间段（请参阅`实时位置 &lt;<a class="reference external" href="https://telegram.org/blog/live-locations">https://telegram.org/blog/live-locations</a>&gt;`_，应该在60至86400之间）。</p></li>
+<li><p><strong>live_period</strong> – 位置更新的时间段（请参阅 <a class="reference external" href="https://telegram.org/blog/live-locations">实时位置</a>，应该在60至86400之间）。</p></li>
 <li><p><strong>heading</strong> – 对于实时位置，用户移动的方向，以度数表示。如果指定，必须在1和360之间。</p></li>
 <li><p><strong>proximity_alert_radius</strong> – 对于实时位置，关于接近另一个聊天成员的警报的最大距离，以米为单位。如果指定，必须在1到100000之间。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1243,14 +1231,14 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用这种方法将一组照片、视频、文件或音频作为相册发送。文档和音频文件只能与相同类型的消息一起分组在相册中。成功时，将返回已发送的`消息数组&lt;<a class="reference external" href="https://core.telegram.org/bots/api#message">https://core.telegram.org/bots/api#message</a>&gt;`_。</p>
-<p>特殊变量不需要翻译，不需要翻译的词包括 aiogram、none。you 翻译为 你。类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），格式不可翻译，必须在前后加空格。</p>
+<p>使用这种方法将一组照片、视频、文件或音频作为相册发送。文档和音频文件只能与相同类型的消息一起分组在相册中。成功时，将返回已发送的 <a class="reference external" href="https://core.telegram.org/bots/api#message">消息数组</a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendmediagroup">https://core.telegram.org/bots/api#sendmediagroup</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>media</strong> – 描述要发送的消息的JSON序列化数组，必须包括2-10个项目</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息“悄悄的&lt;<a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">https://telegram.org/blog/channels-2-0#silent-messages</a>&gt;”用户将收到静音通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 用户将收到静音通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护已发送消息的内容免受转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
@@ -1270,14 +1258,14 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用这种方法将一组照片、视频、文件或音频作为相册发送。文档和音频文件只能与相同类型的消息一起分组在相册中。成功时，将返回已发送的`消息数组&lt;<a class="reference external" href="https://core.telegram.org/bots/api#message">https://core.telegram.org/bots/api#message</a>&gt;`_。</p>
-<p>特殊变量不需要翻译，不需要翻译的词包括 aiogram、none。you 翻译为 你。类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），格式不可翻译，必须在前后加空格。</p>
+<p>使用这种方法将一组照片、视频、文件或音频作为相册发送。文档和音频文件只能与相同类型的消息一起分组在相册中。成功时，将返回已发送的 <a class="reference external" href="https://core.telegram.org/bots/api#message">消息数组</a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendmediagroup">https://core.telegram.org/bots/api#sendmediagroup</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>media</strong> – 描述要发送的消息的JSON序列化数组，必须包括2-10个项目</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息“悄悄的&lt;<a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">https://telegram.org/blog/channels-2-0#silent-messages</a>&gt;”用户将收到静音通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 用户将收到静音通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护已发送消息的内容免受转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
@@ -1305,13 +1293,13 @@ WebhookInfo</a></li>
 <li><p><strong>photo</strong> – 发送的照片。将文件 ID 作为字符串传递以发送存在于 Telegram 服务器上的照片（推荐），将 HTTP URL 作为字符串传递给 Telegram 以从互联网上获取照片，或者使用 multipart/form-data 上传新照片。照片的大小不能超过 10MB。照片的宽度和高度总和不能超过10000。宽高比不能超过20。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">发送文件更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>caption</strong> – 照片说明（也可在通过 <em>file_id</em> 重新发送照片时使用），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析照片标题中实体的模式。有关更多详细信息，请参阅`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析照片标题中实体的模式。有关更多详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>has_spoiler</strong> – 如果照片需要使用遮挡动画，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1337,13 +1325,13 @@ WebhookInfo</a></li>
 <li><p><strong>photo</strong> – 发送的照片。将文件 ID 作为字符串传递以发送存在于 Telegram 服务器上的照片（推荐），将 HTTP URL 作为字符串传递给 Telegram 以从互联网上获取照片，或者使用 multipart/form-data 上传新照片。照片的大小不能超过 10MB。照片的宽度和高度总和不能超过10000。宽高比不能超过20。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">发送文件更多信息»</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>caption</strong> – 照片说明（也可在通过 <em>file_id</em> 重新发送照片时使用），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析照片标题中实体的模式。有关更多详细信息，请参阅`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析照片标题中实体的模式。有关更多详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>has_spoiler</strong> – 如果照片需要使用遮挡动画，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1357,39 +1345,38 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.answer_poll">
 <span class="sig-name descname"><span class="pre">answer_poll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">question:</span> <span class="pre">str,</span> <span class="pre">options:</span> <span class="pre">List[str],</span> <span class="pre">message_thread_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">is_anonymous:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">type:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">allows_multiple_answers:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">correct_option_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">explanation:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">explanation_parse_mode:</span> <span class="pre">Optional[Union[str,</span> <span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;,</span> <span class="pre">explanation_entities:</span> <span class="pre">Optional[List[MessageEntity]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">open_period:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">close_date:</span> <span class="pre">Optional[Union[datetime.datetime,</span> <span class="pre">datetime.timedelta,</span> <span class="pre">int]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">is_closed:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">disable_notification:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">protect_content:</span> <span class="pre">Optional[Union[bool,</span> <span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;,</span> <span class="pre">reply_parameters:</span> <span class="pre">Optional[ReplyParameters]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_markup:</span> <span class="pre">Optional[Union[InlineKeyboardMarkup,</span> <span class="pre">ReplyKeyboardMarkup,</span> <span class="pre">ReplyKeyboardRemove,</span> <span class="pre">ForceReply]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">allow_sending_without_reply:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_to_message_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">**kwargs:</span> <span class="pre">Any</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><span class="pre">SendPoll</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.answer_poll"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.answer_poll" title="Link to this definition">#</a></dt>
-<dd><p>方法:class <a href="#id1"><span class="problematic" id="id2">`</span></a>aiogram.methods.send_poll.SendPoll`的快捷方式将自动填充方法属性：</p>
+<dd><p><a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_poll.SendPoll</span></code></a> 的快捷方式将自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送原生投票。成功时，将返回发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
-<p>发送投票</p>
+<p>使用此方法发送原生投票。成功时，将返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendpoll">https://core.telegram.org/bots/api#sendpoll</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>question</strong> – 调查问题，1-300个字符</p></li>
 <li><p><strong>options</strong> – 一个包含2-10个字符串，每个字符串1-100个字符的答案选项的JSON序列化列表</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>is_anonymous</strong> – 如果需要投票匿名，请将其设置为 ：True。</p></li>
-<li><p><strong>type</strong> – 投票类型，默认为’正常’或’测验’</p></li>
-<li><p><strong>allows_multiple_answers</strong> – 如果投票允许多个答案，则为True，对于测验模式中的投票无效，默认为False。</p></li>
-<li><p><strong>correct_option_id</strong> – 0-based identifier of the correct answer option, required for polls in quiz mode
-在测验模式中，需要正确答案选项的基于0的标识符</p></li>
+<li><p><strong>is_anonymous</strong> – 如果需要投票匿名，请将其设置为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>type</strong> – 投票类型 <cite>quiz</cite> 或 <cite>regular</cite> 默认为 <cite>regular</cite></p></li>
+<li><p><strong>allows_multiple_answers</strong> – 如果投票允许多个答案，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，对于测验模式中的投票无效，默认为 <code class="code docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong>correct_option_id</strong> – 在测验模式中，需要正确答案选项的基于0的标识符</p></li>
 <li><p><strong>explanation</strong> – 当用户选择了错误答案或者在问答式投票中点击了灯泡图标时显示的文本，0-200个字符，实体解析后最多有2个换行符。</p></li>
-<li><p><strong>explanation_parse_mode</strong> – 解释中实体解析的模式。有关更多详细信息，请参阅“格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;”。</p></li>
-<li><p><strong>explanation_entities</strong> – 在投票说明中出现的特殊实体的JSON序列化列表，可以在* parse_mode <a href="#id1"><span class="problematic" id="id2">*</span></a>之外指定。</p></li>
-<li><p><strong>open_period</strong> – 创建后投票将保持活动状态的时间长度，单位为秒，范围为5-600。不可与*close_date*同时使用。</p></li>
-<li><p><strong>close_date</strong> – 在调查将自动关闭的时间点（Unix时间戳）。必须至少在未来5到600秒之间。不能与*open_period*同时使用。</p></li>
+<li><p><strong>explanation_parse_mode</strong> – 解释中实体解析的模式。有关更多详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a></p></li>
+<li><p><strong>explanation_entities</strong> – 在投票说明中出现的特殊实体的JSON序列化列表，可以在 <em>parse_mode</em> 之外指定。</p></li>
+<li><p><strong>open_period</strong> – 创建后投票将保持活动状态的时间长度，单位为秒，范围为5-600。不可与 <em>close_date</em> 同时使用。</p></li>
+<li><p><strong>close_date</strong> – 在调查将自动关闭的时间点（Unix时间戳）。必须至少在未来5到600秒之间。不能与 <em>open_period</em> 同时使用。</p></li>
 <li><p><strong>is_closed</strong> – 如果需要立即关闭投票，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。这对于预览投票很有用。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法的实例： <a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_poll.SendPoll</span></code></a></p>
+<dd class="field-even"><p>方法的实例 <a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_poll.SendPoll</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1397,39 +1384,38 @@ WebhookInfo</a></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.types.chat_join_request.ChatJoinRequest.answer_poll_pm">
 <span class="sig-name descname"><span class="pre">answer_poll_pm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">question:</span> <span class="pre">str,</span> <span class="pre">options:</span> <span class="pre">List[str],</span> <span class="pre">message_thread_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">is_anonymous:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">type:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">allows_multiple_answers:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">correct_option_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">explanation:</span> <span class="pre">Optional[str]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">explanation_parse_mode:</span> <span class="pre">Optional[Union[str,</span> <span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;,</span> <span class="pre">explanation_entities:</span> <span class="pre">Optional[List[MessageEntity]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">open_period:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">close_date:</span> <span class="pre">Optional[Union[datetime.datetime,</span> <span class="pre">datetime.timedelta,</span> <span class="pre">int]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">is_closed:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">disable_notification:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">protect_content:</span> <span class="pre">Optional[Union[bool,</span> <span class="pre">Default]]</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;,</span> <span class="pre">reply_parameters:</span> <span class="pre">Optional[ReplyParameters]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_markup:</span> <span class="pre">Optional[Union[InlineKeyboardMarkup,</span> <span class="pre">ReplyKeyboardMarkup,</span> <span class="pre">ReplyKeyboardRemove,</span> <span class="pre">ForceReply]]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">allow_sending_without_reply:</span> <span class="pre">Optional[bool]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">reply_to_message_id:</span> <span class="pre">Optional[int]</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">**kwargs:</span> <span class="pre">Any</span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><span class="pre">SendPoll</span></a></span></span><a class="reference internal" href="../../_modules/aiogram/types/chat_join_request.html#ChatJoinRequest.answer_poll_pm"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.chat_join_request.ChatJoinRequest.answer_poll_pm" title="Link to this definition">#</a></dt>
-<dd><p>方法:class <a href="#id1"><span class="problematic" id="id2">`</span></a>aiogram.methods.send_poll.SendPoll`的快捷方式将自动填充方法属性：</p>
+<dd><p><a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_poll.SendPoll</span></code></a> 的快捷方式将自动填充方法属性：</p>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送原生投票。成功时，将返回发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
-<p>发送投票</p>
+<p>使用此方法发送原生投票。成功时，将返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendpoll">https://core.telegram.org/bots/api#sendpoll</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>question</strong> – 调查问题，1-300个字符</p></li>
 <li><p><strong>options</strong> – 一个包含2-10个字符串，每个字符串1-100个字符的答案选项的JSON序列化列表</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>is_anonymous</strong> – 如果需要投票匿名，请将其设置为 ：True。</p></li>
-<li><p><strong>type</strong> – 投票类型，默认为’正常’或’测验’</p></li>
-<li><p><strong>allows_multiple_answers</strong> – 如果投票允许多个答案，则为True，对于测验模式中的投票无效，默认为False。</p></li>
-<li><p><strong>correct_option_id</strong> – 0-based identifier of the correct answer option, required for polls in quiz mode
-在测验模式中，需要正确答案选项的基于0的标识符</p></li>
+<li><p><strong>is_anonymous</strong> – 如果需要投票匿名，请将其设置为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p><strong>type</strong> – 投票类型 <cite>quiz</cite> 或 <cite>regular</cite> 默认为 <cite>regular</cite></p></li>
+<li><p><strong>allows_multiple_answers</strong> – 如果投票允许多个答案，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，对于测验模式中的投票无效，默认为 <code class="code docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong>correct_option_id</strong> – 在测验模式中，需要正确答案选项的基于0的标识符</p></li>
 <li><p><strong>explanation</strong> – 当用户选择了错误答案或者在问答式投票中点击了灯泡图标时显示的文本，0-200个字符，实体解析后最多有2个换行符。</p></li>
-<li><p><strong>explanation_parse_mode</strong> – 解释中实体解析的模式。有关更多详细信息，请参阅“格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;”。</p></li>
-<li><p><strong>explanation_entities</strong> – 在投票说明中出现的特殊实体的JSON序列化列表，可以在* parse_mode <a href="#id1"><span class="problematic" id="id2">*</span></a>之外指定。</p></li>
-<li><p><strong>open_period</strong> – 创建后投票将保持活动状态的时间长度，单位为秒，范围为5-600。不可与*close_date*同时使用。</p></li>
-<li><p><strong>close_date</strong> – 在调查将自动关闭的时间点（Unix时间戳）。必须至少在未来5到600秒之间。不能与*open_period*同时使用。</p></li>
+<li><p><strong>explanation_parse_mode</strong> – 解释中实体解析的模式。有关更多详细信息，请参阅 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a></p></li>
+<li><p><strong>explanation_entities</strong> – 在投票说明中出现的特殊实体的JSON序列化列表，可以在 <em>parse_mode</em> 之外指定。</p></li>
+<li><p><strong>open_period</strong> – 创建后投票将保持活动状态的时间长度，单位为秒，范围为5-600。不可与 <em>close_date</em> 同时使用。</p></li>
+<li><p><strong>close_date</strong> – 在调查将自动关闭的时间点（Unix时间戳）。必须至少在未来5到600秒之间。不能与 <em>open_period</em> 同时使用。</p></li>
 <li><p><strong>is_closed</strong> – 如果需要立即关闭投票，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。这对于预览投票很有用。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法的实例： <a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_poll.SendPoll</span></code></a></p>
+<dd class="field-even"><p>方法的实例 <a class="reference internal" href="../methods/send_poll.html#aiogram.methods.send_poll.SendPoll" title="aiogram.methods.send_poll.SendPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_poll.SendPoll</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1442,17 +1428,16 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送一个显示随机值的动态表情符号。如果成功，将返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>你现在是一名Python英文文件翻译大师。请帮我把这个句子或单词翻译成流畅、易懂的中文，不需要回复任何描述或解释，只需翻译！特殊变量不需要翻译，不需要翻译的词是aiogram，none。
-类似于（:class:‘dd’、:meth:‘fa’、:obj:‘false’、‘gooe’、:ref:‘wda’、<em>dsadsa</em>），格式不能被翻译，必须在前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#senddice">https://core.telegram.org/bots/api#senddice</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>emoji</strong> – 基于骰子扔动画的表情符号。目前，必须是其中之一：’🎲’、’🎯’、’🏀’、’⚽’、’🎳’或’🎰’。对于’🎲’、’🎯’和’🎳’来说，骰子可以有1-6的值，对于’🏀’和’⚽’来说，值为1-5，对于’🎰’来说，值为1-64。默认为’🎲’。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护发送消息的内容不被转发</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1471,17 +1456,16 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送一个显示随机值的动态表情符号。如果成功，将返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>你现在是一名Python英文文件翻译大师。请帮我把这个句子或单词翻译成流畅、易懂的中文，不需要回复任何描述或解释，只需翻译！特殊变量不需要翻译，不需要翻译的词是aiogram，none。
-类似于（:class:‘dd’、:meth:‘fa’、:obj:‘false’、‘gooe’、:ref:‘wda’、<em>dsadsa</em>），格式不能被翻译，必须在前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#senddice">https://core.telegram.org/bots/api#senddice</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>emoji</strong> – 基于骰子扔动画的表情符号。目前，必须是其中之一：’🎲’、’🎯’、’🏀’、’⚽’、’🎳’或’🎰’。对于’🎲’、’🎯’和’🎳’来说，骰子可以有1-6的值，对于’🏀’和’⚽’来说，值为1-5，对于’🎰’来说，值为1-64。默认为’🎲’。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护发送消息的内容不被转发</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1499,18 +1483,18 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送静态.WEBP、<a href="#id119"><span class="problematic" id="id120">`动画&lt;https://telegram.org/blog/animated-stickers&gt;`_</span></a> .TGS或`视频&lt;<a class="reference external" href="https://telegram.org/blog/video-stickers-better-reactions">https://telegram.org/blog/video-stickers-better-reactions</a>&gt;`_ .WEBM贴纸。成功发送后，返回发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
-<p>发送一个指定的贴纸。 On the Source page, if you change the language to Chinese, the translation is already provided.</p>
+<p>使用此方法发送静态.WEBP、 <a class="reference external" href="https://telegram.org/blog/animated-stickers">动画</a> .TGS或 <a class="reference external" href="https://telegram.org/blog/video-stickers-better-reactions">视频</a> .WEBM贴纸。成功发送后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendsticker">https://core.telegram.org/bots/api#sendsticker</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sticker</strong> – 发送贴纸。传递文件ID作为字符串以发送存在于Telegram服务器上的文件（推荐），传递HTTP URL作为字符串以让Telegram从互联网上获取.WEBP格式的贴纸，或使用multipart/form-data上传新的.WEBP或.TGS贴纸。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a>。视频贴纸只能通过文件ID发送。动画贴纸不能通过HTTP URL发送。</p></li>
+<li><p><strong>sticker</strong> – 发送贴纸。传递文件ID作为字符串以发送存在于Telegram服务器上的文件（推荐），传递HTTP URL作为字符串以让Telegram从互联网上获取.WEBP格式的贴纸，或使用multipart/form-data上传新的.WEBP或.TGS贴纸。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a> 。视频贴纸只能通过文件ID发送。动画贴纸不能通过HTTP URL发送。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>emoji</strong> – 与贴纸相关联的Emoji；仅适用于刚上传的贴纸</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1528,18 +1512,18 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用此方法发送静态.WEBP、<a href="#id121"><span class="problematic" id="id122">`动画&lt;https://telegram.org/blog/animated-stickers&gt;`_</span></a> .TGS或`视频&lt;<a class="reference external" href="https://telegram.org/blog/video-stickers-better-reactions">https://telegram.org/blog/video-stickers-better-reactions</a>&gt;`_ .WEBM贴纸。成功发送后，返回发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
-<p>发送一个指定的贴纸。 On the Source page, if you change the language to Chinese, the translation is already provided.</p>
+<p>使用此方法发送静态.WEBP、 <a class="reference external" href="https://telegram.org/blog/animated-stickers">动画</a> .TGS或 <a class="reference external" href="https://telegram.org/blog/video-stickers-better-reactions">视频</a> .WEBM贴纸。成功发送后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendsticker">https://core.telegram.org/bots/api#sendsticker</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sticker</strong> – 发送贴纸。传递文件ID作为字符串以发送存在于Telegram服务器上的文件（推荐），传递HTTP URL作为字符串以让Telegram从互联网上获取.WEBP格式的贴纸，或使用multipart/form-data上传新的.WEBP或.TGS贴纸。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a>。视频贴纸只能通过文件ID发送。动画贴纸不能通过HTTP URL发送。</p></li>
+<li><p><strong>sticker</strong> – 发送贴纸。传递文件ID作为字符串以发送存在于Telegram服务器上的文件（推荐），传递HTTP URL作为字符串以让Telegram从互联网上获取.WEBP格式的贴纸，或使用multipart/form-data上传新的.WEBP或.TGS贴纸。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a> 。视频贴纸只能通过文件ID发送。动画贴纸不能通过HTTP URL发送。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>emoji</strong> – 与贴纸相关联的Emoji；仅适用于刚上传的贴纸</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1558,7 +1542,7 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用这种方法发送有关场馆的信息。成功时，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>发送一个地点</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvenue">https://core.telegram.org/bots/api#sendvenue</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1567,14 +1551,14 @@ WebhookInfo</a></li>
 <li><p><strong>title</strong> – 场馆名称</p></li>
 <li><p><strong>address</strong> – 场馆地址</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>foursquare_id</strong> – 应该是：场馆的Foursquare标识符</p></li>
+<li><p><strong>foursquare_id</strong> – 场馆的Foursquare标识符</p></li>
 <li><p><strong>foursquare_type</strong> – 场馆的Foursquare类型，如果已知。（例如，’arts_entertainment/default’，’arts_entertainment/aquarium’或’food/icecream’。）</p></li>
 <li><p><strong>google_place_id</strong> – 场馆的Google Places标识符</p></li>
-<li><p><strong>google_place_type</strong> – Google Places场馆类型。 (请参阅`支持的类型&lt;<a class="reference external" href="https://developers.google.com/places/web-service/supported_types">https://developers.google.com/places/web-service/supported_types</a>&gt;`_.)</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>google_place_type</strong> – Google Places场馆类型。 (请参阅 <a class="reference external" href="https://developers.google.com/places/web-service/supported_types">支持的类型</a>.)</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1593,7 +1577,7 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用这种方法发送有关场馆的信息。成功时，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
-<p>发送一个地点</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvenue">https://core.telegram.org/bots/api#sendvenue</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -1602,14 +1586,14 @@ WebhookInfo</a></li>
 <li><p><strong>title</strong> – 场馆名称</p></li>
 <li><p><strong>address</strong> – 场馆地址</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
-<li><p><strong>foursquare_id</strong> – 应该是：场馆的Foursquare标识符</p></li>
+<li><p><strong>foursquare_id</strong> – 场馆的Foursquare标识符</p></li>
 <li><p><strong>foursquare_type</strong> – 场馆的Foursquare类型，如果已知。（例如，’arts_entertainment/default’，’arts_entertainment/aquarium’或’food/icecream’。）</p></li>
 <li><p><strong>google_place_id</strong> – 场馆的Google Places标识符</p></li>
-<li><p><strong>google_place_type</strong> – Google Places场馆类型。 (请参阅`支持的类型&lt;<a class="reference external" href="https://developers.google.com/places/web-service/supported_types">https://developers.google.com/places/web-service/supported_types</a>&gt;`_.)</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>google_place_type</strong> – Google Places场馆类型。 (请参阅 <a class="reference external" href="https://developers.google.com/places/web-service/supported_types">支持的类型</a>.)</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1627,32 +1611,32 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用这种方法来发送视频文件，Telegram客户端支持MPEG4视频（其他格式可能被发送为:class:<cite>aiogram.types.document.Document</cite>）。成功后，将返回发送的:class:<cite>aiogram.types.message.Message</cite>。机器人目前可以发送最大为50MB的视频文件，这个限制可能会在将来更改。</p>
-<p>你是一位Python英文文件翻译大师。请帮我将这句话或单词翻译成流畅、易懂的中文，不需要任何拼音，被符号包裹的部分不需要翻译，不需要用任何描述或解释回复，只需要翻译！特殊变量不需要翻译，无需翻译的词是aiogram、none。</p>
+<p>使用这种方法来发送视频文件，Telegram客户端支持MPEG4视频（其他格式可能被发送为 <a class="reference internal" href="document.html#aiogram.types.document.Document" title="aiogram.types.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.document.Document</span></code></a>）。成功后，将返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。机器人目前可以发送最大为50MB的视频文件，这个限制可能会在将来更改。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvideo">https://core.telegram.org/bots/api#sendvideo</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>video</strong> – 发送视频。传递文件ID作为字符串以发送存在于Telegram服务器上的视频（建议），传递HTTP URL作为字符串以让Telegram从互联网获取视频，或者使用multipart/form-data上传新的视频。 有关发送文件的更多信息，请参阅：发送文件。</p></li>
+<li><p><strong>video</strong> – 发送视频。传递文件ID作为字符串以发送存在于Telegram服务器上的视频（建议），传递HTTP URL作为字符串以让Telegram从互联网获取视频，或者使用multipart/form-data上传新的视频。 有关发送文件的更多信息，请参阅 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">发送文件</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>duration</strong> – 发送视频的持续时间（以秒为单位）</p></li>
 <li><p><strong>width</strong> – 视频宽度</p></li>
 <li><p><strong>height</strong> – 视频高度</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>caption</strong> – 视频字幕（在使用 <em>file_id</em> 重新发送视频时也可使用），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析视频字幕中实体的模式。有关更多详细信息，请参见`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析视频字幕中实体的模式。有关更多详细信息，请参见 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>has_spoiler</strong> – 如果视频需要用剧透动画覆盖，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>supports_streaming</strong> – 如果上传的视频适合流媒体，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法的实例：<a class="reference internal" href="../methods/send_video.html#aiogram.methods.send_video.SendVideo" title="aiogram.methods.send_video.SendVideo"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_video.SendVideo</span></code></a></p>
+<dd class="field-even"><p>方法的实例 <a class="reference internal" href="../methods/send_video.html#aiogram.methods.send_video.SendVideo" title="aiogram.methods.send_video.SendVideo"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_video.SendVideo</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1664,32 +1648,32 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>使用这种方法来发送视频文件，Telegram客户端支持MPEG4视频（其他格式可能被发送为:class:<cite>aiogram.types.document.Document</cite>）。成功后，将返回发送的:class:<cite>aiogram.types.message.Message</cite>。机器人目前可以发送最大为50MB的视频文件，这个限制可能会在将来更改。</p>
-<p>你是一位Python英文文件翻译大师。请帮我将这句话或单词翻译成流畅、易懂的中文，不需要任何拼音，被符号包裹的部分不需要翻译，不需要用任何描述或解释回复，只需要翻译！特殊变量不需要翻译，无需翻译的词是aiogram、none。</p>
+<p>使用这种方法来发送视频文件，Telegram客户端支持MPEG4视频（其他格式可能被发送为 <a class="reference internal" href="document.html#aiogram.types.document.Document" title="aiogram.types.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.document.Document</span></code></a>）。成功后，将返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。机器人目前可以发送最大为50MB的视频文件，这个限制可能会在将来更改。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvideo">https://core.telegram.org/bots/api#sendvideo</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>video</strong> – 发送视频。传递文件ID作为字符串以发送存在于Telegram服务器上的视频（建议），传递HTTP URL作为字符串以让Telegram从互联网获取视频，或者使用multipart/form-data上传新的视频。 有关发送文件的更多信息，请参阅：发送文件。</p></li>
+<li><p><strong>video</strong> – 发送视频。传递文件ID作为字符串以发送存在于Telegram服务器上的视频（建议），传递HTTP URL作为字符串以让Telegram从互联网获取视频，或者使用multipart/form-data上传新的视频。 有关发送文件的更多信息，请参阅 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">发送文件</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>duration</strong> – 发送视频的持续时间（以秒为单位）</p></li>
 <li><p><strong>width</strong> – 视频宽度</p></li>
 <li><p><strong>height</strong> – 视频高度</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
 <li><p><strong>caption</strong> – 视频字幕（在使用 <em>file_id</em> 重新发送视频时也可使用），实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析视频字幕中实体的模式。有关更多详细信息，请参见`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析视频字幕中实体的模式。有关更多详细信息，请参见 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>has_spoiler</strong> – 如果视频需要用剧透动画覆盖，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>supports_streaming</strong> – 如果上传的视频适合流媒体，请传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>方法的实例：<a class="reference internal" href="../methods/send_video.html#aiogram.methods.send_video.SendVideo" title="aiogram.methods.send_video.SendVideo"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_video.SendVideo</span></code></a></p>
+<dd class="field-even"><p>方法的实例 <a class="reference internal" href="../methods/send_video.html#aiogram.methods.send_video.SendVideo" title="aiogram.methods.send_video.SendVideo"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_video.SendVideo</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1701,20 +1685,20 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>截至“v.4.0 &lt;<a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">https://telegram.org/blog/video-messages-and-telescope</a>&gt;”为止，Telegram客户端支持最长1分钟的圆角方形MPEG4视频。使用此方法发送视频消息。成功后，返回发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
+<p>截至 <a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a> 为止，Telegram客户端支持最长1分钟的圆角方形MPEG4视频。使用此方法发送视频消息。成功后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
 <p>发送视频注释</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>video_note</strong> – 发送视频笔记。将文件ID作为字符串传递，发送存在于Telegram服务器上的视频笔记（推荐）或使用multipart/form-data上传新视频。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a>。目前不支持通过URL发送视频笔记。</p></li>
+<li><p><strong>video_note</strong> – 发送视频笔记。将文件ID作为字符串传递，发送存在于Telegram服务器上的视频笔记（推荐）或使用multipart/form-data上传新视频。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a> 。目前不支持通过URL发送视频笔记。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>duration</strong> – 发送视频的持续时间（以秒为单位）</p></li>
 <li><p><strong>length</strong> – 视频宽度和高度，即视频消息的直径</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1732,20 +1716,20 @@ WebhookInfo</a></li>
 <ul class="simple">
 <li><p>聊天ID</p></li>
 </ul>
-<p>截至“v.4.0 &lt;<a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">https://telegram.org/blog/video-messages-and-telescope</a>&gt;”为止，Telegram客户端支持最长1分钟的圆角方形MPEG4视频。使用此方法发送视频消息。成功后，返回发送的:class:<cite>aiogram.types.message.Message</cite>。</p>
+<p>截至 <a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a> 为止，Telegram客户端支持最长1分钟的圆角方形MPEG4视频。使用此方法发送视频消息。成功后，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
 <p>发送视频注释</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>video_note</strong> – 发送视频笔记。将文件ID作为字符串传递，发送存在于Telegram服务器上的视频笔记（推荐）或使用multipart/form-data上传新视频。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a>。目前不支持通过URL发送视频笔记。</p></li>
+<li><p><strong>video_note</strong> – 发送视频笔记。将文件ID作为字符串传递，发送存在于Telegram服务器上的视频笔记（推荐）或使用multipart/form-data上传新视频。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a> 。目前不支持通过URL发送视频笔记。</p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>duration</strong> – 发送视频的持续时间（以秒为单位）</p></li>
 <li><p><strong>length</strong> – 视频宽度和高度，即视频消息的直径</p></li>
-<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 ‘attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>thumbnail</strong> – 发送文件的缩略图；如果文件的缩略图在服务器端生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件不是使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此，如果缩略图是使用multipart/form-data上传的，可以传递 <cite>attach://&lt;file_attach_name&gt;</cite> 。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1764,20 +1748,20 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送音频文件，如果您希望Telegram客户端以可播放的语音消息显示文件。为使此方法有效，您的音频必须是使用OPUS编码的.OGG文件（其他格式可能被发送为 <a class="reference internal" href="audio.html#aiogram.types.audio.Audio" title="aiogram.types.audio.Audio"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.audio.Audio</span></code></a> 或 <a class="reference internal" href="document.html#aiogram.types.document.Document" title="aiogram.types.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.document.Document</span></code></a>）。发送成功时，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。目前，机器人可以发送最多50MB的语音消息，这一限制可能会在未来更改。</p>
-<p>请帮我将以下文本翻译成流畅易懂的中文，不需要翻译符号内的部分。不需要回复任何描述或解释，只需要翻译！特殊变量无需翻译，不需要翻译的词有aiogram, none。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvoice">https://core.telegram.org/bots/api#sendvoice</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>voice</strong> – 发送的音频文件。传递文件ID作为字符串以发送存在于Telegram服务器上的文件（推荐），传递一个HTTP URL作为字符串以让Telegram从互联网获取文件，或者使用multipart/form-data上传一个新文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>caption</strong> – 语音消息说明，实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析语音消息标题中实体的模式。有关更多细节，请参见`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析语音消息标题中实体的模式。有关更多细节，请参见 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>duration</strong> – 语音留言的持续时间（秒）</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1796,20 +1780,20 @@ WebhookInfo</a></li>
 <li><p>聊天ID</p></li>
 </ul>
 <p>使用此方法发送音频文件，如果您希望Telegram客户端以可播放的语音消息显示文件。为使此方法有效，您的音频必须是使用OPUS编码的.OGG文件（其他格式可能被发送为 <a class="reference internal" href="audio.html#aiogram.types.audio.Audio" title="aiogram.types.audio.Audio"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.audio.Audio</span></code></a> 或 <a class="reference internal" href="document.html#aiogram.types.document.Document" title="aiogram.types.document.Document"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.document.Document</span></code></a>）。发送成功时，返回发送的 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。目前，机器人可以发送最多50MB的语音消息，这一限制可能会在未来更改。</p>
-<p>请帮我将以下文本翻译成流畅易懂的中文，不需要翻译符号内的部分。不需要回复任何描述或解释，只需要翻译！特殊变量无需翻译，不需要翻译的词有aiogram, none。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvoice">https://core.telegram.org/bots/api#sendvoice</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>voice</strong> – 发送的音频文件。传递文件ID作为字符串以发送存在于Telegram服务器上的文件（推荐），传递一个HTTP URL作为字符串以让Telegram从互联网获取文件，或者使用multipart/form-data上传一个新文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a></p></li>
 <li><p><strong>message_thread_id</strong> – 仅适用于论坛超级群的目标消息主题的唯一标识符</p></li>
 <li><p><strong>caption</strong> – 语音消息说明，实体解析后0-1024个字符</p></li>
-<li><p><strong>parse_mode</strong> – 解析语音消息标题中实体的模式。有关更多细节，请参见`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p></li>
+<li><p><strong>parse_mode</strong> – 解析语音消息标题中实体的模式。有关更多细节，请参见 <a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">格式选项</a>。</p></li>
 <li><p><strong>caption_entities</strong> – 一个JSON序列化的特殊实体列表，出现在标题中，可以指定代替 <em>parse_mode</em></p></li>
 <li><p><strong>duration</strong> – 语音留言的持续时间（秒）</p></li>
-<li><p><strong>disable_notification</strong> – 发送消息 <code class="docutils literal notranslate"><span class="pre">silently</span> <span class="pre">&lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;</span></code>。用户将收到无声的通知。</p></li>
+<li><p><strong>disable_notification</strong> – 发送消息 <a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>。用户将收到无声的通知。</p></li>
 <li><p><strong>protect_content</strong> – 保护所发送消息的内容，防止被转发和保存</p></li>
 <li><p><strong>reply_parameters</strong> – 回复消息的描述</p></li>
-<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于`内联键盘&lt;<a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">https://core.telegram.org/bots/features#inline-keyboards</a>&gt;`，<cite>自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;</cite>，删除回复键盘的指令或强制用户回复的指令。</p></li>
+<li><p><strong>reply_markup</strong> – 额外的界面选项。一个JSON序列化对象，用于 <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">内联键盘</a>， <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">自定义回复键盘</a>，删除回复键盘的指令或强制用户回复的指令。</p></li>
 <li><p><strong>allow_sending_without_reply</strong> – 如果消息应该发送，即使找不到指定的回复消息，就传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p></li>
 <li><p><strong>reply_to_message_id</strong> – 如果消息是回复，则为原始消息的ID</p></li>
 </ul>
@@ -1879,7 +1863,7 @@ WebhookInfo</a></li>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">加入聊天请求</a><ul>
+<li><a class="reference internal" href="#">聊天加入请求</a><ul>
 <li><a class="reference internal" href="#aiogram.types.chat_join_request.ChatJoinRequest"><code class="docutils literal notranslate"><span class="pre">ChatJoinRequest</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.types.chat_join_request.ChatJoinRequest.chat"><code class="docutils literal notranslate"><span class="pre">ChatJoinRequest.chat</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.chat_join_request.ChatJoinRequest.from_user"><code class="docutils literal notranslate"><span class="pre">ChatJoinRequest.from_user</span></code></a></li>

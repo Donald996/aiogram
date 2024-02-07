@@ -161,11 +161,11 @@
 <li class="toctree-l1"><a class="reference internal" href="migration_2_to_3.html">迁移常见问题解答（2.x -&gt; 3.0）</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="api/index.html">Bot API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/bot.html">机器人</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/session/index.html">客户端会话</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端会话</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/session/index.html">客户端</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/session/custom_server.html">使用自定义 API 服务器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/session/base.html">基本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/session/aiohttp.html">aiohttp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/session/middleware.html">客户端会话中间件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/session/middleware.html">客户端中间件</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -186,42 +186,37 @@
 <li class="toctree-l3"><a class="reference internal" href="api/types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost.html">聊天助推</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_removed.html">ChatBoostRemoved</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source.html">聊天增强源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_gift_code.html">聊天增强源礼品编码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_giveaway.html">ChatBoostSourceGiveaway
-ChatBoostSourceGiveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_premium.html">ChatBoostSourcePremium
-ChatBoostSourcePremium</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_updated.html">ChatBoostUpdated 增强聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost.html">聊天助力添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_removed.html">聊天助力移除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source.html">聊天助力来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_invite_link.html">聊天邀请链接</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_join_request.html">加入聊天请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_location.html">聊天位置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_member.html">聊天成员(object)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_administrator.html">聊天成员管理员</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_banned.html">ChatMemberBanned</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_left.html">ChatMemberLeft
-群成员离开</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_member.html">ChatMemberMember
-成员</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_owner.html">ChatMemberOwner
-群组成员拥有者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_banned.html">聊天成员被封禁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_left.html">聊天成员已离开</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_member.html">聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_owner.html">聊天创建者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_restricted.html">聊天成员限制</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_member_updated.html">聊天成员状态</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_permissions.html">聊天权限</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_photo.html">聊天图片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_shared.html">聊天分享</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/contact.html">联系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/contact.html">联系人</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/dice.html">骰子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/document.html">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/document.html">文档</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/external_reply_info.html">外部回复信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/file.html">文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/force_reply.html">强制回复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic.html">论坛主题</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic_closed.html">论坛主题已关闭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic.html">论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic_closed.html">论坛话题已关闭</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic_created.html">论坛话题已创建</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic_edited.html">论坛话题编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic_edited.html">论坛话题已编辑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
@@ -238,9 +233,8 @@ ChatBoostSourcePremium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/input_media_audio.html">输入媒体音频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/input_media_document.html">输入媒体文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/input_media_photo.html">输入媒体照片</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/input_media_video.html">InputMediaVideo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button.html">KeyboardButton
-键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/input_media_video.html">输入媒体视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button.html">键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button_request_user.html">键盘按钮请求用户</a></li>
@@ -293,9 +287,8 @@ ChatBoostSourcePremium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/video_chat_started.html">视频聊天已开始</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/video_note.html">视频笔记</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/voice.html">声音</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/web_app_data.html">WebAppData  网络应用数据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/web_app_info.html">WebAppInfo
-WebAppInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/web_app_data.html">小程序数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/web_app_info.html">小程序信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/write_access_allowed.html">写入访问被允许</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chosen_inline_result.html">选择内联结果</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/inline_query.html">行内查询</a></li>
@@ -332,8 +325,8 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/mask_position.html">遮罩位置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/sticker.html">贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/sticker_set.html">贴纸集</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/encrypted_credentials.html">加密凭据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/encrypted_passport_element.html">加密护照要素</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/encrypted_credentials.html">护照加密凭据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/encrypted_passport_element.html">护照加密要素</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_data.html">护照数据</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error.html">护照元素错误</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_data_field.html">护照元素错误数据字段</a></li>
@@ -342,8 +335,7 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_front_side.html">护照元素错误-正面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_reverse_side.html">护照元素错误反面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_selfie.html">护照要素错误自拍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_translation_file.html">PassportElementErrorTranslationFile
-护照元素错误翻译文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_translation_file.html">护照元素错误翻译文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_translation_files.html">护照元素错误翻译文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_element_error_unspecified.html">护照元素错误未指定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/passport_file.html">护照文件</a></li>
@@ -353,11 +345,10 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/pre_checkout_query.html">预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/shipping_option.html">运输选项</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/shipping_query.html">ShippingQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/shipping_query.html">查询运输</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/successful_payment.html">成功支付</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/update.html">更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/types/webhook_info.html">WebhookInfo
-WebhookInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/callback_game.html">回调游戏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/game.html">游戏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/game_high_score.html">游戏最高分</a></li>
@@ -497,7 +488,7 @@ WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/encrypted_passport_element.html">加密护照元素</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/inline_query_result_type.html">内联查询结果类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/input_media_type.html">输入媒体类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/enums/keyboard_button_poll_type.html">KeyboardButtonPollType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/enums/keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/mask_position_point.html">遮罩位置点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/menu_button_type.html">菜单按钮类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/message_entity_type.html">消息实体类型</a></li>

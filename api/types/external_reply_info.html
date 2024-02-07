@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="文件" href="file.html" /><link rel="prev" title="文件" href="document.html" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="文件" href="file.html" /><link rel="prev" title="文档" href="document.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>外部回复信息 - aiogram 3.4.0 文档</title>
@@ -164,11 +164,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../migration_2_to_3.html">迁移常见问题解答（2.x -&gt; 3.0）</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Bot API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../bot.html">机器人</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../session/index.html">客户端会话</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端会话</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../session/index.html">客户端</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../session/custom_server.html">使用自定义 API 服务器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../session/base.html">基本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../session/aiohttp.html">aiohttp</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../session/middleware.html">客户端会话中间件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../session/middleware.html">客户端中间件</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">类型</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -189,42 +189,37 @@
 <li class="toctree-l3"><a class="reference internal" href="callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_administrator_rights.html">聊天管理员权限</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost.html">聊天助推</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">ChatBoostRemoved</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天增强源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天增强源礼品编码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">ChatBoostSourceGiveaway
-ChatBoostSourceGiveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">ChatBoostSourcePremium
-ChatBoostSourcePremium</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">ChatBoostUpdated 增强聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost.html">聊天助力添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">加入聊天请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">ChatMemberBanned</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">ChatMemberLeft
-群成员离开</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_member.html">ChatMemberMember
-成员</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member_owner.html">ChatMemberOwner
-群组成员拥有者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_member.html">聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member_owner.html">聊天创建者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_restricted.html">聊天成员限制</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_updated.html">聊天成员状态</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_permissions.html">聊天权限</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_photo.html">聊天图片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_shared.html">聊天分享</a></li>
-<li class="toctree-l3"><a class="reference internal" href="contact.html">联系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="contact.html">联系人</a></li>
 <li class="toctree-l3"><a class="reference internal" href="dice.html">骰子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="document.html">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="document.html">文档</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">外部回复信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="file.html">文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="force_reply.html">强制回复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forum_topic.html">论坛主题</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forum_topic_closed.html">论坛主题已关闭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic.html">论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_closed.html">论坛话题已关闭</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_created.html">论坛话题已创建</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forum_topic_edited.html">论坛话题编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="forum_topic_edited.html">论坛话题已编辑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
@@ -241,9 +236,8 @@ ChatBoostSourcePremium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_audio.html">输入媒体音频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_document.html">输入媒体文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
-<li class="toctree-l3"><a class="reference internal" href="input_media_video.html">InputMediaVideo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">KeyboardButton
-键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
@@ -296,9 +290,8 @@ ChatBoostSourcePremium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="video_chat_started.html">视频聊天已开始</a></li>
 <li class="toctree-l3"><a class="reference internal" href="video_note.html">视频笔记</a></li>
 <li class="toctree-l3"><a class="reference internal" href="voice.html">声音</a></li>
-<li class="toctree-l3"><a class="reference internal" href="web_app_data.html">WebAppData  网络应用数据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="web_app_info.html">WebAppInfo
-WebAppInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_app_data.html">小程序数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_app_info.html">小程序信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="write_access_allowed.html">写入访问被允许</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chosen_inline_result.html">选择内联结果</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_query.html">行内查询</a></li>
@@ -335,8 +328,8 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mask_position.html">遮罩位置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sticker.html">贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sticker_set.html">贴纸集</a></li>
-<li class="toctree-l3"><a class="reference internal" href="encrypted_credentials.html">加密凭据</a></li>
-<li class="toctree-l3"><a class="reference internal" href="encrypted_passport_element.html">加密护照要素</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encrypted_credentials.html">护照加密凭据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="encrypted_passport_element.html">护照加密要素</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_data.html">护照数据</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error.html">护照元素错误</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_data_field.html">护照元素错误数据字段</a></li>
@@ -345,8 +338,7 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_front_side.html">护照元素错误-正面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_reverse_side.html">护照元素错误反面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_selfie.html">护照要素错误自拍</a></li>
-<li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_file.html">PassportElementErrorTranslationFile
-护照元素错误翻译文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_file.html">护照元素错误翻译文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_translation_files.html">护照元素错误翻译文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_element_error_unspecified.html">护照元素错误未指定</a></li>
 <li class="toctree-l3"><a class="reference internal" href="passport_file.html">护照文件</a></li>
@@ -356,11 +348,10 @@ WebAppInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pre_checkout_query.html">预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_option.html">运输选项</a></li>
-<li class="toctree-l3"><a class="reference internal" href="shipping_query.html">ShippingQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shipping_query.html">查询运输</a></li>
 <li class="toctree-l3"><a class="reference internal" href="successful_payment.html">成功支付</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update.html">更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="webhook_info.html">WebhookInfo
-WebhookInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="callback_game.html">回调游戏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="game.html">游戏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="game_high_score.html">游戏最高分</a></li>
@@ -500,7 +491,7 @@ WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/encrypted_passport_element.html">加密护照元素</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/inline_query_result_type.html">内联查询结果类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/input_media_type.html">输入媒体类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../enums/keyboard_button_poll_type.html">KeyboardButtonPollType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/mask_position_point.html">遮罩位置点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/menu_button_type.html">菜单按钮类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/message_entity_type.html">消息实体类型</a></li>
@@ -610,7 +601,7 @@ WebhookInfo</a></li>
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.external_reply_info.</span></span><span class="sig-name descname"><span class="pre">ExternalReplyInfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="message_origin_user.html#aiogram.types.message_origin_user.MessageOriginUser" title="aiogram.types.message_origin_user.MessageOriginUser"><span class="pre">MessageOriginUser</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="message_origin_hidden_user.html#aiogram.types.message_origin_hidden_user.MessageOriginHiddenUser" title="aiogram.types.message_origin_hidden_user.MessageOriginHiddenUser"><span class="pre">MessageOriginHiddenUser</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="message_origin_chat.html#aiogram.types.message_origin_chat.MessageOriginChat" title="aiogram.types.message_origin_chat.MessageOriginChat"><span class="pre">MessageOriginChat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="message_origin_channel.html#aiogram.types.message_origin_channel.MessageOriginChannel" title="aiogram.types.message_origin_channel.MessageOriginChannel"><span class="pre">MessageOriginChannel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="chat.html#aiogram.types.chat.Chat" title="aiogram.types.chat.Chat"><span class="pre">Chat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_preview_options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="link_preview_options.html#aiogram.types.link_preview_options.LinkPreviewOptions" title="aiogram.types.link_preview_options.LinkPreviewOptions"><span class="pre">LinkPreviewOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">animation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="animation.html#aiogram.types.animation.Animation" title="aiogram.types.animation.Animation"><span class="pre">Animation</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="audio.html#aiogram.types.audio.Audio" title="aiogram.types.audio.Audio"><span class="pre">Audio</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="document.html#aiogram.types.document.Document" title="aiogram.types.document.Document"><span class="pre">Document</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">photo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="photo_size.html#aiogram.types.photo_size.PhotoSize" title="aiogram.types.photo_size.PhotoSize"><span class="pre">PhotoSize</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sticker</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sticker.html#aiogram.types.sticker.Sticker" title="aiogram.types.sticker.Sticker"><span class="pre">Sticker</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">story</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="story.html#aiogram.types.story.Story" title="aiogram.types.story.Story"><span class="pre">Story</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="video.html#aiogram.types.video.Video" title="aiogram.types.video.Video"><span class="pre">Video</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_note</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="video_note.html#aiogram.types.video_note.VideoNote" title="aiogram.types.video_note.VideoNote"><span class="pre">VideoNote</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voice</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="voice.html#aiogram.types.voice.Voice" title="aiogram.types.voice.Voice"><span class="pre">Voice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_media_spoiler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="contact.html#aiogram.types.contact.Contact" title="aiogram.types.contact.Contact"><span class="pre">Contact</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dice</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dice.html#aiogram.types.dice.Dice" title="aiogram.types.dice.Dice"><span class="pre">Dice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="game.html#aiogram.types.game.Game" title="aiogram.types.game.Game"><span class="pre">Game</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">giveaway</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="giveaway.html#aiogram.types.giveaway.Giveaway" title="aiogram.types.giveaway.Giveaway"><span class="pre">Giveaway</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">giveaway_winners</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="giveaway_winners.html#aiogram.types.giveaway_winners.GiveawayWinners" title="aiogram.types.giveaway_winners.GiveawayWinners"><span class="pre">GiveawayWinners</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invoice</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="invoice.html#aiogram.types.invoice.Invoice" title="aiogram.types.invoice.Invoice"><span class="pre">Invoice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="location.html#aiogram.types.location.Location" title="aiogram.types.location.Location"><span class="pre">Location</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poll</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="poll.html#aiogram.types.poll.Poll" title="aiogram.types.poll.Poll"><span class="pre">Poll</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">venue</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="venue.html#aiogram.types.venue.Venue" title="aiogram.types.venue.Venue"><span class="pre">Venue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/external_reply_info.html#ExternalReplyInfo"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo" title="Link to this definition">#</a></dt>
 <dd><p>这个对象包含有关正在回复的消息的信息，该消息可能来自另一个聊天或论坛主题。</p>
-<p>请帮我将这句话或单词翻译成流畅、易懂的中文，不需要拼音，被符号包裹的部分不需要翻译，不需要回复任何描述或解释，只需要翻译！特殊变量不需要翻译，无需翻译的单词是aiogram，none。您翻译成你。类似于（ <code class="xref py py-class docutils literal notranslate"><span class="pre">dd</span></code>、<code class="xref py py-meth docutils literal notranslate"><span class="pre">fa()</span></code>、<code class="xref py py-obj docutils literal notranslate"><span class="pre">false</span></code>、<cite>gooe</cite> 、 <span class="xref std std-ref">wda</span>、 <em>dsadsa</em> ），格式不能被翻译，必须在前后加上空格。</p>
+<p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#externalreplyinfo">https://core.telegram.org/bots/api#externalreplyinfo</a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.origin">
 <span class="sig-name descname"><span class="pre">origin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="message_origin_user.html#aiogram.types.message_origin_user.MessageOriginUser" title="aiogram.types.message_origin_user.MessageOriginUser"><span class="pre">MessageOriginUser</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="message_origin_hidden_user.html#aiogram.types.message_origin_hidden_user.MessageOriginHiddenUser" title="aiogram.types.message_origin_hidden_user.MessageOriginHiddenUser"><span class="pre">MessageOriginHiddenUser</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="message_origin_chat.html#aiogram.types.message_origin_chat.MessageOriginChat" title="aiogram.types.message_origin_chat.MessageOriginChat"><span class="pre">MessageOriginChat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="message_origin_channel.html#aiogram.types.message_origin_channel.MessageOriginChannel" title="aiogram.types.message_origin_channel.MessageOriginChannel"><span class="pre">MessageOriginChannel</span></a></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.origin" title="Link to this definition">#</a></dt>
@@ -644,22 +635,19 @@ WebhookInfo</a></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.audio">
 <span class="sig-name descname"><span class="pre">audio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="audio.html#aiogram.types.audio.Audio" title="aiogram.types.audio.Audio"><span class="pre">Audio</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.audio" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is an audio file, information about the file.
-<em>可选</em>。消息是一个音频文件，有关文件的信息。</p>
+<dd><p><em>可选</em>。消息是一个音频文件，有关文件的信息。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.document">
 <span class="sig-name descname"><span class="pre">document</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="document.html#aiogram.types.document.Document" title="aiogram.types.document.Document"><span class="pre">Document</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.document" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a general file, information about the file
-<em>可选的</em>。消息是一个一般文件，关于该文件的信息</p>
+<dd><p><em>可选的</em>。消息是一个一般文件，关于该文件的信息</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.photo">
 <span class="sig-name descname"><span class="pre">photo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="photo_size.html#aiogram.types.photo_size.PhotoSize" title="aiogram.types.photo_size.PhotoSize"><span class="pre">PhotoSize</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.photo" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a photo, available sizes of the photo
-<em>可选</em>. 消息是一张照片，照片的可用尺寸</p>
+<dd><p><em>可选</em>. 消息是一张照片，照片的可用尺寸</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -689,8 +677,7 @@ WebhookInfo</a></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.voice">
 <span class="sig-name descname"><span class="pre">voice</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="voice.html#aiogram.types.voice.Voice" title="aiogram.types.voice.Voice"><span class="pre">Voice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.voice" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a voice message, information about the file
-<em>可选</em>. 消息是语音消息，关于文件的信息</p>
+<dd><p><em>可选</em>. 消息是语音消息，关于文件的信息</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -702,19 +689,19 @@ WebhookInfo</a></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.contact">
 <span class="sig-name descname"><span class="pre">contact</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="contact.html#aiogram.types.contact.Contact" title="aiogram.types.contact.Contact"><span class="pre">Contact</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.contact" title="Link to this definition">#</a></dt>
-<dd><p><em>选项</em>。消息是一个共享联系人，关于联系人的信息</p>
+<dd><p><em>可选</em>。消息是一个共享联系人，关于联系人的信息</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.dice">
 <span class="sig-name descname"><span class="pre">dice</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dice.html#aiogram.types.dice.Dice" title="aiogram.types.dice.Dice"><span class="pre">Dice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.dice" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a dice with random value.</p>
+<dd><p><em>可选</em>. 消息是一个随机值的骰子。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.game">
 <span class="sig-name descname"><span class="pre">game</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="game.html#aiogram.types.game.Game" title="aiogram.types.game.Game"><span class="pre">Game</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.game" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em>。消息是关于游戏的信息。有关游戏的更多信息 » &lt;<a class="reference external" href="https://core.telegram.org/bots/api#games">https://core.telegram.org/bots/api#games</a>&gt;</p>
+<dd><p><em>可选的</em>。消息是关于游戏的信息。 <a class="reference external" href="https://core.telegram.org/bots/api#games">有关游戏的更多信息 »</a></p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -732,14 +719,13 @@ WebhookInfo</a></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.invoice">
 <span class="sig-name descname"><span class="pre">invoice</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="invoice.html#aiogram.types.invoice.Invoice" title="aiogram.types.invoice.Invoice"><span class="pre">Invoice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.invoice" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>。消息是有关 <a class="reference external" href="https://core.telegram.org/bots/api#payments">付款</a> 的发票信息。有关付款的更多信息» &lt;<a class="reference external" href="https://core.telegram.org/bots/api#payments">https://core.telegram.org/bots/api#payments</a>&gt;`_</p>
+<dd><p><em>可选</em>。消息是有关 <a class="reference external" href="https://core.telegram.org/bots/api#payments">付款</a> 的发票信息。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.location">
 <span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="location.html#aiogram.types.location.Location" title="aiogram.types.location.Location"><span class="pre">Location</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.location" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a shared location, information about the location
-<em>可选</em>。消息是一个共享位置，有关位置的信息</p>
+<dd><p><em>可选</em>。消息是一个共享位置，有关位置的信息</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -751,7 +737,7 @@ WebhookInfo</a></li>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.external_reply_info.ExternalReplyInfo.venue">
 <span class="sig-name descname"><span class="pre">venue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="venue.html#aiogram.types.venue.Venue" title="aiogram.types.venue.Venue"><span class="pre">Venue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.external_reply_info.ExternalReplyInfo.venue" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a venue, information about the venue</p>
+<dd><p><em>可选</em>. 信息是一个场地，关于场地的信息</p>
 </dd></dl>
 
 </dd></dl>
@@ -779,7 +765,7 @@ WebhookInfo</a></li>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">文件</div>
+                <div class="title">文档</div>
                 
               </div>
             </a>
