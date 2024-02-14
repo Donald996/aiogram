@@ -805,7 +805,7 @@
 <section id="id73">
 <h3>其他<a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>重做了InputFile的读取，删除了：code：’__aiter__’方法，为：code：’ .read(…) ‘方法添加了’ bot: Bot ‘参数，因此，从现在开始，可以在不指定机器人实例的情况下使用URLInputFile。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1238">#1238</a></p></li>
+<li><p>重做了InputFile的读取，删除了 :code：’__aiter__’方法，为 :code：’ .read(…) ‘方法添加了’ bot: Bot ‘参数，因此，从现在开始，可以在不指定机器人实例的情况下使用URLInputFile。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1238">#1238</a></p></li>
 <li><p>自动生成的代码 <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> 类型提示在类型和方法中，使IDE快乐，而无需额外的pydantic插件 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1245">#1245</a></p></li>
 </ul>
 </section>
@@ -1475,7 +1475,7 @@
 <section id="id286">
 <h2>2.12.1 (2021-03-22)<a class="headerlink" href="#id286" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>固定：code:<cite>TypeError: 值应该是 ‘User’ 的实例，而不是 ‘NoneType’</cite> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/527">#527</a>)</p></li>
+<li><p>固定 <code class="code docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">值应该是</span> <span class="pre">'User'</span> <span class="pre">的实例，而不是</span> <span class="pre">'NoneType'</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/527">#527</a>)</p></li>
 <li><p>增加了缺失的:code:<cite>Chat.message_auto_delete_time</cite> 字段 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/535">#535</a>)</p></li>
 <li><p>添加了 <code class="code docutils literal notranslate"><span class="pre">MediaGroup</span></code> 过滤器 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/528">#528</a>)</p></li>
 <li><p>添加了 <code class="code docutils literal notranslate"><span class="pre">Chat.delete_message</span></code> 快捷方式 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/526">#526</a>)</p></li>
@@ -1496,12 +1496,12 @@
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">Chat.update_chat</span></code> 方法和所有类似情况 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/516">#516</a>)</p></li>
 <li><p>修复 <code class="code docutils literal notranslate"><span class="pre">MediaGroup</span></code> 附加方法 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/514">#514</a>)</p></li>
 <li><p>在群组中为内联键盘查询回调修复了状态过滤器 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/508">#508</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/510">#510</a>)</p></li>
-<li><p>添加了缺失的：code：<a class="reference external" href="https://github.com/aiogram/aiogram/issues/466">ContentTypes.DICE`（`#466</a>）</p></li>
+<li><p>添加了缺失的 :code：<a class="reference external" href="https://github.com/aiogram/aiogram/issues/466">ContentTypes.DICE`（`#466</a>）</p></li>
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">InputContactMessageContent</span></code> 构造函数缺失的 vcard 参数 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/473">#473</a>)</p></li>
 <li><p>添加缺失的异常: <code class="code docutils literal notranslate"><span class="pre">MessageIdInvalid</span></code>, <code class="code docutils literal notranslate"><span class="pre">CantRestrictChatOwner</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">UserIsAnAdministratorOfTheChat</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/474">#474</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/512">#512</a>)</p></li>
 <li><p>添加了 <code class="code docutils literal notranslate"><span class="pre">answer_chat_action</span></code> 到 <code class="code docutils literal notranslate"><span class="pre">Message</span></code> 对象 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/501">#501</a>)</p></li>
 <li><p>将骰子添加到 <code class="code docutils literal notranslate"><span class="pre">message.send_copy</span></code> 方法中 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/511">#511</a>)</p></li>
-<li><p>从：code:<a href="#id1"><span class="problematic" id="id2">`</span></a>Message.send_copy`中删除了弃用警告</p></li>
+<li><p>从 :code:<a href="#id1"><span class="problematic" id="id2">`</span></a>Message.send_copy`中删除了弃用警告</p></li>
 <li><p>新增了一个外部创建的aiohttp应用程序与aiogram集成的示例（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/433">＃433</a>）</p></li>
 <li><p>为 <code class="code docutils literal notranslate"><span class="pre">safe_split_text</span></code> 添加了 <code class="code docutils literal notranslate"><span class="pre">split_separator</span></code> 参数 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/515">#515</a>)</p></li>
 <li><p>在文件和示例中修复了一些拼写错误 (#489, #490, #498, #504, #514)。</p></li>
@@ -1535,7 +1535,7 @@
 </dd>
 </dl>
 </li>
-<li><p>向Message对象添加了别名：code:<cite>Message.copy_to</cite>，同时弃用了： code:<cite>Message.send_copy</cite></p></li>
+<li><p>向Message对象添加了别名 <code class="code docutils literal notranslate"><span class="pre">Message.copy_to</span></code>，同时弃用了： code:<cite>Message.send_copy</cite></p></li>
 <li><p><cite>ChatType.SUPER_GROUP</cite> 重命名为 <code class="code docutils literal notranslate"><span class="pre">ChatType.SUPERGROUP</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/438">#438</a>)</p></li>
 </ul>
 </section>
