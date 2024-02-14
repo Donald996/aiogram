@@ -605,12 +605,12 @@
 <p>默认情况下，它与 <em>aiogram</em> 一起安装，也可在 <a class="reference external" href="https://pypi.org/project/magic-filter/">PyPi - magic-filter</a> 上使用。这意味着你可以安装它，并在不依赖 <em>aiogram</em> 的情况下在自己的项目中与任何其他库一起使用。</p>
 <section id="usage">
 <h2>用法<a class="headerlink" href="#usage" title="Link to this heading">#</a></h2>
-<p><strong>magic_filter</strong> 包实现的类很快命名为 <code class="xref py py-class docutils literal notranslate"><span class="pre">magic_filter.F</span></code> ，这意味着 <code class="code docutils literal notranslate"><span class="pre">F</span></code> 可以从 <code class="code docutils literal notranslate"><span class="pre">aiogram</span></code> 或 <code class="code docutils literal notranslate"><span class="pre">magic_filter</span></code> 导入。 <code class="xref py py-class docutils literal notranslate"><span class="pre">F</span></code> 是 <code class="xref py py-class docutils literal notranslate"><span class="pre">MagicFilter</span></code> 的别名。</p>
+<p><strong>magic_filter</strong> 包实现的类很快命名为  <code class="xref py py-class docutils literal notranslate"><span class="pre">magic_filter.F</span></code> ，这意味着 <code class="code docutils literal notranslate"><span class="pre">F</span></code> 可以从 <code class="code docutils literal notranslate"><span class="pre">aiogram</span></code> 或 <code class="code docutils literal notranslate"><span class="pre">magic_filter</span></code> 导入。  <code class="xref py py-class docutils literal notranslate"><span class="pre">F</span></code> 是  <code class="xref py py-class docutils literal notranslate"><span class="pre">MagicFilter</span></code> 的别名。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>注意 <em>aiogram</em> 比 magic-filter 有一个小的扩展，如果你想使用这个扩展，你应该从 <em>aiogram</em> 而不是 <em>magic_filter</em> 包导入 magic</p>
 </div>
-<p>该 <code class="xref py py-class docutils literal notranslate"><span class="pre">MagicFilter</span></code> 对象是可调用的，支持 <a class="reference internal" href="#magic-filter-possible-actions"><span class="std std-ref">some actions</span></a> ，并记住属性链和应按需检查的操作。</p>
+<p>该  <code class="xref py py-class docutils literal notranslate"><span class="pre">MagicFilter</span></code> 对象是可调用的，支持 <a class="reference internal" href="#magic-filter-possible-actions"><span class="std std-ref">some actions</span></a> ，并记住属性链和应按需检查的操作。</p>
 <p>这意味着您可以链接属性 getter，描述简单的数据验证，然后调用传递单个对象作为参数的结果对象，例如使属性链 <code class="code docutils literal notranslate"><span class="pre">F.foo.bar.baz</span></code> 然后添加操作 <code class="code docutils literal notranslate"><span class="pre">F.foo.bar.baz</span> <span class="pre">==</span> <span class="pre">‘spam’</span></code> 然后调用结果对象 - <code class="code docutils literal notranslate"><span class="pre">(F.foo.bar.baz</span> <span class="pre">==</span> <span class="pre">‘spam’).resolve(obj)</span></code></p>
 </section>
 <section id="possible-actions">

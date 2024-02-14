@@ -645,7 +645,7 @@
 </div>
 <div class="admonition danger">
 <p class="admonition-title">危险</p>
-<p>懒加载的gettext不能用作API方法的值，也不能用于任何Telegram对象（比如 <a class="reference internal" href="../api/types/inline_keyboard_button.html#aiogram.types.inline_keyboard_button.InlineKeyboardButton" title="aiogram.types.inline_keyboard_button.InlineKeyboardButton"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.inline_keyboard_button.InlineKeyboardButton</span></code></a> 等）</p>
+<p>懒加载的gettext不能用作API方法的值，也不能用于任何Telegram对象（比如  <a class="reference internal" href="../api/types/inline_keyboard_button.html#aiogram.types.inline_keyboard_button.InlineKeyboardButton" title="aiogram.types.inline_keyboard_button.InlineKeyboardButton"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.inline_keyboard_button.InlineKeyboardButton</span></code></a> 等）</p>
 </div>
 <p><strong>使用复数形式</strong></p>
 <p>来自 <cite>aiogram.utils.i18n</cite> 的 <cite>gettext</cite> 是 <a class="reference external" href="https://docs.python.org/3/library/gettext.html">GNU gettext Python 模块</a> 的两个函数 _gettext_ 和 _ngettext_ 的别名。因此，信息字符串的封装器是同一个 <cite>_()</cite> 。您需要向函数传递三个参数：一个单数字符串、一个复数字符串和一个值。</p>
@@ -653,7 +653,7 @@
 <section id="configuring-engine">
 <h2>配置引擎<a class="headerlink" href="#configuring-engine" title="Link to this heading">#</a></h2>
 <p>在你的消息已经完成使用gettext后，你的机器人应该知道如何检测用户的语言</p>
-<p>在你的应用程序上层应该创建一个 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.i18n.I18n</span></code> 的实例</p>
+<p>在你的应用程序上层应该创建一个  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.i18n.I18n</span></code> 的实例</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">i18n</span> <span class="o">=</span> <span class="n">I18n</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&quot;locales&quot;</span><span class="p">,</span> <span class="n">default_locale</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="n">domain</span><span class="o">=</span><span class="s2">&quot;messages&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

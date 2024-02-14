@@ -618,7 +618,7 @@
 <li><p>执行程序已完全删除；现在可以直接使用调度程序开始轮询API或处理来自API的webhook。</p></li>
 <li><p>限流方法已完全移除; 现在可以使用中间件来控制执行上下文并实现任何所需的限流机制。</p></li>
 <li><p>从API类型Bot和Dispatcher对象中移除了全局上下文变量。 从现在开始，如果您想在处理程序或过滤器中访问当前的bot实例，您应该接受参数 <code class="code docutils literal notranslate"><span class="pre">bot:</span> <span class="pre">Bot</span></code> 并使用它来替代 <code class="code docutils literal notranslate"><span class="pre">Bot.get_current()</span></code> 。 在中间件中，可以通过 <code class="code docutils literal notranslate"><span class="pre">data[&quot;bot&quot;]</span></code> 访问。</p></li>
-<li><p>为了跳过待定的更新，您现在应该直接调用 <a class="reference internal" href="api/methods/delete_webhook.html#aiogram.methods.delete_webhook.DeleteWebhook" title="aiogram.methods.delete_webhook.DeleteWebhook"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.delete_webhook.DeleteWebhook</span></code></a> 方法，而不是将 <code class="code docutils literal notranslate"><span class="pre">skip_updates=True</span></code> 传递给启动轮询方法。</p></li>
+<li><p>为了跳过待定的更新，您现在应该直接调用  <a class="reference internal" href="api/methods/delete_webhook.html#aiogram.methods.delete_webhook.DeleteWebhook" title="aiogram.methods.delete_webhook.DeleteWebhook"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.delete_webhook.DeleteWebhook</span></code></a> 方法，而不是将 <code class="code docutils literal notranslate"><span class="pre">skip_updates=True</span></code> 传递给启动轮询方法。</p></li>
 </ul>
 </section>
 <section id="filtering-events">
@@ -636,7 +636,7 @@
 <h2>机器人 API<a class="headerlink" href="#bot-api" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>所有的API方法现在都是具有验证的类，通过 <a class="reference external" href="https://docs.pydantic.dev/">pydantic</a> 实现。这些API调用也作为Bot类中的方法可用。</p></li>
-<li><p>已添加更多预定义的枚举并移至 <cite>aiogram.enums</cite> 子包。例如，现在聊天类型枚举是 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.ChatType</span></code> 而不是 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.chat.ChatType</span></code> 。</p></li>
+<li><p>已添加更多预定义的枚举并移至 <cite>aiogram.enums</cite> 子包。例如，现在聊天类型枚举是  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.ChatType</span></code> 而不是  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.chat.ChatType</span></code> 。</p></li>
 <li><p>HTTP客户端会话已被分离成一个可以在应用程序中不同Bot实例之间重复使用的容器。</p></li>
 <li><p>API异常不再按特定消息分类，因为Telegram没有记录的错误代码。然而，所有错误都按HTTP状态代码分类，并且对于每种方法，只能将一种错误类型与特定代码关联起来。因此，在大多数情况下，您应该仅检查错误类型（按状态代码），而不检查错误消息。</p></li>
 </ul>
@@ -652,7 +652,7 @@
 <section id="keyboard-markup">
 <h2>键盘标记<a class="headerlink" href="#keyboard-markup" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>现在 <a class="reference internal" href="api/types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span></code></a> 和 <a class="reference internal" href="api/types/reply_keyboard_markup.html#aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup" title="aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span></code></a> 不再具有用于扩展的方法，而是必须分别使用标记生成器 <a class="reference internal" href="utils/keyboard.html#aiogram.utils.keyboard.ReplyKeyboardBuilder" title="aiogram.utils.keyboard.ReplyKeyboardBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.keyboard.ReplyKeyboardBuilder</span></code></a> 和 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.keyboard.KeyboardBuilder</span></code> (<a class="reference internal" href="utils/keyboard.html#keyboard-builder"><span class="std std-ref">阅读更多 »</span></a>)</p></li>
+<li><p>现在  <a class="reference internal" href="api/types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span></code></a> 和  <a class="reference internal" href="api/types/reply_keyboard_markup.html#aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup" title="aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span></code></a> 不再具有用于扩展的方法，而是必须分别使用标记生成器  <a class="reference internal" href="utils/keyboard.html#aiogram.utils.keyboard.ReplyKeyboardBuilder" title="aiogram.utils.keyboard.ReplyKeyboardBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.keyboard.ReplyKeyboardBuilder</span></code></a> 和  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.keyboard.KeyboardBuilder</span></code> (<a class="reference internal" href="utils/keyboard.html#keyboard-builder"><span class="std std-ref">阅读更多 »</span></a>)</p></li>
 </ul>
 </section>
 <section id="callbacks-data">
@@ -666,8 +666,8 @@
 <ul class="simple">
 <li><p>状态过滤器将不再自动添加到所有处理程序中；如果您想使用它，您将需要指定状态。</p></li>
 <li><p>增加了改变FSM策略的可能性。 例如，如果你想基于聊天话题而不是聊天中的用户来控制每个用户的状态，你可以在调度程序中指定这一点。</p></li>
-<li><p>现在 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.state.State</span></code> 和 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.state.StateGroup</span></code> 没有像 <code class="code docutils literal notranslate"><span class="pre">.set()</span></code> ， <code class="code docutils literal notranslate"><span class="pre">.next()</span></code> 等帮助方法。</p></li>
-<li><p>相反，您应该直接将它们传递给 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.context.FSMContext</span></code> 来设置状态(<a class="reference internal" href="dispatcher/finite_state_machine/index.html#finite-state-machine"><span class="std std-ref">点击了解更多»</span></a>)</p></li>
+<li><p>现在  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.state.State</span></code> 和  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.state.StateGroup</span></code> 没有像 <code class="code docutils literal notranslate"><span class="pre">.set()</span></code> ， <code class="code docutils literal notranslate"><span class="pre">.next()</span></code> 等帮助方法。</p></li>
+<li><p>相反，您应该直接将它们传递给  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.context.FSMContext</span></code> 来设置状态(<a class="reference internal" href="dispatcher/finite_state_machine/index.html#finite-state-machine"><span class="std std-ref">点击了解更多»</span></a>)</p></li>
 <li><p>状态代理已弃用；您应该分别通过调用 <code class="code docutils literal notranslate"><span class="pre">state.set_data(...)</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">state.get_data()</span></code> 来更新状态数据。</p></li>
 </ul>
 </section>
