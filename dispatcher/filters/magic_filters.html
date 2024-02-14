@@ -627,6 +627,7 @@
 <h3>等于<a class="headerlink" href="#equals" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">F</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s1">&#39;hello&#39;</span>  <span class="c1"># lambda message: message.text == &#39;hello&#39;</span>
 <span class="n">F</span><span class="o">.</span><span class="n">from_user</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="mi">42</span>  <span class="c1"># lambda message: message.from_user.id == 42</span>
+<span class="n">F</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span> <span class="s1">&#39;spam&#39;</span>  <span class="c1"># lambda message: message.text != &#39;spam&#39;</span>
 </pre></div>
 </div>
 </section>
@@ -668,7 +669,7 @@
 <section id="inverting-result">
 <h3>反转结果<a class="headerlink" href="#inverting-result" title="Link to this heading">#</a></h3>
 <p>任何可用的操作都可以通过按位反转来反转 - <code class="code docutils literal notranslate"><span class="pre">~</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s1">&#39;spam&#39;</span><span class="p">)</span>  <span class="c1"># lambda message: message.text != &#39;spam&#39;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">~</span><span class="n">F</span><span class="o">.</span><span class="n">text</span>  <span class="c1"># lambda message: not message.text</span>
 <span class="o">~</span><span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;spam&#39;</span><span class="p">)</span>  <span class="c1"># lambda message: not message.text.startswith(&#39;spam&#39;)</span>
 </pre></div>
 </div>

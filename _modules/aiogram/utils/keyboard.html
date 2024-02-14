@@ -912,19 +912,22 @@
         <span class="n">callback_game</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CallbackGame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">pay</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;KeyboardBuilder[InlineKeyboardButton]&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_button</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
-            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-            <span class="n">callback_data</span><span class="o">=</span><span class="n">callback_data</span><span class="p">,</span>
-            <span class="n">web_app</span><span class="o">=</span><span class="n">web_app</span><span class="p">,</span>
-            <span class="n">login_url</span><span class="o">=</span><span class="n">login_url</span><span class="p">,</span>
-            <span class="n">switch_inline_query</span><span class="o">=</span><span class="n">switch_inline_query</span><span class="p">,</span>
-            <span class="n">switch_inline_query_current_chat</span><span class="o">=</span><span class="n">switch_inline_query_current_chat</span><span class="p">,</span>
-            <span class="n">switch_inline_query_chosen_chat</span><span class="o">=</span><span class="n">switch_inline_query_chosen_chat</span><span class="p">,</span>
-            <span class="n">callback_game</span><span class="o">=</span><span class="n">callback_game</span><span class="p">,</span>
-            <span class="n">pay</span><span class="o">=</span><span class="n">pay</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;InlineKeyboardBuilder&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">InlineKeyboardBuilder</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_button</span><span class="p">(</span>
+                <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+                <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+                <span class="n">callback_data</span><span class="o">=</span><span class="n">callback_data</span><span class="p">,</span>
+                <span class="n">web_app</span><span class="o">=</span><span class="n">web_app</span><span class="p">,</span>
+                <span class="n">login_url</span><span class="o">=</span><span class="n">login_url</span><span class="p">,</span>
+                <span class="n">switch_inline_query</span><span class="o">=</span><span class="n">switch_inline_query</span><span class="p">,</span>
+                <span class="n">switch_inline_query_current_chat</span><span class="o">=</span><span class="n">switch_inline_query_current_chat</span><span class="p">,</span>
+                <span class="n">switch_inline_query_chosen_chat</span><span class="o">=</span><span class="n">switch_inline_query_chosen_chat</span><span class="p">,</span>
+                <span class="n">callback_game</span><span class="o">=</span><span class="n">callback_game</span><span class="p">,</span>
+                <span class="n">pay</span><span class="o">=</span><span class="n">pay</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+            <span class="p">),</span>
         <span class="p">)</span></div>
 
 
@@ -995,16 +998,19 @@
         <span class="n">request_poll</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">KeyboardButtonPollType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">web_app</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">WebAppInfo</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;KeyboardBuilder[KeyboardButton]&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_button</span><span class="p">(</span>
-            <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
-            <span class="n">request_users</span><span class="o">=</span><span class="n">request_users</span><span class="p">,</span>
-            <span class="n">request_chat</span><span class="o">=</span><span class="n">request_chat</span><span class="p">,</span>
-            <span class="n">request_contact</span><span class="o">=</span><span class="n">request_contact</span><span class="p">,</span>
-            <span class="n">request_location</span><span class="o">=</span><span class="n">request_location</span><span class="p">,</span>
-            <span class="n">request_poll</span><span class="o">=</span><span class="n">request_poll</span><span class="p">,</span>
-            <span class="n">web_app</span><span class="o">=</span><span class="n">web_app</span><span class="p">,</span>
-            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ReplyKeyboardBuilder&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">ReplyKeyboardBuilder</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_button</span><span class="p">(</span>
+                <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+                <span class="n">request_users</span><span class="o">=</span><span class="n">request_users</span><span class="p">,</span>
+                <span class="n">request_chat</span><span class="o">=</span><span class="n">request_chat</span><span class="p">,</span>
+                <span class="n">request_contact</span><span class="o">=</span><span class="n">request_contact</span><span class="p">,</span>
+                <span class="n">request_location</span><span class="o">=</span><span class="n">request_location</span><span class="p">,</span>
+                <span class="n">request_poll</span><span class="o">=</span><span class="n">request_poll</span><span class="p">,</span>
+                <span class="n">web_app</span><span class="o">=</span><span class="n">web_app</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+            <span class="p">),</span>
         <span class="p">)</span></div>
 
 
