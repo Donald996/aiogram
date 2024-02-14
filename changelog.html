@@ -598,7 +598,7 @@
           <section id="changelog">
 <span id="aiogram-changes"></span><h1>更新日志<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
 <section id="release-unreleased-draft-2024-02-14">
-<h2>3.4.0 [UNRELEASED DRAFT] (2024-02-14)<a class="headerlink" href="#release-unreleased-draft-2024-02-14" title="Link to this heading">#</a></h2>
+<h2><a href="#id481"><span class="problematic" id="id482">|发布|</span></a> [未发布草案] (2024-02-14)<a class="headerlink" href="#release-unreleased-draft-2024-02-14" title="Link to this heading">#</a></h2>
 <section id="features">
 <h3>特性<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -616,8 +616,7 @@
 <section id="improved-documentation">
 <h3>改进的文档<a class="headerlink" href="#improved-documentation" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add notion “Working with plural forms” in documentation Utils -&gt; Translation
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1395">#1395</a></p></li>
+<li><p>在文档中添加“使用复数形式”的概念 Utils -&gt; 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1395">#1395</a></p></li>
 </ul>
 </section>
 </section>
@@ -626,7 +625,7 @@
 <section id="id7">
 <h3>特性<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>完全支持`Bot API 7.0 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">https://core.telegram.org/bots/api-changelog#december-29-2023</a>&gt;`_已添加</p>
+<li><p>完全支持 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">Bot API 7.0</a> 已添加</p>
 <ul class="simple">
 <li><p>反应</p></li>
 <li><p>回复 2.0</p></li>
@@ -649,7 +648,7 @@
 <h3>特性<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>介绍了“场景”功能，可以帮助您使用有限状态机来简化用户交互。了解更多👉 <a class="reference internal" href="dispatcher/finite_state_machine/scene.html#scenes"><span class="std std-ref">Scenes</span></a>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1280">#1280</a></p></li>
-<li><p>添加了新的FSM策略:code:<cite>CHAT_TOPIC</cite>，它为聊天中的整个主题设置状态，也适用于私人消息和没有话题的常规群组。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1343">#1343</a></p></li>
+<li><p>添加了新的FSM策略 <code class="code docutils literal notranslate"><span class="pre">CHAT_TOPIC</span></code>，它为聊天中的整个主题设置状态，也适用于私人消息和没有话题的常规群组。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1343">#1343</a></p></li>
 </ul>
 </section>
 <section id="id13">
@@ -675,19 +674,19 @@
 <li><p>修复测试中的资源警告，重写了 <code class="code docutils literal notranslate"><span class="pre">RedisEventsIsolation</span></code> fixture，以使用来自 <code class="code docutils literal notranslate"><span class="pre">RedisStorage</span></code> 的 Redis 连接 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1320">#1320</a></p></li>
 <li><p>更新了依赖关系，增加了最低所需版本：</p>
 <ul class="simple">
-<li><p>神奇过滤器 - 修复了`.resolve`操作</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">magic-filter</span></code> - 修复了 <cite>.resolve</cite> 操作</p></li>
 <li><p><cite>pydantic</cite> - 修复兼容性（在2.4版中出现故障）</p></li>
-<li><p>“aiodns” - 已将新的依赖项添加到了 “fast” 额外扩展项 (通过 “pip install aiogram[fast]” 命令安装)</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">aiodns</span></code> - 在 <code class="code docutils literal notranslate"><span class="pre">fast</span></code> extras 中添加了新的依赖项（<code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aiogram[fast]</span></code>)</p></li>
 <li><p><em>其他…</em></p></li>
 </ul>
 <p>#1327 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1327">https://github.com/aiogram/aiogram/issues/1327</a>&gt;</p>
 </li>
 <li><p>防止更新处理任务指针被垃圾回收，从2.x回溯到 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1331">#1331</a></p></li>
-<li><p>在依赖项中更新了 <code class="code docutils literal notranslate"><span class="pre">typing-extensions</span></code> 软件包版本范围，以修复与 <code class="code docutils literal notranslate"><span class="pre">FastAPI</span></code> 的兼容性` <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1347">#1347</a></p></li>
+<li><p>更新了依赖项中 <code class="code docutils literal notranslate"><span class="pre">typing-extensions</span></code> 软件包的版本范围，以修复与 <code class="code docutils literal notranslate"><span class="pre">FastAPI</span></code> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1347">#1347</a> 的兼容性问题。</p></li>
 <li><p>介绍Python 3.12支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1354">#1354</a></p></li>
 <li><p>加速了CallableMixin处理过程，通过缓存对嵌套对象的引用并简化kwargs的组装。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1357">#1357</a></p></li>
 <li><p>新增了 <code class="code docutils literal notranslate"><span class="pre">pydantic</span></code> v2.5 支持。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1361">#1361</a></p></li>
-<li><p>更新了 <cite>thumbnail</cite> 字段的类型为 <cite>InputFile</cite> 只 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1372">#1372</a></p></li>
+<li><p>仅将 <code class="code docutils literal notranslate"><span class="pre">thumbnail</span></code> 字段类型更新为 <code class="code docutils literal notranslate"><span class="pre">InputFile</span></code> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1372">#1372</a></p></li>
 </ul>
 </section>
 </section>
@@ -706,8 +705,8 @@
 <h3>特性<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>已添加对负载自定义编码器/解码器的支持（也适用于深链接）。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1262">#1262</a></p></li>
-<li><p>为媒体组构建添加了:class:<cite>aiogram.utils.input_media.MediaGroupBuilder</cite>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1293">#1293</a></p></li>
-<li><p>增加了对`Bot API 6.9 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#september-22-2023">https://core.telegram.org/bots/api-changelog#september-22-2023</a>&gt;`_ <a href="#id1"><span class="problematic" id="id2">`</span></a>#1319 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1319">https://github.com/aiogram/aiogram/issues/1319</a>&gt;`_的完整支持</p></li>
+<li><p>为媒体组构建添加了 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.input_media.MediaGroupBuilder</span></code>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1293">#1293</a></p></li>
+<li><p>增加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#september-22-2023">Bot API 6.9</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1319">#1319</a> 的完整支持</p></li>
 </ul>
 </section>
 <section id="id38">
@@ -1960,7 +1959,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">更新日志</a><ul>
-<li><a class="reference internal" href="#release-unreleased-draft-2024-02-14">3.4.0 [UNRELEASED DRAFT] (2024-02-14)</a><ul>
+<li><a class="reference internal" href="#release-unreleased-draft-2024-02-14">|发布| [未发布草案] (2024-02-14)</a><ul>
 <li><a class="reference internal" href="#features">特性</a></li>
 <li><a class="reference internal" href="#bugfixes">错误修复</a></li>
 <li><a class="reference internal" href="#improved-documentation">改进的文档</a></li>

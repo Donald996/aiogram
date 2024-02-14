@@ -647,11 +647,8 @@
 <p class="admonition-title">危险</p>
 <p>懒加载的gettext不能用作API方法的值，也不能用于任何Telegram对象（比如 <a class="reference internal" href="../api/types/inline_keyboard_button.html#aiogram.types.inline_keyboard_button.InlineKeyboardButton" title="aiogram.types.inline_keyboard_button.InlineKeyboardButton"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.inline_keyboard_button.InlineKeyboardButton</span></code></a> 等）</p>
 </div>
-<p><strong>Working with plural forms</strong></p>
-<p>The <cite>gettext</cite> from <cite>aiogram.utils.i18n</cite> is the one alias for two functions _gettext_ and _ngettext_
-of <a class="reference external" href="https://docs.python.org/3/library/gettext.html">GNU gettext Python module</a>. Therefore, the wrapper for message
-strings is the same <cite>_()</cite>. You need to pass three parameters to the function:
-a singular string, a plural string, and a value.</p>
+<p><strong>使用复数形式</strong></p>
+<p>来自 <cite>aiogram.utils.i18n</cite> 的 <cite>gettext</cite> 是 <a class="reference external" href="https://docs.python.org/3/library/gettext.html">GNU gettext Python 模块</a> 的两个函数 _gettext_ 和 _ngettext_ 的别名。因此，信息字符串的封装器是同一个 <cite>_()</cite> 。您需要向函数传递三个参数：一个单数字符串、一个复数字符串和一个值。</p>
 </section>
 <section id="configuring-engine">
 <h2>配置引擎<a class="headerlink" href="#configuring-engine" title="Link to this heading">#</a></h2>
@@ -818,11 +815,11 @@ a singular string, a plural string, and a value.</p>
 </pre></div>
 </div>
 <p>这里是 <code class="code docutils literal notranslate"><span class="pre">—input-dirs=.</span></code> - 代码的路径，而 <code class="code docutils literal notranslate"><span class="pre">locales/messages.pot</span></code> 是将要提取消息的模板，<cite>messages</cite> 是翻译域。</p>
-<p><strong>Working with plural forms</strong></p>
-<p>Extracting with Pybabel all strings options:</p>
+<p><strong>使用复数形式</strong></p>
+<p>使用 Pybabel 提取所有字符串选项：</p>
 <ul class="simple">
-<li><p><code class="code docutils literal notranslate"><span class="pre">-k</span> <span class="pre">_:1,1t</span> <span class="pre">-k</span> <span class="pre">_:1,2</span></code> - for both singular and plural</p></li>
-<li><p><code class="code docutils literal notranslate"><span class="pre">-k</span> <span class="pre">__</span></code> - for lazy strings</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">-k</span> <span class="pre">_:1,1t</span> <span class="pre">-k</span> <span class="pre">_:1,2</span></code> - 用于单数和复数</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">-k</span> <span class="pre">__</span></code> - 用于懒字符串</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pybabel<span class="w"> </span>extract<span class="w"> </span>-k<span class="w"> </span>_:1,1t<span class="w"> </span>-k<span class="w"> </span>_:1,2<span class="w"> </span>-k<span class="w"> </span>__<span class="w"> </span>--input-dirs<span class="o">=</span>.<span class="w"> </span>-o<span class="w"> </span>locales/messages.pot
 </pre></div>
@@ -832,9 +829,9 @@ a singular string, a plural string, and a value.</p>
 <p>一些有用的选项：</p>
 <ul class="simple">
 <li><p>为翻译者添加备注，如果你愿意，也可以使用其他标签（如TR） <code class="code docutils literal notranslate"><span class="pre">—add-comments=NOTE</span></code></p></li>
-<li><p>Contact email for bugreport <code class="code docutils literal notranslate"><span class="pre">--msgid-bugs-address=EMAIL</span></code></p></li>
+<li><p>错误报告的联系电子邮件 <code class="code docutils literal notranslate"><span class="pre">—msgid-bugs-address=EMAIL</span></code></p></li>
 <li><p>禁用代码中带有字符串位置的注释 <code class="code docutils literal notranslate"><span class="pre">—no-location</span></code></p></li>
-<li><p>Copyrights <code class="code docutils literal notranslate"><span class="pre">--copyright-holder=AUTHOR</span></code></p></li>
+<li><p>版权 <code class="code docutils literal notranslate"><span class="pre">—copyright-holder=AUTHOR</span></code></p></li>
 <li><p>设置项目名称 <code class="code docutils literal notranslate"><span class="pre">—project=MySuperBot</span></code></p></li>
 <li><p>设置版本号 <code class="code docutils literal notranslate"><span class="pre">—version=2.2</span></code></p></li>
 </ul>
