@@ -702,7 +702,9 @@
     <span class="n">permissions</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ChatPermissions</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. Default chat member permissions, for groups and supergroups. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
     <span class="n">slow_mode_delay</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. For supergroups, the minimum allowed delay between consecutive messages sent by each unpriviledged user; in seconds. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. For supergroups, the minimum allowed delay between consecutive messages sent by each unprivileged user; in seconds. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
+    <span class="n">unrestrict_boost_count</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. For supergroups, the minimum number of boosts that a non-administrator user needs to add in order to ignore slow mode and chat permissions. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
     <span class="n">message_auto_delete_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. The time after which all messages sent to the chat will be automatically deleted; in seconds. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
     <span class="n">has_aggressive_anti_spam_enabled</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -717,6 +719,8 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. For supergroups, name of group sticker set. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
     <span class="n">can_set_sticker_set</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the bot can change the group sticker set. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
+    <span class="n">custom_emoji_sticker_set_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. For supergroups, the name of the group&#39;s custom emoji sticker set. Custom emoji from this set can be used by all users and bots in the group. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
     <span class="n">linked_chat_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. Unique identifier for the linked chat, i.e. the discussion group identifier for a channel and vice versa; for supergroups and channel chats. This identifier may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier. Returned only in :class:`aiogram.methods.get_chat.GetChat`.&quot;&quot;&quot;</span>
     <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ChatLocation</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -757,6 +761,7 @@
             <span class="n">pinned_message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Message</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">permissions</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ChatPermissions</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">slow_mode_delay</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">unrestrict_boost_count</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">message_auto_delete_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">has_aggressive_anti_spam_enabled</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">has_hidden_members</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -764,6 +769,7 @@
             <span class="n">has_visible_history</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">sticker_set_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">can_set_sticker_set</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="n">custom_emoji_sticker_set_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">linked_chat_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ChatLocation</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="o">**</span><span class="n">__pydantic_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
@@ -799,6 +805,7 @@
                 <span class="n">pinned_message</span><span class="o">=</span><span class="n">pinned_message</span><span class="p">,</span>
                 <span class="n">permissions</span><span class="o">=</span><span class="n">permissions</span><span class="p">,</span>
                 <span class="n">slow_mode_delay</span><span class="o">=</span><span class="n">slow_mode_delay</span><span class="p">,</span>
+                <span class="n">unrestrict_boost_count</span><span class="o">=</span><span class="n">unrestrict_boost_count</span><span class="p">,</span>
                 <span class="n">message_auto_delete_time</span><span class="o">=</span><span class="n">message_auto_delete_time</span><span class="p">,</span>
                 <span class="n">has_aggressive_anti_spam_enabled</span><span class="o">=</span><span class="n">has_aggressive_anti_spam_enabled</span><span class="p">,</span>
                 <span class="n">has_hidden_members</span><span class="o">=</span><span class="n">has_hidden_members</span><span class="p">,</span>
@@ -806,6 +813,7 @@
                 <span class="n">has_visible_history</span><span class="o">=</span><span class="n">has_visible_history</span><span class="p">,</span>
                 <span class="n">sticker_set_name</span><span class="o">=</span><span class="n">sticker_set_name</span><span class="p">,</span>
                 <span class="n">can_set_sticker_set</span><span class="o">=</span><span class="n">can_set_sticker_set</span><span class="p">,</span>
+                <span class="n">custom_emoji_sticker_set_name</span><span class="o">=</span><span class="n">custom_emoji_sticker_set_name</span><span class="p">,</span>
                 <span class="n">linked_chat_id</span><span class="o">=</span><span class="n">linked_chat_id</span><span class="p">,</span>
                 <span class="n">location</span><span class="o">=</span><span class="n">location</span><span class="p">,</span>
                 <span class="o">**</span><span class="n">__pydantic_kwargs</span><span class="p">,</span>
@@ -1502,12 +1510,12 @@
         <span class="n">can_promote_members</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_change_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_invite_users</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">can_post_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">can_edit_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">can_pin_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_post_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_edit_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_delete_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_post_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_edit_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_pin_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_manage_topics</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PromoteChatMember</span><span class="p">:</span>
@@ -1523,19 +1531,19 @@
 
 <span class="sd">        :param user_id: Unique identifier of the target user</span>
 <span class="sd">        :param is_anonymous: Pass :code:`True` if the administrator&#39;s presence in the chat is hidden</span>
-<span class="sd">        :param can_manage_chat: Pass :code:`True` if the administrator can access the chat event log, boost list in channels, see channel members, report spam messages, see anonymous administrators in supergroups and ignore slow mode. Implied by any other administrator privilege</span>
+<span class="sd">        :param can_manage_chat: Pass :code:`True` if the administrator can access the chat event log, get boost list, see hidden supergroup and channel members, report spam messages and ignore slow mode. Implied by any other administrator privilege.</span>
 <span class="sd">        :param can_delete_messages: Pass :code:`True` if the administrator can delete messages of other users</span>
 <span class="sd">        :param can_manage_video_chats: Pass :code:`True` if the administrator can manage video chats</span>
 <span class="sd">        :param can_restrict_members: Pass :code:`True` if the administrator can restrict, ban or unban chat members, or access supergroup statistics</span>
 <span class="sd">        :param can_promote_members: Pass :code:`True` if the administrator can add new administrators with a subset of their own privileges or demote administrators that they have promoted, directly or indirectly (promoted by administrators that were appointed by him)</span>
 <span class="sd">        :param can_change_info: Pass :code:`True` if the administrator can change chat title, photo and other settings</span>
 <span class="sd">        :param can_invite_users: Pass :code:`True` if the administrator can invite new users to the chat</span>
+<span class="sd">        :param can_post_stories: Pass :code:`True` if the administrator can post stories to the chat</span>
+<span class="sd">        :param can_edit_stories: Pass :code:`True` if the administrator can edit stories posted by other users</span>
+<span class="sd">        :param can_delete_stories: Pass :code:`True` if the administrator can delete stories posted by other users</span>
 <span class="sd">        :param can_post_messages: Pass :code:`True` if the administrator can post messages in the channel, or access channel statistics; channels only</span>
 <span class="sd">        :param can_edit_messages: Pass :code:`True` if the administrator can edit messages of other users and can pin messages; channels only</span>
 <span class="sd">        :param can_pin_messages: Pass :code:`True` if the administrator can pin messages, supergroups only</span>
-<span class="sd">        :param can_post_stories: Pass :code:`True` if the administrator can post stories in the channel; channels only</span>
-<span class="sd">        :param can_edit_stories: Pass :code:`True` if the administrator can edit stories posted by other users; channels only</span>
-<span class="sd">        :param can_delete_stories: Pass :code:`True` if the administrator can delete stories posted by other users; channels only</span>
 <span class="sd">        :param can_manage_topics: Pass :code:`True` if the user is allowed to create, rename, close, and reopen forum topics, supergroups only</span>
 <span class="sd">        :return: instance of method :class:`aiogram.methods.promote_chat_member.PromoteChatMember`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1555,12 +1563,12 @@
             <span class="n">can_promote_members</span><span class="o">=</span><span class="n">can_promote_members</span><span class="p">,</span>
             <span class="n">can_change_info</span><span class="o">=</span><span class="n">can_change_info</span><span class="p">,</span>
             <span class="n">can_invite_users</span><span class="o">=</span><span class="n">can_invite_users</span><span class="p">,</span>
-            <span class="n">can_post_messages</span><span class="o">=</span><span class="n">can_post_messages</span><span class="p">,</span>
-            <span class="n">can_edit_messages</span><span class="o">=</span><span class="n">can_edit_messages</span><span class="p">,</span>
-            <span class="n">can_pin_messages</span><span class="o">=</span><span class="n">can_pin_messages</span><span class="p">,</span>
             <span class="n">can_post_stories</span><span class="o">=</span><span class="n">can_post_stories</span><span class="p">,</span>
             <span class="n">can_edit_stories</span><span class="o">=</span><span class="n">can_edit_stories</span><span class="p">,</span>
             <span class="n">can_delete_stories</span><span class="o">=</span><span class="n">can_delete_stories</span><span class="p">,</span>
+            <span class="n">can_post_messages</span><span class="o">=</span><span class="n">can_post_messages</span><span class="p">,</span>
+            <span class="n">can_edit_messages</span><span class="o">=</span><span class="n">can_edit_messages</span><span class="p">,</span>
+            <span class="n">can_pin_messages</span><span class="o">=</span><span class="n">can_pin_messages</span><span class="p">,</span>
             <span class="n">can_manage_topics</span><span class="o">=</span><span class="n">can_manage_topics</span><span class="p">,</span>
             <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
         <span class="p">)</span><span class="o">.</span><span class="n">as_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bot</span><span class="p">)</span></div>

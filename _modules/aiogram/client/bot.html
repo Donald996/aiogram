@@ -899,6 +899,36 @@
 
 
     <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">parse_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">&quot;Accessing `parse_mode` from Bot instance is deprecated. This attribute will be removed in 3.5.0 version</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;Use `bot.default.parse_mode` instead.&quot;</span><span class="p">,</span>
+            <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
+            <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">parse_mode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">disable_web_page_preview</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">&quot;Accessing `disable_web_page_preview` from Bot instance is deprecated. This attribute will be removed in 3.5.0 version</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;Use `bot.default.link_preview_is_disabled` instead.&quot;</span><span class="p">,</span>
+            <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
+            <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">link_preview_is_disabled</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">protect_content</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s2">&quot;Accessing `protect_content` from Bot instance is deprecated. This attribute will be removed in 3.5.0 version</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="s2">&quot;Use `bot.default.protect_content` instead.&quot;</span><span class="p">,</span>
+            <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
+            <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">protect_content</span>
+
+    <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">token</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__token</span>
 
@@ -2629,12 +2659,12 @@
         <span class="n">can_promote_members</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_change_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_invite_users</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">can_post_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">can_edit_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">can_pin_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_post_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_edit_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_delete_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_post_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_edit_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_pin_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">can_manage_topics</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">request_timeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -2646,19 +2676,19 @@
 <span class="sd">        :param chat_id: Unique identifier for the target chat or username of the target channel (in the format :code:`@channelusername`)</span>
 <span class="sd">        :param user_id: Unique identifier of the target user</span>
 <span class="sd">        :param is_anonymous: Pass :code:`True` if the administrator&#39;s presence in the chat is hidden</span>
-<span class="sd">        :param can_manage_chat: Pass :code:`True` if the administrator can access the chat event log, boost list in channels, see channel members, report spam messages, see anonymous administrators in supergroups and ignore slow mode. Implied by any other administrator privilege</span>
+<span class="sd">        :param can_manage_chat: Pass :code:`True` if the administrator can access the chat event log, get boost list, see hidden supergroup and channel members, report spam messages and ignore slow mode. Implied by any other administrator privilege.</span>
 <span class="sd">        :param can_delete_messages: Pass :code:`True` if the administrator can delete messages of other users</span>
 <span class="sd">        :param can_manage_video_chats: Pass :code:`True` if the administrator can manage video chats</span>
 <span class="sd">        :param can_restrict_members: Pass :code:`True` if the administrator can restrict, ban or unban chat members, or access supergroup statistics</span>
 <span class="sd">        :param can_promote_members: Pass :code:`True` if the administrator can add new administrators with a subset of their own privileges or demote administrators that they have promoted, directly or indirectly (promoted by administrators that were appointed by him)</span>
 <span class="sd">        :param can_change_info: Pass :code:`True` if the administrator can change chat title, photo and other settings</span>
 <span class="sd">        :param can_invite_users: Pass :code:`True` if the administrator can invite new users to the chat</span>
+<span class="sd">        :param can_post_stories: Pass :code:`True` if the administrator can post stories to the chat</span>
+<span class="sd">        :param can_edit_stories: Pass :code:`True` if the administrator can edit stories posted by other users</span>
+<span class="sd">        :param can_delete_stories: Pass :code:`True` if the administrator can delete stories posted by other users</span>
 <span class="sd">        :param can_post_messages: Pass :code:`True` if the administrator can post messages in the channel, or access channel statistics; channels only</span>
 <span class="sd">        :param can_edit_messages: Pass :code:`True` if the administrator can edit messages of other users and can pin messages; channels only</span>
 <span class="sd">        :param can_pin_messages: Pass :code:`True` if the administrator can pin messages, supergroups only</span>
-<span class="sd">        :param can_post_stories: Pass :code:`True` if the administrator can post stories in the channel; channels only</span>
-<span class="sd">        :param can_edit_stories: Pass :code:`True` if the administrator can edit stories posted by other users; channels only</span>
-<span class="sd">        :param can_delete_stories: Pass :code:`True` if the administrator can delete stories posted by other users; channels only</span>
 <span class="sd">        :param can_manage_topics: Pass :code:`True` if the user is allowed to create, rename, close, and reopen forum topics, supergroups only</span>
 <span class="sd">        :param request_timeout: Request timeout</span>
 <span class="sd">        :return: Returns :code:`True` on success.</span>
@@ -2675,12 +2705,12 @@
             <span class="n">can_promote_members</span><span class="o">=</span><span class="n">can_promote_members</span><span class="p">,</span>
             <span class="n">can_change_info</span><span class="o">=</span><span class="n">can_change_info</span><span class="p">,</span>
             <span class="n">can_invite_users</span><span class="o">=</span><span class="n">can_invite_users</span><span class="p">,</span>
-            <span class="n">can_post_messages</span><span class="o">=</span><span class="n">can_post_messages</span><span class="p">,</span>
-            <span class="n">can_edit_messages</span><span class="o">=</span><span class="n">can_edit_messages</span><span class="p">,</span>
-            <span class="n">can_pin_messages</span><span class="o">=</span><span class="n">can_pin_messages</span><span class="p">,</span>
             <span class="n">can_post_stories</span><span class="o">=</span><span class="n">can_post_stories</span><span class="p">,</span>
             <span class="n">can_edit_stories</span><span class="o">=</span><span class="n">can_edit_stories</span><span class="p">,</span>
             <span class="n">can_delete_stories</span><span class="o">=</span><span class="n">can_delete_stories</span><span class="p">,</span>
+            <span class="n">can_post_messages</span><span class="o">=</span><span class="n">can_post_messages</span><span class="p">,</span>
+            <span class="n">can_edit_messages</span><span class="o">=</span><span class="n">can_edit_messages</span><span class="p">,</span>
+            <span class="n">can_pin_messages</span><span class="o">=</span><span class="n">can_pin_messages</span><span class="p">,</span>
             <span class="n">can_manage_topics</span><span class="o">=</span><span class="n">can_manage_topics</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="k">return</span> <span class="k">await</span> <span class="bp">self</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">request_timeout</span><span class="o">=</span><span class="n">request_timeout</span><span class="p">)</span>

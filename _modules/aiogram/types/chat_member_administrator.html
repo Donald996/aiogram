@@ -623,7 +623,7 @@
     <span class="n">is_anonymous</span><span class="p">:</span> <span class="nb">bool</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the user&#39;s presence in the chat is hidden&quot;&quot;&quot;</span>
     <span class="n">can_manage_chat</span><span class="p">:</span> <span class="nb">bool</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the administrator can access the chat event log, boost list in channels, see channel members, report spam messages, see anonymous administrators in supergroups and ignore slow mode. Implied by any other administrator privilege&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the administrator can access the chat event log, get boost list, see hidden supergroup and channel members, report spam messages and ignore slow mode. Implied by any other administrator privilege.&quot;&quot;&quot;</span>
     <span class="n">can_delete_messages</span><span class="p">:</span> <span class="nb">bool</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the administrator can delete messages of other users&quot;&quot;&quot;</span>
     <span class="n">can_manage_video_chats</span><span class="p">:</span> <span class="nb">bool</span>
@@ -636,18 +636,18 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the user is allowed to change the chat title, photo and other settings&quot;&quot;&quot;</span>
     <span class="n">can_invite_users</span><span class="p">:</span> <span class="nb">bool</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the user is allowed to invite new users to the chat&quot;&quot;&quot;</span>
+    <span class="n">can_post_stories</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the administrator can post stories to the chat&quot;&quot;&quot;</span>
+    <span class="n">can_edit_stories</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the administrator can edit stories posted by other users&quot;&quot;&quot;</span>
+    <span class="n">can_delete_stories</span><span class="p">:</span> <span class="nb">bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;:code:`True`, if the administrator can delete stories posted by other users&quot;&quot;&quot;</span>
     <span class="n">can_post_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the administrator can post messages in the channel, or access channel statistics; channels only&quot;&quot;&quot;</span>
     <span class="n">can_edit_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the administrator can edit messages of other users and can pin messages; channels only&quot;&quot;&quot;</span>
     <span class="n">can_pin_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the user is allowed to pin messages; groups and supergroups only&quot;&quot;&quot;</span>
-    <span class="n">can_post_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the administrator can post stories in the channel; channels only&quot;&quot;&quot;</span>
-    <span class="n">can_edit_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the administrator can edit stories posted by other users; channels only&quot;&quot;&quot;</span>
-    <span class="n">can_delete_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the administrator can delete stories posted by other users; channels only&quot;&quot;&quot;</span>
     <span class="n">can_manage_topics</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. :code:`True`, if the user is allowed to create, rename, close, and reopen forum topics; supergroups only&quot;&quot;&quot;</span>
     <span class="n">custom_title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -671,12 +671,12 @@
             <span class="n">can_promote_members</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
             <span class="n">can_change_info</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
             <span class="n">can_invite_users</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">can_post_stories</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">can_edit_stories</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+            <span class="n">can_delete_stories</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
             <span class="n">can_post_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">can_edit_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">can_pin_messages</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">can_post_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">can_edit_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-            <span class="n">can_delete_stories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">can_manage_topics</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="n">custom_title</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
             <span class="o">**</span><span class="n">__pydantic_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
@@ -697,12 +697,12 @@
                 <span class="n">can_promote_members</span><span class="o">=</span><span class="n">can_promote_members</span><span class="p">,</span>
                 <span class="n">can_change_info</span><span class="o">=</span><span class="n">can_change_info</span><span class="p">,</span>
                 <span class="n">can_invite_users</span><span class="o">=</span><span class="n">can_invite_users</span><span class="p">,</span>
-                <span class="n">can_post_messages</span><span class="o">=</span><span class="n">can_post_messages</span><span class="p">,</span>
-                <span class="n">can_edit_messages</span><span class="o">=</span><span class="n">can_edit_messages</span><span class="p">,</span>
-                <span class="n">can_pin_messages</span><span class="o">=</span><span class="n">can_pin_messages</span><span class="p">,</span>
                 <span class="n">can_post_stories</span><span class="o">=</span><span class="n">can_post_stories</span><span class="p">,</span>
                 <span class="n">can_edit_stories</span><span class="o">=</span><span class="n">can_edit_stories</span><span class="p">,</span>
                 <span class="n">can_delete_stories</span><span class="o">=</span><span class="n">can_delete_stories</span><span class="p">,</span>
+                <span class="n">can_post_messages</span><span class="o">=</span><span class="n">can_post_messages</span><span class="p">,</span>
+                <span class="n">can_edit_messages</span><span class="o">=</span><span class="n">can_edit_messages</span><span class="p">,</span>
+                <span class="n">can_pin_messages</span><span class="o">=</span><span class="n">can_pin_messages</span><span class="p">,</span>
                 <span class="n">can_manage_topics</span><span class="o">=</span><span class="n">can_manage_topics</span><span class="p">,</span>
                 <span class="n">custom_title</span><span class="o">=</span><span class="n">custom_title</span><span class="p">,</span>
                 <span class="o">**</span><span class="n">__pydantic_kwargs</span><span class="p">,</span>

@@ -606,7 +606,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.update.Update.update_id">
 <span class="sig-name descname"><span class="pre">update_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#aiogram.types.update.Update.update_id" title="Link to this definition">#</a></dt>
-<dd><p>更新的唯一标识符。 更新标识符从某个正数开始递增。 如果您正在使用`webhooks &lt;<a class="reference external" href="https://core.telegram.org/bots/api#setwebhook">https://core.telegram.org/bots/api#setwebhook</a>&gt;`_，则此ID尤为方便，因为它允许您忽略重复的更新或恢复正确的更新顺序，如果它们混乱了。 如果至少一周没有新的更新，那么下一个更新的标识符将随机选择，而不是按顺序选择。</p>
+<dd><p>The update’s unique identifier. Update identifiers start from a certain positive number and increase sequentially. This identifier becomes especially handy if you’re using <a class="reference external" href="https://core.telegram.org/bots/api#setwebhook">webhooks</a>, since it allows you to ignore repeated updates or to restore the correct update sequence, should they get out of order. If there are no new updates for at least a week, then identifier of the next update will be chosen randomly instead of sequentially.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -618,7 +618,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.update.Update.edited_message">
 <span class="sig-name descname"><span class="pre">edited_message</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><span class="pre">Message</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.update.Update.edited_message" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>。已知于机器人并已编辑的消息的新版本</p>
+<dd><p><em>Optional</em>. New version of a message that is known to the bot and was edited. This update may at times be triggered by changes to message fields that are either unavailable or not actively used by your bot.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -630,7 +630,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.update.Update.edited_channel_post">
 <span class="sig-name descname"><span class="pre">edited_channel_post</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><span class="pre">Message</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.update.Update.edited_channel_post" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>。已知机器人并进行了编辑的频道帖子的新版本</p>
+<dd><p><em>Optional</em>. New version of a channel post that is known to the bot and was edited. This update may at times be triggered by changes to message fields that are either unavailable or not actively used by your bot.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -642,7 +642,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.update.Update.message_reaction_count">
 <span class="sig-name descname"><span class="pre">message_reaction_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="message_reaction_count_updated.html#aiogram.types.message_reaction_count_updated.MessageReactionCountUpdated" title="aiogram.types.message_reaction_count_updated.MessageReactionCountUpdated"><span class="pre">MessageReactionCountUpdated</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.update.Update.message_reaction_count" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>. 现在已更改对带有匿名反应的消息的反应。 机器人必须是聊天室中的管理员，并且必须明确指定在*allowed_updates*列表中的:code:<a href="#id1"><span class="problematic" id="id2">`</span></a>”message_reaction_count”<a href="#id3"><span class="problematic" id="id4">`</span></a>来接收这些更新。</p>
+<dd><p><em>Optional</em>. Reactions to a message with anonymous reactions were changed. The bot must be an administrator in the chat and must explicitly specify <code class="code docutils literal notranslate"><span class="pre">&quot;message_reaction_count&quot;</span></code> in the list of <em>allowed_updates</em> to receive these updates. The updates are grouped and can be sent with delay up to a few minutes.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -679,7 +679,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.update.Update.poll">
 <span class="sig-name descname"><span class="pre">poll</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="poll.html#aiogram.types.poll.Poll" title="aiogram.types.poll.Poll"><span class="pre">Poll</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.update.Update.poll" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>。新的投票状态。 机器人只接收有关已停止的投票和由机器人发送的投票的更新。</p>
+<dd><p><em>Optional</em>. New poll state. Bots receive only updates about manually stopped polls and polls, which are sent by the bot</p>
 </dd></dl>
 
 <dl class="py attribute">

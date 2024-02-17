@@ -594,17 +594,40 @@
         </div>
         <article role="main">
           <h1>aiogram.types.story 源代码</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">aiogram.types</span> <span class="kn">import</span> <span class="n">TelegramObject</span>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">TelegramObject</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">.chat</span> <span class="kn">import</span> <span class="n">Chat</span>
 
 
 <div class="viewcode-block" id="Story">
 <a class="viewcode-back" href="../../../api/types/story.html#aiogram.types.story.Story">[文档]</a>
 <span class="k">class</span> <span class="nc">Story</span><span class="p">(</span><span class="n">TelegramObject</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This object represents a message about a forwarded story in the chat. Currently holds no information.</span>
+<span class="sd">    This object represents a story.</span>
 
 <span class="sd">    Source: https://core.telegram.org/bots/api#story</span>
-<span class="sd">    &quot;&quot;&quot;</span></div>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">chat</span><span class="p">:</span> <span class="n">Chat</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Chat that posted the story&quot;&quot;&quot;</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Unique identifier for the story in the chat&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+        <span class="c1"># DO NOT EDIT MANUALLY!!!</span>
+        <span class="c1"># This section was auto-generated via `butcher`</span>
+
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">__pydantic__self__</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">chat</span><span class="p">:</span> <span class="n">Chat</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="o">**</span><span class="n">__pydantic_kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># DO NOT EDIT MANUALLY!!!</span>
+            <span class="c1"># This method was auto-generated via `butcher`</span>
+            <span class="c1"># Is needed only for type checking and IDE support without any additional plugins</span>
+
+            <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">chat</span><span class="o">=</span><span class="n">chat</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="o">**</span><span class="n">__pydantic_kwargs</span><span class="p">)</span></div>
 
 </pre></div>
         </article>
