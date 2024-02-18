@@ -602,17 +602,17 @@
 <section id="features">
 <h3>特性<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>Reworked bot-wide globals like <code class="code docutils literal notranslate"><span class="pre">parse_mode</span></code>, <code class="code docutils literal notranslate"><span class="pre">disable_web_page_preview</span></code>, and others to be more flexible.</p>
+<li><p>重构了机器人范围内的全局项，如 <code class="code docutils literal notranslate"><span class="pre">parse_mode</span></code>、<code class="code docutils literal notranslate"><span class="pre">disable_web_page_preview</span></code> 等，使其更加灵活。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Note that the old way of setting these global bot properties is now deprecated and will be removed in the next major release.</p>
+<p>请注意，设置这些全局机器人属性的旧方法现已过时，将在下一个主要版本中删除。</p>
 </div>
 <p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1392">#1392</a></p>
 </li>
 <li><p>一个新的枚举 <code class="code docutils literal notranslate"><span class="pre">KeyboardButtonPollTypeType</span></code> 用于 <code class="code docutils literal notranslate"><span class="pre">KeyboardButtonPollTypeType.type</span></code> 字段已经添加。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1398">#1398</a></p></li>
-<li><p>Added full support of <a class="reference external" href="https://core.telegram.org/bots/api-changelog#february-16-2024">Bot API 7.1</a></p>
+<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#february-16-2024">Bot API 7.1</a> 的全面支持。</p>
 <ul class="simple">
-<li><p>在超级组中添加了对管理员权限 <code class="code docutils literal notranslate"><span class="pre">can_post_stories</span></code>、 <code class="code docutils literal notranslate"><span class="pre">can_edit_stories</span></code>、 :code:<a href="#id1"><span class="problematic" id="id2">`</span></a>can_delete_stories`的支持。</p></li>
+<li><p>在超级组中添加了对管理员权限 <code class="code docutils literal notranslate"><span class="pre">can_post_stories</span></code>、 <code class="code docutils literal notranslate"><span class="pre">can_edit_stories</span></code>、 <code class="code docutils literal notranslate"><span class="pre">can_delete_stories</span></code> 的支持。</p></li>
 <li><p>在类 <code class="code docutils literal notranslate"><span class="pre">Message</span></code> 中添加了类 <code class="code docutils literal notranslate"><span class="pre">ChatBoostAdded</span></code> 和字段 <code class="code docutils literal notranslate"><span class="pre">boost_added</span></code>，用于服务用户提升聊天的消息。</p></li>
 <li><p>为类 <code class="code docutils literal notranslate"><span class="pre">Message</span></code> 添加字段 <code class="code docutils literal notranslate"><span class="pre">sender_boost_count</span></code>。</p></li>
 <li><p>为类 <code class="code docutils literal notranslate"><span class="pre">Message</span></code> 添加字段 <code class="code docutils literal notranslate"><span class="pre">reply_to_story</span></code>。</p></li>
