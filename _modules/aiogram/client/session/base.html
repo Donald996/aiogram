@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="索引" href="../../../../genindex.html" /><link rel="search" title="搜索" href="../../../../search.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>aiogram.client.session.base - aiogram 3.4.0 文档</title>
+        <title>aiogram.client.session.base - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../../index.html"><div class="brand">aiogram 3.4.0 文档</div></a>
+      <a href="../../../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -150,7 +150,7 @@
     <img class="sidebar-logo" src="../../../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -634,7 +634,7 @@
 
 <span class="kn">from</span> <span class="nn">...methods</span> <span class="kn">import</span> <span class="n">Response</span><span class="p">,</span> <span class="n">TelegramMethod</span>
 <span class="kn">from</span> <span class="nn">...methods.base</span> <span class="kn">import</span> <span class="n">TelegramType</span>
-<span class="kn">from</span> <span class="nn">...types</span> <span class="kn">import</span> <span class="n">InputFile</span>
+<span class="kn">from</span> <span class="nn">...types</span> <span class="kn">import</span> <span class="n">InputFile</span><span class="p">,</span> <span class="n">TelegramObject</span>
 <span class="kn">from</span> <span class="nn">..default</span> <span class="kn">import</span> <span class="n">Default</span>
 <span class="kn">from</span> <span class="nn">..telegram</span> <span class="kn">import</span> <span class="n">PRODUCTION</span><span class="p">,</span> <span class="n">TelegramAPIServer</span>
 <span class="kn">from</span> <span class="nn">.middlewares.manager</span> <span class="kn">import</span> <span class="n">RequestMiddlewareManager</span>
@@ -845,7 +845,13 @@
             <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()))</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">prepare_value</span><span class="p">(</span><span class="n">value</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span> <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">)</span>
-
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">TelegramObject</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">prepare_value</span><span class="p">(</span>
+                <span class="n">value</span><span class="o">.</span><span class="n">model_dump</span><span class="p">(</span><span class="n">warnings</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
+                <span class="n">files</span><span class="o">=</span><span class="n">files</span><span class="p">,</span>
+                <span class="n">_dumps_json</span><span class="o">=</span><span class="n">_dumps_json</span><span class="p">,</span>
+            <span class="p">)</span>
         <span class="k">if</span> <span class="n">_dumps_json</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">json_dumps</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">value</span></div>
@@ -903,7 +909,7 @@
       
     </aside>
   </div>
-</div><script src="../../../../_static/documentation_options.js?v=dd0888fc"></script>
+</div><script src="../../../../_static/documentation_options.js?v=cfceb4e6"></script>
     <script src="../../../../_static/doctools.js?v=888ff710"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/scripts/furo.js?v=32e29ea5"></script>
