@@ -602,9 +602,7 @@
 <section id="bugfixes">
 <h3>错误修复<a class="headerlink" href="#bugfixes" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Fixed JSON serialization of the <code class="code docutils literal notranslate"><span class="pre">LinkPreviewOptions</span></code> class while it is passed
-as bot-wide default options.
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1418">#1418</a></p></li>
+<li><p>修正了 <code class="code docutils literal notranslate"><span class="pre">LinkPreviewOptions</span></code> 类的 JSON 序列化，当它作为机器人范围的默认选项传递时。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1418">#1418</a></p></li>
 </ul>
 </section>
 </section>
@@ -645,7 +643,7 @@ as bot-wide default options.
 <section id="improved-documentation">
 <h3>改进的文档<a class="headerlink" href="#improved-documentation" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>在文档中添加“使用复数形式”的概念 Utils -&gt; 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1395">#1395</a></p></li>
+<li><p>在文档中添加 <cite>使用复数形式</cite> 的概念 Utils -&gt; 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1395">#1395</a></p></li>
 </ul>
 </section>
 </section>
@@ -666,7 +664,7 @@ as bot-wide default options.
 <li><p>赠品</p></li>
 <li><p>其他变化</p></li>
 </ul>
-<p>#1387 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1387">https://github.com/aiogram/aiogram/issues/1387</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1387">#1387</a></p>
 </li>
 </ul>
 </section>
@@ -676,7 +674,7 @@ as bot-wide default options.
 <section id="id15">
 <h3>特性<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>介绍了“场景”功能，可以帮助您使用有限状态机来简化用户交互。了解更多👉 <a class="reference internal" href="dispatcher/finite_state_machine/scene.html#scenes"><span class="std std-ref">Scenes</span></a>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1280">#1280</a></p></li>
+<li><p>引入场景功能，帮助您使用有限状态机简化用户交互。了解有关 👉 <a class="reference internal" href="dispatcher/finite_state_machine/scene.html#scenes"><span class="std std-ref">Scenes</span></a>.`#1280 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1280">https://github.com/aiogram/aiogram/issues/1280</a>&gt;`_</p></li>
 <li><p>添加了新的FSM策略 <code class="code docutils literal notranslate"><span class="pre">CHAT_TOPIC</span></code>，它为聊天中的整个主题设置状态，也适用于私人消息和没有话题的常规群组。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1343">#1343</a></p></li>
 </ul>
 </section>
@@ -708,7 +706,7 @@ as bot-wide default options.
 <li><p><code class="code docutils literal notranslate"><span class="pre">aiodns</span></code> - 在 <code class="code docutils literal notranslate"><span class="pre">fast</span></code> extras 中添加了新的依赖项（<code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">aiogram[fast]</span></code>)</p></li>
 <li><p><em>其他…</em></p></li>
 </ul>
-<p>#1327 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1327">https://github.com/aiogram/aiogram/issues/1327</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1327">#1327</a></p>
 </li>
 <li><p>防止更新处理任务指针被垃圾回收，从2.x回溯到 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1331">#1331</a></p></li>
 <li><p>更新了依赖项中 <code class="code docutils literal notranslate"><span class="pre">typing-extensions</span></code> 软件包的版本范围，以修复与 <code class="code docutils literal notranslate"><span class="pre">FastAPI</span></code> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1347">#1347</a> 的兼容性问题。</p></li>
@@ -741,7 +739,7 @@ as bot-wide default options.
 <section id="id43">
 <h3>错误修复<a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>为`InlineKeyboardBuilder` 和 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1303">ReplyKeyboardBuilder`添加了实际参数提示。`#1303</a></p></li>
+<li><p>为 <cite>InlineKeyboardBuilder</cite> 和 <cite>ReplyKeyboardBuilder</cite> 添加了实际参数提示。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1303">#1303</a></p></li>
 <li><p>固定了事件隔离的优先级，现在用户状态只有在锁定后才会被加载。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1317">#1317</a></p></li>
 </ul>
 </section>
@@ -752,11 +750,11 @@ as bot-wide default options.
 <h3>错误修复<a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>将 <code class="code docutils literal notranslate"><span class="pre">datetime.datetime</span></code> 替换为 <cite>DateTime</cite> 类型封装器，以使转储的 JSON 对象与通过 Telegram 发送的数据更兼容。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1277">#1277</a></p></li>
-<li><p>修复了可以解释为“False”（例如“0”）的值的固定魔法`:code: ‘.as_(…)`操作。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1281">#1281</a></p></li>
+<li><p>修正了可解释为 <cite>False</cite> (如 <cite>0</cite>)的值的魔法 <code class="code docutils literal notranslate"><span class="pre">.as_(…)</span></code> 操作。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1281">#1281</a></p></li>
 <li><p>utils现在使用正确的装饰符进行斜体标记 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1282">#1282</a></p></li>
 <li><p>修复了方法 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 用于贴纸。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1284">#1284</a></p></li>
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 方法，原先在处理故事时出现问题，现在可以成功复制故事（转发消息）了。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1286">#1286</a></p></li>
-<li><p>修复了当根验证器中的remove_unset引起验证错误时重叠的错误。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1290">#1290</a></p></li>
+<li><p>修正了当基本类型和方法中的 remove_unset 根验证器导致验证错误时的错误重叠。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1290">#1290</a></p></li>
 </ul>
 </section>
 </section>
@@ -774,11 +772,11 @@ as bot-wide default options.
 <h3>改进的文档<a class="headerlink" href="#id58" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>添加了错误处理示例 <cite>examples/error_handling.py</cite> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1099">#1099</a></p></li>
-<li><p>关于跳过待处理更新添加了几句话`#1251 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1251">https://github.com/aiogram/aiogram/issues/1251</a>&gt;`_</p></li>
+<li><p>添加了关于跳过待定更新的几句话 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1251">#1251</a></p></li>
 <li><p>添加了依赖注入技术部分 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1253">#1253</a></p></li>
-<li><p>这次更新包括向存储库添加多文件机器人示例。 #1254 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1254">https://github.com/aiogram/aiogram/issues/1254</a>&gt;</p></li>
+<li><p>此更新包括在软件源中添加一个多文件机器人示例。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1254">#1254</a></p></li>
 <li><p>重构示例代码以使用aiogram枚举，并通过标记美化增强聊天消息，使其更加用户友好。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1256">#1256</a></p></li>
-<li><p>在迁移常见问题解答中补充了”有限状态机”部分 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1264">#1264</a></p></li>
+<li><p>补充迁移常见问题中的 “有限状态机 “部分 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1264">#1264</a></p></li>
 <li><p>TelegramEventObserver的filter方法的文档字符串中删除了额外的参数，并修复了I18n文档中的拼写错误。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1268">#1268</a></p></li>
 </ul>
 </section>
@@ -786,7 +784,7 @@ as bot-wide default options.
 <h3>其他<a class="headerlink" href="#id66" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>在分发器中增强了警告消息，当更新类型未知时，包含了更新的 JSON 转储。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1269">#1269</a></p></li>
-<li><p>已添加对`Bot API 6.8 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#august-18-2023">https://core.telegram.org/bots/api-changelog#august-18-2023</a>&gt;`_ <a href="#id1"><span class="problematic" id="id2">`</span></a>#1275 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1275">https://github.com/aiogram/aiogram/issues/1275</a>&gt;`_的支持。</p></li>
+<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#august-18-2023">Bot API 6.8</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1275">#1275</a> 的支持。</p></li>
 </ul>
 </section>
 </section>
@@ -805,7 +803,7 @@ as bot-wide default options.
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>#1194 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1194">https://github.com/aiogram/aiogram/issues/1194</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1194">#1194</a></p>
 </li>
 <li><p>更新了键盘构建器，增加了新的方法，使按钮和键盘的集成更加顺畅。添加了从现有标记创建按钮并附加另一个构建器的功能。这一改进旨在使键盘构建过程更加用户友好和灵活。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1236">#1236</a></p></li>
 <li><p>在ChatActionSender中添加了message_thread_id的支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1249">#1249</a></p></li>
@@ -814,14 +812,14 @@ as bot-wide default options.
 <section id="id73">
 <h3>错误修复<a class="headerlink" href="#id73" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>修复了手动将“bot”键传递到调度程序工作流数据时的轮询启动`#1242 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1242">https://github.com/aiogram/aiogram/issues/1242</a>&gt;`_</p></li>
+<li><p>修复了手动将“bot”键传递到调度程序工作流数据时的轮询启动 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1242">#1242</a></p></li>
 <li><p>为丢失的快捷方式添加了代码生成配置：</p>
 <ul class="simple">
 <li><p>ShippingQuery.answer</p></li>
-<li><p>PreCheckoutQuery.answer = 预支付查询.回答</p></li>
-<li><p>消息.delete_reply_markup</p></li>
+<li><p>PreCheckoutQuery.answer</p></li>
+<li><p>Message.delete_reply_markup</p></li>
 </ul>
-<p>#1244 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1244">https://github.com/aiogram/aiogram/issues/1244</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1244">#1244</a></p>
 </li>
 </ul>
 </section>
@@ -834,8 +832,8 @@ as bot-wide default options.
 <section id="id78">
 <h3>其他<a class="headerlink" href="#id78" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>重做了InputFile的读取，删除了 :code：’__aiter__’方法，为 :code：’ .read(…) ‘方法添加了’ bot: Bot ‘参数，因此，从现在开始，可以在不指定机器人实例的情况下使用URLInputFile。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1238">#1238</a></p></li>
-<li><p>自动生成的代码 <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> 类型提示在类型和方法中，使IDE快乐，而无需额外的pydantic插件 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1245">#1245</a></p></li>
+<li><p>重做了 InputFile 读取，删除了 <code class="code docutils literal notranslate"><span class="pre">__aiter__</span></code> 方法，并在 <code class="code docutils literal notranslate"><span class="pre">.read(…)</span></code> 方法中添加了 <cite>bot.Bot</cite> 参数：Bot` 参数到 <code class="code docutils literal notranslate"><span class="pre">.read(…)</span></code> 方法，因此，从现在起 URLInputFile 可以在不指定 bot 实例的情况下使用。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1238">#1238</a></p></li>
+<li><p>代码生成的 <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> 类型和方法中的类型提示，使 IDE 无需额外的 pydantic 插件就能满意 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1245">#1245</a></p></li>
 </ul>
 </section>
 </section>
@@ -852,20 +850,20 @@ as bot-wide default options.
 <h3>错误修复<a class="headerlink" href="#id84" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>在 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 快捷方式中修复了机器人分配问题 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1232">#1232</a></p></li>
-<li><p>增加了模型验证以在字段验证前删除UNSET。 这种更改是必要的，以正确处理使用’UNSET’作为标记值的parse_mode。 如果不删除’UNSET’，当传递给来自Bot.method_name的模型初始化时，它会创建问题。 ‘UNSET’也已添加到typing。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1233">#1233</a></p></li>
+<li><p>已添加模型验证，以便在字段验证前移除 UNSET。为了正确处理使用 <cite>UNSET</cite> 作为哨兵值的 parse_mode，这一更改是必要的。如果不移除 <cite>UNSET</cite> ，从 Bot.method_name 传递到模型初始化时就会产生问题。 <cite>UNSET</cite> 也被添加到键入中。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1233">#1233</a></p></li>
 <li><p>将pydantic更新至2.1，并修复了一些bug。</p></li>
 </ul>
 </section>
 <section id="id87">
 <h3>改进的文档<a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>改进了文档，添加了基本迁移指南（以后会扩展）`#1143 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1143">https://github.com/aiogram/aiogram/issues/1143</a>&gt;`_</p></li>
+<li><p>改进文档，添加基本迁移指南（稍后将扩展） <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1143">#1143</a></p></li>
 </ul>
 </section>
 <section id="deprecations-and-removals">
 <h3>弃用和移除<a class="headerlink" href="#deprecations-and-removals" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>移除了以前所有使用的上下文实例（Bot.get_current）的位置。这是为了避免在错误的地方使用上下文实例。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1230">#1230</a></p></li>
+<li><p>从以前使用过的所有位置中移除对上下文实例 (Bot.get_current) 的使用。这是为了避免在错误的地方使用上下文实例。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1230">#1230</a></p></li>
 </ul>
 </section>
 </section>
@@ -889,19 +887,19 @@ as bot-wide default options.
 <p class="admonition-title">备注</p>
 <p>如果您已经实现了您自己的存储，您应该通过新的属性扩展记录键生成 - <code class="code docutils literal notranslate"><span class="pre">thread_id</span></code></p>
 </div>
-<p>#1161 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1161">https://github.com/aiogram/aiogram/issues/1161</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1161">#1161</a></p>
 </li>
 <li><p>改进了回调数据的序列化。</p>
 <ul class="simple">
 <li><p>缩小的 UUID（十六进制，没有破折号）</p></li>
 <li><p>用整数替换布尔值（true=1, false=0）</p></li>
 </ul>
-<p>#1163 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1163">https://github.com/aiogram/aiogram/issues/1163</a>&gt;`_</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1163">#1163</a></p>
 </li>
 <li><p>添加了一个工具，使文本格式灵活且易于使用。有关更多详细信息，请参阅 <a class="reference internal" href="utils/formatting.html#formatting-tool"><span class="std std-ref">相应的文档页面</span></a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1172">#1172</a></p></li>
 <li><p>添加了 <code class="code docutils literal notranslate"><span class="pre">X-Telegram-Bot-Api-Secret-Token</span></code> 标头检查 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1173">#1173</a></p></li>
 <li><p>将 <code class="code docutils literal notranslate"><span class="pre">allowed_updates</span></code> 列表在 start_polling 方法中自动循环，如果未明确设置。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1178">#1178</a></p></li>
-<li><p>新增了将自定义头部传递给 <a href="#id1"><span class="problematic" id="id2">:class:`URLInputFile`对象的可能性 `#1191 &lt;https://github.com/aiogram/aiogram/issues/1191&gt;`_</span></a></p></li>
+<li><p>新增了将自定义头部传递给 <code class="xref py py-class docutils literal notranslate"><span class="pre">URLInputFile</span></code> 对象的可能性 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1191">#1191</a></p></li>
 </ul>
 </section>
 <section id="id98">
