@@ -190,6 +190,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/chat_boost.html">聊天助力添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/chat_boost_removed.html">聊天助力移除</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/chat_boost_source.html">聊天助力来源</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
@@ -649,6 +650,19 @@
 </div>
 <p><strong>使用复数形式</strong></p>
 <p>来自 <cite>aiogram.utils.i18n</cite> 的 <cite>gettext</cite> 是 <a class="reference external" href="https://docs.python.org/3/library/gettext.html">GNU gettext Python 模块</a> 的两个函数 _gettext_ 和 _ngettext_ 的别名。因此，信息字符串的封装器是同一个 <cite>_()</cite> 。您需要向函数传递三个参数：一个单数字符串、一个复数字符串和一个值。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiogram</span> <span class="kn">import</span> <span class="n">html</span>
+<span class="kn">from</span> <span class="nn">aiogram.utils.i18n</span> <span class="kn">import</span> <span class="n">gettext</span> <span class="k">as</span> <span class="n">_</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">my_handler</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+<span class="hll">        <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
+<span class="hll">        <span class="n">_</span><span class="p">(</span><span class="s2">&quot;You ordered </span><span class="si">{n}</span><span class="s2"> piece.&quot;</span><span class="p">,</span> <span class="s2">&quot;You ordered </span><span class="si">{n}</span><span class="s2"> pieces.&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+</span>    <span class="p">)</span>
+</pre></div>
+</div>
 </section>
 <section id="configuring-engine">
 <h2>配置引擎<a class="headerlink" href="#configuring-engine" title="Link to this heading">#</a></h2>
