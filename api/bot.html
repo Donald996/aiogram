@@ -603,7 +603,7 @@
 <p>举例：<code class="code docutils literal notranslate"><span class="pre">sendMessage</span></code> 名为 <code class="code docutils literal notranslate"><span class="pre">send_message</span></code> ，并且与所有基于类的方法具有相同的规范。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>文档的适当部分中可以找到方法的完整列表。</p>
+<p>文档的适当部分中可以找到方法的完整列表</p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py">
@@ -621,8 +621,7 @@
 <li><p><strong>parse_mode</strong> – 默认解析模式。如果指定，它将在运行时传播到API方法中。</p></li>
 <li><p><strong>disable_web_page_preview</strong> – 默认禁用网页预览模式。如果指定，它将在运行时传播到API方法中。</p></li>
 <li><p><strong>protect_content</strong> – 默认的 protect_content 模式。如果指定，它将在运行时传播到 API 方法中。</p></li>
-<li><p><strong>default</strong> – Default bot properties.
-If specified it will be propagated into the API methods at runtime.</p></li>
+<li><p><strong>default</strong> – 机器人默认属性。如果指定了这些属性，则会在运行时传播到 API 方法中。</p></li>
 </ul>
 </dd>
 <dt class="field-even">抛出<span class="colon">:</span></dt>
@@ -681,7 +680,7 @@ If specified it will be propagated into the API methods at runtime.</p></li>
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_path</strong> – 在Telegram服务器上的文件路径（您可以从 <code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.types.File</span></code> 中获取）</p></li>
-<li><p><strong>destination</strong> – 文件名，文件路径或者  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.IOBase</span></code> 的实例。例如  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code> ，默认为 <code class="code docutils literal notranslate"><span class="pre">None</span></code>。</p></li>
+<li><p><strong>destination</strong> – 文件名，文件路径或者  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.IOBase</span></code> 的实例。例如  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code> ，默认为 <code class="code docutils literal notranslate"><span class="pre">None</span></code></p></li>
 <li><p><strong>timeout</strong> – 默认为30秒的总超时时间</p></li>
 <li><p><strong>chunk_size</strong> – 文件块大小，默认为64 kb</p></li>
 <li><p><strong>seek</strong> – 下载完成时转到文件的开头。仅用于类型为  <code class="xref py py-class docutils literal notranslate"><span class="pre">typing.BinaryIO</span></code> 的目标，默认为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p></li>
@@ -699,7 +698,7 @@ If specified it will be propagated into the API methods at runtime.</p></li>
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> – 文件ID或可下载的对象</p></li>
-<li><p><strong>destination</strong> – 文件名，文件路径或者  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.IOBase</span></code> 的实例。例如  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code> ，默认为 <code class="code docutils literal notranslate"><span class="pre">None</span></code>。</p></li>
+<li><p><strong>destination</strong> – 文件名，文件路径或者  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.IOBase</span></code> 的实例。例如  <code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code> ，默认为 <code class="code docutils literal notranslate"><span class="pre">None</span></code></p></li>
 <li><p><strong>timeout</strong> – 默认为30秒的总超时时间</p></li>
 <li><p><strong>chunk_size</strong> – 文件块大小，默认为64 kb</p></li>
 <li><p><strong>seek</strong> – 下载完成时转到文件的开头。仅用于类型为  <code class="xref py py-class docutils literal notranslate"><span class="pre">typing.BinaryIO</span></code> 的目标，默认为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p></li>
