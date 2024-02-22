@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="中间件" href="../middlewares.html" /><link rel="prev" title="存储" href="storages.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>场景向导 - aiogram 3.4.1 文档</title>
+        <title>场景 - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -517,17 +517,17 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../filters/command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/callback_data.html">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../webhook.html">Webhook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">有限状态机</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="storages.html">存储</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">场景向导</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
@@ -596,7 +596,7 @@
         </div>
         <article role="main">
           <section id="scenes-wizard">
-<span id="scenes"></span><h1>场景向导<a class="headerlink" href="#scenes-wizard" title="Link to this heading">#</a></h1>
+<span id="scenes"></span><h1>场景<a class="headerlink" href="#scenes-wizard" title="Link to this heading">#</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.2 版本加入.</span></p>
 </div>
@@ -609,19 +609,19 @@
 <h2>理解场景<a class="headerlink" href="#understanding-scenes" title="Link to this heading">#</a></h2>
 <p>在 <strong>aiogram</strong> 中，一个场景就像是一个抽象的、孤立的命名空间或房间，用户可以通过代码引导进入其中。当用户处于场景中时，大多数其他全局命令或消息处理程序都会被绕过，除非它们被专门设计为在场景之外起作用。这有助于创建一种专注交互的体验。场景为更复杂的交互提供了结构，有效地隔离和管理对话不同阶段的上下文。它们允许您以更有组织的方式控制和管理对话的流程。</p>
 <section id="scene-lifecycle">
-<h3>场景生命周期<a class="headerlink" href="#scene-lifecycle" title="Link to this heading">#</a></h3>
-<p>每个场景都可以被“进入”，“离开”或“退出”，从而清晰地过渡到对话的不同阶段。例如，在多步骤表单填写交互中，每个步骤都可以是一个场景-机器人引导用户从一个场景到下一个，当他们提供所需的信息。</p>
+<h3>场景生命周期(Scene Lifecycle)<a class="headerlink" href="#scene-lifecycle" title="Link to this heading">#</a></h3>
+<p>每个场景都可以被 <cite>entered</cite> ,`left` 或 <cite>exited</cite> ，从而清晰地过渡到对话的不同阶段。例如，在多步骤表单填写交互中，每个步骤都可以是一个场景-机器人引导用户从一个场景到下一个，当他们提供所需的信息。</p>
 </section>
 <section id="scene-listeners">
-<h3>场景监听器<a class="headerlink" href="#scene-listeners" title="Link to this heading">#</a></h3>
-<p>场景有自己的钩子，这些钩子是命令或消息监听器，只会在用户在场景内时起作用。这些钩子对用户的动作做出反应，而用户在“内部”场景时，提供适合该上下文的响应或动作。当用户从一个场景被引导到另一个场景时，行动和响应相应地改变，因为用户现在正在与新场景内的监听器集交互。这些“特定场景”的钩子或监听器，脱离了全局监听上下文，允许更加流畅和有组织的机器人用户交互。</p>
+<h3>场景监听器(Scene Listeners)<a class="headerlink" href="#scene-listeners" title="Link to this heading">#</a></h3>
+<p>场景有自己的钩子，这些钩子是命令或消息监听器，只会在用户在场景内时起作用。这些钩子对用户的动作做出反应，而用户在 <cite>内部</cite> 场景时，提供适合该上下文的响应或动作。当用户从一个场景被引导到另一个场景时，行动和响应相应地改变，因为用户现在正在与新场景内的监听器集交互。这些 <cite>特定场景</cite> 的钩子或监听器，脱离了全局监听上下文，允许更加流畅和有组织的机器人用户交互。</p>
 </section>
 <section id="scene-interactions">
-<h3>场景互动<a class="headerlink" href="#scene-interactions" title="Link to this heading">#</a></h3>
+<h3>场景互动(Scene Interactions)<a class="headerlink" href="#scene-interactions" title="Link to this heading">#</a></h3>
 <p>每个场景就像是一个独立的世界，其内定义了场景范围内的互动。因此，在特定场景内定义的处理程序才会在该场景的生命周期内对用户的输入作出反应。</p>
 </section>
 <section id="scene-benefits">
-<h3>场景优势<a class="headerlink" href="#scene-benefits" title="Link to this heading">#</a></h3>
+<h3>场景优势(Scene Benefits)<a class="headerlink" href="#scene-benefits" title="Link to this heading">#</a></h3>
 <p>场景可以帮助管理更复杂的交互工作流程，使用户与机器人之间的对话更加互动和动态。这样可以更灵活地处理多步交互或与用户的对话。</p>
 </section>
 </section>
@@ -823,7 +823,7 @@
 </pre></div>
 </div>
 </div>
-<p>当用户回答未知消息时，我们应该再次期待文本消息。</p>
+<p>当用户回答未知消息时，我们应该再次期待文本消息:</p>
 <div class="literal-block-wrapper docutils container" id="id7">
 <div class="code-block-caption"><span class="caption-text">未知消息处理程序</span><a class="headerlink" href="#id7" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="nd">@on</span><span class="o">.</span><span class="n">message</span><span class="p">()</span>
@@ -894,7 +894,7 @@
 </pre></div>
 </div>
 </div>
-<p>也可以实现退出提问游戏或返回上一个问题的操作。</p>
+<p>也可以实现退出提问游戏或返回上一个问题的操作:</p>
 <div class="literal-block-wrapper docutils container" id="id9">
 <div class="code-block-caption"><span class="caption-text">退出处理程序</span><a class="headerlink" href="#id9" title="Link to this code">#</a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="nd">@on</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span> <span class="o">==</span> <span class="s2">&quot;🚫 Exit&quot;</span><span class="p">)</span>
@@ -1325,7 +1325,7 @@
 <dt class="sig sig-object py" id="aiogram.fsm.scene.SceneRegistry.add">
 <span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">scenes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#aiogram.fsm.scene.Scene" title="aiogram.fsm.scene.Scene"><span class="pre">Scene</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">router</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../router.html#aiogram.dispatcher.router.Router" title="aiogram.dispatcher.router.Router"><span class="pre">Router</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../_modules/aiogram/fsm/scene.html#SceneRegistry.add"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.fsm.scene.SceneRegistry.add" title="Link to this definition">#</a></dt>
 <dd><p>这个方法将指定的场景添加到注册表，并可选择将其注册到路由器。</p>
-<p>如果注册表中已存在相同状态的场景，则会引发SceneException。</p>
+<p>如果注册表中已存在相同状态的场景，则会引发 <cite>SceneException</cite>。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>如果路由器未指定，则情景将不会被注册到路由器。您需要手动将情景包含到路由器中或使用注册方法。</p>
@@ -1346,7 +1346,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.fsm.scene.SceneRegistry.get">
 <span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#aiogram.fsm.scene.Scene" title="aiogram.fsm.scene.Scene"><span class="pre">Scene</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#aiogram.fsm.scene.Scene" title="aiogram.fsm.scene.Scene"><span class="pre">Scene</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/aiogram/fsm/scene.html#SceneRegistry.get"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.fsm.scene.SceneRegistry.get" title="Link to this definition">#</a></dt>
-<dd><p>这个方法返回指定场景注册的Scene对象。场景参数可以是一个Scene对象，也可以是表示场景名称的字符串。如果提供了一个Scene对象，则将使用与该Scene对象关联的SceneConfig对象的state属性作为场景名称。如果提供了None或无效类型，将引发一个SceneException。</p>
+<dd><p>这个方法返回指定场景注册的 Scene 对象。场景参数可以是一个 Scene 对象，也可以是表示场景名称的字符串。如果提供了一个 Scene 对象，则将使用与该 Scene 对象关联的 SceneConfig 对象的 state 属性作为场景名称。如果提供了None或无效类型，将引发一个 SceneException 。</p>
 <p>如果指定的场景在SceneRegistry对象中没有注册，则会触发一个SceneException。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
@@ -1399,9 +1399,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scene_type</strong> – 可选类型 [Scene] 或表示要进入的场景类型的字符串。</p></li>
-<li><p><strong>_check_active</strong> – 可选的布尔值，表示在进入新场景之前是否检查是否有活动场景需要退出。默认为True。</p></li>
-<li><p><strong>kwargs</strong> – 传递到场景的wizard.enter()方法的额外关键字参数。</p></li>
+<li><p><strong>scene_type</strong> – 可选 <code class="code docutils literal notranslate"><span class="pre">Type[Scene]</span></code> 或表示要进入的场景类型的字符串。</p></li>
+<li><p><strong>_check_active</strong> – 可选 <code class="code docutils literal notranslate"><span class="pre">bool</span></code> 表示在进入新场景之前是否检查是否有活动场景需要退出。默认为True。</p></li>
+<li><p><strong>kwargs</strong> – 传递到场景的 <code class="code docutils literal notranslate"><span class="pre">wizard.enter()</span></code> 方法的额外关键字参数。</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
@@ -1418,7 +1418,7 @@
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.fsm.scene.SceneConfig.actions">
 <span class="sig-name descname"><span class="pre">actions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">SceneAction</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">CallableObject</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#aiogram.fsm.scene.SceneConfig.actions" title="Link to this definition">#</a></dt>
-<dd><p>场景动作</p>
+<dd><p>场景动作(Scene actions)</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1613,20 +1613,20 @@
 <p>它可以从 <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.fsm.scene</span> <span class="pre">import</span> <span class="pre">on</span></code> 导入，并且应该用作装饰器。</p>
 <p>允许的事件类型：</p>
 <ul class="simple">
-<li><p>消息</p></li>
-<li><p>编辑后的消息</p></li>
-<li><p>频道帖子</p></li>
-<li><p>编辑过的频道帖子</p></li>
-<li><p>内联查询</p></li>
-<li><p>选定的内联结果</p></li>
-<li><p>回调查询</p></li>
-<li><p>运输查询</p></li>
-<li><p>预结账查询</p></li>
-<li><p>投票</p></li>
-<li><p>投票答案</p></li>
-<li><p>我的聊天成员</p></li>
-<li><p>聊天成员</p></li>
-<li><p>聊天加入请求</p></li>
+<li><p>message</p></li>
+<li><p>edited_message</p></li>
+<li><p>channel_post</p></li>
+<li><p>edited_channel_post</p></li>
+<li><p>inline_query</p></li>
+<li><p>chosen_inline_result</p></li>
+<li><p>callback_query</p></li>
+<li><p>shipping_query</p></li>
+<li><p>pre_checkout_query</p></li>
+<li><p>poll</p></li>
+<li><p>poll_answer</p></li>
+<li><p>my_chat_member</p></li>
+<li><p>chat_member</p></li>
+<li><p>chat_join_request</p></li>
 </ul>
 <p>每种事件类型都可以像在路由器中一样进行过滤。</p>
 <p>同样，每个事件类型都可以标记为场景入口点、出口点或离开点。</p>
@@ -1706,12 +1706,12 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">场景向导</a><ul>
+<li><a class="reference internal" href="#">场景</a><ul>
 <li><a class="reference internal" href="#understanding-scenes">理解场景</a><ul>
-<li><a class="reference internal" href="#scene-lifecycle">场景生命周期</a></li>
-<li><a class="reference internal" href="#scene-listeners">场景监听器</a></li>
-<li><a class="reference internal" href="#scene-interactions">场景互动</a></li>
-<li><a class="reference internal" href="#scene-benefits">场景优势</a></li>
+<li><a class="reference internal" href="#scene-lifecycle">场景生命周期(Scene Lifecycle)</a></li>
+<li><a class="reference internal" href="#scene-listeners">场景监听器(Scene Listeners)</a></li>
+<li><a class="reference internal" href="#scene-interactions">场景互动(Scene Interactions)</a></li>
+<li><a class="reference internal" href="#scene-benefits">场景优势(Scene Benefits)</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#how-to-use-scenes">如何使用场景</a></li>

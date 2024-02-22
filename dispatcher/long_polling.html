@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="Webhook" href="webhook.html" /><link rel="prev" title="例外情况" href="filters/exception.html" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="网络钩子(Webhook)" href="webhook.html" /><link rel="prev" title="例外情况" href="filters/exception.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>长轮询 - aiogram 3.4.1 文档</title>
+        <title>长轮询(Long-polling) - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -517,17 +517,17 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="filters/command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters/magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters/magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters/magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters/magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/callback_data.html">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">长轮询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="webhook.html">Webhook</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webhook.html">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景向导</a></li>
+<li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件</a></li>
@@ -596,24 +596,24 @@
         </div>
         <article role="main">
           <section id="long-polling">
-<span id="id1"></span><h1>长轮询<a class="headerlink" href="#long-polling" title="Link to this heading">#</a></h1>
-<p>长轮询是一种技术，它允许Telegram服务器在您没有专用ip地址或端口来接收webhook的情况下发送更新，例如在开发人员机器上。</p>
+<span id="id1"></span><h1>长轮询(Long-polling)<a class="headerlink" href="#long-polling" title="Link to this heading">#</a></h1>
+<p>长轮询是一种技术，它允许Telegram服务器在没有专用ip地址或端口来接收网络钩子的情况下发送更新，例如在开发人员机器上。</p>
 <p>要使用长轮询模式，您应该使用 <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher.start_polling" title="aiogram.dispatcher.dispatcher.Dispatcher.start_polling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher.start_polling()</span></code></a> 或 <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher.run_polling" title="aiogram.dispatcher.dispatcher.Dispatcher.run_polling"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher.run_polling()</span></code></a> 方法。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>您只能从每个单个机器人令牌的一个轮询过程中使用轮询，在其他情况下，电报服务器将返回错误。</p>
+<p>只能从每个单个机器人令牌的一个轮询过程中使用轮询，在其他情况下，电报服务器将返回错误。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果你需要扩展你的机器人，你应该使用webhook而不是长轮询。</p>
+<p>如果需要扩展机器人，应该使用网络钩子而不是长轮询。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果您将使用multibot模式，您应该为所有机器人使用webhook模式。</p>
+<p>如果将使用多机器人模式，应该为所有机器人使用网络钩子模式。</p>
 </div>
 <section id="example">
 <h2>示例<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
-<p>此示例将向您展示如何基于长轮询创建简单的echo bot。</p>
+<p>此示例将向展示如何基于长轮询创建简单的回声机器人。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -685,7 +685,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Webhook</div>
+                <div class="title">网络钩子(Webhook)</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -730,7 +730,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">长轮询</a><ul>
+<li><a class="reference internal" href="#">长轮询(Long-polling)</a><ul>
 <li><a class="reference internal" href="#example">示例</a></li>
 </ul>
 </li>

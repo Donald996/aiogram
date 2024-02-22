@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="场景向导" href="scene.html" /><link rel="prev" title="有限状态机" href="index.html" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="场景" href="scene.html" /><link rel="prev" title="有限状态机" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>存储 - aiogram 3.4.1 文档</title>
@@ -517,17 +517,17 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../filters/command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/callback_data.html">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../webhook.html">Webhook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">有限状态机</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scene.html">场景向导</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene.html">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
@@ -598,16 +598,16 @@
           <section id="storages">
 <h1>存储<a class="headerlink" href="#storages" title="Link to this heading">#</a></h1>
 <section id="storages-out-of-the-box">
-<h2>存储开箱即用<a class="headerlink" href="#storages-out-of-the-box" title="Link to this heading">#</a></h2>
+<h2>开箱即用<a class="headerlink" href="#storages-out-of-the-box" title="Link to this heading">#</a></h2>
 <section id="memorystorage">
 <h3>内存存储<a class="headerlink" href="#memorystorage" title="Link to this heading">#</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.fsm.storage.memory.MemoryStorage">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.fsm.storage.memory.</span></span><span class="sig-name descname"><span class="pre">MemoryStorage</span></span><a class="reference internal" href="../../_modules/aiogram/fsm/storage/memory.html#MemoryStorage"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.fsm.storage.memory.MemoryStorage" title="Link to this definition">#</a></dt>
-<dd><p>默认FSM存储，将所有数据存储在  <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> 中，并在关闭时丢失所有数据</p>
+<dd><p>默认FSM存储，将所有数据存储在 <code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code> 中，并在关闭时丢失所有数据</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>不建议在生产环境中使用，因为当你的机器人重新启动时，你会丢失所有数据。</p>
+<p>不建议在生产环境中使用，因为当你的机器人重新启动时，你会丢失所有数据</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.fsm.storage.memory.MemoryStorage.__init__">
@@ -687,7 +687,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.fsm.storage.base.BaseStorage.update_data">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">StorageKey</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/aiogram/fsm/storage/base.html#BaseStorage.update_data"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.fsm.storage.base.BaseStorage.update_data" title="Link to this definition">#</a></dt>
-<dd><p>更新存储中键的日期（类似dict.update）</p>
+<dd><p>更新存储中键的日期（类似 <cite>dict.update</cite>）</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -722,7 +722,7 @@
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">场景向导</div>
+                <div class="title">场景</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -768,7 +768,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">存储</a><ul>
-<li><a class="reference internal" href="#storages-out-of-the-box">存储开箱即用</a><ul>
+<li><a class="reference internal" href="#storages-out-of-the-box">开箱即用</a><ul>
 <li><a class="reference internal" href="#memorystorage">内存存储</a><ul>
 <li><a class="reference internal" href="#aiogram.fsm.storage.memory.MemoryStorage"><code class="docutils literal notranslate"><span class="pre">MemoryStorage</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.fsm.storage.memory.MemoryStorage.__init__"><code class="docutils literal notranslate"><span class="pre">MemoryStorage.__init__()</span></code></a></li>

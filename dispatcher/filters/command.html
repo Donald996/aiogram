@@ -517,17 +517,17 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">过滤事件</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="callback_data.html">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../webhook.html">Webhook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/storages.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/scene.html">场景向导</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
@@ -601,8 +601,8 @@
 <h2>用法<a class="headerlink" href="#usage" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>过滤命令的单一变量： <code class="code docutils literal notranslate"><span class="pre">Command(“start”)</span></code></p></li>
-<li><p>用 regexp 模式处理命令： <code class="code docutils literal notranslate"><span class="pre">Command(re.compile(r</span> <span class="pre">“item_(d+)”))</span></code></p></li>
-<li><p>通过多个变量匹配命令： <code class="code docutils literal notranslate"><span class="pre">Command(“item”,</span> <span class="pre">re.compile(r</span> <span class="pre">“item_(d+)”))</span></code></p></li>
+<li><p>用 regexp 模式处理命令： <code class="code docutils literal notranslate"><span class="pre">Command(re.compile(r“item_(d+)”))</span></code></p></li>
+<li><p>通过多个变量匹配命令： <code class="code docutils literal notranslate"><span class="pre">Command(“item”,</span> <span class="pre">re.compile(r“item_(d+)”))</span></code></p></li>
 <li><p>在面向其他机器人的公开聊天中处理命令： <code class="code docutils literal notranslate"><span class="pre">Command(“command”,</span> <span class="pre">ignore_mention=True)</span></code></p></li>
 <li><p>使用  <a class="reference internal" href="../../api/types/bot_command.html#aiogram.types.bot_command.BotCommand" title="aiogram.types.bot_command.BotCommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.bot_command.BotCommand</span></code></a> 对象作为命令引用 <code class="code docutils literal notranslate"><span class="pre">Command(BotCommand(command=“command”,</span> <span class="pre">description=“My</span> <span class="pre">awesome</span> <span class="pre">command”)</span></code></p></li>
 </ol>
@@ -625,7 +625,7 @@
 <li><p><strong>prefix</strong> – 命令前缀。前缀总是单字符，但在这里可以传递所有允许的前缀，例如： <code class="code docutils literal notranslate"><span class="pre">”/!”</span></code> 将适用于前缀为 <code class="code docutils literal notranslate"><span class="pre">”/“</span></code> 或 <code class="code docutils literal notranslate"><span class="pre">”!”</span></code> 的命令。</p></li>
 <li><p><strong>ignore_case</strong> – 忽略大小写（不适用于 regexp，请使用标记代替）</p></li>
 <li><p><strong>ignore_mention</strong> – 忽略提及的机器人。默认情况下，机器人无法处理针对其他机器人的命令</p></li>
-<li><p><strong>magic</strong> – 完成所有检查后，通过 Magic filter 验证命令对象</p></li>
+<li><p><strong>magic</strong> – 完成所有检查后，通过 <cite>魔法过滤</cite> 验证命令对象</p></li>
 </ul>
 </dd>
 </dl>
@@ -633,7 +633,7 @@
 
 </dd></dl>
 
-<p>当过滤器被传递时， <a class="reference internal" href="#aiogram.filters.command.CommandObject" title="aiogram.filters.command.CommandObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.filters.command.CommandObject</span></code></a> 将被传递到处理程序参数 <code class="code docutils literal notranslate"><span class="pre">command</span></code> 中。</p>
+<p>当过滤器被传递时， <a class="reference internal" href="#aiogram.filters.command.CommandObject" title="aiogram.filters.command.CommandObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.filters.command.CommandObject</span></code></a> 将被传递到处理程序参数 <code class="code docutils literal notranslate"><span class="pre">command</span></code> 中</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.filters.command.CommandObject">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.filters.command.</span></span><span class="sig-name descname"><span class="pre">CommandObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mention</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regexp_match</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Match</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magic_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/filters/command.html#CommandObject"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.command.CommandObject" title="Link to this definition">#</a></dt>

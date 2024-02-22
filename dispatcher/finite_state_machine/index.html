@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="存储" href="storages.html" /><link rel="prev" title="Webhook" href="../webhook.html" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="存储" href="storages.html" /><link rel="prev" title="网络钩子(Webhook)" href="../webhook.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>有限状态机 - aiogram 3.4.1 文档</title>
@@ -517,17 +517,17 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../filters/command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../filters/magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filters/magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/callback_data.html">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../filters/exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../webhook.html">Webhook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">有限状态机</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="storages.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scene.html">场景向导</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene.html">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
@@ -601,7 +601,7 @@
 <div><p>有限状态机（FSM）或有限状态自动机（FSA，复数：automata）、有限自动机或简称状态机，是一种计算数学模型。</p>
 <p>它是一种抽象的机器，在任何给定时间内都可以处于有限状态中的一种状态。FSM 可以根据某些输入从一种状态转换到另一种状态；从一种状态转换到另一种状态称为转换。</p>
 <p>FSM由其状态列表、其初始状态以及触发每个转变的输入来定义。</p>
-<hr><p>Source: <a class="reference external" href="wiki">WikiPedia</a></p>
+<hr><p>来源: <a class="reference external" href="wiki">WikiPedia</a></p>
 </div></blockquote>
 <section id="usage-example">
 <h2>使用示例<a class="headerlink" href="#usage-example" title="Link to this heading">#</a></h2>
@@ -618,7 +618,7 @@
 </pre></div>
 </div>
 <p>然后从对话框的开始分别为每个状态写入处理程序</p>
-<p>这里的对话框只能通过 <code class="code docutils literal notranslate"><span class="pre">/start</span></code> 命令启动，因此让我们来处理它，并将用户过渡到 <code class="code docutils literal notranslate"><span class="pre">Form.name</span></code> 状态。</p>
+<p>这里的对话框只能通过 <code class="code docutils literal notranslate"><span class="pre">/start</span></code> 命令启动，因此让我们来处理它，并将用户过渡到 <code class="code docutils literal notranslate"><span class="pre">Form.name</span></code> 状态</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">CommandStart</span><span class="p">())</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -647,8 +647,8 @@
     <span class="p">)</span>
 </pre></div>
 </div>
-<p>在接下来的步骤中，用户可以做出不同的回答，可以是 “是”、”否 “或任何其他答案。</p>
-<p>处理 <code class="code docutils literal notranslate"><span class="pre">是</span></code> ，很快我们需要处理 <code class="code docutils literal notranslate"><span class="pre">Form.language</span></code> 状态</p>
+<p>在接下来的步骤中，用户可以做出不同的回答，可以是 <cite>yes</cite>、<cite>no</cite> 或任何其他答案</p>
+<p>处理 <code class="code docutils literal notranslate"><span class="pre">yes</span></code> ，很快我们需要处理 <code class="code docutils literal notranslate"><span class="pre">Form.language</span></code> 状态</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">process_like_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
@@ -677,7 +677,7 @@
     <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="s2">&quot;I don&#39;t understand you :(&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>涵盖了“like_bots”步骤的所有可能情况，让我们实现finally step</p>
+<p>涵盖了 <cite>like_bots</cite> 步骤的所有可能情况，让我们实现最后一步</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">process_language</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">update_data</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -870,7 +870,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="storages.html">存储</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="storages.html#storages-out-of-the-box">存储开箱即用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="storages.html#storages-out-of-the-box">开箱即用</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="storages.html#memorystorage">内存存储</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="storages.html#aiogram.fsm.storage.memory.MemoryStorage"><code class="docutils literal notranslate"><span class="pre">MemoryStorage</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="storages.html#aiogram.fsm.storage.memory.MemoryStorage.__init__"><code class="docutils literal notranslate"><span class="pre">MemoryStorage.__init__()</span></code></a></li>
@@ -895,12 +895,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="scene.html">场景向导</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="scene.html">场景</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="scene.html#understanding-scenes">理解场景</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-lifecycle">场景生命周期</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-listeners">场景监听器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-interactions">场景互动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-benefits">场景优势</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-lifecycle">场景生命周期(Scene Lifecycle)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-listeners">场景监听器(Scene Listeners)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-interactions">场景互动(Scene Interactions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scene.html#scene-benefits">场景优势(Scene Benefits)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="scene.html#how-to-use-scenes">如何使用场景</a></li>
@@ -975,7 +975,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Webhook</div>
+                <div class="title">网络钩子(Webhook)</div>
                 
               </div>
             </a>

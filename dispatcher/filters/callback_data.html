@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="例外情况" href="exception.html" /><link rel="prev" title="MagicData" href="magic_data.html" />
+<link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="例外情况" href="exception.html" /><link rel="prev" title="魔法数据(MagicData)" href="magic_data.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>回调数据工厂和过滤器 - aiogram 3.4.1 文档</title>
@@ -517,17 +517,17 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">过滤事件</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../webhook.html">Webhook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/storages.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/scene.html">场景向导</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
@@ -609,7 +609,7 @@
 <dd><p>生成回调数据字符串</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Telegram Bot API的有效回调数据</p>
+<dd class="field-odd"><p>Telegram Bot API 的有效回调数据</p>
 </dd>
 </dl>
 </dd></dl>
@@ -634,7 +634,7 @@
 <dd><p>使用规则为回调查询生成过滤器</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rule</strong> – magic rule</p>
+<dd class="field-odd"><p><strong>rule</strong> – 魔法规则</p>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
 <dd class="field-even"><p>过滤器实例</p>
@@ -652,13 +652,13 @@
     <span class="n">bar</span><span class="p">:</span> <span class="nb">int</span>
 </pre></div>
 </div>
-<p>之后，您可以根据该类生成任何回调，例如</p>
+<p>之后，可以根据该类生成任何回调，例如:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cb1</span> <span class="o">=</span> <span class="n">MyCallback</span><span class="p">(</span><span class="n">foo</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">bar</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">cb1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>  <span class="c1"># returns &#39;my:demo:42&#39;</span>
 <span class="n">cb1</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s1">&#39;my:demo:42&#39;</span><span class="p">)</span>  <span class="c1"># returns &lt;MyCallback(foo=&quot;demo&quot;, bar=42)&gt;</span>
 </pre></div>
 </div>
-<p>所以……现在，您可以使用该类来生成任何已定义结构的回调</p>
+<p>所以……现在，可以使用该类来生成任何已定义结构的回调</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
 <span class="c1"># Pass it into the markup</span>
 <span class="n">InlineKeyboardButton</span><span class="p">(</span>
@@ -763,7 +763,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">MagicData</div>
+                <div class="title">魔法数据(MagicData)</div>
                 
               </div>
             </a>

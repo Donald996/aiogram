@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="有限状态机" href="finite_state_machine/index.html" /><link rel="prev" title="长轮询" href="long_polling.html" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="有限状态机" href="finite_state_machine/index.html" /><link rel="prev" title="长轮询(Long-polling)" href="long_polling.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>Webhook - aiogram 3.4.1 文档</title>
+        <title>网络钩子(Webhook) - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -517,17 +517,17 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="filters/command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/chat_member_updated.html">聊天成员更新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters/magic_filters.html">Magic filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters/magic_data.html">MagicData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters/magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters/magic_data.html">魔法数据(MagicData)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/callback_data.html">回调数据工厂和过滤器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="filters/exception.html">例外情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Webhook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">网络钩子(Webhook)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景向导</a></li>
+<li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件</a></li>
@@ -596,29 +596,29 @@
         </div>
         <article role="main">
           <section id="webhook">
-<span id="id1"></span><h1>Webhook<a class="headerlink" href="#webhook" title="Link to this heading">#</a></h1>
-<p>Telegram Bot API支持webhook。如果你为你的机器人设置了webhook，Telegram就会向指定的网址发送更新。您可以使用 <a class="reference internal" href="../api/methods/set_webhook.html#aiogram.methods.set_webhook.SetWebhook" title="aiogram.methods.set_webhook.SetWebhook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.methods.set_webhook.SetWebhook()</span></code></a> 方法指定一个网址，并在该网址上接收接收到的更新。</p>
+<span id="id1"></span><h1>网络钩子(Webhook)<a class="headerlink" href="#webhook" title="Link to this heading">#</a></h1>
+<p>Telegram Bot API支持网络钩子。如果机器人设置了网络钩子，Telegram就会向指定的网址发送更新。可以使用 <a class="reference internal" href="../api/methods/set_webhook.html#aiogram.methods.set_webhook.SetWebhook" title="aiogram.methods.set_webhook.SetWebhook"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.methods.set_webhook.SetWebhook()</span></code></a> 方法指定一个网址，并在该网址上接收接收到的更新。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果使用webhook，就不能同时使用长轮询。</p>
+<p>如果使用网络钩子，就不能同时使用长轮询。</p>
 </div>
-<p>在开始之前，我建议您阅读 <a class="reference external" href="https://core.telegram.org/bots/webhooks">official Telegram’s documentation about webhook</a></p>
-<p>读完之后，您就可以开始阅读本节内容了。</p>
-<p>一般来说，要在aiogram中使用webhook，应该使用任何异步网络框架。开箱即用的aiogram集成了aiohttp，因此我们将使用它。</p>
+<p>在开始之前，建议阅读 <a class="reference external" href="https://core.telegram.org/bots/webhooks">Telegram 关于 webhook 的官方文档</a></p>
+<p>读完之后，就可以开始阅读本节内容了。</p>
+<p>一般来说，要在aiogram中使用网络钩子，应该使用任何异步网络框架。开箱即用的aiogram集成了aiohttp，因此我们将使用它。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>您可以使用任何您想要的异步网络框架，但如果您不使用aiohttp，则应编写自己的集成。</p>
+<p>可以使用任何您想要的异步网络框架，但如果不使用aiohttp，则应编写自己的集成。</p>
 </div>
 <section id="aiohttp-integration">
 <h2>aiohttp集成<a class="headerlink" href="#aiohttp-integration" title="Link to this heading">#</a></h2>
-<p>开箱即用的aiogram集成了aiohttp，因此你可以使用它。</p>
+<p>开箱即用的aiogram集成了aiohttp.</p>
 <p>下面是使用Webhook控制器不同实现方式的几种可用方法：</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#aiogram.webhook.aiohttp_server.BaseRequestHandler" title="aiogram.webhook.aiohttp_server.BaseRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.webhook.aiohttp_server.BaseRequestHandler</span></code></a> - aiohttp网络钩子控制器的抽象类</p></li>
-<li><p><a class="reference internal" href="#aiogram.webhook.aiohttp_server.SimpleRequestHandler" title="aiogram.webhook.aiohttp_server.SimpleRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.webhook.aiohttp_server.SimpleRequestHandler</span></code></a> -简单的webhook控制器，使用单个Bot实例</p></li>
-<li><p><a class="reference internal" href="#aiogram.webhook.aiohttp_server.TokenBasedRequestHandler" title="aiogram.webhook.aiohttp_server.TokenBasedRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.webhook.aiohttp_server.TokenBasedRequestHandler</span></code></a> -基于令牌的webhook控制器，使用多个机器人实例和令牌</p></li>
+<li><p><a class="reference internal" href="#aiogram.webhook.aiohttp_server.SimpleRequestHandler" title="aiogram.webhook.aiohttp_server.SimpleRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.webhook.aiohttp_server.SimpleRequestHandler</span></code></a> - 简单的网络钩子控制器，使用单个机器人实例</p></li>
+<li><p><a class="reference internal" href="#aiogram.webhook.aiohttp_server.TokenBasedRequestHandler" title="aiogram.webhook.aiohttp_server.TokenBasedRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.webhook.aiohttp_server.TokenBasedRequestHandler</span></code></a> - 基于令牌的网络钩子控制器，使用多个机器人实例和令牌</p></li>
 </ul>
-<p>您可以按原样使用它，也可以继承它并覆盖某些方法。</p>
+<p>可以按原样使用它，也可以继承它并覆盖某些方法。</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.webhook.aiohttp_server.BaseRequestHandler">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.webhook.aiohttp_server.</span></span><span class="sig-name descname"><span class="pre">BaseRequestHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><span class="pre">Dispatcher</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle_in_background</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aiogram/webhook/aiohttp_server.html#BaseRequestHandler"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.webhook.aiohttp_server.BaseRequestHandler" title="Link to this definition">#</a></dt>
@@ -630,7 +630,7 @@
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dispatcher</strong> – <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher</span></code></a> 的实例</p></li>
-<li><p><strong>handle_in_background</strong> – 立即响应电报，而不是等待处理程序结束</p></li>
+<li><p><strong>handle_in_background</strong> – 立即响应 Telegram，而不是等待处理程序结束</p></li>
 </ul>
 </dd>
 </dl>
@@ -679,7 +679,7 @@
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dispatcher</strong> – <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher</span></code></a> 的实例</p></li>
-<li><p><strong>handle_in_background</strong> – 立即响应电报，而不是等待处理程序结束进程</p></li>
+<li><p><strong>handle_in_background</strong> – 立即响应 Telegram，而不是等待处理程序结束进程</p></li>
 <li><p><strong>bot</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.client.bot.Bot</span></code> 的实例</p></li>
 </ul>
 </dd>
@@ -730,7 +730,7 @@
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="aiogram.webhook.aiohttp_server.TokenBasedRequestHandler.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dispatcher</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><span class="pre">Dispatcher</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">handle_in_background</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/aiogram/webhook/aiohttp_server.html#TokenBasedRequestHandler.__init__"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.webhook.aiohttp_server.TokenBasedRequestHandler.__init__" title="Link to this definition">#</a></dt>
-<dd><p>支持多个机器人的处理程序，上下文将通过路径变量 ’bot_token’ 解析</p>
+<dd><p>支持多个机器人的处理程序，上下文将通过路径变量 <cite>bot_token</cite> 解析</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>不建议使用此处理程序，因为URL中提供了令牌，反向代理服务器或其他中间件可以记录令牌。</p>
@@ -739,7 +739,7 @@
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dispatcher</strong> – <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher</span></code></a> 的实例</p></li>
-<li><p><strong>handle_in_background</strong> – 立即响应电报，而不是等待处理程序结束进程</p></li>
+<li><p><strong>handle_in_background</strong> – 立即响应 Telegram，而不是等待处理程序结束进程</p></li>
 <li><p><strong>bot_settings</strong> – 将传递给新Bot实例的kwargs</p></li>
 </ul>
 </dd>
@@ -1106,7 +1106,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">长轮询</div>
+                <div class="title">长轮询(Long-polling)</div>
                 
               </div>
             </a>
@@ -1140,7 +1140,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Webhook</a><ul>
+<li><a class="reference internal" href="#">网络钩子(Webhook)</a><ul>
 <li><a class="reference internal" href="#aiohttp-integration">aiohttp集成</a><ul>
 <li><a class="reference internal" href="#aiogram.webhook.aiohttp_server.BaseRequestHandler"><code class="docutils literal notranslate"><span class="pre">BaseRequestHandler</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.webhook.aiohttp_server.BaseRequestHandler.__init__"><code class="docutils literal notranslate"><span class="pre">BaseRequestHandler.__init__()</span></code></a></li>
