@@ -606,6 +606,29 @@
 <span class="kn">from</span> <span class="nn">aiogram.types</span> <span class="kn">import</span> <span class="n">TelegramObject</span>
 
 
+<span class="k">class</span> <span class="nc">WebAppChat</span><span class="p">(</span><span class="n">TelegramObject</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This object represents a chat.</span>
+
+<span class="sd">    Source: https://core.telegram.org/bots/webapps#webappchat</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Unique identifier for this chat. This number may have more than 32 significant bits</span>
+<span class="sd">    and some programming languages may have difficulty/silent defects in interpreting it.</span>
+<span class="sd">    But it has at most 52 significant bits, so a signed 64-bit integer or double-precision</span>
+<span class="sd">    float type are safe for storing this identifier.&quot;&quot;&quot;</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type of chat, can be either “group”, “supergroup” or “channel”&quot;&quot;&quot;</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Title of the chat&quot;&quot;&quot;</span>
+    <span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Username of the chat&quot;&quot;&quot;</span>
+    <span class="n">photo_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;URL of the chat’s photo. The photo can be in .jpeg or .svg formats.</span>
+<span class="sd">    Only returned for Web Apps launched from the attachment menu.&quot;&quot;&quot;</span>
+
+
 <div class="viewcode-block" id="WebAppUser">
 <a class="viewcode-back" href="../../../utils/web_app.html#aiogram.utils.web_app.WebAppUser">[文档]</a>
 <span class="k">class</span> <span class="nc">WebAppUser</span><span class="p">(</span><span class="n">TelegramObject</span><span class="p">):</span>
@@ -630,6 +653,12 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Username of the user or bot.&quot;&quot;&quot;</span>
     <span class="n">language_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;IETF language tag of the user&#39;s language. Returns in user field only.&quot;&quot;&quot;</span>
+    <span class="n">is_premium</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;True, if this user is a Telegram Premium user.&quot;&quot;&quot;</span>
+    <span class="n">added_to_attachment_menu</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;True, if this user added the bot to the attachment menu.&quot;&quot;&quot;</span>
+    <span class="n">allows_write_to_pm</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;True, if this user allowed the bot to message them.&quot;&quot;&quot;</span>
     <span class="n">photo_url</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;URL of the user’s profile photo. The photo can be in .jpeg or .svg formats.</span>
 <span class="sd">    Only returned for Web Apps launched from the attachment menu.&quot;&quot;&quot;</span></div>
@@ -655,11 +684,25 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;An object containing data about the chat partner of the current user in the chat where</span>
 <span class="sd">    the bot was launched via the attachment menu.</span>
 <span class="sd">    Returned only for Web Apps launched via the attachment menu.&quot;&quot;&quot;</span>
+    <span class="n">chat</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">WebAppChat</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;An object containing data about the chat where the bot was launched via the attachment menu.</span>
+<span class="sd">    Returned for supergroups, channels, and group chats – only for Web Apps launched via the</span>
+<span class="sd">    attachment menu.&quot;&quot;&quot;</span>
+    <span class="n">chat_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Type of the chat from which the Web App was opened.</span>
+<span class="sd">    Can be either “sender” for a private chat with the user opening the link,</span>
+<span class="sd">    “private”, “group”, “supergroup”, or “channel”.</span>
+<span class="sd">    Returned only for Web Apps launched from direct links.&quot;&quot;&quot;</span>
+    <span class="n">chat_instance</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Global identifier, uniquely corresponding to the chat from which the Web App was opened.</span>
+<span class="sd">    Returned only for Web Apps launched from a direct link.&quot;&quot;&quot;</span>
     <span class="n">start_param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The value of the startattach parameter, passed via link.</span>
 <span class="sd">    Only returned for Web Apps when launched from the attachment menu via link.</span>
 <span class="sd">    The value of the start_param parameter will also be passed in the GET-parameter</span>
 <span class="sd">    tgWebAppStartParam, so the Web App can load the correct interface right away.&quot;&quot;&quot;</span>
+    <span class="n">can_send_after</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Time in seconds, after which a message can be sent via the answerWebAppQuery method.&quot;&quot;&quot;</span>
     <span class="n">auth_date</span><span class="p">:</span> <span class="n">datetime</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Unix time when the form was opened.&quot;&quot;&quot;</span>
     <span class="nb">hash</span><span class="p">:</span> <span class="nb">str</span>
