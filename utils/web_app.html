@@ -719,25 +719,19 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppInitData.chat">
 <span class="sig-name descname"><span class="pre">chat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">WebAppChat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppInitData.chat" title="Link to this definition">#</a></dt>
-<dd><p>An object containing data about the chat where the bot was launched via the attachment menu.
-Returned for supergroups, channels, and group chats – only for Web Apps launched via the
-attachment menu.</p>
+<dd><p>包含通过附件菜单启动机器人的聊天数据的对象。超级群组、频道和群组聊天会返回该对象—仅适用于通过附件菜单启动的 Web 应用程序。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppInitData.chat_type">
 <span class="sig-name descname"><span class="pre">chat_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppInitData.chat_type" title="Link to this definition">#</a></dt>
-<dd><p>Type of the chat from which the Web App was opened.
-Can be either “sender” for a private chat with the user opening the link,
-“private”, “group”, “supergroup”, or “channel”.
-Returned only for Web Apps launched from direct links.</p>
+<dd><p>打开 Web 应用程序的聊天类型。可以是 “发件人”（与打开链接的用户进行私人聊天）、”私人”、”群组”、”超级群组 “或 “频道”。仅返回从直接链接启动的 Web 应用程序。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppInitData.chat_instance">
 <span class="sig-name descname"><span class="pre">chat_instance</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppInitData.chat_instance" title="Link to this definition">#</a></dt>
-<dd><p>Global identifier, uniquely corresponding to the chat from which the Web App was opened.
-Returned only for Web Apps launched from a direct link.</p>
+<dd><p>全局标识符，与打开 Web 应用程序的聊天唯一对应。只有通过直接链接启动的 Web 应用程序才会返回。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -749,7 +743,7 @@ Returned only for Web Apps launched from a direct link.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppInitData.can_send_after">
 <span class="sig-name descname"><span class="pre">can_send_after</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppInitData.can_send_after" title="Link to this definition">#</a></dt>
-<dd><p>Time in seconds, after which a message can be sent via the answerWebAppQuery method.</p>
+<dd><p>可以通过 answerWebAppQuery 方法发送消息的时间（以秒为单位）。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -810,19 +804,19 @@ Returned only for Web Apps launched from a direct link.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppUser.is_premium">
 <span class="sig-name descname"><span class="pre">is_premium</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppUser.is_premium" title="Link to this definition">#</a></dt>
-<dd><p>True, if this user is a Telegram Premium user.</p>
+<dd><p>True，如果该用户是 Telegram Premium 用户。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppUser.added_to_attachment_menu">
 <span class="sig-name descname"><span class="pre">added_to_attachment_menu</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppUser.added_to_attachment_menu" title="Link to this definition">#</a></dt>
-<dd><p>True, if this user added the bot to the attachment menu.</p>
+<dd><p>True，如果该用户在附件菜单中添加了机器人。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppUser.allows_write_to_pm">
 <span class="sig-name descname"><span class="pre">allows_write_to_pm</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppUser.allows_write_to_pm" title="Link to this definition">#</a></dt>
-<dd><p>True, if this user allowed the bot to message them.</p>
+<dd><p>True，如果该用户允许机器人向其发送信息。</p>
 </dd></dl>
 
 <dl class="py attribute">
