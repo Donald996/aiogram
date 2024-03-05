@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flags.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flags.html">标记(Flags)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/base.html">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/callback_query.html">回调查询处理程序</a></li>
@@ -600,9 +600,9 @@
 <h1>依赖注入<a class="headerlink" href="#dependency-injection" title="Link to this heading">#</a></h1>
 <p>依赖注入是一种编程技术，可使类独立于其依赖关系。它通过将对象的使用与对象的创建解耦来实现这一点。这有助于您遵循 <a class="reference external" href="https://en.wikipedia.org/wiki/SOLID">SOLID’s</a> 依赖反转和单一责任原则。</p>
 <section id="how-it-works-in-aiogram">
-<h2>它如何在aiogram中工作<a class="headerlink" href="#how-it-works-in-aiogram" title="Link to this heading">#</a></h2>
+<h2>工作原理<a class="headerlink" href="#how-it-works-in-aiogram" title="Link to this heading">#</a></h2>
 <p>每次更新  <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher</span></code></a> 都会传递处理上下文数据。过滤器和中间件也可以更改上下文。</p>
-<p>要访问上下文数据，应在处理程序或过滤器中指定相应的关键字参数。例如，要获取  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.context.FSMContext</span></code> 我们可以这样做：</p>
+<p>要访问上下文数据，应在处理程序或过滤器中指定相应的关键字参数。例如，要获取 <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.fsm.context.FSMContext</span></code> 我们可以这样做：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">ProfileCompletion</span><span class="o">.</span><span class="n">add_photo</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">photo</span><span class="p">)</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">add_photo</span><span class="p">(</span>
     <span class="n">message</span><span class="p">:</span> <span class="n">types</span><span class="o">.</span><span class="n">Message</span><span class="p">,</span> <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span>
@@ -612,7 +612,7 @@
 </div>
 </section>
 <section id="injecting-own-dependencies">
-<h2>注入自己的依赖项<a class="headerlink" href="#injecting-own-dependencies" title="Link to this heading">#</a></h2>
+<h2>注入自定义依赖项<a class="headerlink" href="#injecting-own-dependencies" title="Link to this heading">#</a></h2>
 <p>Aiogram提供了几种补充/修改上下文数据的方法。</p>
 <p>第一种也是最简单的方法是在  <a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher" title="aiogram.dispatcher.dispatcher.Dispatcher"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.dispatcher.dispatcher.Dispatcher</span></code></a> 初始化、轮询启动方法或  <a class="reference internal" href="webhook.html#aiogram.webhook.aiohttp_server.SimpleRequestHandler" title="aiogram.webhook.aiohttp_server.SimpleRequestHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.webhook.aiohttp_server.SimpleRequestHandler</span></code></a> 初始化（如果使用 webhooks）中指定命名参数。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -636,7 +636,7 @@
 </div>
 <p>中间件经常更新上下文。你可以阅读更多关于他们在这个页面：</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="middlewares.html#middlewares"><span class="std std-ref">Middlewares</span></a></p></li>
+<li><p><a class="reference internal" href="middlewares.html#middlewares"><span class="std std-ref">中间件</span></a></p></li>
 </ul>
 <p>最后一种方法是从过滤器返回字典：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
@@ -671,7 +671,7 @@
     <span class="k">return</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="s2">&quot;Hello, </span><span class="si">{name}</span><span class="s2">!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>…或使用 <a class="reference internal" href="filters/magic_filters.html#magic-filters"><span class="std std-ref">MagicFilter</span></a> 和 <code class="code docutils literal notranslate"><span class="pre">.as_(…)</span></code> 方法。</p>
+<p>…或使用 <a class="reference internal" href="filters/magic_filters.html#magic-filters"><span class="std std-ref">魔法过滤</span></a> 和 <code class="code docutils literal notranslate"><span class="pre">.as_(…)</span></code> 方法。</p>
 </section>
 </section>
 
@@ -731,8 +731,8 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">依赖注入</a><ul>
-<li><a class="reference internal" href="#how-it-works-in-aiogram">它如何在aiogram中工作</a></li>
-<li><a class="reference internal" href="#injecting-own-dependencies">注入自己的依赖项</a></li>
+<li><a class="reference internal" href="#how-it-works-in-aiogram">工作原理</a></li>
+<li><a class="reference internal" href="#injecting-own-dependencies">注入自定义依赖项</a></li>
 </ul>
 </li>
 </ul>

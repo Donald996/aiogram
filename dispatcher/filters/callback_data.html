@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../errors.html">错误</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../flags.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flags.html">标记(Flags)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../class_based_handlers/base.html">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../class_based_handlers/callback_query.html">回调查询处理程序</a></li>
@@ -610,7 +610,7 @@
 <dd><p>生成回调数据字符串</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Telegram Bot API 的有效回调数据</p>
+<dd class="field-odd"><p><cite>Telegram Bot API</cite> 的有效回调数据</p>
 </dd>
 </dl>
 </dd></dl>
@@ -624,7 +624,7 @@
 <dd class="field-odd"><p><strong>value</strong> – 来自 Telegram 的值</p>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>CallbackData的实例</p>
+<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">CallbackData</span></code> 的实例</p>
 </dd>
 </dl>
 </dd></dl>
@@ -678,7 +678,7 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bar =&quot;</span><span class="p">,</span> <span class="n">callback_data</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>也可以在 <a class="reference internal" href="../../utils/keyboard.html"><span class="doc">Keyboard builder</span></a> 中使用：</p>
+<p>也可以在 <a class="reference internal" href="../../utils/keyboard.html"><span class="doc">键盘构建器</span></a> 中使用：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">builder</span> <span class="o">=</span> <span class="n">InlineKeyboardBuilder</span><span class="p">()</span>
 <span class="n">builder</span><span class="o">.</span><span class="n">button</span><span class="p">(</span>
     <span class="n">text</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span>

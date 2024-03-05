@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flags.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flags.html">标记(Flags)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/base.html">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/callback_query.html">回调查询处理程序</a></li>
@@ -598,27 +598,27 @@
         <article role="main">
           <section id="dispatcher">
 <h1>调度器(Dispatcher)<a class="headerlink" href="#dispatcher" title="Link to this heading">#</a></h1>
-<p>Dispatcher 是root <code class="xref py py-obj docutils literal notranslate"><span class="pre">Router</span></code> ，并且在代码中Dispatcher可以直接用于路由更新或将另一个路由器附加到dispatcher中。</p>
-<p>此处仅列出有关Dispatcher的基本信息。所有关于写作处理程序，过滤器等，你可以在下一页找到：</p>
+<p>调度器是根 <code class="xref py py-obj docutils literal notranslate"><span class="pre">路由器</span></code> ，并且在代码中调度器可以直接用于路由更新或将另一个路由器附加到调度器中。</p>
+<p>此处仅列出有关调度器的基本信息。所有关于写作处理程序，过滤器等，你可以在下一页找到：</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="router.html#router"><span class="std std-ref">Router</span></a></p></li>
+<li><p><a class="reference internal" href="router.html#router"><span class="std std-ref">路由器</span></a></p></li>
 <li><p><a class="reference internal" href="filters/index.html#filtering-events"><span class="std std-ref">过滤事件</span></a></p></li>
 </ul>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.dispatcher.dispatcher.Dispatcher">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.dispatcher.dispatcher.</span></span><span class="sig-name descname"><span class="pre">Dispatcher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="finite_state_machine/storages.html#aiogram.fsm.storage.base.BaseStorage" title="aiogram.fsm.storage.base.BaseStorage"><span class="pre">BaseStorage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fsm_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMStrategy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FSMStrategy.USER_IN_CHAT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events_isolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BaseEventIsolation</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_fsm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aiogram/dispatcher/dispatcher.html#Dispatcher"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.dispatcher.dispatcher.Dispatcher" title="Link to this definition">#</a></dt>
-<dd><p>Root router</p>
+<dd><p>根路由器</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.dispatcher.dispatcher.Dispatcher.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="finite_state_machine/storages.html#aiogram.fsm.storage.base.BaseStorage" title="aiogram.fsm.storage.base.BaseStorage"><span class="pre">BaseStorage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fsm_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">FSMStrategy</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">FSMStrategy.USER_IN_CHAT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">events_isolation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BaseEventIsolation</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_fsm</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/aiogram/dispatcher/dispatcher.html#Dispatcher.__init__"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.dispatcher.dispatcher.Dispatcher.__init__" title="Link to this definition">#</a></dt>
-<dd><p>Root router</p>
+<dd><p>根路由器</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>storage</strong> – FSM的存储</p></li>
-<li><p><strong>fsm_strategy</strong> – FSM战略</p></li>
+<li><p><strong>fsm_strategy</strong> – FSM 的计划</p></li>
 <li><p><strong>events_isolation</strong> – 事件隔离</p></li>
-<li><p><strong>disable_fsm</strong> – 禁用FSM，请注意，如果禁用FSM，则不应使用存储和事件隔离</p></li>
+<li><p><strong>disable_fsm</strong> – 禁用 FSM，请注意，如果禁用 FSM，则不应使用存储和事件隔离</p></li>
 <li><p><strong>kwargs</strong> – 其他参数，将作为关键字参数传递给处理程序</p></li>
 </ul>
 </dd>
@@ -628,7 +628,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.dispatcher.dispatcher.Dispatcher.feed_raw_update">
 <em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">feed_raw_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bot</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Bot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="../_modules/aiogram/dispatcher/dispatcher.html#Dispatcher.feed_raw_update"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.dispatcher.dispatcher.Dispatcher.feed_raw_update" title="Link to this definition">#</a></dt>
-<dd><p>使用自动Dict-&gt;更新序列化程序的传入更新的主入口点</p>
+<dd><p>使用自动 Dict-&gt;更新 序列化程序的传入更新的主入口点</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -664,9 +664,9 @@
 <li><p><strong>bots</strong> – Bot实例(一个或多个)</p></li>
 <li><p><strong>polling_timeout</strong> – 长轮询等待时间</p></li>
 <li><p><strong>handle_as_tasks</strong> – 为每个事件运行任务，没有等待结果</p></li>
-<li><p><strong>backoff_config</strong> – Backoff-retry配置</p></li>
-<li><p><strong>allowed_updates</strong> – 您希望机器人接收的更新类型列表</p></li>
-<li><p><strong>handle_signals</strong> – 处理信号(SIGINT/SIGTERM)</p></li>
+<li><p><strong>backoff_config</strong> – Backoff-retry 配置</p></li>
+<li><p><strong>allowed_updates</strong> – 机器人接收的更新类型列表</p></li>
+<li><p><strong>handle_signals</strong> – 处理信号 (SIGINT/SIGTERM)</p></li>
 <li><p><strong>close_bot_session</strong> – 关闭机器人会话</p></li>
 <li><p><strong>kwargs</strong> – 上下文数据</p></li>
 </ul>
@@ -687,9 +687,9 @@
 <li><p><strong>bots</strong> – Bot实例(一个或多个)</p></li>
 <li><p><strong>polling_timeout</strong> – 长轮询等待时间</p></li>
 <li><p><strong>handle_as_tasks</strong> – 为每个事件运行任务，没有等待结果</p></li>
-<li><p><strong>backoff_config</strong> – Backoff-retry配置</p></li>
+<li><p><strong>backoff_config</strong> – Backoff-retry 配置</p></li>
 <li><p><strong>allowed_updates</strong> – 您希望机器人接收的更新类型的列表默认情况下，所有使用的更新类型都已启用(从处理程序解析)</p></li>
-<li><p><strong>handle_signals</strong> – 处理信号(SIGINT/SIGTERM)</p></li>
+<li><p><strong>handle_signals</strong> – 处理信号 (SIGINT/SIGTERM)</p></li>
 <li><p><strong>close_bot_session</strong> – 关闭机器人会话</p></li>
 <li><p><strong>kwargs</strong> – 上下文数据</p></li>
 </ul>
@@ -714,7 +714,7 @@
 </dd></dl>
 
 <section id="simple-usage">
-<h2>简单用法<a class="headerlink" href="#simple-usage" title="Link to this heading">#</a></h2>
+<h2>用法<a class="headerlink" href="#simple-usage" title="Link to this heading">#</a></h2>
 <p>示例：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dp</span> <span class="o">=</span> <span class="n">Dispatcher</span><span class="p">()</span>
 
@@ -723,7 +723,7 @@
     <span class="k">await</span> <span class="n">SendMessage</span><span class="p">(</span><span class="n">chat_id</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">from_user</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>包括 routers</p>
+<p>包括路由器</p>
 <p>示例：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dp</span> <span class="o">=</span> <span class="n">Dispatcher</span><span class="p">()</span>
 <span class="n">router1</span> <span class="o">=</span> <span class="n">Router</span><span class="p">()</span>
@@ -733,7 +733,7 @@
 </section>
 <section id="handling-updates">
 <h2>处理更新<a class="headerlink" href="#handling-updates" title="Link to this heading">#</a></h2>
-<p>所有更新都可以通过以下方法传播到 dispatcher <code class="xref py py-obj docutils literal notranslate"><span class="pre">Dispatcher.feed_update(bot=…,</span> <span class="pre">update=…)</span></code> 方法：</p>
+<p>所有更新都可以通过以下方法传播到调度器 <code class="xref py py-obj docutils literal notranslate"><span class="pre">Dispatcher.feed_update(bot=…,</span> <span class="pre">update=…)</span></code> 方法：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="n">dp</span> <span class="o">=</span> <span class="n">Dispathcher</span><span class="p">()</span>
 
@@ -810,7 +810,7 @@
 <li><a class="reference internal" href="#aiogram.dispatcher.dispatcher.Dispatcher.stop_polling"><code class="docutils literal notranslate"><span class="pre">Dispatcher.stop_polling()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#simple-usage">简单用法</a></li>
+<li><a class="reference internal" href="#simple-usage">用法</a></li>
 <li><a class="reference internal" href="#handling-updates">处理更新</a></li>
 </ul>
 </li>

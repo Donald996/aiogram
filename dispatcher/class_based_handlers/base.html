@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../middlewares.html">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../errors.html">错误</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../flags.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flags.html">标记(Flags)</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">基于类的处理程序</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="callback_query.html">回调查询处理程序</a></li>
@@ -599,7 +599,7 @@
           <section id="basehandler">
 <span id="cbh-base-handler"></span><h1>基本处理程序<a class="headerlink" href="#basehandler" title="Link to this heading">#</a></h1>
 <p>基础处理程序是通用抽象类，应该在所有其他基于类的处理程序中使用。</p>
-<p>Import: <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.handlers</span> <span class="pre">import</span> <span class="pre">BaseHandler</span></code></p>
+<p>导入: <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.handlers</span> <span class="pre">import</span> <span class="pre">BaseHandler</span></code></p>
 <p>默认情况下，您只需要覆盖方法 <code class="code docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span> <span class="pre">handle(self)</span> <span class="pre">-&gt;</span> <span class="pre">Any:</span> <span class="pre">...</span></code></p>
 <p>这个类也有默认的初始化程序，你不需要改变它。该初始化程序接受传入的事件和所有相关数据，处理程序可以通过属性访问这些数据： <code class="code docutils literal notranslate"><span class="pre">event:</span> <span class="pre">TelegramEvent</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">data:</span> <span class="pre">Dict[Any,</span> <span class="pre">str]</span></code></p>
 <p>如果在上下文数据或当前上下文中指定了机器人的实例，则可以通过 <em>bot</em> 类属性进行访问。</p>

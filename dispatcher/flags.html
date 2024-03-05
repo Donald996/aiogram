@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="基于类的处理程序" href="class_based_handlers/index.html" /><link rel="prev" title="错误" href="errors.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>标记 - aiogram 3.4.1 文档</title>
+        <title>标记(Flags) - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">标记</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">标记(Flags)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/base.html">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/callback_query.html">回调查询处理程序</a></li>
@@ -597,9 +597,9 @@
         </div>
         <article role="main">
           <section id="flags">
-<span id="id1"></span><h1>标记<a class="headerlink" href="#flags" title="Link to this heading">#</a></h1>
-<p>处理程序的标记，可用于 <a class="reference external" href="#use-in-middlewares">middlewares</a> 或特殊的 <a class="reference external" href="#use-in-utilities">utilities</a> 以对处理程序进行分类。</p>
-<p>可以通过 <a class="reference external" href="#via-decorators">decorators</a>, <a class="reference external" href="#via-handler-registration-method">handlers registration</a> 或 <a class="reference external" href="via-filters">filters</a> 将标记添加到处理程序中。</p>
+<span id="id1"></span><h1>标记(Flags)<a class="headerlink" href="#flags" title="Link to this heading">#</a></h1>
+<p>处理程序的标记，可用于 <a class="reference external" href="#use-in-middlewares">中间件</a> 或特殊的 <a class="reference external" href="#use-in-utilities">utilities</a> 以对处理程序进行分类。</p>
+<p>可以通过 <a class="reference external" href="#via-decorators">装饰器</a>, <a class="reference external" href="#via-handler-registration-method">处理程序注册</a> 或 <a class="reference external" href="filters">过滤事件</a> 将标记添加到处理程序中。</p>
 <section id="via-decorators">
 <h2>通过装饰器<a class="headerlink" href="#via-decorators" title="Link to this heading">#</a></h2>
 <p>例如，使用 <cite>chat_action</cite> 标志标记处理程序</p>
@@ -676,7 +676,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>handler</strong> – 处理程序对象或数据</p></li>
 <li><p><strong>name</strong> – 标记名称</p></li>
-<li><p><strong>default</strong> – 默认值(None)</p></li>
+<li><p><strong>default</strong> – 默认值 (None)</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
@@ -771,7 +771,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">标记</a><ul>
+<li><a class="reference internal" href="#">标记(Flags)</a><ul>
 <li><a class="reference internal" href="#via-decorators">通过装饰器</a></li>
 <li><a class="reference internal" href="#via-handler-registration-method">通过处理程序注册方法</a></li>
 <li><a class="reference internal" href="#via-filters">通过过滤器</a></li>

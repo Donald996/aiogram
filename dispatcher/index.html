@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="middlewares.html">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flags.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flags.html">标记(Flags)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/base.html">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/callback_query.html">回调查询处理程序</a></li>
@@ -598,21 +598,21 @@
         <article role="main">
           <section id="handling-events">
 <h1>处理事件<a class="headerlink" href="#handling-events" title="Link to this heading">#</a></h1>
-<p><em>aiogram</em> 包括调度机制。需要Dispatcher来处理来自Telegram的传入更新。</p>
-<p>使用dispatcher，您可以执行以下操作：</p>
+<p><em>aiogram</em> 包含调度机制。调度程序用于处理从 Telegram 接收的更新。</p>
+<p>有了 <code class="code docutils literal notranslate"><span class="pre">dispatcher</span></code>，可以这样做：</p>
 <ul class="simple">
-<li><p>处理传入的更新；</p></li>
-<li><p>过滤传入的事件之前，它将由特定的处理程序处理；</p></li>
+<li><p>处理收到的更新；</p></li>
+<li><p>在特定处理程序处理传入事件之前对其进行过滤；</p></li>
 <li><p>修改中间件中的事件和相关数据；</p></li>
-<li><p>在不同的处理程序、模块和包之间分离bot功能</p></li>
+<li><p>在不同处理程序、模块和软件包之间分离机器人功能</p></li>
 </ul>
-<p>调度程序也分为两个实体-路由器和调度程序。Dispatcher是路由器的子类，应该始终是根路由器。</p>
-<p>Telegram支持两种接收更新的方式：</p>
+<p>调度器也分为两个实体—路由器和调度器。调度器是路由器的子类，应始终是根路由器。</p>
+<p>Telegram 支持两种接收更新的方式：</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="webhook.html#webhook"><span class="std std-ref">Webhook</span></a> -您应该配置您的web服务器从Telegram接收更新；</p></li>
-<li><p><a class="reference internal" href="long_polling.html#long-polling"><span class="std std-ref">Long polling</span></a> -你应该从电报请求更新。</p></li>
+<li><p><a class="reference internal" href="webhook.html#webhook"><span class="std std-ref">Webhook</span></a> - 配置网络服务器以接收来自 Telegram 的更新；</p></li>
+<li><p><a class="reference internal" href="long_polling.html#long-polling"><span class="std std-ref">Long polling</span></a> - 向 Telegram 请求更新。</p></li>
 </ul>
-<p>因此，您可以将它们与 <em>aiogram</em> 一起使用。</p>
+<p>因此，可以将它们与 <em>aiogram</em> 一起使用。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="router.html">路由器(Router)</a><ul>
@@ -645,7 +645,7 @@
 <li class="toctree-l3"><a class="reference internal" href="router.html#errors">错误</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="router.html#nested-routers">嵌套 router</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="router.html#nested-routers">嵌套路由器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="router.html#update">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="router.html#how-it-works">它是如何工作的？</a></li>
 </ul>
@@ -662,13 +662,13 @@
 <li class="toctree-l3"><a class="reference internal" href="dispatcher.html#aiogram.dispatcher.dispatcher.Dispatcher.stop_polling"><code class="docutils literal notranslate"><span class="pre">Dispatcher.stop_polling()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="dispatcher.html#simple-usage">简单用法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dispatcher.html#simple-usage">用法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dispatcher.html#handling-updates">处理更新</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dependency_injection.html">依赖注入</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dependency_injection.html#how-it-works-in-aiogram">它如何在aiogram中工作</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dependency_injection.html#injecting-own-dependencies">注入自己的依赖项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dependency_injection.html#how-it-works-in-aiogram">工作原理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dependency_injection.html#injecting-own-dependencies">注入自定义依赖项</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="filters/index.html">过滤事件</a><ul>
@@ -823,7 +823,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="webhook.html#examples">实例</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="webhook.html#behind-reverse-proxy">反向代理背后</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webhook.html#behind-reverse-proxy">反向代理</a></li>
 <li class="toctree-l4"><a class="reference internal" href="webhook.html#without-reverse-proxy-not-recommended">无反向代理（不推荐）</a></li>
 </ul>
 </li>
@@ -832,7 +832,7 @@
 <li class="toctree-l2"><a class="reference internal" href="webhook.html#with-using-other-web-framework">使用其他网络框架</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="finite_state_machine/index.html">有限状态机(FSM)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="finite_state_machine/index.html#usage-example">使用示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/index.html#step-by-step">一步一步</a></li>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/index.html#complete-example">完整示例</a></li>
@@ -923,7 +923,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="middlewares.html">中间件</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="middlewares.html">中间件(Middlewares)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="middlewares.html#base-theory">基础理论</a></li>
 <li class="toctree-l2"><a class="reference internal" href="middlewares.html#basics">基础知识</a></li>
 <li class="toctree-l2"><a class="reference internal" href="middlewares.html#arguments-specification">参数规范</a><ul>
@@ -974,7 +974,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="flags.html">标记</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="flags.html">标记(Flags)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="flags.html#via-decorators">通过装饰器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flags.html#via-handler-registration-method">通过处理程序注册方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flags.html#via-filters">通过过滤器</a></li>

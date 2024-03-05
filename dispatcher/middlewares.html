@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="错误" href="errors.html" /><link rel="prev" title="场景" href="finite_state_machine/scene.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>中间件 - aiogram 3.4.1 文档</title>
+        <title>中间件(Middlewares) - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -526,14 +526,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="long_polling.html">长轮询(Long-polling)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhook.html">网络钩子(Webhook)</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/storages.html">存储</a></li>
 <li class="toctree-l3"><a class="reference internal" href="finite_state_machine/scene.html">场景</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">中间件</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">中间件(Middlewares)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="errors.html">错误</a></li>
-<li class="toctree-l2"><a class="reference internal" href="flags.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flags.html">标记(Flags)</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/base.html">基本处理程序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="class_based_handlers/callback_query.html">回调查询处理程序</a></li>
@@ -597,7 +597,7 @@
         </div>
         <article role="main">
           <section id="middlewares">
-<span id="id1"></span><h1>中间件<a class="headerlink" href="#middlewares" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>中间件(Middlewares)<a class="headerlink" href="#middlewares" title="Link to this heading">#</a></h1>
 <p><strong>aiogram</strong> 提供了通过中间件自定义事件处理程序的强大机制。</p>
 <p>bot框架中的中间件似乎像web框架中的中间件机制，如 <a class="reference external" href="https://docs.aiohttp.org/en/stable/web_advanced.html#aiohttp-web-middlewares">aiohttp</a>, <a class="reference external" href="https://fastapi.tiangolo.com/tutorial/middleware/">fastapi</a>, <a class="reference external" href="https://docs.djangoproject.com/en/3.0/topics/http/middleware/">Django</a> 等)，差别很小-这里实现了两层中间件(之前和之后的过滤器)。</p>
 <div class="admonition note">
@@ -616,8 +616,8 @@
 <h2>基础知识<a class="headerlink" href="#basics" title="Link to this heading">#</a></h2>
 <p>中间件实例可以在两个地方应用于每种类型的电报事件(更新，消息等)</p>
 <ol class="arabic simple">
-<li><p>外部作用域-在处理过滤器之前( <code class="code docutils literal notranslate"><span class="pre">&lt;router&gt;.&lt;event&gt;.outer_middleware(…)</span></code> )</p></li>
-<li><p>内部作用域-在处理过滤器之后但在处理程序之前( <code class="code docutils literal notranslate"><span class="pre">&lt;router&gt;.&lt;event&gt;.middleware(…)</span></code> )</p></li>
+<li><p>外部作用域 - 在处理过滤器之前( <code class="code docutils literal notranslate"><span class="pre">&lt;router&gt;.&lt;event&gt;.outer_middleware(…)</span></code> )</p></li>
+<li><p>内部作用域 - 在处理过滤器之后但在处理程序之前( <code class="code docutils literal notranslate"><span class="pre">&lt;router&gt;.&lt;event&gt;.middleware(…)</span></code> )</p></li>
 </ol>
 <img alt="中间件基础知识" src="../_images/basics_middleware.png" />
 <div class="admonition attention">
@@ -765,7 +765,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">中间件</a><ul>
+<li><a class="reference internal" href="#">中间件(Middlewares)</a><ul>
 <li><a class="reference internal" href="#base-theory">基础理论</a></li>
 <li><a class="reference internal" href="#basics">基础知识</a></li>
 <li><a class="reference internal" href="#arguments-specification">参数规范</a><ul>
