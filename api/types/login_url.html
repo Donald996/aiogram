@@ -193,14 +193,14 @@
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源 GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
@@ -224,10 +224,10 @@
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway.html">赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">活动已结束</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">创建赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">中奖者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway.html">Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">Giveaway已结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">Giveaway创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">Giveaway中奖者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inaccessible_message.html">无法访问的消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_button.html">内联键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_markup.html">内联键盘标记</a></li>
@@ -239,10 +239,10 @@
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">请求用户的键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">键盘按钮请求多个用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="link_preview_options.html">链接预览选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="location.html">地点</a></li>
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">登录网址</a></li>
@@ -601,7 +601,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.types.login_url.LoginUrl">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.login_url.</span></span><span class="sig-name descname"><span class="pre">LoginUrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bot_username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request_write_access</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/login_url.html#LoginUrl"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.login_url.LoginUrl" title="Link to this definition">#</a></dt>
-<dd><p>这个对象代表内联键盘按钮的参数，用于自动授权用户。 当用户来自Telegram时，它可以很好地替代`Telegram登录小部件&lt;<a class="reference external" href="https://core.telegram.org/widgets/login">https://core.telegram.org/widgets/login</a>&gt;`_。 用户所需做的就是轻触/点击按钮并确认他们想要登录：Telegram应用自`版本5.7&lt;<a class="reference external" href="https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots">https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots</a>&gt;`_起支持这些按钮。</p>
+<dd><p>这个对象代表内联键盘按钮的参数，用于自动授权用户。 当用户来自Telegram时，它可以很好地替代 <a class="reference external" href="https://core.telegram.org/widgets/login">Telegram登录小部件</a>。 用户所需做的就是轻触/点击按钮并确认他们想要登录：Telegram应用自 <a class="reference external" href="https://telegram.org/blog/privacy-discussions-web-bots#meet-seamless-web-bots">版本5.7</a> 起支持这些按钮。</p>
 <blockquote>
 <div><p>示例机器人：<a class="reference external" href="https://t.me/discussbot">&#64;discussbot</a></p>
 </div></blockquote>
@@ -609,7 +609,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.login_url.LoginUrl.url">
 <span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.types.login_url.LoginUrl.url" title="Link to this definition">#</a></dt>
-<dd><p>用户按下按钮时，将授权数据添加到查询字符串中并打开一个 HTTPS URL。如果用户拒绝提供授权数据，则将打开不包含用户信息的原始 URL。添加的数据与`接收授权数据 &lt;<a class="reference external" href="https://core.telegram.org/widgets/login#receiving-authorization-data">https://core.telegram.org/widgets/login#receiving-authorization-data</a>&gt;`_中描述的相同。</p>
+<dd><p>用户按下按钮时，将授权数据添加到查询字符串中并打开一个 HTTPS URL。如果用户拒绝提供授权数据，则将打开不包含用户信息的原始 URL。添加的数据与 <a class="reference external" href="https://core.telegram.org/widgets/login#receiving-authorization-data">接收授权数据</a> 中描述的相同。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -621,7 +621,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.login_url.LoginUrl.bot_username">
 <span class="sig-name descname"><span class="pre">bot_username</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.login_url.LoginUrl.bot_username" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>。一个机器人的用户名，用于用户授权。查看`设置机器人&lt;<a class="reference external" href="https://core.telegram.org/widgets/login#setting-up-a-bot">https://core.telegram.org/widgets/login#setting-up-a-bot</a>&gt;`_以获取更多详情。如果未指定，将假定为当前机器人的用户名。<a href="#id1"><span class="problematic" id="id2">*</span></a>url*的域必须与机器人链接的域相同。查看`将域名链接到机器人&lt;<a class="reference external" href="https://core.telegram.org/widgets/login#linking-your-domain-to-the-bot">https://core.telegram.org/widgets/login#linking-your-domain-to-the-bot</a>&gt;`_以获取更多详情。</p>
+<dd><p><em>可选</em>。一个机器人的用户名，用于用户授权。查看 <a class="reference external" href="https://core.telegram.org/widgets/login#setting-up-a-bot">设置机器人</a> 以获取更多详情。如果未指定，将假定为当前机器人的用户名。<em>url</em> 的域必须与机器人链接的域相同。查看 <a class="reference external" href="https://core.telegram.org/widgets/login#linking-your-domain-to-the-bot">将域名链接到机器人</a> 以获取更多详情。</p>
 </dd></dl>
 
 <dl class="py attribute">

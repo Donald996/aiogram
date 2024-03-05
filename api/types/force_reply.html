@@ -193,14 +193,14 @@
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源 GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
@@ -224,10 +224,10 @@
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway.html">赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">活动已结束</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">创建赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">中奖者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway.html">Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">Giveaway已结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">Giveaway创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">Giveaway中奖者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inaccessible_message.html">无法访问的消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_button.html">内联键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_markup.html">内联键盘标记</a></li>
@@ -239,10 +239,10 @@
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">请求用户的键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">键盘按钮请求多个用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="link_preview_options.html">链接预览选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="location.html">地点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="login_url.html">登录网址</a></li>
@@ -601,13 +601,16 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.types.force_reply.ForceReply">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.force_reply.</span></span><span class="sig-name descname"><span class="pre">ForceReply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_reply</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="k"><span class="pre">True</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_field_placeholder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selective</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/force_reply.html#ForceReply"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.force_reply.ForceReply" title="Link to this definition">#</a></dt>
-<dd><p>收到带有这个对象的消息后，电报客户端将向用户显示一个回复界面（就好像用户已经选择了机器人的消息并点击了“回复”）。 如果您希望创建用户友好的逐步界面而又不想牺牲 <a class="reference external" href="https://core.telegram.org/bots/features#privacy-mode">隐私模式</a>，这将非常有用。</p>
+<dd><p>收到带有这个对象的消息后，电报客户端将向用户显示一个回复界面（就好像用户已经选择了机器人的消息并点击了 ‘回复’）。 如果您希望创建用户友好的逐步界面而又不想牺牲 <a class="reference external" href="https://core.telegram.org/bots/features#privacy-mode">隐私模式</a>，这将非常有用。</p>
 <blockquote>
 <div><p><strong>例子：</strong> 一个用于群组的 <a class="reference external" href="https://t.me/PollBot">投票机器人</a> 以隐私模式运行（只接收命令、回复其消息和提到）。可能有两种方式来创建新的投票：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>告诉用户如何发送带参数的命令（例如 /newpoll 问题 答案1 答案2）。可能会吸引资深用户，但缺乏现代化的光泽。</p></li>
-<li><p>引导用户完成逐步流程。’请发送你的问题’，’很棒，现在让我们添加第一个答案选项’，’太棒了。继续添加答案选项，然后在准备好时发送 /done’。</p></li>
+<li><p>向用户解释如何发送带参数的命令（如 /newpoll question answer1 answer2）。对铁杆用户可能有吸引力，但缺乏现代感。</p></li>
+<li><p>引导用户完成逐步流程。
+‘请发送你的问题’，
+‘很棒，现在让我们添加第一个答案选项’，
+‘太棒了。继续添加答案选项，然后在准备好时发送 /done’。</p></li>
 </ul>
 </div></blockquote>
 <p>最后一个选择显然更有吸引力。如果您在机器人的问题中使用  <a class="reference internal" href="#aiogram.types.force_reply.ForceReply" title="aiogram.types.force_reply.ForceReply"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.force_reply.ForceReply</span></code></a> ，即使它只接收用户的回复、命令和提及，也会收到用户的答案，而无需用户额外工作。</p>
@@ -616,19 +619,19 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.force_reply.ForceReply.force_reply">
 <span class="sig-name descname"><span class="pre">force_reply</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Literal</span><span class="p"><span class="pre">[</span></span><span class="k"><span class="pre">True</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#aiogram.types.force_reply.ForceReply.force_reply" title="Link to this definition">#</a></dt>
-<dd><p>向用户显示回复界面，就好像他们手动选择了机器人的消息并点击了“回复”按钮。</p>
+<dd><p>向用户显示回复界面，就好像他们手动选择了机器人的消息并点击了 <cite>回复</cite> 按钮。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.force_reply.ForceReply.input_field_placeholder">
 <span class="sig-name descname"><span class="pre">input_field_placeholder</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.force_reply.ForceReply.input_field_placeholder" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em>. 当回复处于激活状态时，在输入框中显示的占位符；1-64个字符</p>
+<dd><p><em>可选</em>。当回复处于激活状态时，在输入框中显示的占位符；1-64个字符</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.force_reply.ForceReply.selective">
 <span class="sig-name descname"><span class="pre">selective</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.force_reply.ForceReply.selective" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Use this parameter if you want to force reply from specific users only. Targets: 1) users that are &#64;mentioned in the <em>text</em> of the <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a> object; 2) if the bot’s message is a reply to a message in the same chat and forum topic, sender of the original message.</p>
+<dd><p><em>可选</em>。如果只想强制回复特定用户，请使用此参数。目标1）在 <a class="reference internal" href="message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a> 对象的 <em>text</em> 中&#64;提到的用户；2）如果机器人的消息是对同一聊天和论坛主题中的消息的回复，则为原始消息的发送者。</p>
 </dd></dl>
 
 </dd></dl>

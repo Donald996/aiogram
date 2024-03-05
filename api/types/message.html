@@ -193,14 +193,14 @@
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源 GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
@@ -224,10 +224,10 @@
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway.html">赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">活动已结束</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">创建赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">中奖者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway.html">Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">Giveaway已结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">Giveaway创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">Giveaway中奖者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inaccessible_message.html">无法访问的消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_button.html">内联键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_markup.html">内联键盘标记</a></li>
@@ -239,10 +239,10 @@
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">请求用户的键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">键盘按钮请求多个用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="link_preview_options.html">链接预览选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="location.html">地点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="login_url.html">登录网址</a></li>
@@ -642,7 +642,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.sender_boost_count">
 <span class="sig-name descname"><span class="pre">sender_boost_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.sender_boost_count" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. If the sender of the message boosted the chat, the number of boosts added by the user</p>
+<dd><p><em>可选</em>。如果信息发送者助力了聊天效果，则用户助力的次数</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -684,21 +684,19 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.reply_to_story">
 <span class="sig-name descname"><span class="pre">reply_to_story</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="story.html#aiogram.types.story.Story" title="aiogram.types.story.Story"><span class="pre">Story</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.reply_to_story" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. For replies to a story, the original story</p>
+<dd><p><em>选修的</em>。对于故事的回复，原始故事</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.via_bot">
 <span class="sig-name descname"><span class="pre">via_bot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="user.html#aiogram.types.user.User" title="aiogram.types.user.User"><span class="pre">User</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.via_bot" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Bot through which the message was sent
-<em>可选</em>. 通过这条消息发送的机器人</p>
+<dd><p><em>可选</em>. 通过这条消息发送的机器人</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.edit_date">
 <span class="sig-name descname"><span class="pre">edit_date</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.edit_date" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Date the message was last edited in Unix time
-<em>可选</em>。消息最后编辑的日期（Unix时间）</p>
+<dd><p><em>可选</em>。消息最后编辑的日期（Unix时间）</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -740,14 +738,13 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.animation">
 <span class="sig-name descname"><span class="pre">animation</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="animation.html#aiogram.types.animation.Animation" title="aiogram.types.animation.Animation"><span class="pre">Animation</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.animation" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is an animation, information about the animation. For backward compatibility, when this field is set, the <em>document</em> field will also be set
-<em>可选</em>。消息是一个动画，关于动画的信息。为了向后兼容，当设置了此字段时，<a href="#id1"><span class="problematic" id="id2">*</span></a>document*字段也将被设置</p>
+<dd><p><em>可选</em>。消息是一个动画，关于动画的信息。为了向后兼容，当设置了此字段时，<em>document</em> 字段也将被设置</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.audio">
 <span class="sig-name descname"><span class="pre">audio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="audio.html#aiogram.types.audio.Audio" title="aiogram.types.audio.Audio"><span class="pre">Audio</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.audio" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is an audio file, information about the file</p>
+<dd><p><em>可选</em>. 消息是一个音频文件，有关文件的信息</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -771,7 +768,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.story">
 <span class="sig-name descname"><span class="pre">story</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="story.html#aiogram.types.story.Story" title="aiogram.types.story.Story"><span class="pre">Story</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.story" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>. 消息是转发的故事。</p>
+<dd><p><em>可选</em>。消息是转发的故事</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -783,7 +780,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.video_note">
 <span class="sig-name descname"><span class="pre">video_note</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="video_note.html#aiogram.types.video_note.VideoNote" title="aiogram.types.video_note.VideoNote"><span class="pre">VideoNote</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.video_note" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>. 消息是一个 <a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">视频笔记</a>，关于视频消息的信息。</p>
+<dd><p><em>可选</em>。消息是一个 <a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">视频笔记</a>，关于视频消息的信息</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -819,7 +816,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.dice">
 <span class="sig-name descname"><span class="pre">dice</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dice.html#aiogram.types.dice.Dice" title="aiogram.types.dice.Dice"><span class="pre">Dice</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.dice" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Message is a dice with random value</p>
+<dd><p><em>Optional</em>. 消息是一个随机值的骰子</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -837,7 +834,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.venue">
 <span class="sig-name descname"><span class="pre">venue</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="venue.html#aiogram.types.venue.Venue" title="aiogram.types.venue.Venue"><span class="pre">Venue</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.venue" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>. 消息是一个场馆，有关场馆的信息。为了向后兼容性，当设置了这个字段时，<em>location</em> 字段也将被设置。</p>
+<dd><p><em>可选</em>。消息是一个场馆，有关场馆的信息。为了向后兼容性，当设置了这个字段时，<em>location</em> 字段也将被设置</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -867,7 +864,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.new_chat_photo">
 <span class="sig-name descname"><span class="pre">new_chat_photo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="photo_size.html#aiogram.types.photo_size.PhotoSize" title="aiogram.types.photo_size.PhotoSize"><span class="pre">PhotoSize</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.new_chat_photo" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. A chat photo was change to this value</p>
+<dd><p><em>Optional</em>. 聊天照片已更改为此值</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -945,13 +942,13 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.connected_website">
 <span class="sig-name descname"><span class="pre">connected_website</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.connected_website" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. The domain name of the website on which the user has logged in. <a class="reference external" href="https://core.telegram.org/widgets/login">More about Telegram Login »</a></p>
+<dd><p><em>可选</em>。用户登录的网站域名。<a class="reference external" href="https://core.telegram.org/widgets/login">有关 Telegram 登录的更多信息 »</a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.write_access_allowed">
 <span class="sig-name descname"><span class="pre">write_access_allowed</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="write_access_allowed.html#aiogram.types.write_access_allowed.WriteAccessAllowed" title="aiogram.types.write_access_allowed.WriteAccessAllowed"><span class="pre">WriteAccessAllowed</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.write_access_allowed" title="Link to this definition">#</a></dt>
-<dd><p><em>可选</em>. 服务消息：用户允许机器人在将其添加到附件或侧边菜单后编写消息，从链接启动 Web 应用程序，或接受通过方法 <a class="reference external" href="https://core.telegram.org/bots/webapps#initializing-mini-apps">requestWriteAccess</a> 发送的 Web 应用程序的显式请求。</p>
+<dd><p><em>可选</em>。服务消息：用户允许机器人在将其添加到附件或侧边菜单后编写消息，从链接启动 Web 应用程序，或接受通过方法 <a class="reference external" href="https://core.telegram.org/bots/webapps#initializing-mini-apps">requestWriteAccess</a> 发送的 Web 应用程序的显式请求。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -969,7 +966,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.boost_added">
 <span class="sig-name descname"><span class="pre">boost_added</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="chat_boost_added.html#aiogram.types.chat_boost_added.ChatBoostAdded" title="aiogram.types.chat_boost_added.ChatBoostAdded"><span class="pre">ChatBoostAdded</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.boost_added" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Service message: user boosted the chat</p>
+<dd><p><em>可选</em>。服务信息：用户助力了聊天</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1011,7 +1008,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.giveaway_created">
 <span class="sig-name descname"><span class="pre">giveaway_created</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="giveaway_created.html#aiogram.types.giveaway_created.GiveawayCreated" title="aiogram.types.giveaway_created.GiveawayCreated"><span class="pre">GiveawayCreated</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.giveaway_created" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Service message: a scheduled giveaway was created</p>
+<dd><p><em>可选</em>。服务消息：创建了一个定时赠品活动</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1059,8 +1056,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message.Message.web_app_data">
 <span class="sig-name descname"><span class="pre">web_app_data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="web_app_data.html#aiogram.types.web_app_data.WebAppData" title="aiogram.types.web_app_data.WebAppData"><span class="pre">WebAppData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message.Message.web_app_data" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. Service message: data sent by a Web App
-<em>可选</em>。服务消息：由Web应用发送的数据</p>
+<dd><p><em>可选</em>。服务消息：由Web应用发送的数据</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -2624,7 +2620,7 @@
 <li><p><code class="code docutils literal notranslate"><span class="pre">chat_id</span></code></p></li>
 <li><p><code class="code docutils literal notranslate"><span class="pre">message_id</span></code></p></li>
 </ul>
-<p>Use this method to change the chosen reactions on a message. Service messages can’t be reacted to. Automatically forwarded messages from a channel to its discussion group have the same available reactions as messages in the channel. Returns <code class="code docutils literal notranslate"><span class="pre">True</span></code> on success.</p>
+<p>使用此方法可以更改对消息的所选反应。无法对服务消息做出反应。从频道自动转发到其讨论组的消息与频道中的消息具有相同的可用反应。成功时返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#setmessagereaction">https://core.telegram.org/bots/api#setmessagereaction</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>

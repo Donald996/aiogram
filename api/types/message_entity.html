@@ -193,14 +193,14 @@
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源 GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
@@ -224,10 +224,10 @@
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway.html">赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">活动已结束</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">创建赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">中奖者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway.html">Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">Giveaway已结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">Giveaway创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">Giveaway中奖者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inaccessible_message.html">无法访问的消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_button.html">内联键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_markup.html">内联键盘标记</a></li>
@@ -239,10 +239,10 @@
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">请求用户的键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">键盘按钮请求多个用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="link_preview_options.html">链接预览选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="location.html">地点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="login_url.html">登录网址</a></li>
@@ -606,7 +606,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message_entity.MessageEntity.type">
 <span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.types.message_entity.MessageEntity.type" title="Link to this definition">#</a></dt>
-<dd><p>实体类型。目前可以是 ‘mention’（&#64;用户名），’hashtag’（#hashtag），’cashtag’（$USD），’bot_command’（<a class="reference external" href="mailto:/start&#37;&#52;&#48;jobs_bot">/start<span>&#64;</span>jobs_bot</a>），’url’（<a class="reference external" href="https://telegram.org">https://telegram.org</a>），’email’（<a class="reference external" href="mailto:do-not-reply&#37;&#52;&#48;telegram&#46;org">do-not-reply<span>&#64;</span>telegram<span>&#46;</span>org</a>），’phone_number’（+1-212-555-0123），’bold’（<strong>粗体文字</strong>），’italic’（<em>斜体文字</em>），’underline’（下划线文字），’strikethrough’（删除线文字），’spoiler’（剧透消息），’blockquote’（引用块），’code’（单宽字符串），’pre’（单宽块），’text_link’（可点击的文本网址），’text_mention’（用于没有用户名的用户&lt;<a class="reference external" href="https://telegram.org/blog/edit#new-mentions">https://telegram.org/blog/edit#new-mentions</a>&gt;），’custom_emoji’（内联自定义表情贴纸）</p>
+<dd><p>实体的类型。目前，可以是“提及”(<code class="code docutils literal notranslate"><span class="pre">&#64;username</span></code>)、“标签”(<code class="code docutils literal notranslate"><span class="pre">#hashtag</span></code>)、“现金标签”(<code class="code docutils literal notranslate"><span class="pre">$USD</span></code>)、“机器人命令”(<code class="code docutils literal notranslate"><span class="pre">/start&#64;jobs_bot</span></code>), “url” (<code class="code docutils literal notranslate"><span class="pre">https://telegram.org</span></code>), ‘电子邮件’ (<code class="code docutils literal notranslate"><span class="pre">do-not-reply&#64;telegram.org</span></code>), ‘电话号码’ ( <code class="code docutils literal notranslate"><span class="pre">+1-212-555-0123</span></code>), ‘bold’ (<strong>粗体文本</strong>), ‘italic’ (<em>斜体文本</em>), ‘underline’ (下划线文本), ‘strikethrough’ (删除线text), ‘spoiler’ (剧透消息), ‘blockquote’ (块引用), ‘code’ (等宽字符串), ‘pre’ (等宽块), ‘text_link’ (用于可点击的文本 URL), ‘text_mention’ (用于用户`没有用户名 &lt;<a class="reference external" href="https://telegram.org/blog/edit#new-mentions">https://telegram.org/blog/edit#new-mentions</a>&gt;`_)，’custom_emoji’（用于内联自定义表情符号贴纸）</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -624,7 +624,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message_entity.MessageEntity.url">
 <span class="sig-name descname"><span class="pre">url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message_entity.MessageEntity.url" title="Link to this definition">#</a></dt>
-<dd><p><em>Optional</em>. 对于’text_link’，用户点击文本后打开的URL.</p>
+<dd><p><em>可选</em>。对于 <cite>text_link</cite>，用户点击文本后打开的URL.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -642,7 +642,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.message_entity.MessageEntity.custom_emoji_id">
 <span class="sig-name descname"><span class="pre">custom_emoji_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.message_entity.MessageEntity.custom_emoji_id" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em>。仅对于’custom_emoji’，自定义表情符号的唯一标识符。使用 :class:<a href="#id1"><span class="problematic" id="id2">`</span></a>aiogram.methods.get_custom_emoji_stickers.GetCustomEmojiStickers`获取有关贴纸的完整信息。</p>
+<dd><p><em>可选</em>。仅对于 <cite>custom_emoji</cite>，自定义表情符号的唯一标识符。使用 <a class="reference internal" href="../methods/get_custom_emoji_stickers.html#aiogram.methods.get_custom_emoji_stickers.GetCustomEmojiStickers" title="aiogram.methods.get_custom_emoji_stickers.GetCustomEmojiStickers"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.get_custom_emoji_stickers.GetCustomEmojiStickers</span></code></a> 获取有关贴纸的完整信息。</p>
 </dd></dl>
 
 <dl class="py method">

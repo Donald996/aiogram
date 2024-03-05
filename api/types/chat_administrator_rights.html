@@ -193,14 +193,14 @@
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_removed.html">聊天助力移除</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_source.html">聊天助力来源</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源GiftCode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源Giveaway</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_gift_code.html">聊天助力来源 GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_boost_updated.html">聊天助力更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_invite_link.html">聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_location.html">聊天位置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员(object)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chat_member.html">聊天成员类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_administrator.html">聊天成员管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_banned.html">聊天成员被封禁</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chat_member_left.html">聊天成员已离开</a></li>
@@ -224,10 +224,10 @@
 <li class="toctree-l3"><a class="reference internal" href="forum_topic_reopened.html">论坛话题重新打开</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
 <li class="toctree-l3"><a class="reference internal" href="general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway.html">赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">活动已结束</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">创建赠品</a></li>
-<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">中奖者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway.html">Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_completed.html">Giveaway已结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_created.html">Giveaway创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="giveaway_winners.html">Giveaway中奖者</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inaccessible_message.html">无法访问的消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_button.html">内联键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="inline_keyboard_markup.html">内联键盘标记</a></li>
@@ -239,10 +239,10 @@
 <li class="toctree-l3"><a class="reference internal" href="input_media_photo.html">输入媒体照片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="input_media_video.html">输入媒体视频</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button.html">键盘按钮</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮调查类型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">请求对话框键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
 <li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_user.html">键盘按钮请求用户</a></li>
-<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">请求用户的键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keyboard_button_request_users.html">键盘按钮请求多个用户</a></li>
 <li class="toctree-l3"><a class="reference internal" href="link_preview_options.html">链接预览选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="location.html">地点</a></li>
 <li class="toctree-l3"><a class="reference internal" href="login_url.html">登录网址</a></li>
@@ -606,91 +606,91 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.is_anonymous">
 <span class="sig-name descname"><span class="pre">is_anonymous</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.is_anonymous" title="Link to this definition">#</a></dt>
-<dd><p>如果用户在聊天中的在线状态是隐藏，那么返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果用户在聊天中的在线状态是隐藏</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_manage_chat">
 <span class="sig-name descname"><span class="pre">can_manage_chat</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_manage_chat" title="Link to this definition">#</a></dt>
-<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>, if the administrator can access the chat event log, get boost list, see hidden supergroup and channel members, report spam messages and ignore slow mode. Implied by any other administrator privilege.</p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以访问聊天事件日志、获取增强列表、查看隐藏的超级组和频道成员、报告垃圾邮件并忽略慢速模式。由任何其他管理员权限暗示。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_delete_messages">
 <span class="sig-name descname"><span class="pre">can_delete_messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_delete_messages" title="Link to this definition">#</a></dt>
-<dd><p>如果管理员可以删除其他用户的消息则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以删除其他用户的消息</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_manage_video_chats">
 <span class="sig-name descname"><span class="pre">can_manage_video_chats</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_manage_video_chats" title="Link to this definition">#</a></dt>
-<dd><p>如果管理员可以管理视频聊天，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以管理视频聊天</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_restrict_members">
 <span class="sig-name descname"><span class="pre">can_restrict_members</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_restrict_members" title="Link to this definition">#</a></dt>
-<dd><p>如果管理员可以限制、禁止或解除禁止聊天成员，或者访问超级群统计，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以限制、禁止或解除禁止聊天成员，或者访问超级群统计</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_promote_members">
 <span class="sig-name descname"><span class="pre">can_promote_members</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_promote_members" title="Link to this definition">#</a></dt>
-<dd><p>如果管理员能够添加具有其特权子集的新管理员或降职直接或间接由其任命的管理员（由用户任命的管理员）时，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员能够添加具有其特权子集的新管理员或降职直接或间接由其任命的管理员（由用户任命的管理员）时</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_change_info">
 <span class="sig-name descname"><span class="pre">can_change_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_change_info" title="Link to this definition">#</a></dt>
-<dd><p>如果用户被允许修改聊天标题、照片和其他设置，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果用户被允许修改聊天标题、照片和其他设置</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_invite_users">
 <span class="sig-name descname"><span class="pre">can_invite_users</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_invite_users" title="Link to this definition">#</a></dt>
-<dd><p>如果用户被允许邀请新用户加入聊天，则为 <code class="code docutils literal notranslate"><span class="pre">True</span></code></p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果用户被允许邀请新用户加入聊天</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_post_stories">
 <span class="sig-name descname"><span class="pre">can_post_stories</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_post_stories" title="Link to this definition">#</a></dt>
-<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>, if the administrator can post stories to the chat</p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以在聊天中发布故事</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_edit_stories">
 <span class="sig-name descname"><span class="pre">can_edit_stories</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_edit_stories" title="Link to this definition">#</a></dt>
-<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>, if the administrator can edit stories posted by other users</p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以编辑其他用户发布的故事</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_delete_stories">
 <span class="sig-name descname"><span class="pre">can_delete_stories</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_delete_stories" title="Link to this definition">#</a></dt>
-<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>, if the administrator can delete stories posted by other users</p>
+<dd><p><code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以删除其他用户发布的故事</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_post_messages">
 <span class="sig-name descname"><span class="pre">can_post_messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_post_messages" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em> 。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以在频道中发布消息，或者访问频道统计数据；仅限频道</p>
+<dd><p><em>可选</em>。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以在频道中发布消息，或者访问频道统计数据；仅限频道</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_edit_messages">
 <span class="sig-name descname"><span class="pre">can_edit_messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_edit_messages" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em> 。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以编辑其他用户的消息并且可以置顶消息；仅限频道</p>
+<dd><p><em>可选</em>。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果管理员可以编辑其他用户的消息并且可以置顶消息；仅限频道</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_pin_messages">
 <span class="sig-name descname"><span class="pre">can_pin_messages</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_pin_messages" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em>。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果允许用户固定消息；仅限群组和超级群组</p>
+<dd><p><em>可选</em>。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果允许用户固定消息；仅限群组和超级群组</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_manage_topics">
 <span class="sig-name descname"><span class="pre">can_manage_topics</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.chat_administrator_rights.ChatAdministratorRights.can_manage_topics" title="Link to this definition">#</a></dt>
-<dd><p><em>可选的</em> 。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果用户被允许创建、重命名、关闭和重新打开论坛主题；仅超级群组</p>
+<dd><p><em>可选</em>。 <code class="code docutils literal notranslate"><span class="pre">True</span></code>，如果用户被允许创建、重命名、关闭和重新打开论坛主题；仅超级群组</p>
 </dd></dl>
 
 </dd></dl>
