@@ -165,7 +165,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="api/index.html">Bot API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/bot.html">机器人</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/session/index.html">客户端</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/session/custom_server.html">使用自定义 API 服务器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/session/custom_server.html">自定义 API 服务器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/session/base.html">基本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/session/aiohttp.html">aiohttp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/session/middleware.html">客户端中间件</a></li>
@@ -612,12 +612,12 @@
 <section id="dispatcher">
 <h2>调度器<a class="headerlink" href="#dispatcher" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dispatcher</span></code> 类现在不再在其初始化程序中接受 <cite>Bot</cite> 实例。相反，<cite>Bot</cite> 实例应该只在调度程序中用于启动轮询或处理来自 Webhook 的事件。这种方法还允许同时使用多个机器人实例（“多机器人”）。</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dispatcher</span></code> 现在可以通过另一个类似于Dispatcher的东西进行扩展，名为 <code class="xref py py-class docutils literal notranslate"><span class="pre">Router</span></code> (<a class="reference internal" href="dispatcher/router.html#nested-routers"><span class="std std-ref">阅读更多 »</span></a>)。</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dispatcher</span></code> 类现在不再在其初始化程序中接受 <cite>Bot</cite> 实例。相反，<cite>Bot</cite> 实例应该只在调度程序中用于启动轮询或处理来自 Webhook 的事件。这种方法还允许同时使用多个机器人实例（<cite>多机器人</cite>）。</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dispatcher</span></code> 现在可以通过另一个类似于调度器的东西进行扩展，名为 <code class="xref py py-class docutils literal notranslate"><span class="pre">路由器</span></code> (<a class="reference internal" href="dispatcher/router.html#nested-routers"><span class="std std-ref">阅读更多 »</span></a>)。</p></li>
 <li><p>使用路由，您可以轻松模块化您的代码，并且有可能在不同项目之间共享这些模块。</p></li>
 <li><p>从所有事件处理程序装饰器和注册方法中去除了 <strong>_handler</strong> 后缀。 (<a class="reference internal" href="dispatcher/router.html#event-observers"><span class="std std-ref">阅读更多»</span></a>)</p></li>
-<li><p>执行程序已完全删除；现在可以直接使用调度程序开始轮询API或处理来自API的webhook。</p></li>
-<li><p>限流方法已完全移除; 现在可以使用中间件来控制执行上下文并实现任何所需的限流机制。</p></li>
+<li><p>执行程序已完全删除；现在可以直接使用调度程序开始轮询 API 或处理来自 API 的 webhook。</p></li>
+<li><p>限流方法已完全移除；现在可以使用中间件来控制执行上下文并实现任何所需的限流机制。</p></li>
 <li><p>从API类型Bot和Dispatcher对象中移除了全局上下文变量。 从现在开始，如果您想在处理程序或过滤器中访问当前的bot实例，您应该接受参数 <code class="code docutils literal notranslate"><span class="pre">bot:</span> <span class="pre">Bot</span></code> 并使用它来替代 <code class="code docutils literal notranslate"><span class="pre">Bot.get_current()</span></code> 。 在中间件中，可以通过 <code class="code docutils literal notranslate"><span class="pre">data[&quot;bot&quot;]</span></code> 访问。</p></li>
 <li><p>为了跳过待定的更新，您现在应该直接调用  <a class="reference internal" href="api/methods/delete_webhook.html#aiogram.methods.delete_webhook.DeleteWebhook" title="aiogram.methods.delete_webhook.DeleteWebhook"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.delete_webhook.DeleteWebhook</span></code></a> 方法，而不是将 <code class="code docutils literal notranslate"><span class="pre">skip_updates=True</span></code> 传递给启动轮询方法。</p></li>
 </ul>
@@ -627,10 +627,10 @@
 <ul class="simple">
 <li><p>关键字过滤器不再能够使用；请明确使用过滤器。 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/942">阅读更多 »</a>)</p></li>
 <li><p>由于关键词过滤器被移除，所有先前默认启用的过滤器（例如状态和内容类型）现在被禁用了。如果您希望使用它们，必须明确指定它们。例如，不要使用 <code class="code docutils literal notranslate"><span class="pre">&#64;dp.message_handler(content_types=ContentType.PHOTO)</span></code> ，而应该使用 <code class="code docutils literal notranslate"><span class="pre">&#64;router.message(F.photo)</span></code></p></li>
-<li><p>大多数常见的过滤器都已被“魔法过滤器”取代。 (<a class="reference internal" href="dispatcher/filters/magic_filters.html#magic-filters"><span class="std std-ref">阅读更多 »</span></a>)</p></li>
-<li><p>默认情况下，消息处理程序现在接收任何内容类型。如果你想要特定的，只需添加适当的过滤器（Magic或任何其他）。</p></li>
+<li><p>大多数常见的过滤器都已被 <cite>魔法过滤</cite> 取代。 (<a class="reference internal" href="dispatcher/filters/magic_filters.html#magic-filters"><span class="std std-ref">阅读更多 »</span></a>)</p></li>
+<li><p>默认情况下，消息处理程序现在接收任何内容类型。如果你想要特定的，只需添加适当的过滤器（Magic 或任何其他）。</p></li>
 <li><p>状态过滤器不再默认启用。这意味着如果在 v2 中使用了 <code class="code docutils literal notranslate"><span class="pre">state=&quot;*&quot;</span></code> ，则在 v3 中不应该传递任何状态过滤器。相反，如果在 v2 中没有指定状态，则现在需要在 v3 中指定。</p></li>
-<li><p>为每个路由器添加了注册全局过滤器的可能性，这有助于减少代码重复，提供了更容易控制每个路由器目的的方式。</p></li>
+<li><p>添加了为每个路由器注册全局过滤器的可能性，这有助于减少代码重复，并为控制每个路由器的目的提供了更简便的方法。</p></li>
 </ul>
 </section>
 <section id="bot-api">
@@ -659,7 +659,7 @@
 <section id="callbacks-data">
 <h2>回调数据<a class="headerlink" href="#callbacks-data" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>回调数据工厂现在使用 <a class="reference external" href="https://docs.pydantic.dev/">pydantic</a> 模型严格类型化。 (<span class="xref std std-ref">阅读更多»</span>)</p></li>
+<li><p>回调数据工厂现在使用 <a class="reference external" href="https://docs.pydantic.dev/">pydantic</a> 模型严格类型化。 (<a class="reference internal" href="dispatcher/filters/callback_data.html#callback-data-factory"><span class="std std-ref">阅读更多»</span></a>)</p></li>
 </ul>
 </section>
 <section id="finite-state-machine">
@@ -675,7 +675,7 @@
 <section id="sending-files">
 <h2>发送文件<a class="headerlink" href="#sending-files" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>从现在开始，发送文件时应该先将文件包装在一个InputFile对象中， 而不是直接将IO对象传递给API方法。(<a class="reference internal" href="api/upload_file.html#sending-files"><span class="std std-ref">Read more »</span></a>)</p></li>
+<li><p>从现在开始，发送文件时应该先将文件包装在一个InputFile对象中， 而不是直接将IO对象传递给API方法。(<a class="reference internal" href="api/upload_file.html#sending-files"><span class="std std-ref">阅读更多»</span></a>)</p></li>
 </ul>
 </section>
 <section id="webhook">

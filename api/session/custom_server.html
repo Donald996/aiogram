@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="基本" href="base.html" /><link rel="prev" title="客户端" href="index.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>使用自定义 API 服务器 - aiogram 3.4.1 文档</title>
+        <title>自定义 API 服务器 - aiogram 3.4.1 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -165,7 +165,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Bot API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../bot.html">机器人</a></li>
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">客户端</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">使用自定义 API 服务器</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">自定义 API 服务器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="base.html">基本</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aiohttp.html">aiohttp</a></li>
 <li class="toctree-l3"><a class="reference internal" href="middleware.html">客户端中间件</a></li>
@@ -597,8 +597,8 @@
         </div>
         <article role="main">
           <section id="use-custom-api-server">
-<h1>使用自定义 API 服务器<a class="headerlink" href="#use-custom-api-server" title="Link to this heading">#</a></h1>
-<p>如果要使用自托管的 API 服务器</p>
+<h1>自定义 API 服务器<a class="headerlink" href="#use-custom-api-server" title="Link to this heading">#</a></h1>
+<p>如果要使用自托管的 API 服务器：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">session</span> <span class="o">=</span> <span class="n">AiohttpSession</span><span class="p">(</span>
     <span class="n">api</span><span class="o">=</span><span class="n">TelegramAPIServer</span><span class="o">.</span><span class="n">from_base</span><span class="p">(</span><span class="s1">&#39;http://localhost:8082&#39;</span><span class="p">)</span>
 <span class="p">)</span>
@@ -742,7 +742,7 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">使用自定义 API 服务器</a><ul>
+<li><a class="reference internal" href="#">自定义 API 服务器</a><ul>
 <li><a class="reference internal" href="#aiogram.client.telegram.TelegramAPIServer"><code class="docutils literal notranslate"><span class="pre">TelegramAPIServer</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.client.telegram.TelegramAPIServer.api_url"><code class="docutils literal notranslate"><span class="pre">TelegramAPIServer.api_url()</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.client.telegram.TelegramAPIServer.base"><code class="docutils literal notranslate"><span class="pre">TelegramAPIServer.base</span></code></a></li>
