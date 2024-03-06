@@ -599,13 +599,13 @@
           <section id="changelog">
 <span id="aiogram-changes"></span><h1>更新日志<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
 <section id="release-unreleased-draft-2024-03-06">
-<h2>3.4.1 [UNRELEASED DRAFT] (2024-03-06)<a class="headerlink" href="#release-unreleased-draft-2024-03-06" title="Link to this heading">#</a></h2>
+<h2><a href="#id490"><span class="problematic" id="id491">|发布|</span></a> [未发布草案] (2024-03-06)<a class="headerlink" href="#release-unreleased-draft-2024-03-06" title="Link to this heading">#</a></h2>
 <section id="bugfixes">
 <h3>错误修复<a class="headerlink" href="#bugfixes" title="Link to this heading">#</a></h3>
 <ul>
 <li><ul class="simple">
 <li><p><strong>WebAppUser 类字段</strong> ：为 <cite>WebAppUser</cite> 类添加了缺失的 <cite>is_premium</cite> 、 <cite>added_to_attachment_menu</cite> 和 <cite>allows_write_to_pm</cite> 字段，以便与 Telegram API 保持一致。</p></li>
-<li><p>实现 <strong>WebAppChat 类</strong> ：引入了 <cite>WebAppChat</cite> 类，其中包含 Telegram API 中指定的所有字段（<cite>id</cite>、<cite>type</cite>、<cite>title</cite>、<cite>username</cite> 和`photo_url`），而之前的类库中缺少这些字段。</p></li>
+<li><p>实现 <strong>WebAppChat 类</strong> ：引入了 <cite>WebAppChat</cite> 类，其中包含 Telegram API 中指定的所有字段（<cite>id</cite>、<cite>type</cite>、<cite>title</cite>、<cite>username</cite> 和 <cite>photo_url</cite>），而之前的类库中缺少这些字段。</p></li>
 <li><p><strong>WebAppInitData 类字段</strong> ：在 <cite>WebAppInitData</cite> 类中加入了之前省略的字段：<cite>chat</cite>、<cite>chat_type</cite>、<cite>chat_instance</cite>，以匹配官方文档，获得完整的 Telegram Web 应用程序支持。</p></li>
 </ul>
 <p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1424">#1424</a></p>
@@ -615,8 +615,7 @@
 <section id="improved-documentation">
 <h3>改进的文档<a class="headerlink" href="#improved-documentation" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Added WebAppChat class to WebApp docs, updated uk_UA localisation of WebApp docs.
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1433">#1433</a></p></li>
+<li><p>在 WebApp 文档中添加了 WebAppChat 类，更新了 WebApp 文档的 uk_UA 本地化。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1433">#1433</a></p></li>
 </ul>
 </section>
 </section>
@@ -697,7 +696,7 @@
 <section id="id19">
 <h3>特性<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>引入场景功能，帮助您使用有限状态机简化用户交互。了解有关 👉 <a class="reference internal" href="dispatcher/finite_state_machine/scene.html#scenes"><span class="std std-ref">Scenes</span></a>.`#1280 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1280">https://github.com/aiogram/aiogram/issues/1280</a>&gt;`_</p></li>
+<li><p>引入场景功能，帮助您使用有限状态机简化用户交互。了解有关 👉 <a class="reference internal" href="dispatcher/finite_state_machine/scene.html#scenes"><span class="std std-ref">Scenes</span></a>. <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1280">#1280</a></p></li>
 <li><p>添加了新的FSM策略 <code class="code docutils literal notranslate"><span class="pre">CHAT_TOPIC</span></code>，它为聊天中的整个主题设置状态，也适用于私人消息和没有话题的常规群组。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1343">#1343</a></p></li>
 </ul>
 </section>
@@ -799,15 +798,15 @@
 <li><p>添加了依赖注入技术部分 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1253">#1253</a></p></li>
 <li><p>此更新包括在软件源中添加一个多文件机器人示例。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1254">#1254</a></p></li>
 <li><p>重构示例代码以使用aiogram枚举，并通过标记美化增强聊天消息，使其更加用户友好。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1256">#1256</a></p></li>
-<li><p>补充迁移常见问题中的 “有限状态机 “部分 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1264">#1264</a></p></li>
-<li><p>TelegramEventObserver的filter方法的文档字符串中删除了额外的参数，并修复了I18n文档中的拼写错误。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1268">#1268</a></p></li>
+<li><p>补充迁移常见问题中的 “有限状态机“ 部分 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1264">#1264</a></p></li>
+<li><p>TelegramEventObserver 的 filter 方法的文档字符串中删除了额外的参数，并修复了I18n文档中的拼写错误。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1268">#1268</a></p></li>
 </ul>
 </section>
 <section id="id70">
 <h3>其他<a class="headerlink" href="#id70" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>在分发器中增强了警告消息，当更新类型未知时，包含了更新的 JSON 转储。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1269">#1269</a></p></li>
-<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#august-18-2023">Bot API 6.8</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1275">#1275</a> 的支持。</p></li>
+<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#august-18-2023">Bot API 6.8</a> 的支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1275">#1275</a></p></li>
 </ul>
 </section>
 </section>
@@ -835,7 +834,7 @@
 <section id="id77">
 <h3>错误修复<a class="headerlink" href="#id77" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>修复了手动将“bot”键传递到调度程序工作流数据时的轮询启动 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1242">#1242</a></p></li>
+<li><p>修复了手动将 “bot” 键传递到调度程序工作流数据时的轮询启动 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1242">#1242</a></p></li>
 <li><p>为丢失的快捷方式添加了代码生成配置：</p>
 <ul class="simple">
 <li><p>ShippingQuery.answer</p></li>
@@ -874,7 +873,7 @@
 <ul class="simple">
 <li><p>在 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 快捷方式中修复了机器人分配问题 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1232">#1232</a></p></li>
 <li><p>已添加模型验证，以便在字段验证前移除 UNSET。为了正确处理使用 <cite>UNSET</cite> 作为哨兵值的 parse_mode，这一更改是必要的。如果不移除 <cite>UNSET</cite> ，从 Bot.method_name 传递到模型初始化时就会产生问题。 <cite>UNSET</cite> 也被添加到键入中。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1233">#1233</a></p></li>
-<li><p>将pydantic更新至2.1，并修复了一些bug。</p></li>
+<li><p>将pydantic更新至2.1，并修复了一些bug</p></li>
 </ul>
 </section>
 <section id="id91">
@@ -931,9 +930,9 @@
 <li><p>在InlineQueryResult枚举的结果类型中，将InlineQueryResultCachedMpeg4Gif和InlineQueryResultMpeg4Gif的类型更改为更符合文档的正确类型。</p>
 <p>更改用于实体解析的正则表达式为更正确的 (<code class="code docutils literal notranslate"><span class="pre">InlineQueryResultType.yml</span></code>). <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1146">#1146</a></p>
 </li>
-<li><p>修复了启动/关闭事件的签名，以包括`**dispatcher.workflow_data`作为处理程序参数。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1155">#1155</a></p></li>
+<li><p>修复了启动/关闭事件的签名，以包括 <cite>**dispatcher.workflow_data</cite> 作为处理程序参数。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1155">#1155</a></p></li>
 <li><p>将缺失的 <code class="code docutils literal notranslate"><span class="pre">FORUM_TOPIC_EDITED</span></code> 值添加到 content_type 属性中 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1160">#1160</a></p></li>
-<li><p>已修复与Python 3.8-3.9的兼容性（来自之前的版本）`#1162 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1162">https://github.com/aiogram/aiogram/issues/1162</a>&gt;`_</p></li>
+<li><p>已修复与Python 3.8-3.9的兼容性（来自之前的版本） <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1162">#1162</a></p></li>
 <li><p>修复了Markdown中的隐藏文本解析器。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1176">#1176</a></p></li>
 <li><p>修正的工作流数据传播 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1196">#1196</a></p></li>
 <li><p>修复了与InputMedia、ChatMember等嵌套子类型相关的序列化错误。</p>
@@ -958,42 +957,42 @@
 <section id="id114">
 <h3>其他<a class="headerlink" href="#id114" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>完全支持了`Bot API 6.6 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-9-2023">https://core.telegram.org/bots/api-changelog#march-9-2023</a>&gt;`_</p>
+<li><p>完全支持了 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-9-2023">Bot API 6.6</a></p>
 <div class="admonition danger">
 <p class="admonition-title">危险</p>
 <p>请注意，此问题的变更已在Bot API更改日志中描述，此更改不会在API中造成破坏，但在aiogram中由于Beta阶段尚未完成而会有破坏。</p>
 </div>
-<p>#1139 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1139">https://github.com/aiogram/aiogram/issues/1139</a>&gt;`_</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1139">#1139</a></p>
 </li>
-<li><p>完全支持Bot API 6.7 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#april-21-2023">https://core.telegram.org/bots/api-changelog#april-21-2023</a>&gt; 的添加</p>
+<li><p>完全支持 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#april-21-2023">Bot API 6.7</a></p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>请注意参数 <em>switch_pm_parameter</em> 和 <em>switch_pm_text</em> 已被弃用，应根据 API 文档中描述更改为 <em>button</em> 参数。</p>
 </div>
-<p>#1168 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1168">https://github.com/aiogram/aiogram/issues/1168</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1168">#1168</a></p>
 </li>
 <li><p>更新后的 <a class="reference external" href="https://docs.pydantic.dev/2.0/migration/">Pydantic 到 V2</a></p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>小心，不是所有的库都已经更新到使用 V2。</p>
+<p>小心，不是所有的库都已经更新到使用 V2</p>
 </div>
-<p>#1202 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1202">https://github.com/aiogram/aiogram/issues/1202</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1202">#1202</a></p>
 </li>
 <li><p>在Bot实例中添加了全局默认值 <code class="code docutils literal notranslate"><span class="pre">disable_web_page_preview</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">protect_content</span></code>，以及 <code class="code docutils literal notranslate"><span class="pre">parse_mode</span></code>，重新设计了内部请求构建器机制。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1142">#1142</a></p></li>
 <li><p>已从存储中删除了机器人参数 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1144">#1144</a></p></li>
-<li><p>用Pydantic中的新功能’验证上下文&lt;<a class="reference external" href="https://docs.pydantic.dev/latest/usage/validators/#validation-context">https://docs.pydantic.dev/latest/usage/validators/#validation-context</a>&gt;’替换了ContextVar，以提高处理Bot实例在方法快捷方式中的清晰度、可用性和多功能性。</p>
+<li><p>用Pydantic中的新功能 <a class="reference external" href="https://docs.pydantic.dev/latest/usage/validators/#validation-context">验证上下文</a> 替换了ContextVar，以提高处理Bot实例在方法快捷方式中的清晰度、可用性和多功能性。</p>
 <div class="admonition danger">
 <p class="admonition-title">危险</p>
 <p><strong>Breaking</strong>: ‘bot’ 参数现在在 <cite>URLInputFile</cite> 中是必需的</p>
 </div>
-<p>#1210 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1210">https://github.com/aiogram/aiogram/issues/1210</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1210">#1210</a></p>
 </li>
 <li><p>更新了带有新功能的魔术过滤器</p>
 <ul class="simple">
 <li><p>为 <code class="code docutils literal notranslate"><span class="pre">len(F)</span></code> 错误添加了提示</p></li>
 <li><p>操作中添加的非</p></li>
 </ul>
-<p>#1221 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1221">https://github.com/aiogram/aiogram/issues/1221</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1221">#1221</a></p>
 </li>
 </ul>
 </section>
@@ -1033,13 +1032,50 @@
 <li><p>添加了缺失的快捷方式，新的枚举，重新设计了旧的东西</p>
 <p><strong>Breaking</strong> 所有先前添加的枚举都在新位置重新生成 - <cite>aiogram.enums</cite> 而不是 <cite>aiogram.types</cite></p>
 <dl class="simple">
-<dt><strong>新增的枚举:</strong> <a class="reference internal" href="api/enums/bot_command_scope_type.html#aiogram.enums.bot_command_scope_type.BotCommandScopeType" title="aiogram.enums.bot_command_scope_type.BotCommandScopeType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.bot_command_scope_type.BotCommandScopeType</span></code></a>,</dt><dd><p><a class="reference internal" href="api/enums/chat_action.html#aiogram.enums.chat_action.ChatAction" title="aiogram.enums.chat_action.ChatAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.chat_action.ChatAction</span></code></a>, <a class="reference internal" href="api/enums/chat_member_status.html#aiogram.enums.chat_member_status.ChatMemberStatus" title="aiogram.enums.chat_member_status.ChatMemberStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.chat_member_status.ChatMemberStatus</span></code></a>, <a class="reference internal" href="api/enums/chat_type.html#aiogram.enums.chat_type.ChatType" title="aiogram.enums.chat_type.ChatType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.chat_type.ChatType</span></code></a>, <a class="reference internal" href="api/enums/content_type.html#aiogram.enums.content_type.ContentType" title="aiogram.enums.content_type.ContentType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.content_type.ContentType</span></code></a>, <a class="reference internal" href="api/enums/dice_emoji.html#aiogram.enums.dice_emoji.DiceEmoji" title="aiogram.enums.dice_emoji.DiceEmoji"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.dice_emoji.DiceEmoji</span></code></a>, <a class="reference internal" href="api/enums/inline_query_result_type.html#aiogram.enums.inline_query_result_type.InlineQueryResultType" title="aiogram.enums.inline_query_result_type.InlineQueryResultType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.inline_query_result_type.InlineQueryResultType</span></code></a>, <a class="reference internal" href="api/enums/input_media_type.html#aiogram.enums.input_media_type.InputMediaType" title="aiogram.enums.input_media_type.InputMediaType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.input_media_type.InputMediaType</span></code></a>, <a class="reference internal" href="api/enums/mask_position_point.html#aiogram.enums.mask_position_point.MaskPositionPoint" title="aiogram.enums.mask_position_point.MaskPositionPoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.mask_position_point.MaskPositionPoint</span></code></a>, <a class="reference internal" href="api/enums/menu_button_type.html#aiogram.enums.menu_button_type.MenuButtonType" title="aiogram.enums.menu_button_type.MenuButtonType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.menu_button_type.MenuButtonType</span></code></a>, <a class="reference internal" href="api/enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType" title="aiogram.enums.message_entity_type.MessageEntityType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.message_entity_type.MessageEntityType</span></code></a>, <a class="reference internal" href="api/enums/parse_mode.html#aiogram.enums.parse_mode.ParseMode" title="aiogram.enums.parse_mode.ParseMode"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.parse_mode.ParseMode</span></code></a>, <a class="reference internal" href="api/enums/poll_type.html#aiogram.enums.poll_type.PollType" title="aiogram.enums.poll_type.PollType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.poll_type.PollType</span></code></a>, <a class="reference internal" href="api/enums/sticker_type.html#aiogram.enums.sticker_type.StickerType" title="aiogram.enums.sticker_type.StickerType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.sticker_type.StickerType</span></code></a>, <a class="reference internal" href="api/enums/topic_icon_color.html#aiogram.enums.topic_icon_color.TopicIconColor" title="aiogram.enums.topic_icon_color.TopicIconColor"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.topic_icon_color.TopicIconColor</span></code></a>, <a class="reference internal" href="api/enums/update_type.html#aiogram.enums.update_type.UpdateType" title="aiogram.enums.update_type.UpdateType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.update_type.UpdateType</span></code></a></p>
+<dt><strong>新增的枚举:</strong> <a class="reference internal" href="api/enums/bot_command_scope_type.html#aiogram.enums.bot_command_scope_type.BotCommandScopeType" title="aiogram.enums.bot_command_scope_type.BotCommandScopeType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.bot_command_scope_type.BotCommandScopeType</span></code></a>,</dt><dd><p><a class="reference internal" href="api/enums/chat_action.html#aiogram.enums.chat_action.ChatAction" title="aiogram.enums.chat_action.ChatAction"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.chat_action.ChatAction</span></code></a>,
+<a class="reference internal" href="api/enums/chat_member_status.html#aiogram.enums.chat_member_status.ChatMemberStatus" title="aiogram.enums.chat_member_status.ChatMemberStatus"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.chat_member_status.ChatMemberStatus</span></code></a>,
+<a class="reference internal" href="api/enums/chat_type.html#aiogram.enums.chat_type.ChatType" title="aiogram.enums.chat_type.ChatType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.chat_type.ChatType</span></code></a>,
+<a class="reference internal" href="api/enums/content_type.html#aiogram.enums.content_type.ContentType" title="aiogram.enums.content_type.ContentType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.content_type.ContentType</span></code></a>,
+<a class="reference internal" href="api/enums/dice_emoji.html#aiogram.enums.dice_emoji.DiceEmoji" title="aiogram.enums.dice_emoji.DiceEmoji"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.dice_emoji.DiceEmoji</span></code></a>,
+<a class="reference internal" href="api/enums/inline_query_result_type.html#aiogram.enums.inline_query_result_type.InlineQueryResultType" title="aiogram.enums.inline_query_result_type.InlineQueryResultType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.inline_query_result_type.InlineQueryResultType</span></code></a>,
+<a class="reference internal" href="api/enums/input_media_type.html#aiogram.enums.input_media_type.InputMediaType" title="aiogram.enums.input_media_type.InputMediaType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.input_media_type.InputMediaType</span></code></a>,
+<a class="reference internal" href="api/enums/mask_position_point.html#aiogram.enums.mask_position_point.MaskPositionPoint" title="aiogram.enums.mask_position_point.MaskPositionPoint"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.mask_position_point.MaskPositionPoint</span></code></a>,
+<a class="reference internal" href="api/enums/menu_button_type.html#aiogram.enums.menu_button_type.MenuButtonType" title="aiogram.enums.menu_button_type.MenuButtonType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.menu_button_type.MenuButtonType</span></code></a>,
+<a class="reference internal" href="api/enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType" title="aiogram.enums.message_entity_type.MessageEntityType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.message_entity_type.MessageEntityType</span></code></a>,
+<a class="reference internal" href="api/enums/parse_mode.html#aiogram.enums.parse_mode.ParseMode" title="aiogram.enums.parse_mode.ParseMode"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.parse_mode.ParseMode</span></code></a>,
+<a class="reference internal" href="api/enums/poll_type.html#aiogram.enums.poll_type.PollType" title="aiogram.enums.poll_type.PollType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.poll_type.PollType</span></code></a>,
+<a class="reference internal" href="api/enums/sticker_type.html#aiogram.enums.sticker_type.StickerType" title="aiogram.enums.sticker_type.StickerType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.sticker_type.StickerType</span></code></a>,
+<a class="reference internal" href="api/enums/topic_icon_color.html#aiogram.enums.topic_icon_color.TopicIconColor" title="aiogram.enums.topic_icon_color.TopicIconColor"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.topic_icon_color.TopicIconColor</span></code></a>,
+<a class="reference internal" href="api/enums/update_type.html#aiogram.enums.update_type.UpdateType" title="aiogram.enums.update_type.UpdateType"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.enums.update_type.UpdateType</span></code></a>,</p>
 </dd>
 </dl>
 <p>增加了快捷方式:</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Chat: <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.get_administrators" title="aiogram.types.chat.Chat.get_administrators"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.get_administrators()</span></code></a>,</dt><dd><p><a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.delete_message" title="aiogram.types.chat.Chat.delete_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.delete_message()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.revoke_invite_link" title="aiogram.types.chat.Chat.revoke_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.revoke_invite_link()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.edit_invite_link" title="aiogram.types.chat.Chat.edit_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.edit_invite_link()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.create_invite_link" title="aiogram.types.chat.Chat.create_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.create_invite_link()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.export_invite_link" title="aiogram.types.chat.Chat.export_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.export_invite_link()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.do" title="aiogram.types.chat.Chat.do"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.do()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.delete_sticker_set" title="aiogram.types.chat.Chat.delete_sticker_set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.delete_sticker_set()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_sticker_set" title="aiogram.types.chat.Chat.set_sticker_set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_sticker_set()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.get_member" title="aiogram.types.chat.Chat.get_member"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.get_member()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.get_member_count" title="aiogram.types.chat.Chat.get_member_count"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.get_member_count()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.leave" title="aiogram.types.chat.Chat.leave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.leave()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.unpin_all_messages" title="aiogram.types.chat.Chat.unpin_all_messages"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.unpin_all_messages()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.unpin_message" title="aiogram.types.chat.Chat.unpin_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.unpin_message()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.pin_message" title="aiogram.types.chat.Chat.pin_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.pin_message()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_administrator_custom_title" title="aiogram.types.chat.Chat.set_administrator_custom_title"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_administrator_custom_title()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_permissions" title="aiogram.types.chat.Chat.set_permissions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_permissions()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.promote" title="aiogram.types.chat.Chat.promote"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.promote()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.restrict" title="aiogram.types.chat.Chat.restrict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.restrict()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.unban" title="aiogram.types.chat.Chat.unban"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.unban()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.ban" title="aiogram.types.chat.Chat.ban"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.ban()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_description" title="aiogram.types.chat.Chat.set_description"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_description()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_title" title="aiogram.types.chat.Chat.set_title"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_title()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.delete_photo" title="aiogram.types.chat.Chat.delete_photo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.delete_photo()</span></code></a>, <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_photo" title="aiogram.types.chat.Chat.set_photo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_photo()</span></code></a></p>
+<dt>Chat: <a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.get_administrators" title="aiogram.types.chat.Chat.get_administrators"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.get_administrators()</span></code></a>,</dt><dd><p><a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.delete_message" title="aiogram.types.chat.Chat.delete_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.delete_message()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.revoke_invite_link" title="aiogram.types.chat.Chat.revoke_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.revoke_invite_link()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.edit_invite_link" title="aiogram.types.chat.Chat.edit_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.edit_invite_link()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.create_invite_link" title="aiogram.types.chat.Chat.create_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.create_invite_link()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.export_invite_link" title="aiogram.types.chat.Chat.export_invite_link"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.export_invite_link()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.do" title="aiogram.types.chat.Chat.do"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.do()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.delete_sticker_set" title="aiogram.types.chat.Chat.delete_sticker_set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.delete_sticker_set()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_sticker_set" title="aiogram.types.chat.Chat.set_sticker_set"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_sticker_set()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.get_member" title="aiogram.types.chat.Chat.get_member"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.get_member()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.get_member_count" title="aiogram.types.chat.Chat.get_member_count"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.get_member_count()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.leave" title="aiogram.types.chat.Chat.leave"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.leave()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.unpin_all_messages" title="aiogram.types.chat.Chat.unpin_all_messages"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.unpin_all_messages()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.unpin_message" title="aiogram.types.chat.Chat.unpin_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.unpin_message()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.pin_message" title="aiogram.types.chat.Chat.pin_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.pin_message()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_administrator_custom_title" title="aiogram.types.chat.Chat.set_administrator_custom_title"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_administrator_custom_title()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_permissions" title="aiogram.types.chat.Chat.set_permissions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_permissions()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.promote" title="aiogram.types.chat.Chat.promote"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.promote()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.restrict" title="aiogram.types.chat.Chat.restrict"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.restrict()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.unban" title="aiogram.types.chat.Chat.unban"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.unban()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.ban" title="aiogram.types.chat.Chat.ban"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.ban()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_description" title="aiogram.types.chat.Chat.set_description"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_description()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_title" title="aiogram.types.chat.Chat.set_title"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_title()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.delete_photo" title="aiogram.types.chat.Chat.delete_photo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.delete_photo()</span></code></a>,
+<a class="reference internal" href="api/types/chat.html#aiogram.types.chat.Chat.set_photo" title="aiogram.types.chat.Chat.set_photo"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.chat.Chat.set_photo()</span></code></a>,</p>
 </dd>
 </dl>
 </li>
@@ -1048,33 +1084,33 @@
 </dd>
 </dl>
 </li>
-<li><p>用户：<a class="reference internal" href="api/types/user.html#aiogram.types.user.User.get_profile_photos" title="aiogram.types.user.User.get_profile_photos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.user.User.get_profile_photos()</span></code></a></p></li>
+<li><p><em>User</em>: <a class="reference internal" href="api/types/user.html#aiogram.types.user.User.get_profile_photos" title="aiogram.types.user.User.get_profile_photos"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.user.User.get_profile_photos()</span></code></a></p></li>
 </ul>
-<p>#952 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/952">https://github.com/aiogram/aiogram/issues/952</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/952">#952</a></p>
 </li>
 <li><p>添加了 <a class="reference internal" href="utils/callback_answer.html#callback-answer-util"><span class="std std-ref">callback answer</span></a> 功能 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1091">#1091</a></p></li>
-<li><p>添加了一种方法，允许您紧凑地注册路由器`＃1117 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1117">https://github.com/aiogram/aiogram/issues/1117</a>&gt;`_</p></li>
+<li><p>添加了一种方法，允许您紧凑地注册路由器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1117">＃1117</a></p></li>
 </ul>
 </section>
 <section id="id126">
 <h3>错误修复<a class="headerlink" href="#id126" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>检查下载文件`#816 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/816">https://github.com/aiogram/aiogram/issues/816</a>&gt;`_时的状态码</p></li>
+<li><p>检查下载文件 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/816">#816</a> 时的状态码</p></li>
 <li><p>修复了 <a class="reference internal" href="dispatcher/filters/command.html#aiogram.filters.command.Command" title="aiogram.filters.command.Command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.filters.command.Command</span></code></a> 过滤器中的 <cite>ignore_case</cite> 参数 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1106">#1106</a></p></li>
 </ul>
 </section>
 <section id="id129">
 <h3>其他<a class="headerlink" href="#id129" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>与名为`Butcher &lt;<a class="reference external" href="https://github.com/aiogram/butcher">https://github.com/aiogram/butcher</a>&gt;`_的新代码生成器集成。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1069">#1069</a></p></li>
-<li><p>完全支持`Bot API 6.4 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-30-2022">https://core.telegram.org/bots/api-changelog#december-30-2022</a>&gt;`_ <a href="#id1"><span class="problematic" id="id2">`</span></a>#1088 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1088">https://github.com/aiogram/aiogram/issues/1088</a>&gt;`_的添加</p></li>
+<li><p>与名为 <a class="reference external" href="https://github.com/aiogram/butcher">Butcher</a> 的新代码生成器集成。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1069">#1069</a></p></li>
+<li><p>完全支持 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-30-2022">Bot API 6.4</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1088">#1088</a></p></li>
 <li><p>更新的软件包元数据，将构建内部从Poetry移到Hatch，增加了贡献指南。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1095">#1095</a></p></li>
-<li><p>增加对`Bot API 6.5 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#february-3-2023">https://core.telegram.org/bots/api-changelog#february-3-2023</a>&gt;`_的完整支持。</p>
+<li><p>增加对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#february-3-2023">Bot API 6.5</a> 的完整支持</p>
 <div class="admonition danger">
 <p class="admonition-title">危险</p>
-<p>请注意 <a class="reference internal" href="api/types/chat_permissions.html#aiogram.types.chat_permissions.ChatPermissions" title="aiogram.types.chat_permissions.ChatPermissions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.types.chat_permissions.ChatPermissions</span></code></a> 已更新，不兼容向后，因此此对象现在没有 <code class="code docutils literal notranslate"><span class="pre">can_send_media_messages</span></code> 属性。</p>
+<p>请注意 <a class="reference internal" href="api/types/chat_permissions.html#aiogram.types.chat_permissions.ChatPermissions" title="aiogram.types.chat_permissions.ChatPermissions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.types.chat_permissions.ChatPermissions</span></code></a> 已更新，不兼容向后，因此此对象现在没有 <code class="code docutils literal notranslate"><span class="pre">can_send_media_messages</span></code> 属性</p>
 </div>
-<p>#1112 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1112">https://github.com/aiogram/aiogram/issues/1112</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1112">#1112</a></p>
 </li>
 <li><p>替换了错误 <code class="code docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">TelegramEventObserver.__call__()</span> <span class="pre">got</span> <span class="pre">an</span> <span class="pre">unexpected</span> <span class="pre">keyword</span> <span class="pre">argument</span> <span class="pre">'&lt;name&gt;'</span></code> 为更容易理解的错误信息，同时附带了指向文档的链接。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1114">#1114</a></p></li>
 <li><p>增加了通过Webhook回复带有文件的可能性 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1120">#1120</a></p></li>
@@ -1087,28 +1123,28 @@
 <section id="id137">
 <h3>特性<a class="headerlink" href="#id137" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>(再次)增加了使用*and*/<a href="#id1"><span class="problematic" id="id2">*</span></a>or*操作符组合筛选器的可能性。</p>
+<li><p>(再次)增加了使用 <em>and</em>/<em>or</em> 操作符组合筛选器的可能性。</p>
 <p>在“<a class="reference internal" href="dispatcher/filters/index.html#combining-filters"><span class="std std-ref">Combining filters</span></a>”文档部分中阅读更多内容 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1018">#1018</a></p>
 </li>
-<li><p>为``Message``类添加了以下方法：</p>
+<li><p>为 <code class="docutils literal notranslate"><span class="pre">Message</span></code> 类添加了以下方法：</p>
 <ul class="simple">
-<li><p>消息.forward(…)</p></li>
-<li><p>消息.edit_media(…)</p></li>
-<li><p>编辑实时位置（…）</p></li>
-<li><p>代码： <cite>Message.stop_live_location（…）</cite></p></li>
-<li><p>消息.pin(…)</p></li>
-<li><p>消息.unpin()</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.forward(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.edit_media(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.edit_live_location(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.stop_live_location(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.pin(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.unpin()</span></code></p></li>
 </ul>
-<p>#1030 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1030">https://github.com/aiogram/aiogram/issues/1030</a>&gt;`_</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1030">#1030</a></p>
 </li>
 <li><p>为 <code class="code docutils literal notranslate"><span class="pre">User</span></code> 类添加了以下方法：</p>
 <ul class="simple">
-<li><p>用户. mention_markdown (…)</p></li>
-<li><p>用户.mention_html(…)</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">User.mention_markdown(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">User.mention_html(…)</span></code></p></li>
 </ul>
-<p>#1049 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1049">https://github.com/aiogram/aiogram/issues/1049</a>&gt;`_</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1049">#1049</a></p>
 </li>
-<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#november-5-2022">Bot API 6.3</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1057">#1057</a> 的完全支持。</p></li>
+<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#november-5-2022">Bot API 6.3</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1057">#1057</a> 的完全支持</p></li>
 </ul>
 </section>
 <section id="id142">
@@ -1117,17 +1153,17 @@
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">Message.send_invoice</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">Message.reply_invoice</span></code>，添加了丢失的参数 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1047">#1047</a></p></li>
 <li><p>修复了复制和转发功能：</p>
 <ul class="simple">
-<li><p>消息.回答(…)</p></li>
-<li><p>信息.copy_to(…)</p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.answer(…)</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">Message.copy_to(…)</span></code></p></li>
 </ul>
-<p>#1064 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1064">https://github.com/aiogram/aiogram/issues/1064</a>&gt;</p>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1064">#1064</a></p>
 </li>
 </ul>
 </section>
 <section id="id145">
 <h3>改进的文档<a class="headerlink" href="#id145" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>在 index.po 中修复了 UA 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1017">#1017</a>。</p></li>
+<li><p>在 index.po 中修复了 UA 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1017">#1017</a></p></li>
 <li><p>修复 <code class="code docutils literal notranslate"><span class="pre">Message</span></code>, <code class="code docutils literal notranslate"><span class="pre">reply_media_group</span></code> 以及 <code class="code docutils literal notranslate"><span class="pre">answer_media_group</span></code> 方法的类型标注 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1029">#1029</a></p></li>
 <li><p>移除了一个旧的现在不起作用的功能 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1060">#1060</a></p></li>
 </ul>
@@ -1146,8 +1182,8 @@
 <h3>特性<a class="headerlink" href="#id152" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>增加对PyPy的支持并在PyPy下运行测试 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/985">#985</a></p></li>
-<li><p>将消息文本添加到aiogram异常表示`#988 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/988">https://github.com/aiogram/aiogram/issues/988</a>&gt;`_</p></li>
-<li><p>提醒使用`magic_filter`而不是`aiogram`的魔术过滤器。建议使用`from aiogram import F`而不是`from magic_filter import F` <a class="reference external" href="https://github.com/aiogram/aiogram/issues/990">#990</a></p></li>
+<li><p>将消息文本添加到aiogram异常表示 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/988">#988</a></p></li>
+<li><p>提醒使用 <cite>magic_filter</cite> 而不是 <cite>aiogram</cite> 的魔术过滤器。建议使用 <cite>from aiogram import F</cite> 而不是 <cite>from magic_filter import F</cite> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/990">#990</a></p></li>
 <li><p>当服务器响应无法被反序列化时，添加了更详细的错误。 这个功能将有助于调试来自服务器的意外响应。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1014">#1014</a></p></li>
 </ul>
 </section>
@@ -1163,7 +1199,7 @@
 <section id="id162">
 <h3>改进的文档<a class="headerlink" href="#id162" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>初始化文档翻译（添加了乌克兰语）`＃925 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/925">https://github.com/aiogram/aiogram/issues/925</a>&gt;`_</p></li>
+<li><p>初始化文档翻译（添加了乌克兰语） <a class="reference external" href="https://github.com/aiogram/aiogram/issues/925">＃925</a></p></li>
 </ul>
 </section>
 <section id="id164">
@@ -1184,7 +1220,7 @@
 <section id="id168">
 <h3>特性<a class="headerlink" href="#id168" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>为Telegram BotAPI在sendChatAction请求中使用的常量添加类助手ChatAction。在我看来，这将有助于用户，也会提高与2.x版本的兼容性，那里有一个名为”ChatActions”的类似类。</p></li>
+<li><p>为 Telegram BotAPI 在 sendChatAction 请求中使用的常量添加类帮助程序 ChatAction。在我看来，这将帮助用户，并且还将提高与 2.x 版本的兼容性，其中类似的类被称为“ChatActions”。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/803">#803</a></p></li>
 <li><p>增加了将过滤器组合或反转结果的可能性</p>
 <p>示例：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">Command</span><span class="p">(</span><span class="n">commands</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;demo&quot;</span><span class="p">])</span>
@@ -1220,7 +1256,7 @@
 <ul>
 <li><p>限制包括带有字符串 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/896">#896</a></p></li>
 <li><p>将CommandPatterType改为CommandPatternType在`aiogram/dispatcher/filters/command.py`中 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/907">#907</a></p></li>
-<li><p>完整支持了 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#june-20-2022">Bot API 6.1</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/936">#936</a> 的新增。</p></li>
+<li><p>完整支持了 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#june-20-2022">Bot API 6.1</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/936">#936</a> 的新增</p></li>
 <li><p>緊急消息！更扁平的項目結構</p>
 <p>这些包已经移动，你的代码中的导入应该被修复：</p>
 <ul class="simple">
@@ -1233,7 +1269,7 @@
 <p>#938 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/938">https://github.com/aiogram/aiogram/issues/938</a>&gt;</p>
 </li>
 <li><p>移除了已弃用的 <code class="code docutils literal notranslate"><span class="pre">router.&lt;event&gt;_handler</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">router.register_&lt;event&gt;_handler</span></code> 方法。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/941">#941</a></p></li>
-<li><p>废弃的过滤器工厂。它将在下一个Beta版（3.0b5）中被移除。</p></li>
+<li><p>已弃用的过滤器工厂。它将在下一个 Beta (3.0b5) <a class="reference external" href="https://github.com/aiogram/aiogram/issues/942">#942</a> 中删除</p></li>
 <li><p><cite>MessageEntity</cite> 方法 <cite>get_text</cite> 被移除，<cite>extract</cite> 被重命名为 <cite>extract_from</cite> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/944">#944</a></p></li>
 <li><p>完全支持了`Bot API 6.2 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#august-12-2022">https://core.telegram.org/bots/api-changelog#august-12-2022</a>&gt;`_ <a class="reference external" href="https://github.com/aiogram/aiogram/issues/975">#975</a></p></li>
 </ul>
@@ -1301,7 +1337,7 @@
 <h3>特性<a class="headerlink" href="#id211" title="Link to this heading">#</a></h3>
 <ul>
 <li><p>为MagicFilter添加了名为:code:<a href="#id1"><span class="problematic" id="id2">`</span></a>as_`的新自定义操作</p>
-<p>现在您可以使用它作为处理程序参数来获得魔法过滤器结果。</p>
+<p>现在您可以使用它作为处理程序参数来获得魔法过滤器结果</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiogram</span> <span class="kn">import</span> <span class="n">F</span>
 
 <span class="o">...</span>
@@ -1580,7 +1616,7 @@
 <li><p>完全支持了 Telegram 机器人 API 5.0 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/454">#454</a>)</p></li>
 <li><dl class="simple">
 <dt>更容易地指定自定义API服务器的可能性的添加(例如)</dt><dd><ul>
-<li><p>警告：API 方法 <code class="code docutils literal notranslate"><span class="pre">close</span></code> 在 Bot 类中被命名为 close_bot，因为 Bot 实例已经有同名方法。它将在 <code class="code docutils literal notranslate"><span class="pre">aiogram</span> <span class="pre">3.0</span></code> 中更改。</p></li>
+<li><p>警告：API 方法 <code class="code docutils literal notranslate"><span class="pre">close</span></code> 在 Bot 类中被命名为 close_bot，因为 Bot 实例已经有同名方法。它将在 <code class="code docutils literal notranslate"><span class="pre">aiogram</span> <span class="pre">3.0</span></code> 中更改</p></li>
 </ul>
 </dd>
 </dl>
@@ -1625,7 +1661,7 @@
 <li><p>为 Message 添加了 is_forward 方法（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/390">#390</a>）</p></li>
 <li><p>修复了 is_private 函数的弃用用法 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/421">#421</a>)</p></li>
 </ul>
-<p>和许多其他文档和示例更改</p>
+<p>和许多其他文档和示例更改:</p>
 <ul class="simple">
 <li><p>RedisStorage2的文档字符串已更新（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/423">#423</a>）</p></li>
 <li><p>更新的I18n示例（添加了文档并修正了拼写错误）（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/419">#419</a>）</p></li>
@@ -1647,7 +1683,7 @@
 <section id="id379">
 <h2>2.9 (2021-06-08)<a class="headerlink" href="#id379" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>完全支持Telegram Bot API 4.9。</p></li>
+<li><p>完全支持Telegram Bot API 4.9</p></li>
 <li><p>在 poll_answer 更新时修复了用户上下文 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/322">#322</a>)</p></li>
 <li><p>修复 Chat.set_description (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/325">#325</a>)</p></li>
 <li><p>添加懒惰的会话生成器 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/326">#326</a>)</p></li>
@@ -1693,7 +1729,7 @@
 <section id="id405">
 <h2>2.5.3 (2021-01-05)<a class="headerlink" href="#id405" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>#255 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/255">https://github.com/aiogram/aiogram/issues/255</a>&gt; 更新了CallbackData工厂的有效性检查。对非拉丁符号更加正确。</p></li>
+<li><p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/255">#255</a> 更新了CallbackData工厂的有效性检查。对非拉丁符号更加正确</p></li>
 <li><p>#256 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/256">https://github.com/aiogram/aiogram/issues/256</a>&gt; Fixed <code class="code docutils literal notranslate"><span class="pre">renamed_argument</span></code> decorator error
 #256 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/256">https://github.com/aiogram/aiogram/issues/256</a>&gt; 修复 <code class="code docutils literal notranslate"><span class="pre">renamed_argument</span></code> 装饰器错误</p></li>
 <li><p>#257 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/257">https://github.com/aiogram/aiogram/issues/257</a>&gt;  进一步修复CommandStart过滤器</p></li>
@@ -1718,7 +1754,7 @@
 <li><p>#239 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/239">https://github.com/aiogram/aiogram/issues/239</a>&gt;`_ 修复了 <code class="code docutils literal notranslate"><span class="pre">check_token</span></code> 方法</p></li>
 <li><p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/238">#238</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/241">#241</a>: Added deep-linking utils</p></li>
 <li><p>#248 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/248">https://github.com/aiogram/aiogram/issues/248</a>&gt;`_ 修复了对aiohttp-socks的支持</p></li>
-<li><p>更新了setup.py。不再使用内部pip API。</p></li>
+<li><p>更新了setup.py。不再使用内部pip API</p></li>
 <li><p>更新了文档链接 (<a class="reference external" href="https://docs.aiogram.dev">https://docs.aiogram.dev</a>)</p></li>
 <li><p>其他小的更改和细微的改进（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/223">#223</a> 和其他…)</p></li>
 </ul>
@@ -1768,7 +1804,7 @@
 <section id="id446">
 <h2>2.1 (2021-04-18)<a class="headerlink" href="#id446" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>实现了来自 Telegram Bot API 4.2 的所有新功能。</p></li>
+<li><p>实现了来自 Telegram Bot API 4.2 的所有新功能</p></li>
 <li><p><cite>ChatMember`和`ChatMemberStatus`的`is_member`和`is_admin`方法已重命名为`is_chat_member`和`is_chat_admin</cite></p></li>
 <li><p>移除函数过滤</p></li>
 <li><p>添加了一些有用的消息编辑功能（<code class="code docutils literal notranslate"><span class="pre">Message.edit_caption</span></code>, <code class="code docutils literal notranslate"><span class="pre">Message.edit_media</span></code>, <code class="code docutils literal notranslate"><span class="pre">Message.edit_reply_markup</span></code>) (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/121">#121</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/103">#103</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/104">#104</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/112">#112</a>)</p></li>
@@ -2009,7 +2045,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">更新日志</a><ul>
-<li><a class="reference internal" href="#release-unreleased-draft-2024-03-06">3.4.1 [UNRELEASED DRAFT] (2024-03-06)</a><ul>
+<li><a class="reference internal" href="#release-unreleased-draft-2024-03-06">|发布| [未发布草案] (2024-03-06)</a><ul>
 <li><a class="reference internal" href="#bugfixes">错误修复</a></li>
 <li><a class="reference internal" href="#improved-documentation">改进的文档</a></li>
 </ul>
