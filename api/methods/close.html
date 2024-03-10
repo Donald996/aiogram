@@ -604,6 +604,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.close.</span></span><span class="sig-name descname"><span class="pre">Close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/close.html#Close"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.close.Close" title="Link to this definition">#</a></dt>
 <dd><p>使用此方法在将其从一个本地服务器移动到另一个本地服务器之前关闭机器人实例。在调用此方法之前，您需要删除 Webhook，以确保在服务器重新启动后不会再次启动机器人。在机器人启动后的前 10 分钟内，该方法将返回错误 429。成功时返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。不需要任何参数。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#close">https://core.telegram.org/bots/api#close</a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.close.Close.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.close.Close.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
 </dd></dl>
 
 <section id="usage">
@@ -693,7 +699,10 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">关闭</a><ul>
-<li><a class="reference internal" href="#aiogram.methods.close.Close"><code class="docutils literal notranslate"><span class="pre">Close</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.close.Close"><code class="docutils literal notranslate"><span class="pre">Close</span></code></a><ul>
+<li><a class="reference internal" href="#aiogram.methods.close.Close.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Close.model_computed_fields</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#usage">用法</a><ul>
 <li><a class="reference internal" href="#as-bot-method">作为机器人方法</a></li>
 <li><a class="reference internal" href="#method-as-object">方法作为对象</a><ul>

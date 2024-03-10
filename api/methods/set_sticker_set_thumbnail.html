@@ -617,6 +617,12 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.thumbnail">
 <span class="sig-name descname"><span class="pre">thumbnail</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/input_file.html#aiogram.types.input_file.InputFile" title="aiogram.types.input_file.InputFile"><span class="pre">InputFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.thumbnail" title="Link to this definition">#</a></dt>
 <dd><p>带有缩略图的 .WEBP 或 .PNG 图片，大小不得超过 128 千字节，宽度和高度必须正好为 100px；或者带有缩略图的 .TGS 动画，大小不得超过 32 千字节（动画贴纸的技术要求见 <a class="reference external" href="https://core.telegram.org/stickers#animated-sticker-requirements">https://core.telegram.org/stickers#animated-sticker-requirements</a>）；或者带有缩略图的 WEBM 视频，大小不得超过 32 千字节；视频贴纸的技术要求见 <a class="reference external" href="https://core.telegram.org/stickers#video-sticker-requirements">https://core.telegram.org/stickers#video-sticker-requirements</a>。以字符串形式传递 file_id 可发送 Telegram 服务器上已存在的文件，以字符串形式传递 HTTP URL 可让 Telegram 从互联网上获取文件，或使用 multipart/form-data 上传新文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">发送文件的更多信息 »</span></a>。动画和视频贴纸集缩略图不能通过 HTTP URL 上传。如果省略，则会放弃缩略图，并使用第一个贴纸作为缩略图。</p>
@@ -714,6 +720,7 @@
 <li><a class="reference internal" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail"><code class="docutils literal notranslate"><span class="pre">SetStickerSetThumbnail</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.name"><code class="docutils literal notranslate"><span class="pre">SetStickerSetThumbnail.name</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.user_id"><code class="docutils literal notranslate"><span class="pre">SetStickerSetThumbnail.user_id</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SetStickerSetThumbnail.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_sticker_set_thumbnail.SetStickerSetThumbnail.thumbnail"><code class="docutils literal notranslate"><span class="pre">SetStickerSetThumbnail.thumbnail</span></code></a></li>
 </ul>
 </li>

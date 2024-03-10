@@ -635,6 +635,12 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.set_webhook.SetWebhook.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.set_webhook.SetWebhook.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.set_webhook.SetWebhook.allowed_updates">
 <span class="sig-name descname"><span class="pre">allowed_updates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.set_webhook.SetWebhook.allowed_updates" title="Link to this definition">#</a></dt>
 <dd><p>一个 JSON 序列化的更新类型列表，您希望您的机器人接收到。例如，指定 <code class="code docutils literal notranslate"><span class="pre">[&quot;message&quot;,</span> <span class="pre">&quot;edited_channel_post&quot;,</span> <span class="pre">&quot;callback_query&quot;]</span></code> 来只接收到这些类型的更新。查看  <a class="reference internal" href="../types/update.html#aiogram.types.update.Update" title="aiogram.types.update.Update"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.update.Update</span></code></a> 获取所有可用的更新类型的完整列表。指定一个空列表来接收除了 <em>chat_member</em>, <em>message_reaction</em>, 和 <a href="#id1"><span class="problematic" id="id2">*</span></a>message_reaction_count*（默认）之外的所有更新类型。如果未指定，将使用先前的设置。</p>
@@ -746,6 +752,7 @@
 <li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.certificate"><code class="docutils literal notranslate"><span class="pre">SetWebhook.certificate</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.ip_address"><code class="docutils literal notranslate"><span class="pre">SetWebhook.ip_address</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.max_connections"><code class="docutils literal notranslate"><span class="pre">SetWebhook.max_connections</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SetWebhook.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.allowed_updates"><code class="docutils literal notranslate"><span class="pre">SetWebhook.allowed_updates</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.drop_pending_updates"><code class="docutils literal notranslate"><span class="pre">SetWebhook.drop_pending_updates</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.set_webhook.SetWebhook.secret_token"><code class="docutils literal notranslate"><span class="pre">SetWebhook.secret_token</span></code></a></li>

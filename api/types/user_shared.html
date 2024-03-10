@@ -613,6 +613,12 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.types.user_shared.UserShared.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.types.user_shared.UserShared.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.user_shared.UserShared.user_id">
 <span class="sig-name descname"><span class="pre">user_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#aiogram.types.user_shared.UserShared.user_id" title="Link to this definition">#</a></dt>
 <dd><p>共享用户的标识符。这个数字可能有超过32位的重要位，并且有些编程语言可能在解释它时会出现困难/隐含缺陷。但它最多有52位重要位，因此64位整数或双精度浮点类型是安全的用于存储这个标识符。除非用户已经以其他方式为机器人所知，否则机器人可能无法访问用户或无法使用这个标识符。</p>
@@ -680,6 +686,7 @@
 <li><a class="reference internal" href="#">用户共享</a><ul>
 <li><a class="reference internal" href="#aiogram.types.user_shared.UserShared"><code class="docutils literal notranslate"><span class="pre">UserShared</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.types.user_shared.UserShared.request_id"><code class="docutils literal notranslate"><span class="pre">UserShared.request_id</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.types.user_shared.UserShared.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">UserShared.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.user_shared.UserShared.user_id"><code class="docutils literal notranslate"><span class="pre">UserShared.user_id</span></code></a></li>
 </ul>
 </li>

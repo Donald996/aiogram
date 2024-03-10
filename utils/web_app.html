@@ -686,6 +686,12 @@
 <dd><p>此对象包含打开 Web App 时传输到 Web App 的数据。如果 Web App 是通过键盘按钮启动的，则该字段为空。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/webapps#webappinitdata">https://core.telegram.org/bots/webapps#webappinitdata</a></p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppInitData.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppInitData.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>计算字段名及其对应的 <cite>ComputedFieldInfo</cite> 对象的字典。</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppInitData.model_config">
 <span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'defer_build':</span> <span class="pre">True,</span> <span class="pre">'extra':</span> <span class="pre">'allow',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'populate_by_name':</span> <span class="pre">True,</span> <span class="pre">'use_enum_values':</span> <span class="pre">True,</span> <span class="pre">'validate_assignment':</span> <span class="pre">True}</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppInitData.model_config" title="Link to this definition">#</a></dt>
 <dd><p>模型的配置应该是符合 [<cite>ConfigDict</cite>][pydantic.config.ConfigDict] 的字典。</p>
@@ -820,6 +826,12 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppUser.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppUser.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>计算字段名及其对应的 <cite>ComputedFieldInfo</cite> 对象的字典。</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppUser.model_config">
 <span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'arbitrary_types_allowed':</span> <span class="pre">True,</span> <span class="pre">'defer_build':</span> <span class="pre">True,</span> <span class="pre">'extra':</span> <span class="pre">'allow',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'populate_by_name':</span> <span class="pre">True,</span> <span class="pre">'use_enum_values':</span> <span class="pre">True,</span> <span class="pre">'validate_assignment':</span> <span class="pre">True}</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppUser.model_config" title="Link to this definition">#</a></dt>
 <dd><p>模型的配置应该是符合 [<cite>ConfigDict</cite>][pydantic.config.ConfigDict] 的字典。</p>
@@ -873,6 +885,12 @@
 <dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppChat.photo_url">
 <span class="sig-name descname"><span class="pre">photo_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppChat.photo_url" title="Link to this definition">#</a></dt>
 <dd><p>聊天照片的 URL。照片可以是 .jpeg 或 .svg 格式。仅返回从附件菜单启动的网络应用程序。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.utils.web_app.WebAppChat.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.utils.web_app.WebAppChat.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>计算字段名及其对应的 <cite>ComputedFieldInfo</cite> 对象的字典。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -958,6 +976,7 @@
 </li>
 <li><a class="reference internal" href="#types">类型</a><ul>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppInitData"><code class="docutils literal notranslate"><span class="pre">WebAppInitData</span></code></a><ul>
+<li><a class="reference internal" href="#aiogram.utils.web_app.WebAppInitData.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">WebAppInitData.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppInitData.model_config"><code class="docutils literal notranslate"><span class="pre">WebAppInitData.model_config</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppInitData.model_fields"><code class="docutils literal notranslate"><span class="pre">WebAppInitData.model_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppInitData.query_id"><code class="docutils literal notranslate"><span class="pre">WebAppInitData.query_id</span></code></a></li>
@@ -982,6 +1001,7 @@
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.is_premium"><code class="docutils literal notranslate"><span class="pre">WebAppUser.is_premium</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.added_to_attachment_menu"><code class="docutils literal notranslate"><span class="pre">WebAppUser.added_to_attachment_menu</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.allows_write_to_pm"><code class="docutils literal notranslate"><span class="pre">WebAppUser.allows_write_to_pm</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">WebAppUser.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.model_config"><code class="docutils literal notranslate"><span class="pre">WebAppUser.model_config</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.model_fields"><code class="docutils literal notranslate"><span class="pre">WebAppUser.model_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppUser.photo_url"><code class="docutils literal notranslate"><span class="pre">WebAppUser.photo_url</span></code></a></li>
@@ -993,6 +1013,7 @@
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppChat.title"><code class="docutils literal notranslate"><span class="pre">WebAppChat.title</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppChat.username"><code class="docutils literal notranslate"><span class="pre">WebAppChat.username</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppChat.photo_url"><code class="docutils literal notranslate"><span class="pre">WebAppChat.photo_url</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.utils.web_app.WebAppChat.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">WebAppChat.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppChat.model_config"><code class="docutils literal notranslate"><span class="pre">WebAppChat.model_config</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.web_app.WebAppChat.model_fields"><code class="docutils literal notranslate"><span class="pre">WebAppChat.model_fields</span></code></a></li>
 </ul>

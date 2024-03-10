@@ -604,6 +604,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.get_me.</span></span><span class="sig-name descname"><span class="pre">GetMe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/get_me.html#GetMe"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.get_me.GetMe" title="Link to this definition">#</a></dt>
 <dd><p>一个用于测试机器人身份验证令牌的简单方法。不需要参数。以  <a class="reference internal" href="../types/user.html#aiogram.types.user.User" title="aiogram.types.user.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.user.User</span></code></a> 对象的形式返回有关机器人的基本信息。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#getme">https://core.telegram.org/bots/api#getme</a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.get_me.GetMe.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.get_me.GetMe.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
 </dd></dl>
 
 <section id="usage">
@@ -687,7 +693,10 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">获取机器人信息</a><ul>
-<li><a class="reference internal" href="#aiogram.methods.get_me.GetMe"><code class="docutils literal notranslate"><span class="pre">GetMe</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.get_me.GetMe"><code class="docutils literal notranslate"><span class="pre">GetMe</span></code></a><ul>
+<li><a class="reference internal" href="#aiogram.methods.get_me.GetMe.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">GetMe.model_computed_fields</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#usage">用法</a><ul>
 <li><a class="reference internal" href="#as-bot-method">作为机器人方法</a></li>
 <li><a class="reference internal" href="#method-as-object">方法作为对象</a><ul>

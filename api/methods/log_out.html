@@ -604,6 +604,12 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.log_out.</span></span><span class="sig-name descname"><span class="pre">LogOut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/log_out.html#LogOut"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.log_out.LogOut" title="Link to this definition">#</a></dt>
 <dd><p>使用此方法在将机器人在本地启动之前从云Bot API服务器注销。否则，不能保证机器人将能够接收更新。成功调用后，您可以立即在本地服务器上登录，但在接下来的10分钟内将无法再登录到云Bot API服务器。成功时返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。不需要任何参数。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#logout">https://core.telegram.org/bots/api#logout</a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.log_out.LogOut.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.log_out.LogOut.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
 </dd></dl>
 
 <section id="usage">
@@ -693,7 +699,10 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">注销</a><ul>
-<li><a class="reference internal" href="#aiogram.methods.log_out.LogOut"><code class="docutils literal notranslate"><span class="pre">LogOut</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.log_out.LogOut"><code class="docutils literal notranslate"><span class="pre">LogOut</span></code></a><ul>
+<li><a class="reference internal" href="#aiogram.methods.log_out.LogOut.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">LogOut.model_computed_fields</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#usage">用法</a><ul>
 <li><a class="reference internal" href="#as-bot-method">作为机器人方法</a></li>
 <li><a class="reference internal" href="#method-as-object">方法作为对象</a><ul>
