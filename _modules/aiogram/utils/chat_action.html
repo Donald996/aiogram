@@ -642,6 +642,7 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        :param bot: instance of the bot</span>
 <span class="sd">        :param chat_id: target chat id</span>
+<span class="sd">        :param message_thread_id: unique identifier for the target message thread; supergroups only</span>
 <span class="sd">        :param action: chat action type</span>
 <span class="sd">        :param interval: interval between iterations</span>
 <span class="sd">        :param initial_sleep: sleep before first sending of the action</span>
@@ -740,6 +741,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -747,6 +749,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;typing&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -760,6 +763,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -767,6 +771,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;upload_photo&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -780,6 +785,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -787,6 +793,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;record_video&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -800,6 +807,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -807,6 +815,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;upload_video&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -820,6 +829,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -827,6 +837,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;record_voice&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -840,6 +851,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -847,6 +859,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;upload_voice&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -860,6 +873,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -867,6 +881,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;upload_document&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -880,6 +895,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -887,6 +903,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;choose_sticker&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -900,6 +917,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -907,6 +925,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;find_location&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -920,6 +939,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -927,6 +947,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;record_video_note&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
@@ -940,6 +961,7 @@
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">chat_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
         <span class="n">bot</span><span class="p">:</span> <span class="n">Bot</span><span class="p">,</span>
+        <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">interval</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INTERVAL</span><span class="p">,</span>
         <span class="n">initial_sleep</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">DEFAULT_INITIAL_SLEEP</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;ChatActionSender&quot;</span><span class="p">:</span>
@@ -947,6 +969,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
             <span class="n">bot</span><span class="o">=</span><span class="n">bot</span><span class="p">,</span>
             <span class="n">chat_id</span><span class="o">=</span><span class="n">chat_id</span><span class="p">,</span>
+            <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">action</span><span class="o">=</span><span class="s2">&quot;upload_video_note&quot;</span><span class="p">,</span>
             <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span>
             <span class="n">initial_sleep</span><span class="o">=</span><span class="n">initial_sleep</span><span class="p">,</span>
