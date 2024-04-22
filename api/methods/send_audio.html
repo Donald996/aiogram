@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="发送聊天动作" href="send_chat_action.html" /><link rel="prev" title="发送动画" href="send_animation.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>发送音频 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>发送音频 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_chat_member.html">获取聊天成员</a></li>
@@ -597,106 +607,119 @@
         </div>
         <article role="main">
           <section id="sendaudio">
-<h1>发送音频<a class="headerlink" href="#sendaudio" title="Link to this heading">#</a></h1>
+<h1>发送音频<a class="headerlink" href="#sendaudio" title="Link to this heading">¶</a></h1>
 <p>Returns: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py class" id="module-aiogram.methods.send_audio">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.send_audio.</span></span><span class="sig-name descname"><span class="pre">SendAudio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption_entities:</span> <span class="pre">~typing.List[~aiogram.types.message_entity.MessageEntity]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">performer:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">~aiogram.types.reply_parameters.ReplyParameters</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove</span> <span class="pre">|</span> <span class="pre">~aiogram.types.force_reply.ForceReply</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/send_audio.html#SendAudio"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.send_audio.</span></span><span class="sig-name descname"><span class="pre">SendAudio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">business_connection_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption_entities:</span> <span class="pre">~typing.List[~aiogram.types.message_entity.MessageEntity]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">performer:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">~aiogram.types.reply_parameters.ReplyParameters</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove</span> <span class="pre">|</span> <span class="pre">~aiogram.types.force_reply.ForceReply</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/send_audio.html#SendAudio"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio" title="Link to this definition">¶</a></dt>
 <dd><p>使用此方法发送音频文件，如果您希望Telegram客户端在音乐播放器中显示它们。 您的音频必须以 .MP3 或 .M4A 格式。 成功后，返回发送的  <a class="reference internal" href="../types/message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。 机器人目前可以发送大小最多为50 MB的音频文件，这一限制可能会在将来更改。 若要发送语音消息，请改用  <a class="reference internal" href="send_voice.html#aiogram.methods.send_voice.SendVoice" title="aiogram.methods.send_voice.SendVoice"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.send_voice.SendVoice</span></code></a> 方法。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendaudio">https://core.telegram.org/bots/api#sendaudio</a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.chat_id">
-<span class="sig-name descname"><span class="pre">chat_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.chat_id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">chat_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.chat_id" title="Link to this definition">¶</a></dt>
 <dd><p>用于目标聊天的唯一标识符或目标频道的用户名（格式为:code:<cite>&#64;channelusername</cite>）</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.audio">
-<span class="sig-name descname"><span class="pre">audio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/input_file.html#aiogram.types.input_file.InputFile" title="aiogram.types.input_file.InputFile"><span class="pre">InputFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.audio" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">audio</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/input_file.html#aiogram.types.input_file.InputFile" title="aiogram.types.input_file.InputFile"><span class="pre">InputFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.audio" title="Link to this definition">¶</a></dt>
 <dd><p>发送音频文件。 传递文件ID作为字符串以发送存在于Telegram服务器上的音频文件（推荐），传递HTTP URL作为字符串供Telegram从互联网获取音频文件，或者使用multipart/form-data上传新文件。 <a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息»</span></a></p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.business_connection_id">
+<span class="sig-name descname"><span class="pre">business_connection_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.business_connection_id" title="Link to this definition">¶</a></dt>
+<dd><p>Unique identifier of the business connection on behalf of which the message will be sent</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.message_thread_id">
-<span class="sig-name descname"><span class="pre">message_thread_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.message_thread_id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">message_thread_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.message_thread_id" title="Link to this definition">¶</a></dt>
 <dd><p>用于论坛超级群组的目标消息主题的唯一标识符。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.caption">
-<span class="sig-name descname"><span class="pre">caption</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.caption" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">caption</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.caption" title="Link to this definition">¶</a></dt>
 <dd><p>音频标题，实体解析后0-1024个字符</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.parse_mode">
-<span class="sig-name descname"><span class="pre">parse_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.parse_mode" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">parse_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.parse_mode" title="Link to this definition">¶</a></dt>
 <dd><p>在音频字幕中解析实体的模式。有关详细信息，请参见“格式选项”&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.caption_entities">
-<span class="sig-name descname"><span class="pre">caption_entities</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../types/message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><span class="pre">MessageEntity</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.caption_entities" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">caption_entities</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../types/message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><span class="pre">MessageEntity</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.caption_entities" title="Link to this definition">¶</a></dt>
 <dd><p>一個特殊字符列表的 JSON 序列，出現在標題中，可以指定它來代替 <em>parse_mode</em>。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.duration">
-<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.duration" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">duration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.duration" title="Link to this definition">¶</a></dt>
 <dd><p>音频持续时间（秒）</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.performer">
-<span class="sig-name descname"><span class="pre">performer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.performer" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">performer</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.performer" title="Link to this definition">¶</a></dt>
 <dd><p>执行者</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.model_computed_fields">
-<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.model_computed_fields" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.model_computed_fields" title="Link to this definition">¶</a></dt>
 <dd><p>计算字段名及其对应的 <cite>ComputedFieldInfo</cite> 对象的字典。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.model_post_init">
+<span class="sig-name descname"><span class="pre">model_post_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_ModelMetaclass__context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.model_post_init" title="Link to this definition">¶</a></dt>
+<dd><p>We need to both initialize private attributes and call the user-defined model_post_init
+method.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.title">
-<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.title" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">title</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.title" title="Link to this definition">¶</a></dt>
 <dd><p>跟踪名称</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.thumbnail">
-<span class="sig-name descname"><span class="pre">thumbnail</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/input_file.html#aiogram.types.input_file.InputFile" title="aiogram.types.input_file.InputFile"><span class="pre">InputFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.thumbnail" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">thumbnail</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/input_file.html#aiogram.types.input_file.InputFile" title="aiogram.types.input_file.InputFile"><span class="pre">InputFile</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.thumbnail" title="Link to this definition">¶</a></dt>
 <dd><p>发送的文件缩略图；如果服务器端支持文件的缩略图生成，则可以忽略。缩略图应为JPEG格式，大小不超过200 kB。缩略图的宽度和高度不应超过320。如果文件未使用multipart/form-data上传，则可以忽略。缩略图不能被重复使用，只能作为新文件上传，因此如果缩略图是使用multipart/form-data上传的，则可以传递’attach://&lt;file_attach_name&gt;’。<a class="reference internal" href="../upload_file.html#sending-files"><span class="std std-ref">有关发送文件的更多信息 »</span></a></p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.disable_notification">
-<span class="sig-name descname"><span class="pre">disable_notification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.disable_notification" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">disable_notification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.disable_notification" title="Link to this definition">¶</a></dt>
 <dd><p>发送消息`悄悄地&lt;<a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">https://telegram.org/blog/channels-2-0#silent-messages</a>&gt;`_。用户将收到静音通知。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.protect_content">
-<span class="sig-name descname"><span class="pre">protect_content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.protect_content" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">protect_content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.protect_content" title="Link to this definition">¶</a></dt>
 <dd><p>保护已发送消息的内容免于转发和保存。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.reply_parameters">
-<span class="sig-name descname"><span class="pre">reply_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_parameters.html#aiogram.types.reply_parameters.ReplyParameters" title="aiogram.types.reply_parameters.ReplyParameters"><span class="pre">ReplyParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.reply_parameters" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">reply_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_parameters.html#aiogram.types.reply_parameters.ReplyParameters" title="aiogram.types.reply_parameters.ReplyParameters"><span class="pre">ReplyParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.reply_parameters" title="Link to this definition">¶</a></dt>
 <dd><p>回复消息的描述</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.reply_markup">
-<span class="sig-name descname"><span class="pre">reply_markup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><span class="pre">InlineKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_markup.html#aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup" title="aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup"><span class="pre">ReplyKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_remove.html#aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove" title="aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove"><span class="pre">ReplyKeyboardRemove</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/force_reply.html#aiogram.types.force_reply.ForceReply" title="aiogram.types.force_reply.ForceReply"><span class="pre">ForceReply</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.reply_markup" title="Link to this definition">#</a></dt>
-<dd><p>附加接口选项。 用于 <a href="#id1"><span class="problematic" id="id2">`内联键盘&lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_</span></a>、<a href="#id3"><span class="problematic" id="id4">`自定义回复键盘&lt;https://core.telegram.org/bots/features#keyboards&gt;`_</span></a>、删除回复键盘或强制用户回复的JSON序列化对象。</p>
+<span class="sig-name descname"><span class="pre">reply_markup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><span class="pre">InlineKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_markup.html#aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup" title="aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup"><span class="pre">ReplyKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_remove.html#aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove" title="aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove"><span class="pre">ReplyKeyboardRemove</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/force_reply.html#aiogram.types.force_reply.ForceReply" title="aiogram.types.force_reply.ForceReply"><span class="pre">ForceReply</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.reply_markup" title="Link to this definition">¶</a></dt>
+<dd><p>Additional interface options. A JSON-serialized object for an <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user. Not supported for messages sent on behalf of a business account</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.allow_sending_without_reply">
-<span class="sig-name descname"><span class="pre">allow_sending_without_reply</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.allow_sending_without_reply" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">allow_sending_without_reply</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.allow_sending_without_reply" title="Link to this definition">¶</a></dt>
 <dd><p>如果消息应发送，即使找不到指定的回复消息，则传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">自 API:7.0 版本弃用: </span><a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">https://core.telegram.org/bots/api-changelog#december-29-2023</a></p>
@@ -705,7 +728,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_audio.SendAudio.reply_to_message_id">
-<span class="sig-name descname"><span class="pre">reply_to_message_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.reply_to_message_id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">reply_to_message_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_audio.SendAudio.reply_to_message_id" title="Link to this definition">¶</a></dt>
 <dd><p>如果消息是回复，则为原始消息的ID。</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">自 API:7.0 版本弃用: </span><a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">https://core.telegram.org/bots/api-changelog#december-29-2023</a></p>
@@ -715,35 +738,35 @@
 </dd></dl>
 
 <section id="usage">
-<h2>用法<a class="headerlink" href="#usage" title="Link to this heading">#</a></h2>
+<h2>用法<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <section id="as-bot-method">
-<h3>作为机器人方法<a class="headerlink" href="#as-bot-method" title="Link to this heading">#</a></h3>
+<h3>作为机器人方法<a class="headerlink" href="#as-bot-method" title="Link to this heading">¶</a></h3>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="p">:</span> <span class="n">Message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">send_audio</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="method-as-object">
-<h3>方法作为对象<a class="headerlink" href="#method-as-object" title="Link to this heading">#</a></h3>
+<h3>方法作为对象<a class="headerlink" href="#method-as-object" title="Link to this heading">¶</a></h3>
 <p>导入：</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.methods.send_audio</span> <span class="pre">import</span> <span class="pre">SendAudio</span></code></p></li>
 <li><p>alias: <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.methods</span> <span class="pre">import</span> <span class="pre">SendAudio</span></code></p></li>
 </ul>
 <section id="with-specific-bot">
-<h4>使用特定的机器人<a class="headerlink" href="#with-specific-bot" title="Link to this heading">#</a></h4>
+<h4>使用特定的机器人<a class="headerlink" href="#with-specific-bot" title="Link to this heading">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="p">:</span> <span class="n">Message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">bot</span><span class="p">(</span><span class="n">SendAudio</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
 <section id="as-reply-into-webhook-in-handler">
-<h4>作为在处理程序中的 Webhook 回复<a class="headerlink" href="#as-reply-into-webhook-in-handler" title="Link to this heading">#</a></h4>
+<h4>作为在处理程序中的 Webhook 回复<a class="headerlink" href="#as-reply-into-webhook-in-handler" title="Link to this heading">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">SendAudio</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="as-shortcut-from-received-object">
-<h3>作为从收到的对象的快捷方式<a class="headerlink" href="#as-shortcut-from-received-object" title="Link to this heading">#</a></h3>
+<h3>作为从收到的对象的快捷方式<a class="headerlink" href="#as-shortcut-from-received-object" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../types/message.html#aiogram.types.message.Message.answer_audio" title="aiogram.types.message.Message.answer_audio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.message.Message.answer_audio()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../types/message.html#aiogram.types.message.Message.reply_audio" title="aiogram.types.message.Message.reply_audio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.message.Message.reply_audio()</span></code></a></p></li>
@@ -814,6 +837,7 @@
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio"><code class="docutils literal notranslate"><span class="pre">SendAudio</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.chat_id"><code class="docutils literal notranslate"><span class="pre">SendAudio.chat_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.audio"><code class="docutils literal notranslate"><span class="pre">SendAudio.audio</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.business_connection_id"><code class="docutils literal notranslate"><span class="pre">SendAudio.business_connection_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.message_thread_id"><code class="docutils literal notranslate"><span class="pre">SendAudio.message_thread_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.caption"><code class="docutils literal notranslate"><span class="pre">SendAudio.caption</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendAudio.parse_mode</span></code></a></li>
@@ -821,6 +845,7 @@
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.duration"><code class="docutils literal notranslate"><span class="pre">SendAudio.duration</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.performer"><code class="docutils literal notranslate"><span class="pre">SendAudio.performer</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendAudio.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendAudio.model_post_init()</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.title"><code class="docutils literal notranslate"><span class="pre">SendAudio.title</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.thumbnail"><code class="docutils literal notranslate"><span class="pre">SendAudio.thumbnail</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_audio.SendAudio.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendAudio.disable_notification</span></code></a></li>
@@ -852,8 +877,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>

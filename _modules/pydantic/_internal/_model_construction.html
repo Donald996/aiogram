@@ -1,0 +1,1361 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="索引" href="../../../genindex.html" /><link rel="search" title="搜索" href="../../../search.html" />
+
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>pydantic._internal._model_construction - aiogram 3.5.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/stylesheets/extra.css?v=040759bd" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install.html">安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../migration_2_to_3.html">迁移常见问题解答（2.x -&gt; 3.0）</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../api/index.html">Bot API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Bot API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/bot.html">机器人</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/session/index.html">客户端</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of 客户端</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/session/custom_server.html">自定义 API 服务器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/session/base.html">基本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/session/aiohttp.html">aiohttp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/session/middleware.html">客户端中间件</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/animation.html">动图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/birthdate.html">Birthdate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command.html">命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope.html">命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_all_group_chats.html">群聊命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_all_private_chats.html">私聊命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_chat.html">聊天命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_chat_administrators.html">指定群聊管理员命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_chat_member.html">指定群聊成员命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_command_scope_default.html">默认命令范围</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_description.html">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_name.html">名称</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/callback_query.html">回调查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat.html">聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost.html">聊天助力添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_added.html">聊天助力已添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_removed.html">聊天助力移除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_source.html">聊天助力来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_source_gift_code.html">聊天助力来源 GiftCode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_boost_updated.html">聊天助力更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_invite_link.html">聊天邀请链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_join_request.html">聊天加入请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_location.html">聊天位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member.html">聊天成员类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_administrator.html">聊天成员管理员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_banned.html">聊天成员被封禁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_left.html">聊天成员已离开</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_member.html">聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_owner.html">聊天创建者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_restricted.html">聊天成员限制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_member_updated.html">聊天成员状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_permissions.html">聊天权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_photo.html">聊天图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chat_shared.html">聊天分享</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/contact.html">联系人</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/dice.html">骰子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/document.html">文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/external_reply_info.html">外部回复信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/file.html">文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/force_reply.html">强制回复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/forum_topic.html">论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/forum_topic_closed.html">论坛话题已关闭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/forum_topic_created.html">论坛话题已创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/forum_topic_edited.html">论坛话题已编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/forum_topic_reopened.html">论坛话题重新打开</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/general_forum_topic_hidden.html">一般论坛话题隐藏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/general_forum_topic_unhidden.html">一般论坛话题未隐藏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/giveaway.html">Giveaway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/giveaway_completed.html">Giveaway已结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/giveaway_created.html">Giveaway创建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/giveaway_winners.html">Giveaway中奖者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inaccessible_message.html">无法访问的消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_keyboard_button.html">内联键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_keyboard_markup.html">内联键盘标记</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_file.html">输入文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_media.html">输入媒体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_media_animation.html">输入媒体动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_media_audio.html">输入媒体音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_media_document.html">输入媒体文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_media_photo.html">输入媒体照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_media_video.html">输入媒体视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/keyboard_button.html">键盘按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/keyboard_button_request_user.html">键盘按钮请求用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/keyboard_button_request_users.html">键盘按钮请求多个用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/link_preview_options.html">链接预览选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/location.html">地点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/login_url.html">登录网址</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/maybe_inaccessible_message.html">也许不可访问的信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/menu_button.html">菜单按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/menu_button_commands.html">菜单按钮命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/menu_button_default.html">默认菜单按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/menu_button_web_app.html">菜单按钮网页应用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message.html">消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_auto_delete_timer_changed.html">自动删除定时器已更改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_entity.html">消息实体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_id.html">消息ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_origin.html">消息来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_origin_channel.html">消息源频道</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_origin_chat.html">消息来源对话</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_origin_hidden_user.html">消息来源隐藏用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_origin_user.html">消息发送者</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_reaction_count_updated.html">消息反应计数已更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/message_reaction_updated.html">消息反应已更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/photo_size.html">照片尺寸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/poll.html">投票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/poll_answer.html">投票答案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/poll_option.html">投票选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/proximity_alert_triggered.html">触发了邻近警报</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reaction_count.html">反应计数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reaction_type.html">反应类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reaction_type_custom_emoji.html">自定义表情类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reaction_type_emoji.html">反应类型表情符号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reply_keyboard_markup.html">回复键盘标记</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reply_keyboard_remove.html">删除回复键盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/reply_parameters.html">回复参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/shared_user.html">SharedUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/story.html">故事</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/text_quote.html">文本引用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/user.html">用户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/user_chat_boosts.html">用户聊天增强</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/user_profile_photos.html">用户个人资料照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/user_shared.html">用户共享</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/users_shared.html">用户分享</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/venue.html">地点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/video.html">视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/video_chat_ended.html">视频聊天结束</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/video_chat_participants_invited.html">视频聊天参与者已邀请</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/video_chat_scheduled.html">视频聊天预定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/video_chat_started.html">视频聊天已开始</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/video_note.html">视频笔记</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/voice.html">声音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/web_app_data.html">小程序数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/web_app_info.html">小程序信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/write_access_allowed.html">写入访问被允许</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/chosen_inline_result.html">选择内联结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query.html">行内查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result.html">行内查询结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_article.html">内联查询结果文章</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_audio.html">内联查询结果音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_audio.html">内联查询结果缓存音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_document.html">内联查询结果缓存文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_gif.html">内联查询结果缓存的gif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_mpeg4_gif.html">内联查询结果缓存的MPEG-4 GIF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_photo.html">缓存图片内联查询结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_sticker.html">内联查询结果缓存的贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_video.html">内联查询结果缓存视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_cached_voice.html">内联查询结果缓存语音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_contact.html">内联查询结果联系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_document.html">内联查询结果文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_game.html">内联查询结果游戏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_gif.html">内联查询结果GIF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_location.html">内联查询结果位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_mpeg4_gif.html">内联查询结果Mpeg4Gif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_photo.html">内联查询结果照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_venue.html">在这里输入文本…</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_video.html">行内查询结果视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_result_voice.html">内联查询结果音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/inline_query_results_button.html">内联查询结果按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_contact_message_content.html">输入联系消息内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_invoice_message_content.html">输入发票消息内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_location_message_content.html">输入位置消息内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_message_content.html">输入消息内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_text_message_content.html">输入文本消息内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_venue_message_content.html">输入场馆消息内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/sent_web_app_message.html">网页应用消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/input_sticker.html">输入贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/mask_position.html">遮罩位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/sticker.html">贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/sticker_set.html">贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/encrypted_credentials.html">护照加密凭据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/encrypted_passport_element.html">护照加密要素</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_data.html">护照数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error.html">护照元素错误</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_data_field.html">护照元素错误数据字段</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_file.html">护照元素错误文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_files.html">护照元素错误的文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_front_side.html">护照元素错误-正面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_reverse_side.html">护照元素错误反面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_selfie.html">护照要素错误自拍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_translation_file.html">护照元素错误翻译文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_translation_files.html">护照元素错误翻译文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_element_error_unspecified.html">护照元素错误未指定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/passport_file.html">护照文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/invoice.html">发票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/labeled_price.html">标记的价格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/order_info.html">订单信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_address.html">送货地址</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_option.html">运输选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/update.html">更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/webhook_info.html">WebhookInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/callback_game.html">回调游戏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/game.html">游戏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/game_high_score.html">游戏最高分</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/methods/index.html">方法</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of 方法</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/add_sticker_to_set.html">添加贴纸到贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/create_new_sticker_set.html">创建新贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_sticker_from_set.html">从贴纸集删除贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_sticker_set.html">删除贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_sticker.html">发送贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_sticker_keywords.html">设置贴纸关键词</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_sticker_mask_position.html">设置贴纸掩码位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_sticker_position_in_set.html">设置贴纸在贴纸集中的位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_sticker_set_thumbnail.html">设置贴纸集缩略图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_sticker_set_title.html">设置贴纸标题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/upload_sticker_file.html">上传贴纸文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_callback_query.html">回答回调查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/approve_chat_join_request.html">批准聊天加入请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/ban_chat_member.html">封禁聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/ban_chat_sender_chat.html">禁止聊天发送者聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/close.html">关闭</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/close_forum_topic.html">关闭论坛主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/close_general_forum_topic.html">关闭一般论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/copy_message.html">复制消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/copy_messages.html">复制多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/create_chat_invite_link.html">创建聊天邀请链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/create_forum_topic.html">创建论坛主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/decline_chat_join_request.html">拒绝聊天加入请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_chat_photo.html">删除聊天照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_chat_sticker_set.html">删除聊天贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_forum_topic.html">删除论坛主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_my_commands.html">删除命令列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_chat_invite_link.html">编辑聊天邀请链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_forum_topic.html">编辑论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_general_forum_topic.html">编辑常规论坛主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/forward_message.html">转发消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_business_connection.html">getBusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_chat.html">获取聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_chat_administrators.html">获取聊天管理员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_chat_member.html">获取聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_chat_member_count.html">获取聊天成员数量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_chat_menu_button.html">获取聊天菜单按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_file.html">获取文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_forum_topic_icon_stickers.html">获取论坛主题图标贴纸</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_me.html">获取机器人信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_my_commands.html">获取机器人命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_my_default_administrator_rights.html">获取机器人默认管理员权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_my_description.html">获取机器人描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_my_name.html">获取机器人姓名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_my_short_description.html">获取机器人简短描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_user_chat_boosts.html">获取用户聊天增强</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_user_profile_photos.html">获取用户个人资料照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/hide_general_forum_topic.html">隐藏一般论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/leave_chat.html">退出聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/log_out.html">注销</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/pin_chat_message.html">发送聊天消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/promote_chat_member.html">提升聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/reopen_forum_topic.html">重新打开论坛话题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/reopen_general_forum_topic.html">重新打开一般论坛主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/restrict_chat_member.html">限制聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/revoke_chat_invite_link.html">撤销聊天邀请链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_animation.html">发送动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_audio.html">发送音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_chat_action.html">发送聊天动作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_contact.html">发送联系方式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_dice.html">发送骰子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_document.html">发送文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_location.html">发送位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_media_group.html">发送媒体组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_message.html">发送消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_photo.html">发送照片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_poll.html">发送调查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_venue.html">发送地点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_video.html">发送视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_video_note.html">发送视频笔记</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_voice.html">发送语音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_administrator_custom_title.html">设置聊天管理员自定义头衔</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_description.html">设置聊天描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_menu_button.html">设置聊天菜单按钮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_permissions.html">设置聊天权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_photo.html">设置聊天图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_sticker_set.html">设置聊天表情套装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_chat_title.html">设置聊天标题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_message_reaction.html">设置消息反应</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_my_commands.html">设置我的命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_my_default_administrator_rights.html">设置我的默认管理员权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_my_description.html">设置我的描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_my_name.html">设定我的名字</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_my_short_description.html">设置我的简短描述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unban_chat_member.html">解除禁止聊天成员</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unban_chat_sender_chat.html">解禁聊天发送者聊天</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unhide_general_forum_topic.html">显示一般论坛主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unpin_all_chat_messages.html">取消固定所有聊天消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unpin_all_forum_topic_messages.html">取消所有论坛主题消息的取消固定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unpin_all_general_forum_topic_messages.html">取消所有一般论坛主题消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/unpin_chat_message.html">取消固定聊天消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_message.html">删除消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_messages.html">删除消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_message_caption.html">编辑消息标题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_message_live_location.html">编辑实时位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_message_media.html">编辑消息媒体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_message_reply_markup.html">编辑消息回复标记</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/edit_message_text.html">编辑消息文本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/stop_message_live_location.html">停止发送实时位置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/stop_poll.html">停止投票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_inline_query.html">回答内联查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_web_app_query.html">回答WebApp查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_game_high_scores.html">获取游戏最高分</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_game.html">发送游戏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_game_score.html">设置游戏比分</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_shipping_query.html">回答shipping查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_invoice.html">发送发票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_webhook.html">删除网页链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_updates.html">获取更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_webhook_info.html">获取Webhook信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_webhook.html">设置网络钩子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/set_passport_data_errors.html">设置护照数据错误</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../api/enums/index.html">枚举</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of 枚举</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/bot_command_scope_type.html">机器人命令范围类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/chat_action.html">聊天操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/chat_boost_source_type.html">聊天提升来源类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/chat_member_status.html">聊天成员状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/chat_type.html">聊天类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/content_type.html">内容类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/currency.html">货币</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/dice_emoji.html">骰子表情符号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/encrypted_passport_element.html">加密护照元素</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/inline_query_result_type.html">内联查询结果类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/input_media_type.html">输入媒体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/mask_position_point.html">遮罩位置点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/menu_button_type.html">菜单按钮类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/message_entity_type.html">消息实体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/message_origin_type.html">消息来源类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/parse_mode.html">解析模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/passport_element_error_type.html">护照元素错误类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/poll_type.html">投票类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/sticker_format.html">贴纸格式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/sticker_type.html">贴纸类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/update_type.html">更新类型</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/download_file.html">下载文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/upload_file.html">上传文件</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/router.html">路由器(Router)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/dispatcher.html">调度器(Dispatcher)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/dependency_injection.html">依赖注入</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../dispatcher/filters/index.html">过滤事件</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of 过滤事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/filters/command.html">命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/filters/chat_member_updated.html">聊天成员更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/filters/magic_filters.html">魔法过滤(Magic filters)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/filters/magic_data.html">魔法数据(MagicData)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/filters/callback_data.html">回调数据工厂和过滤器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/filters/exception.html">例外情况</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/long_polling.html">长轮询(Long-polling)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/webhook.html">网络钩子(Webhook)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../dispatcher/finite_state_machine/index.html">有限状态机(FSM)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of 有限状态机(FSM)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/finite_state_machine/storages.html">存储</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/finite_state_machine/scene.html">场景</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/middlewares.html">中间件(Middlewares)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/errors.html">错误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dispatcher/flags.html">标记(Flags)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../dispatcher/class_based_handlers/index.html">基于类的处理程序</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of 基于类的处理程序</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/base.html">基本处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/callback_query.html">回调查询处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/chosen_inline_result.html">已选择的内联结果处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/error.html">错误处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/inline_query.html">内联查询处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/message.html">消息处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/poll.html">投票处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/pre_checkout_query.html">预结账查询处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/shipping_query.html">发货查询处理程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dispatcher/class_based_handlers/chat_member.html">聊天成员处理程序</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../utils/index.html">工具</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of 工具</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/keyboard.html">键盘构建器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/i18n.html">国际化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/chat_action.html">聊天动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/web_app.html">WebApp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/callback_answer.html">回调应答</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/formatting.html">格式化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/media_group.html">媒体组构建器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/deep_linking.html">深度链接</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">贡献</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>pydantic._internal._model_construction 源代码</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Private logic for creating models.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span> <span class="k">as</span> <span class="n">_annotations</span>
+
+<span class="kn">import</span> <span class="nn">builtins</span>
+<span class="kn">import</span> <span class="nn">operator</span>
+<span class="kn">import</span> <span class="nn">typing</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">weakref</span>
+<span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABCMeta</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">FunctionType</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Generic</span><span class="p">,</span> <span class="n">NoReturn</span>
+
+<span class="kn">import</span> <span class="nn">typing_extensions</span>
+<span class="kn">from</span> <span class="nn">pydantic_core</span> <span class="kn">import</span> <span class="n">PydanticUndefined</span><span class="p">,</span> <span class="n">SchemaSerializer</span>
+<span class="kn">from</span> <span class="nn">typing_extensions</span> <span class="kn">import</span> <span class="n">dataclass_transform</span><span class="p">,</span> <span class="n">deprecated</span>
+
+<span class="kn">from</span> <span class="nn">..errors</span> <span class="kn">import</span> <span class="n">PydanticUndefinedAnnotation</span><span class="p">,</span> <span class="n">PydanticUserError</span>
+<span class="kn">from</span> <span class="nn">..plugin._schema_validator</span> <span class="kn">import</span> <span class="n">create_schema_validator</span>
+<span class="kn">from</span> <span class="nn">..warnings</span> <span class="kn">import</span> <span class="n">GenericBeforeBaseModelWarning</span><span class="p">,</span> <span class="n">PydanticDeprecatedSince20</span>
+<span class="kn">from</span> <span class="nn">._config</span> <span class="kn">import</span> <span class="n">ConfigWrapper</span>
+<span class="kn">from</span> <span class="nn">._decorators</span> <span class="kn">import</span> <span class="n">DecoratorInfos</span><span class="p">,</span> <span class="n">PydanticDescriptorProxy</span><span class="p">,</span> <span class="n">get_attribute_from_bases</span><span class="p">,</span> <span class="n">unwrap_wrapped_function</span>
+<span class="kn">from</span> <span class="nn">._fields</span> <span class="kn">import</span> <span class="n">collect_model_fields</span><span class="p">,</span> <span class="n">is_valid_field_name</span><span class="p">,</span> <span class="n">is_valid_privateattr_name</span>
+<span class="kn">from</span> <span class="nn">._generate_schema</span> <span class="kn">import</span> <span class="n">GenerateSchema</span>
+<span class="kn">from</span> <span class="nn">._generics</span> <span class="kn">import</span> <span class="n">PydanticGenericMetadata</span><span class="p">,</span> <span class="n">get_model_typevars_map</span>
+<span class="kn">from</span> <span class="nn">._mock_val_ser</span> <span class="kn">import</span> <span class="n">MockValSer</span><span class="p">,</span> <span class="n">set_model_mocks</span>
+<span class="kn">from</span> <span class="nn">._schema_generation_shared</span> <span class="kn">import</span> <span class="n">CallbackGetCoreSchemaHandler</span>
+<span class="kn">from</span> <span class="nn">._signature</span> <span class="kn">import</span> <span class="n">generate_pydantic_signature</span>
+<span class="kn">from</span> <span class="nn">._typing_extra</span> <span class="kn">import</span> <span class="n">get_cls_types_namespace</span><span class="p">,</span> <span class="n">is_annotated</span><span class="p">,</span> <span class="n">is_classvar</span><span class="p">,</span> <span class="n">parent_frame_namespace</span>
+<span class="kn">from</span> <span class="nn">._utils</span> <span class="kn">import</span> <span class="n">ClassAttribute</span><span class="p">,</span> <span class="n">SafeGetItemProxy</span>
+<span class="kn">from</span> <span class="nn">._validate_call</span> <span class="kn">import</span> <span class="n">ValidateCallWrapper</span>
+
+<span class="k">if</span> <span class="n">typing</span><span class="o">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">..fields</span> <span class="kn">import</span> <span class="n">Field</span> <span class="k">as</span> <span class="n">PydanticModelField</span>
+    <span class="kn">from</span> <span class="nn">..fields</span> <span class="kn">import</span> <span class="n">FieldInfo</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span>
+    <span class="kn">from</span> <span class="nn">..main</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># See PyCharm issues https://youtrack.jetbrains.com/issue/PY-21915</span>
+    <span class="c1"># and https://youtrack.jetbrains.com/issue/PY-51428</span>
+    <span class="ne">DeprecationWarning</span> <span class="o">=</span> <span class="n">PydanticDeprecatedSince20</span>
+    <span class="n">PydanticModelField</span> <span class="o">=</span> <span class="nb">object</span><span class="p">()</span>
+
+<span class="n">object_setattr</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span>
+
+
+<span class="k">class</span> <span class="nc">_ModelNamespaceDict</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A dictionary subclass that intercepts attribute setting on model classes and</span>
+<span class="sd">    warns about overriding of decorators.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">v</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">existing</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">existing</span> <span class="ow">and</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">existing</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">existing</span><span class="p">,</span> <span class="n">PydanticDescriptorProxy</span><span class="p">):</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;`</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">` overrides an existing Pydantic `</span><span class="si">{</span><span class="n">existing</span><span class="o">.</span><span class="n">decorator_info</span><span class="o">.</span><span class="n">decorator_repr</span><span class="si">}</span><span class="s1">` decorator&#39;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__setitem__</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+
+<span class="nd">@dataclass_transform</span><span class="p">(</span><span class="n">kw_only_default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">field_specifiers</span><span class="o">=</span><span class="p">(</span><span class="n">PydanticModelField</span><span class="p">,))</span>
+<span class="k">class</span> <span class="nc">ModelMetaclass</span><span class="p">(</span><span class="n">ABCMeta</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span>
+        <span class="n">mcs</span><span class="p">,</span>
+        <span class="n">cls_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">bases</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">],</span>
+        <span class="n">namespace</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+        <span class="n">__pydantic_generic_metadata__</span><span class="p">:</span> <span class="n">PydanticGenericMetadata</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">__pydantic_reset_parent_namespace__</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">_create_model_module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Metaclass for creating Pydantic models.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cls_name: The name of the class to be created.</span>
+<span class="sd">            bases: The base classes of the class to be created.</span>
+<span class="sd">            namespace: The attribute dictionary of the class to be created.</span>
+<span class="sd">            __pydantic_generic_metadata__: Metadata for generic models.</span>
+<span class="sd">            __pydantic_reset_parent_namespace__: Reset parent namespace.</span>
+<span class="sd">            _create_model_module: The module of the class to be created, if created by `create_model`.</span>
+<span class="sd">            **kwargs: Catch-all for any other keyword arguments.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The new class created by the metaclass.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Note `ModelMetaclass` refers to `BaseModel`, but is also used to *create* `BaseModel`, so we rely on the fact</span>
+        <span class="c1"># that `BaseModel` itself won&#39;t have any bases, but any subclass of it will, to determine whether the `__new__`</span>
+        <span class="c1"># call we&#39;re in the middle of is for the `BaseModel` class.</span>
+        <span class="k">if</span> <span class="n">bases</span><span class="p">:</span>
+            <span class="n">base_field_names</span><span class="p">,</span> <span class="n">class_vars</span><span class="p">,</span> <span class="n">base_private_attributes</span> <span class="o">=</span> <span class="n">mcs</span><span class="o">.</span><span class="n">_collect_bases_data</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span>
+
+            <span class="n">config_wrapper</span> <span class="o">=</span> <span class="n">ConfigWrapper</span><span class="o">.</span><span class="n">for_model</span><span class="p">(</span><span class="n">bases</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;model_config&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_wrapper</span><span class="o">.</span><span class="n">config_dict</span>
+            <span class="n">private_attributes</span> <span class="o">=</span> <span class="n">inspect_namespace</span><span class="p">(</span>
+                <span class="n">namespace</span><span class="p">,</span> <span class="n">config_wrapper</span><span class="o">.</span><span class="n">ignored_types</span><span class="p">,</span> <span class="n">class_vars</span><span class="p">,</span> <span class="n">base_field_names</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">private_attributes</span> <span class="ow">or</span> <span class="n">base_private_attributes</span><span class="p">:</span>
+                <span class="n">original_model_post_init</span> <span class="o">=</span> <span class="n">get_model_post_init</span><span class="p">(</span><span class="n">namespace</span><span class="p">,</span> <span class="n">bases</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">original_model_post_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="c1"># if there are private_attributes and a model_post_init function, we handle both</span>
+
+                    <span class="k">def</span> <span class="nf">wrapped_model_post_init</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">__context</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">                        </span><span class="sd">&quot;&quot;&quot;We need to both initialize private attributes and call the user-defined model_post_init</span>
+<span class="sd">                        method.</span>
+<span class="sd">                        &quot;&quot;&quot;</span>
+                        <span class="n">init_private_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__context</span><span class="p">)</span>
+                        <span class="n">original_model_post_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">__context</span><span class="p">)</span>
+
+                    <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;model_post_init&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wrapped_model_post_init</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;model_post_init&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">init_private_attributes</span>
+
+            <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;__class_vars__&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">class_vars</span>
+            <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;__private_attributes__&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">base_private_attributes</span><span class="p">,</span> <span class="o">**</span><span class="n">private_attributes</span><span class="p">}</span>
+
+            <span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">cls_name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+
+            <span class="kn">from</span> <span class="nn">..main</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+            <span class="n">mro</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__mro__</span>
+            <span class="k">if</span> <span class="n">Generic</span> <span class="ow">in</span> <span class="n">mro</span> <span class="ow">and</span> <span class="n">mro</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">Generic</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">mro</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+                    <span class="n">GenericBeforeBaseModelWarning</span><span class="p">(</span>
+                        <span class="s1">&#39;Classes should inherit from `BaseModel` before generic classes (e.g. `typing.Generic[T]`) &#39;</span>
+                        <span class="s1">&#39;for pydantic generics to work properly.&#39;</span>
+                    <span class="p">),</span>
+                    <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+                <span class="p">)</span>
+
+            <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_custom_init__</span> <span class="o">=</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="fm">__init__</span><span class="p">,</span> <span class="s1">&#39;__pydantic_base_init__&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_post_init__</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">model_post_init</span> <span class="ow">is</span> <span class="n">BaseModel</span><span class="o">.</span><span class="n">model_post_init</span> <span class="k">else</span> <span class="s1">&#39;model_post_init&#39;</span>
+
+            <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_decorators__</span> <span class="o">=</span> <span class="n">DecoratorInfos</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+
+            <span class="c1"># Use the getattr below to grab the __parameters__ from the `typing.Generic` parent class</span>
+            <span class="k">if</span> <span class="n">__pydantic_generic_metadata__</span><span class="p">:</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_generic_metadata__</span> <span class="o">=</span> <span class="n">__pydantic_generic_metadata__</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">parent_parameters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;__pydantic_generic_metadata__&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;parameters&#39;</span><span class="p">,</span> <span class="p">())</span>
+                <span class="n">parameters</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;__parameters__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">or</span> <span class="n">parent_parameters</span>
+                <span class="k">if</span> <span class="n">parameters</span> <span class="ow">and</span> <span class="n">parent_parameters</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">parameters</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">parent_parameters</span><span class="p">):</span>
+                    <span class="kn">from</span> <span class="nn">..root_model</span> <span class="kn">import</span> <span class="n">RootModelRootType</span>
+
+                    <span class="n">missing_parameters</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">parameters</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">parent_parameters</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">RootModelRootType</span> <span class="ow">in</span> <span class="n">parent_parameters</span> <span class="ow">and</span> <span class="n">RootModelRootType</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+                        <span class="c1"># This is a special case where the user has subclassed `RootModel`, but has not parametrized</span>
+                        <span class="c1"># RootModel with the generic type identifiers being used. Ex:</span>
+                        <span class="c1"># class MyModel(RootModel, Generic[T]):</span>
+                        <span class="c1">#    root: T</span>
+                        <span class="c1"># Should instead just be:</span>
+                        <span class="c1"># class MyModel(RootModel[T]):</span>
+                        <span class="c1">#   root: T</span>
+                        <span class="n">parameters_str</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">missing_parameters</span><span class="p">])</span>
+                        <span class="n">error_message</span> <span class="o">=</span> <span class="p">(</span>
+                            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> is a subclass of `RootModel`, but does not include the generic type identifier(s) &#39;</span>
+                            <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">parameters_str</span><span class="si">}</span><span class="s1"> in its parameters. &#39;</span>
+                            <span class="sa">f</span><span class="s1">&#39;You should parametrize RootModel directly, e.g., `class </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">(RootModel[</span><span class="si">{</span><span class="n">parameters_str</span><span class="si">}</span><span class="s1">]): ...`.&#39;</span>
+                        <span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">combined_parameters</span> <span class="o">=</span> <span class="n">parent_parameters</span> <span class="o">+</span> <span class="n">missing_parameters</span>
+                        <span class="n">parameters_str</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">combined_parameters</span><span class="p">])</span>
+                        <span class="n">generic_type_label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;typing.Generic[</span><span class="si">{</span><span class="n">parameters_str</span><span class="si">}</span><span class="s1">]&#39;</span>
+                        <span class="n">error_message</span> <span class="o">=</span> <span class="p">(</span>
+                            <span class="sa">f</span><span class="s1">&#39;All parameters must be present on typing.Generic;&#39;</span>
+                            <span class="sa">f</span><span class="s1">&#39; you should inherit from </span><span class="si">{</span><span class="n">generic_type_label</span><span class="si">}</span><span class="s1">.&#39;</span>
+                        <span class="p">)</span>
+                        <span class="k">if</span> <span class="n">Generic</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">bases</span><span class="p">:</span>  <span class="c1"># pragma: no cover</span>
+                            <span class="c1"># We raise an error here not because it is desirable, but because some cases are mishandled.</span>
+                            <span class="c1"># It would be nice to remove this error and still have things behave as expected, it&#39;s just</span>
+                            <span class="c1"># challenging because we are using a custom `__class_getitem__` to parametrize generic models,</span>
+                            <span class="c1"># and not returning a typing._GenericAlias from it.</span>
+                            <span class="n">bases_str</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">bases</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">generic_type_label</span><span class="p">])</span>
+                            <span class="n">error_message</span> <span class="o">+=</span> <span class="p">(</span>
+                                <span class="sa">f</span><span class="s1">&#39; Note: `typing.Generic` must go last: `class </span><span class="si">{</span><span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1">(</span><span class="si">{</span><span class="n">bases_str</span><span class="si">}</span><span class="s1">): ...`)&#39;</span>
+                            <span class="p">)</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="n">error_message</span><span class="p">)</span>
+
+                <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_generic_metadata__</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s1">&#39;origin&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+                    <span class="s1">&#39;args&#39;</span><span class="p">:</span> <span class="p">(),</span>
+                    <span class="s1">&#39;parameters&#39;</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span>
+                <span class="p">}</span>
+
+            <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_complete__</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Ensure this specific class gets completed</span>
+
+            <span class="c1"># preserve `__set_name__` protocol defined in https://peps.python.org/pep-0487</span>
+            <span class="c1"># for attributes not in `new_namespace` (e.g. private attributes)</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">private_attributes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">obj</span><span class="o">.</span><span class="n">__set_name__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">__pydantic_reset_parent_namespace__</span><span class="p">:</span>
+                <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_parent_namespace__</span> <span class="o">=</span> <span class="n">build_lenient_weakvaluedict</span><span class="p">(</span><span class="n">parent_frame_namespace</span><span class="p">())</span>
+            <span class="n">parent_namespace</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;__pydantic_parent_namespace__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parent_namespace</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="n">parent_namespace</span> <span class="o">=</span> <span class="n">unpack_lenient_weakvaluedict</span><span class="p">(</span><span class="n">parent_namespace</span><span class="p">)</span>
+
+            <span class="n">types_namespace</span> <span class="o">=</span> <span class="n">get_cls_types_namespace</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">parent_namespace</span><span class="p">)</span>
+            <span class="n">set_model_fields</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">config_wrapper</span><span class="p">,</span> <span class="n">types_namespace</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">config_wrapper</span><span class="o">.</span><span class="n">frozen</span> <span class="ow">and</span> <span class="s1">&#39;__hash__&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">namespace</span><span class="p">:</span>
+                <span class="n">set_default_hash_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">bases</span><span class="p">)</span>
+
+            <span class="n">complete_model_class</span><span class="p">(</span>
+                <span class="bp">cls</span><span class="p">,</span>
+                <span class="n">cls_name</span><span class="p">,</span>
+                <span class="n">config_wrapper</span><span class="p">,</span>
+                <span class="n">raise_errors</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">types_namespace</span><span class="o">=</span><span class="n">types_namespace</span><span class="p">,</span>
+                <span class="n">create_model_module</span><span class="o">=</span><span class="n">_create_model_module</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="c1"># If this is placed before the complete_model_class call above,</span>
+            <span class="c1"># the generic computed fields return type is set to PydanticUndefined</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">model_computed_fields</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">info</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_decorators__</span><span class="o">.</span><span class="n">computed_fields</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+            <span class="n">set_deprecated_descriptors</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+
+            <span class="c1"># using super(cls, cls) on the next line ensures we only call the parent class&#39;s __pydantic_init_subclass__</span>
+            <span class="c1"># I believe the `type: ignore` is only necessary because mypy doesn&#39;t realize that this code branch is</span>
+            <span class="c1"># only hit for _proper_ subclasses of BaseModel</span>
+            <span class="nb">super</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">__pydantic_init_subclass__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[misc]</span>
+            <span class="k">return</span> <span class="bp">cls</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># this is the BaseModel class itself being created, no logic required</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="n">mcs</span><span class="p">,</span> <span class="n">cls_name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">typing</span><span class="o">.</span><span class="n">TYPE_CHECKING</span><span class="p">:</span>  <span class="c1"># pragma: no branch</span>
+        <span class="c1"># We put `__getattr__` in a non-TYPE_CHECKING block because otherwise, mypy allows arbitrary attribute access</span>
+
+        <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;This is necessary to keep attribute access working for class attribute access.&quot;&quot;&quot;</span>
+            <span class="n">private_attributes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__private_attributes__&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">private_attributes</span> <span class="ow">and</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">private_attributes</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">private_attributes</span><span class="p">[</span><span class="n">item</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="o">==</span> <span class="s1">&#39;__pydantic_core_schema__&#39;</span><span class="p">:</span>
+                <span class="c1"># This means the class didn&#39;t get a schema generated for it, likely because there was an undefined reference</span>
+                <span class="n">maybe_mock_validator</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;__pydantic_validator__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">maybe_mock_validator</span><span class="p">,</span> <span class="n">MockValSer</span><span class="p">):</span>
+                    <span class="n">rebuilt_validator</span> <span class="o">=</span> <span class="n">maybe_mock_validator</span><span class="o">.</span><span class="n">rebuild</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">rebuilt_validator</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                        <span class="c1"># In this case, a validator was built, and so `__pydantic_core_schema__` should now be set</span>
+                        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;__pydantic_core_schema__&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="fm">__prepare__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">object</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">_ModelNamespaceDict</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__instancecheck__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Avoid calling ABC _abc_subclasscheck unless we&#39;re pretty sure.</span>
+
+<span class="sd">        See #3829 and python/cpython#92810</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="s1">&#39;__pydantic_validator__&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__instancecheck__</span><span class="p">(</span><span class="n">instance</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_collect_bases_data</span><span class="p">(</span><span class="n">bases</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">]]:</span>
+        <span class="kn">from</span> <span class="nn">..main</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+        <span class="n">field_names</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">class_vars</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">private_attributes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">bases</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">BaseModel</span><span class="p">)</span> <span class="ow">and</span> <span class="n">base</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">BaseModel</span><span class="p">:</span>
+                <span class="c1"># model_fields might not be defined yet in the case of generics, so we use getattr here:</span>
+                <span class="n">field_names</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="s1">&#39;model_fields&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+                <span class="n">class_vars</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">__class_vars__</span><span class="p">)</span>
+                <span class="n">private_attributes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">base</span><span class="o">.</span><span class="n">__private_attributes__</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">field_names</span><span class="p">,</span> <span class="n">class_vars</span><span class="p">,</span> <span class="n">private_attributes</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@deprecated</span><span class="p">(</span><span class="s1">&#39;The `__fields__` attribute is deprecated, use `model_fields` instead.&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__fields__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">FieldInfo</span><span class="p">]:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+            <span class="s1">&#39;The `__fields__` attribute is deprecated, use `model_fields` instead.&#39;</span><span class="p">,</span> <span class="n">PydanticDeprecatedSince20</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_fields</span>  <span class="c1"># type: ignore</span>
+
+    <span class="k">def</span> <span class="fm">__dir__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="n">attributes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__dir__</span><span class="p">())</span>
+        <span class="k">if</span> <span class="s1">&#39;__fields__&#39;</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">:</span>
+            <span class="n">attributes</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;__fields__&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">attributes</span>
+
+
+<span class="k">def</span> <span class="nf">init_private_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">__context</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;This function is meant to behave like a BaseModel method to initialise private attributes.</span>
+
+<span class="sd">    It takes context as an argument since that&#39;s what pydantic-core passes when calling it.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        self: The BaseModel instance.</span>
+<span class="sd">        __context: The context.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;__pydantic_private__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">pydantic_private</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">private_attr</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__private_attributes__</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">default</span> <span class="o">=</span> <span class="n">private_attr</span><span class="o">.</span><span class="n">get_default</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">PydanticUndefined</span><span class="p">:</span>
+                <span class="n">pydantic_private</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">default</span>
+        <span class="n">object_setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;__pydantic_private__&#39;</span><span class="p">,</span> <span class="n">pydantic_private</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">get_model_post_init</span><span class="p">(</span><span class="n">namespace</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">bases</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the `model_post_init` method from the namespace or the class bases, or `None` if not defined.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s1">&#39;model_post_init&#39;</span> <span class="ow">in</span> <span class="n">namespace</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;model_post_init&#39;</span><span class="p">]</span>
+
+    <span class="kn">from</span> <span class="nn">..main</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+    <span class="n">model_post_init</span> <span class="o">=</span> <span class="n">get_attribute_from_bases</span><span class="p">(</span><span class="n">bases</span><span class="p">,</span> <span class="s1">&#39;model_post_init&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">model_post_init</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">BaseModel</span><span class="o">.</span><span class="n">model_post_init</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">model_post_init</span>
+
+
+<span class="k">def</span> <span class="nf">inspect_namespace</span><span class="p">(</span>  <span class="c1"># noqa C901</span>
+    <span class="n">namespace</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
+    <span class="n">ignored_types</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">],</span>
+    <span class="n">base_class_vars</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">base_class_fields</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Iterate over the namespace and:</span>
+<span class="sd">    * gather private attributes</span>
+<span class="sd">    * check for items which look like fields but are not (e.g. have no annotation) and warn.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        namespace: The attribute dictionary of the class to be created.</span>
+<span class="sd">        ignored_types: A tuple of ignore types.</span>
+<span class="sd">        base_class_vars: A set of base class class variables.</span>
+<span class="sd">        base_class_fields: A set of base class fields.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A dict contains private attributes info.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: If there is a `__root__` field in model.</span>
+<span class="sd">        NameError: If private attribute name is invalid.</span>
+<span class="sd">        PydanticUserError:</span>
+<span class="sd">            - If a field does not have a type annotation.</span>
+<span class="sd">            - If a field on base class was overridden by a non-annotated attribute.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">..fields</span> <span class="kn">import</span> <span class="n">FieldInfo</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">,</span> <span class="n">PrivateAttr</span>
+
+    <span class="n">all_ignored_types</span> <span class="o">=</span> <span class="n">ignored_types</span> <span class="o">+</span> <span class="n">default_ignored_types</span><span class="p">()</span>
+
+    <span class="n">private_attributes</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">raw_annotations</span> <span class="o">=</span> <span class="n">namespace</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;__annotations__&#39;</span><span class="p">,</span> <span class="p">{})</span>
+
+    <span class="k">if</span> <span class="s1">&#39;__root__&#39;</span> <span class="ow">in</span> <span class="n">raw_annotations</span> <span class="ow">or</span> <span class="s1">&#39;__root__&#39;</span> <span class="ow">in</span> <span class="n">namespace</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;To define root models, use `pydantic.RootModel` rather than a field called &#39;__root__&#39;&quot;</span><span class="p">)</span>
+
+    <span class="n">ignored_names</span><span class="p">:</span> <span class="nb">set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">var_name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">namespace</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">var_name</span> <span class="o">==</span> <span class="s1">&#39;model_config&#39;</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="p">(</span>
+            <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">type</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">==</span> <span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;__module__&#39;</span><span class="p">]</span>
+            <span class="ow">and</span> <span class="s1">&#39;__qualname__&#39;</span> <span class="ow">in</span> <span class="n">namespace</span>
+            <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="vm">__qualname__</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">namespace</span><span class="p">[</span><span class="s1">&#39;__qualname__&#39;</span><span class="p">])</span>
+        <span class="p">):</span>
+            <span class="c1"># `value` is a nested type defined in this namespace; don&#39;t error</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">all_ignored_types</span><span class="p">)</span> <span class="ow">or</span> <span class="n">value</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span> <span class="o">==</span> <span class="s1">&#39;functools&#39;</span><span class="p">:</span>
+            <span class="n">ignored_names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">var_name</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">var_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span>
+                    <span class="s1">&#39;Private attributes must not use dunder names;&#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39; use a single underscore prefix instead of </span><span class="si">{</span><span class="n">var_name</span><span class="si">!r}</span><span class="s1">.&#39;</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">is_valid_field_name</span><span class="p">(</span><span class="n">var_name</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span>
+                    <span class="s1">&#39;Private attributes must not use valid field names;&#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39; use sunder names, e.g. </span><span class="si">{</span><span class="s2">&quot;_&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">var_name</span><span class="si">!r}</span><span class="s1"> instead of </span><span class="si">{</span><span class="n">var_name</span><span class="si">!r}</span><span class="s1">.&#39;</span>
+                <span class="p">)</span>
+            <span class="n">private_attributes</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+            <span class="k">del</span> <span class="n">namespace</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">FieldInfo</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_valid_field_name</span><span class="p">(</span><span class="n">var_name</span><span class="p">):</span>
+            <span class="n">suggested_name</span> <span class="o">=</span> <span class="n">var_name</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="s1">&#39;my_field&#39;</span>  <span class="c1"># don&#39;t suggest &#39;&#39; for all-underscore name</span>
+            <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;Fields must not use names with leading underscores;&#39;</span>
+                <span class="sa">f</span><span class="s1">&#39; e.g., use </span><span class="si">{</span><span class="n">suggested_name</span><span class="si">!r}</span><span class="s1"> instead of </span><span class="si">{</span><span class="n">var_name</span><span class="si">!r}</span><span class="s1">.&#39;</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">var_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__&#39;</span><span class="p">):</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="n">is_valid_privateattr_name</span><span class="p">(</span><span class="n">var_name</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">var_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw_annotations</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">is_classvar</span><span class="p">(</span><span class="n">raw_annotations</span><span class="p">[</span><span class="n">var_name</span><span class="p">]):</span>
+                <span class="n">private_attributes</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">PrivateAttr</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="n">value</span><span class="p">)</span>
+                <span class="k">del</span> <span class="n">namespace</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">var_name</span> <span class="ow">in</span> <span class="n">base_class_vars</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="n">var_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">raw_annotations</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">var_name</span> <span class="ow">in</span> <span class="n">base_class_fields</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">PydanticUserError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Field </span><span class="si">{</span><span class="n">var_name</span><span class="si">!r}</span><span class="s1"> defined on a base class was overridden by a non-annotated attribute. &#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;All field definitions, including overrides, require a type annotation.&#39;</span><span class="p">,</span>
+                    <span class="n">code</span><span class="o">=</span><span class="s1">&#39;model-field-overridden&#39;</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">FieldInfo</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">PydanticUserError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;Field </span><span class="si">{</span><span class="n">var_name</span><span class="si">!r}</span><span class="s1"> requires a type annotation&#39;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="s1">&#39;model-field-missing-annotation&#39;</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">PydanticUserError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;A non-annotated attribute was detected: `</span><span class="si">{</span><span class="n">var_name</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">value</span><span class="si">!r}</span><span class="s1">`. All model fields require a &#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;type annotation; if `</span><span class="si">{</span><span class="n">var_name</span><span class="si">}</span><span class="s1">` is not meant to be a field, you may be able to resolve this &#39;</span>
+                    <span class="sa">f</span><span class="s2">&quot;error by annotating it as a `ClassVar` or updating `model_config[&#39;ignored_types&#39;]`.&quot;</span><span class="p">,</span>
+                    <span class="n">code</span><span class="o">=</span><span class="s1">&#39;model-field-missing-annotation&#39;</span><span class="p">,</span>
+                <span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ann_name</span><span class="p">,</span> <span class="n">ann_type</span> <span class="ow">in</span> <span class="n">raw_annotations</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">is_valid_privateattr_name</span><span class="p">(</span><span class="n">ann_name</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">ann_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">private_attributes</span>
+            <span class="ow">and</span> <span class="n">ann_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ignored_names</span>
+            <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_classvar</span><span class="p">(</span><span class="n">ann_type</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">ann_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">all_ignored_types</span>
+            <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ann_type</span><span class="p">,</span> <span class="s1">&#39;__module__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;functools&#39;</span>
+        <span class="p">):</span>
+            <span class="k">if</span> <span class="n">is_annotated</span><span class="p">(</span><span class="n">ann_type</span><span class="p">):</span>
+                <span class="n">_</span><span class="p">,</span> <span class="o">*</span><span class="n">metadata</span> <span class="o">=</span> <span class="n">typing_extensions</span><span class="o">.</span><span class="n">get_args</span><span class="p">(</span><span class="n">ann_type</span><span class="p">)</span>
+                <span class="n">private_attr</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">metadata</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">ModelPrivateAttr</span><span class="p">)),</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">private_attr</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">private_attributes</span><span class="p">[</span><span class="n">ann_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">private_attr</span>
+                    <span class="k">continue</span>
+            <span class="n">private_attributes</span><span class="p">[</span><span class="n">ann_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">PrivateAttr</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">private_attributes</span>
+
+
+<span class="k">def</span> <span class="nf">set_default_hash_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">],</span> <span class="n">bases</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">base_hash_func</span> <span class="o">=</span> <span class="n">get_attribute_from_bases</span><span class="p">(</span><span class="n">bases</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">)</span>
+    <span class="n">new_hash_func</span> <span class="o">=</span> <span class="n">make_hash_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">base_hash_func</span> <span class="ow">in</span> <span class="p">{</span><span class="kc">None</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">}</span> <span class="ow">or</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">base_hash_func</span><span class="p">,</span> <span class="s1">&#39;__code__&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="n">new_hash_func</span><span class="o">.</span><span class="vm">__code__</span><span class="p">:</span>
+        <span class="c1"># If `__hash__` is some default, we generate a hash function.</span>
+        <span class="c1"># It will be `None` if not overridden from BaseModel.</span>
+        <span class="c1"># It may be `object.__hash__` if there is another</span>
+        <span class="c1"># parent class earlier in the bases which doesn&#39;t override `__hash__` (e.g. `typing.Generic`).</span>
+        <span class="c1"># It may be a value set by `set_default_hash_func` if `cls` is a subclass of another frozen model.</span>
+        <span class="c1"># In the last case we still need a new hash function to account for new `model_fields`.</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="fm">__hash__</span> <span class="o">=</span> <span class="n">new_hash_func</span>
+
+
+<span class="k">def</span> <span class="nf">make_hash_func</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+    <span class="n">getter</span> <span class="o">=</span> <span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="o">*</span><span class="bp">cls</span><span class="o">.</span><span class="n">model_fields</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">model_fields</span> <span class="k">else</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">hash_func</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">getter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">))</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="c1"># In rare cases (such as when using the deprecated copy method), the __dict__ may not contain</span>
+            <span class="c1"># all model fields, which is how we can get here.</span>
+            <span class="c1"># getter(self.__dict__) is much faster than any &#39;safe&#39; method that accounts for missing keys,</span>
+            <span class="c1"># and wrapping it in a `try` doesn&#39;t slow things down much in the common case.</span>
+            <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="n">getter</span><span class="p">(</span><span class="n">SafeGetItemProxy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">hash_func</span>
+
+
+<span class="k">def</span> <span class="nf">set_model_fields</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">],</span> <span class="n">bases</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">],</span> <span class="n">config_wrapper</span><span class="p">:</span> <span class="n">ConfigWrapper</span><span class="p">,</span> <span class="n">types_namespace</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Collect and set `cls.model_fields` and `cls.__class_vars__`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cls: BaseModel or dataclass.</span>
+<span class="sd">        bases: Parents of the class, generally `cls.__bases__`.</span>
+<span class="sd">        config_wrapper: The config wrapper instance.</span>
+<span class="sd">        types_namespace: Optional extra namespace to look for types in.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">typevars_map</span> <span class="o">=</span> <span class="n">get_model_typevars_map</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="n">fields</span><span class="p">,</span> <span class="n">class_vars</span> <span class="o">=</span> <span class="n">collect_model_fields</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">config_wrapper</span><span class="p">,</span> <span class="n">types_namespace</span><span class="p">,</span> <span class="n">typevars_map</span><span class="o">=</span><span class="n">typevars_map</span><span class="p">)</span>
+
+    <span class="bp">cls</span><span class="o">.</span><span class="n">model_fields</span> <span class="o">=</span> <span class="n">fields</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">__class_vars__</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">class_vars</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">class_vars</span><span class="p">:</span>
+        <span class="c1"># Class vars should not be private attributes</span>
+        <span class="c1">#     We remove them _here_ and not earlier because we rely on inspecting the class to determine its classvars,</span>
+        <span class="c1">#     but private attributes are determined by inspecting the namespace _prior_ to class creation.</span>
+        <span class="c1">#     In the case that a classvar with a leading-&#39;_&#39; is defined via a ForwardRef (e.g., when using</span>
+        <span class="c1">#     `__future__.annotations`), we want to remove the private attribute which was detected _before_ we knew it</span>
+        <span class="c1">#     evaluated to a classvar</span>
+
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__private_attributes__</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">value</span><span class="o">.</span><span class="n">default</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">PydanticUndefined</span><span class="p">:</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">value</span><span class="o">.</span><span class="n">default</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">complete_model_class</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">],</span>
+    <span class="n">cls_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">config_wrapper</span><span class="p">:</span> <span class="n">ConfigWrapper</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">raise_errors</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">types_namespace</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">create_model_module</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Finish building a model class.</span>
+
+<span class="sd">    This logic must be called after class has been created since validation functions must be bound</span>
+<span class="sd">    and `get_type_hints` requires a class object.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        cls: BaseModel or dataclass.</span>
+<span class="sd">        cls_name: The model or dataclass name.</span>
+<span class="sd">        config_wrapper: The config wrapper instance.</span>
+<span class="sd">        raise_errors: Whether to raise errors.</span>
+<span class="sd">        types_namespace: Optional extra namespace to look for types in.</span>
+<span class="sd">        create_model_module: The module of the class to be created, if created by `create_model`.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        `True` if the model is successfully completed, else `False`.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        PydanticUndefinedAnnotation: If `PydanticUndefinedAnnotation` occurs in`__get_pydantic_core_schema__`</span>
+<span class="sd">            and `raise_errors=True`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">typevars_map</span> <span class="o">=</span> <span class="n">get_model_typevars_map</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+    <span class="n">gen_schema</span> <span class="o">=</span> <span class="n">GenerateSchema</span><span class="p">(</span>
+        <span class="n">config_wrapper</span><span class="p">,</span>
+        <span class="n">types_namespace</span><span class="p">,</span>
+        <span class="n">typevars_map</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">handler</span> <span class="o">=</span> <span class="n">CallbackGetCoreSchemaHandler</span><span class="p">(</span>
+        <span class="n">partial</span><span class="p">(</span><span class="n">gen_schema</span><span class="o">.</span><span class="n">generate_schema</span><span class="p">,</span> <span class="n">from_dunder_get_core_schema</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+        <span class="n">gen_schema</span><span class="p">,</span>
+        <span class="n">ref_mode</span><span class="o">=</span><span class="s1">&#39;unpack&#39;</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">config_wrapper</span><span class="o">.</span><span class="n">defer_build</span><span class="p">:</span>
+        <span class="n">set_model_mocks</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cls_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">__get_pydantic_core_schema__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">handler</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">PydanticUndefinedAnnotation</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">raise_errors</span><span class="p">:</span>
+            <span class="k">raise</span>
+        <span class="n">set_model_mocks</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cls_name</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;`</span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">`&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="n">core_config</span> <span class="o">=</span> <span class="n">config_wrapper</span><span class="o">.</span><span class="n">core_config</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">schema</span> <span class="o">=</span> <span class="n">gen_schema</span><span class="o">.</span><span class="n">clean_schema</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">gen_schema</span><span class="o">.</span><span class="n">CollectedInvalid</span><span class="p">:</span>
+        <span class="n">set_model_mocks</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cls_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="c1"># debug(schema)</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_core_schema__</span> <span class="o">=</span> <span class="n">schema</span>
+
+    <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_validator__</span> <span class="o">=</span> <span class="n">create_schema_validator</span><span class="p">(</span>
+        <span class="n">schema</span><span class="p">,</span>
+        <span class="bp">cls</span><span class="p">,</span>
+        <span class="n">create_model_module</span> <span class="ow">or</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__module__</span><span class="p">,</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="vm">__qualname__</span><span class="p">,</span>
+        <span class="s1">&#39;create_model&#39;</span> <span class="k">if</span> <span class="n">create_model_module</span> <span class="k">else</span> <span class="s1">&#39;BaseModel&#39;</span><span class="p">,</span>
+        <span class="n">core_config</span><span class="p">,</span>
+        <span class="n">config_wrapper</span><span class="o">.</span><span class="n">plugin_settings</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_serializer__</span> <span class="o">=</span> <span class="n">SchemaSerializer</span><span class="p">(</span><span class="n">schema</span><span class="p">,</span> <span class="n">core_config</span><span class="p">)</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">__pydantic_complete__</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># set __signature__ attr only for model class, but not for its instances</span>
+    <span class="bp">cls</span><span class="o">.</span><span class="n">__signature__</span> <span class="o">=</span> <span class="n">ClassAttribute</span><span class="p">(</span>
+        <span class="s1">&#39;__signature__&#39;</span><span class="p">,</span>
+        <span class="n">generate_pydantic_signature</span><span class="p">(</span><span class="n">init</span><span class="o">=</span><span class="bp">cls</span><span class="o">.</span><span class="fm">__init__</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="bp">cls</span><span class="o">.</span><span class="n">model_fields</span><span class="p">,</span> <span class="n">config_wrapper</span><span class="o">=</span><span class="n">config_wrapper</span><span class="p">),</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">set_deprecated_descriptors</span><span class="p">(</span><span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Set data descriptors on the class for deprecated fields.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">field_info</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">model_fields</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">msg</span> <span class="o">:=</span> <span class="n">field_info</span><span class="o">.</span><span class="n">deprecation_message</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">desc</span> <span class="o">=</span> <span class="n">_DeprecatedFieldDescriptor</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+            <span class="n">desc</span><span class="o">.</span><span class="n">__set_name__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">field</span><span class="p">,</span> <span class="n">computed_field_info</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">model_computed_fields</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="p">(</span><span class="n">msg</span> <span class="o">:=</span> <span class="n">computed_field_info</span><span class="o">.</span><span class="n">deprecation_message</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="c1"># Avoid having two warnings emitted:</span>
+            <span class="ow">and</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">unwrap_wrapped_function</span><span class="p">(</span><span class="n">computed_field_info</span><span class="o">.</span><span class="n">wrapped_property</span><span class="p">),</span> <span class="s1">&#39;__deprecated__&#39;</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="n">desc</span> <span class="o">=</span> <span class="n">_DeprecatedFieldDescriptor</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">computed_field_info</span><span class="o">.</span><span class="n">wrapped_property</span><span class="p">)</span>
+            <span class="n">desc</span><span class="o">.</span><span class="n">__set_name__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">field</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">_DeprecatedFieldDescriptor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Data descriptor used to emit a runtime deprecation warning before accessing a deprecated field.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        msg: The deprecation message to be emitted.</span>
+<span class="sd">        wrapped_property: The property instance if the deprecated field is a computed field, or `None`.</span>
+<span class="sd">        field_name: The name of the field being deprecated.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">field_name</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">wrapped_property</span><span class="p">:</span> <span class="nb">property</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wrapped_property</span> <span class="o">=</span> <span class="n">wrapped_property</span>
+
+    <span class="k">def</span> <span class="nf">__set_name__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">cls</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">],</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">field_name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">BaseModel</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">:</span> <span class="nb">type</span><span class="p">[</span><span class="n">BaseModel</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
+
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">msg</span><span class="p">,</span> <span class="n">builtins</span><span class="o">.</span><span class="n">DeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrapped_property</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrapped_property</span><span class="o">.</span><span class="fm">__get__</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">]</span>
+
+    <span class="c1"># Defined to take precedence over the instance&#39;s dictionary</span>
+    <span class="c1"># Note that it will not be called when setting a value on a model instance</span>
+    <span class="c1"># as `BaseModel.__setattr__` is defined and takes priority.</span>
+    <span class="k">def</span> <span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NoReturn</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">field_name</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">_PydanticWeakRef</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Wrapper for `weakref.ref` that enables `pickle` serialization.</span>
+
+<span class="sd">    Cloudpickle fails to serialize `weakref.ref` objects due to an arcane error related</span>
+<span class="sd">    to abstract base classes (`abc.ABC`). This class works around the issue by wrapping</span>
+<span class="sd">    `weakref.ref` instead of subclassing it.</span>
+
+<span class="sd">    See https://github.com/pydantic/pydantic/issues/6763 for context.</span>
+
+<span class="sd">    Semantics:</span>
+<span class="sd">        - If not pickled, behaves the same as a `weakref.ref`.</span>
+<span class="sd">        - If pickled along with the referenced object, the same `weakref.ref` behavior</span>
+<span class="sd">          will be maintained between them after unpickling.</span>
+<span class="sd">        - If pickled without the referenced object, after unpickling the underlying</span>
+<span class="sd">          reference will be cleared (`__call__` will always return `None`).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">obj</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="c1"># The object will be `None` upon deserialization if the serialized weakref</span>
+            <span class="c1"># had lost its underlying object.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_wr</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_wr</span> <span class="o">=</span> <span class="n">weakref</span><span class="o">.</span><span class="n">ref</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wr</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wr</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__reduce__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">Callable</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">weakref</span><span class="o">.</span><span class="n">ReferenceType</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="n">_PydanticWeakRef</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="p">(),)</span>
+
+
+<span class="k">def</span> <span class="nf">build_lenient_weakvaluedict</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Takes an input dictionary, and produces a new value that (invertibly) replaces the values with weakrefs.</span>
+
+<span class="sd">    We can&#39;t just use a WeakValueDictionary because many types (including int, str, etc.) can&#39;t be stored as values</span>
+<span class="sd">    in a WeakValueDictionary.</span>
+
+<span class="sd">    The `unpack_lenient_weakvaluedict` function can be used to reverse this operation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">proxy</span> <span class="o">=</span> <span class="n">_PydanticWeakRef</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="n">proxy</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="n">result</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">proxy</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">def</span> <span class="nf">unpack_lenient_weakvaluedict</span><span class="p">(</span><span class="n">d</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Inverts the transform performed by `build_lenient_weakvaluedict`.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">_PydanticWeakRef</span><span class="p">):</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">v</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">result</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">def</span> <span class="nf">default_ignored_types</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">[</span><span class="n">Any</span><span class="p">],</span> <span class="o">...</span><span class="p">]:</span>
+    <span class="kn">from</span> <span class="nn">..fields</span> <span class="kn">import</span> <span class="n">ComputedFieldInfo</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">FunctionType</span><span class="p">,</span>
+        <span class="nb">property</span><span class="p">,</span>
+        <span class="nb">classmethod</span><span class="p">,</span>
+        <span class="nb">staticmethod</span><span class="p">,</span>
+        <span class="n">PydanticDescriptorProxy</span><span class="p">,</span>
+        <span class="n">ComputedFieldInfo</span><span class="p">,</span>
+        <span class="n">ValidateCallWrapper</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, aiogram Team
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/translations.js?v=beaddf03"></script>
+    </body>
+</html>

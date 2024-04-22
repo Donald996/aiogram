@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="命令" href="command.html" /><link rel="prev" title="依赖注入" href="../dependency_injection.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>过滤事件 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>过滤事件 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat_member.html">获取聊天成员</a></li>
@@ -597,11 +607,11 @@
         </div>
         <article role="main">
           <section id="filtering-events">
-<span id="id1"></span><h1>过滤事件<a class="headerlink" href="#filtering-events" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>过滤事件<a class="headerlink" href="#filtering-events" title="Link to this heading">¶</a></h1>
 <p>需要使用过滤器将更新路由到特定的处理程序。处理程序的搜索总是在通过过滤器集的第一个匹配时停止。默认情况下，所有处理程序的过滤器都是空的，因此所有更新都将传递给第一个过滤器为空的处理程序。</p>
 <p><em>aiogram</em> 内置了一些有用的过滤器，你也可以编写自己的过滤器。</p>
 <section id="builtin-filters">
-<h2>内置过滤器<a class="headerlink" href="#builtin-filters" title="Link to this heading">#</a></h2>
+<h2>内置过滤器<a class="headerlink" href="#builtin-filters" title="Link to this heading">¶</a></h2>
 <p>以下是内置过滤器的列表：</p>
 <div class="toctree-wrapper compound">
 <ul>
@@ -615,7 +625,7 @@
 </div>
 </section>
 <section id="writing-own-filters">
-<h2>编写过滤器<a class="headerlink" href="#writing-own-filters" title="Link to this heading">#</a></h2>
+<h2>编写过滤器<a class="headerlink" href="#writing-own-filters" title="Link to this heading">¶</a></h2>
 <p>过滤器可以是：</p>
 <ul class="simple">
 <li><p>异步函数 (<code class="code docutils literal notranslate"><span class="pre">async</span> <span class="pre">def</span> <span class="pre">my_filter(*args,</span> <span class="pre">**kwargs):</span> <span class="pre">pass</span></code>)</p></li>
@@ -627,14 +637,14 @@
 </ul>
 <p>并应返回 <cite>bool</cite> 或 <cite>dict</cite>。如果字典作为过滤器的结果传递，则结果数据将作为关键字参数传播给下一个过滤器和处理程序。</p>
 <section id="base-class-for-own-filters">
-<h3>自带过滤器的基类<a class="headerlink" href="#base-class-for-own-filters" title="Link to this heading">#</a></h3>
+<h3>自带过滤器的基类<a class="headerlink" href="#base-class-for-own-filters" title="Link to this heading">¶</a></h3>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.filters.base.Filter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.filters.base.</span></span><span class="sig-name descname"><span class="pre">Filter</span></span><a class="reference internal" href="../../_modules/aiogram/filters/base.html#Filter"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.base.Filter" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.filters.base.</span></span><span class="sig-name descname"><span class="pre">Filter</span></span><a class="reference internal" href="../../_modules/aiogram/filters/base.html#Filter"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.base.Filter" title="Link to this definition">¶</a></dt>
 <dd><p>如果您想注册自己的过滤器（如内置过滤器），则需要编写该类的子类，重写 <code class="code docutils literal notranslate"><span class="pre">__call__</span></code> 方法并添加过滤器属性。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.filters.base.Filter.__call__">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/base.html#Filter.__call__"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.base.Filter.__call__" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/base.html#Filter.__call__"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.base.Filter.__call__" title="Link to this definition">¶</a></dt>
 <dd><p>应重写此方法。</p>
 <p>接受接收到的事件，并返回布尔值或 dict 值。</p>
 <dl class="field-list simple">
@@ -646,7 +656,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.filters.base.Filter.update_handler_flags">
-<span class="sig-name descname"><span class="pre">update_handler_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/base.html#Filter.update_handler_flags"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.base.Filter.update_handler_flags" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">update_handler_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/base.html#Filter.update_handler_flags"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.base.Filter.update_handler_flags" title="Link to this definition">¶</a></dt>
 <dd><p>此外，如果想使用此过滤器扩展处理程序标记，则应执行此方法</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
@@ -659,7 +669,7 @@
 
 </section>
 <section id="own-filter-example">
-<h3>自建过滤器示例<a class="headerlink" href="#own-filter-example" title="Link to this heading">#</a></h3>
+<h3>自建过滤器示例<a class="headerlink" href="#own-filter-example" title="Link to this heading">¶</a></h3>
 <p>例如，如果需要做简单的文本过滤器：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiogram</span> <span class="kn">import</span> <span class="n">Router</span>
 <span class="kn">from</span> <span class="nn">aiogram.filters</span> <span class="kn">import</span> <span class="n">Filter</span>
@@ -684,10 +694,10 @@
 </section>
 </section>
 <section id="combining-filters">
-<span id="id2"></span><h2>组合过滤器<a class="headerlink" href="#combining-filters" title="Link to this heading">#</a></h2>
+<span id="id2"></span><h2>组合过滤器<a class="headerlink" href="#combining-filters" title="Link to this heading">¶</a></h2>
 <p>通常，所有过滤器都可以通过两种方式组合</p>
 <section id="recommended-way">
-<h3>推荐方式<a class="headerlink" href="#recommended-way" title="Link to this heading">#</a></h3>
+<h3>推荐方式<a class="headerlink" href="#recommended-way" title="Link to this heading">¶</a></h3>
 <p>如果在一行中指定多个筛选器，则会以 <cite>and</cite> 为条件进行检查：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">@&lt;</span><span class="n">router</span><span class="o">&gt;.</span><span class="n">message</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;show&quot;</span><span class="p">),</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">))</span>
 </pre></div>
@@ -703,7 +713,7 @@
 </div>
 </section>
 <section id="another-possible-way">
-<h3>另一种可能的方式<a class="headerlink" href="#another-possible-way" title="Link to this heading">#</a></h3>
+<h3>另一种可能的方式<a class="headerlink" href="#another-possible-way" title="Link to this heading">¶</a></h3>
 <p>另一种方法是使用特殊函数进行组合（<code class="code docutils literal notranslate"><span class="pre">aiogram.filters</span></code> 模块中的 <code class="xref py py-func docutils literal notranslate"><span class="pre">and_f()</span></code> 、<code class="xref py py-func docutils literal notranslate"><span class="pre">or_f()</span></code> 、<code class="xref py py-func docutils literal notranslate"><span class="pre">invert_f()</span></code>）：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">and_f</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;show&quot;</span><span class="p">),</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">))</span>
 <span class="n">or_f</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;hi&quot;</span><span class="p">),</span> <span class="n">CommandStart</span><span class="p">())</span>
@@ -800,8 +810,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>

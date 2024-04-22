@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="上传文件" href="upload_file.html" /><link rel="prev" title="更新类型" href="enums/update_type.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>下载文件 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>下载文件 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="methods/delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="methods/get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/get_chat_member.html">获取聊天成员</a></li>
@@ -597,9 +607,9 @@
         </div>
         <article role="main">
           <section id="how-to-download-file">
-<h1>下载文件<a class="headerlink" href="#how-to-download-file" title="Link to this heading">#</a></h1>
+<h1>下载文件<a class="headerlink" href="#how-to-download-file" title="Link to this heading">¶</a></h1>
 <section id="download-file-manually">
-<h2>手动下载文件<a class="headerlink" href="#download-file-manually" title="Link to this heading">#</a></h2>
+<h2>手动下载文件<a class="headerlink" href="#download-file-manually" title="Link to this heading">¶</a></h2>
 <p>首先，必须获取要下载的文件的 <cite>file_id</cite> 。发送给机器人的文件信息包含在 <a class="reference external" href="types/message.html">Message</a> 中。</p>
 <p>例如，下载机器人收到的文件。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_id</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">document</span><span class="o">.</span><span class="n">file_id</span>
@@ -612,12 +622,12 @@
 </div>
 <p>然后，使用机器人对象中的 <a class="reference external" href="#download-file">download_file</a> 方法。</p>
 <section id="download-file">
-<h3>下载文件(…)<a class="headerlink" href="#download-file" title="Link to this heading">#</a></h3>
+<h3>下载文件(…)<a class="headerlink" href="#download-file" title="Link to this heading">¶</a></h3>
 <p>按 <cite>file_path</cite> 下载文件到本地目录。</p>
 <p>如果要自动创建本地目录（<code class="xref py py-obj docutils literal notranslate"><span class="pre">io.BytesIO</span></code>），请使用本地目录的默认值并处理此方法的结果。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.client.bot.Bot.download_file">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Bot.</span></span><span class="sig-name descname"><span class="pre">download_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">65536</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seek</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/aiogram/client/bot.html#Bot.download_file"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.client.bot.Bot.download_file" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Bot.</span></span><span class="sig-name descname"><span class="pre">download_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">65536</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seek</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/aiogram/client/bot.html#Bot.download_file"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.client.bot.Bot.download_file" title="Link to this definition">¶</a></dt>
 <dd><p>按文件路径将文件下载到本地目录。</p>
 <p>如果要自动创建本地目录（ <code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code>），请使用本地目录的默认值并处理此方法的结果。</p>
 <dl class="field-list simple">
@@ -636,14 +646,14 @@
 <p>下载文件有两种方式： <strong>磁盘</strong> 或 <strong>二进制 I/O 对象</strong> 。</p>
 </section>
 <section id="download-file-to-disk">
-<h3>将文件下载到磁盘<a class="headerlink" href="#download-file-to-disk" title="Link to this heading">#</a></h3>
+<h3>将文件下载到磁盘<a class="headerlink" href="#download-file-to-disk" title="Link to this heading">¶</a></h3>
 <p>要将文件下载到磁盘，必须指定文件名或下载文件的路径。在这种情况下，函数将不返回任何内容。</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">download_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;text.txt&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="download-file-to-binary-i-o-object">
-<h3>将文件下载到二进制I/O对象<a class="headerlink" href="#download-file-to-binary-i-o-object" title="Link to this heading">#</a></h3>
+<h3>将文件下载到二进制I/O对象<a class="headerlink" href="#download-file-to-binary-i-o-object" title="Link to this heading">¶</a></h3>
 <p>要将文件下载到二进制 I/O 对象，必须指定一个 <code class="xref py py-obj docutils literal notranslate"><span class="pre">typing.BinaryIO</span></code> 类型的对象，或使用默认值（<code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>）。</p>
 <p>在第一种情况下，函数将返回你的对象：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_object</span> <span class="o">=</span> <span class="n">MyBinaryIO</span><span class="p">()</span>
@@ -658,15 +668,15 @@
 </section>
 </section>
 <section id="download-file-in-short-way">
-<h2>快速下载文件<a class="headerlink" href="#download-file-in-short-way" title="Link to this heading">#</a></h2>
+<h2>快速下载文件<a class="headerlink" href="#download-file-in-short-way" title="Link to this heading">¶</a></h2>
 <p>每次手动获取 <cite>file_path</cite> 都很无聊，所以应该使用 <a class="reference external" href="#download">download</a> 方法。</p>
 <section id="download">
-<h3>下载(…)<a class="headerlink" href="#download" title="Link to this heading">#</a></h3>
+<h3>下载(…)<a class="headerlink" href="#download" title="Link to this heading">¶</a></h3>
 <p>按 <cite>file_id</cite> 或 <cite>Downloadable</cite> 对象下载文件到目的地。</p>
 <p>如果要自动创建本地目录（<code class="xref py py-obj docutils literal notranslate"><span class="pre">io.BytesIO</span></code>），请使用本地目录的默认值并处理此方法的结果。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.client.bot.Bot.download">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Bot.</span></span><span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Downloadable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">65536</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seek</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/aiogram/client/bot.html#Bot.download"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.client.bot.Bot.download" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Bot.</span></span><span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Downloadable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">65536</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seek</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BinaryIO</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/aiogram/client/bot.html#Bot.download"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.client.bot.Bot.download" title="Link to this definition">¶</a></dt>
 <dd><p>按 file_id 或可下载对象将文件下载到本地目录。</p>
 <p>如果要自动创建本地目录（ <code class="xref py py-class docutils literal notranslate"><span class="pre">io.BytesIO</span></code>），请使用本地目录的默认值并处理此方法的结果。</p>
 <dl class="field-list simple">
@@ -776,8 +786,8 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+</div><script src="../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>

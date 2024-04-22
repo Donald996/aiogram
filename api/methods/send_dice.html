@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="发送文件" href="send_document.html" /><link rel="prev" title="发送联系方式" href="send_contact.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>发送骰子 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>发送骰子 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_chat_member.html">获取聊天成员</a></li>
@@ -597,64 +607,77 @@
         </div>
         <article role="main">
           <section id="senddice">
-<h1>发送骰子<a class="headerlink" href="#senddice" title="Link to this heading">#</a></h1>
+<h1>发送骰子<a class="headerlink" href="#senddice" title="Link to this heading">¶</a></h1>
 <p>Returns: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py class" id="module-aiogram.methods.send_dice">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.send_dice.</span></span><span class="sig-name descname"><span class="pre">SendDice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emoji:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">~aiogram.types.reply_parameters.ReplyParameters</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove</span> <span class="pre">|</span> <span class="pre">~aiogram.types.force_reply.ForceReply</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/send_dice.html#SendDice"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.send_dice.SendDice" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.send_dice.</span></span><span class="sig-name descname"><span class="pre">SendDice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">business_connection_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emoji:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">~aiogram.types.reply_parameters.ReplyParameters</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove</span> <span class="pre">|</span> <span class="pre">~aiogram.types.force_reply.ForceReply</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/send_dice.html#SendDice"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.send_dice.SendDice" title="Link to this definition">¶</a></dt>
 <dd><p>使用此方法发送一个显示随机值的动画表情符号。成功时，将返回发送的  <a class="reference internal" href="../types/message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#senddice">https://core.telegram.org/bots/api#senddice</a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.chat_id">
-<span class="sig-name descname"><span class="pre">chat_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.chat_id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">chat_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.chat_id" title="Link to this definition">¶</a></dt>
 <dd><p>目标聊天或目标频道的唯一标识符（格式为:code:<cite>&#64;channelusername</cite>）</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.business_connection_id">
+<span class="sig-name descname"><span class="pre">business_connection_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.business_connection_id" title="Link to this definition">¶</a></dt>
+<dd><p>Unique identifier of the business connection on behalf of which the message will be sent</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.message_thread_id">
-<span class="sig-name descname"><span class="pre">message_thread_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.message_thread_id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">message_thread_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.message_thread_id" title="Link to this definition">¶</a></dt>
 <dd><p>论坛中目标消息主题（话题）的唯一标识符；仅适用于论坛超级群组</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.emoji">
-<span class="sig-name descname"><span class="pre">emoji</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.emoji" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">emoji</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.emoji" title="Link to this definition">¶</a></dt>
 <dd><p>动画基于的 Emoji。目前，必须是 ‘🎲’, ‘🎯’, ‘🏀’, ‘⚽’, ‘🎳’, 或 ‘🎰’ 中的一个。🎲、🎯 和 🎳 的骰子可以有值 1-6，🏀 和 ⚽ 的骰子可以有值 1-5，🎰 的骰子可以有值 1-64。默认为 ‘🎲’。</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.disable_notification">
-<span class="sig-name descname"><span class="pre">disable_notification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.disable_notification" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">disable_notification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.disable_notification" title="Link to this definition">¶</a></dt>
 <dd><p>发送消息“静默 &lt;<a class="reference external" href="https://telegram.org/blog/channels-2-0#silent-messages">https://telegram.org/blog/channels-2-0#silent-messages</a>&gt;`_。用户将收到无声的通知。</p>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.model_computed_fields" title="Link to this definition">¶</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.model_post_init">
+<span class="sig-name descname"><span class="pre">model_post_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_ModelMetaclass__context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.model_post_init" title="Link to this definition">¶</a></dt>
+<dd><p>We need to both initialize private attributes and call the user-defined model_post_init
+method.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.protect_content">
-<span class="sig-name descname"><span class="pre">protect_content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.protect_content" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">protect_content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.protect_content" title="Link to this definition">¶</a></dt>
 <dd><p>保护发送的消息内容免受转发</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.model_computed_fields">
-<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.model_computed_fields" title="Link to this definition">#</a></dt>
-<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.reply_parameters">
-<span class="sig-name descname"><span class="pre">reply_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_parameters.html#aiogram.types.reply_parameters.ReplyParameters" title="aiogram.types.reply_parameters.ReplyParameters"><span class="pre">ReplyParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.reply_parameters" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">reply_parameters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_parameters.html#aiogram.types.reply_parameters.ReplyParameters" title="aiogram.types.reply_parameters.ReplyParameters"><span class="pre">ReplyParameters</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.reply_parameters" title="Link to this definition">¶</a></dt>
 <dd><p>用于回复消息的描述</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.reply_markup">
-<span class="sig-name descname"><span class="pre">reply_markup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><span class="pre">InlineKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_markup.html#aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup" title="aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup"><span class="pre">ReplyKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_remove.html#aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove" title="aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove"><span class="pre">ReplyKeyboardRemove</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/force_reply.html#aiogram.types.force_reply.ForceReply" title="aiogram.types.force_reply.ForceReply"><span class="pre">ForceReply</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.reply_markup" title="Link to this definition">#</a></dt>
-<dd><p>附加接口选项。用于“内联键盘”，“自定义回复键盘”，删除回复键盘或强制用户回复的JSON序列化对象。</p>
+<span class="sig-name descname"><span class="pre">reply_markup</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><span class="pre">InlineKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_markup.html#aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup" title="aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup"><span class="pre">ReplyKeyboardMarkup</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/reply_keyboard_remove.html#aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove" title="aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove"><span class="pre">ReplyKeyboardRemove</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="../types/force_reply.html#aiogram.types.force_reply.ForceReply" title="aiogram.types.force_reply.ForceReply"><span class="pre">ForceReply</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.reply_markup" title="Link to this definition">¶</a></dt>
+<dd><p>Additional interface options. A JSON-serialized object for an <a class="reference external" href="https://core.telegram.org/bots/features#inline-keyboards">inline keyboard</a>, <a class="reference external" href="https://core.telegram.org/bots/features#keyboards">custom reply keyboard</a>, instructions to remove a reply keyboard or to force a reply from the user. Not supported for messages sent on behalf of a business account</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.allow_sending_without_reply">
-<span class="sig-name descname"><span class="pre">allow_sending_without_reply</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.allow_sending_without_reply" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">allow_sending_without_reply</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.allow_sending_without_reply" title="Link to this definition">¶</a></dt>
 <dd><p>如果找不到指定的回复消息，即使找不到指定的回复消息，也应传递 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">自 API:7.0 版本弃用: </span><a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">https://core.telegram.org/bots/api-changelog#december-29-2023</a></p>
@@ -663,7 +686,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.send_dice.SendDice.reply_to_message_id">
-<span class="sig-name descname"><span class="pre">reply_to_message_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.reply_to_message_id" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">reply_to_message_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_dice.SendDice.reply_to_message_id" title="Link to this definition">¶</a></dt>
 <dd><p>如果消息是回复，则为原始消息的ID.</p>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">自 API:7.0 版本弃用: </span><a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">https://core.telegram.org/bots/api-changelog#december-29-2023</a></p>
@@ -673,35 +696,35 @@
 </dd></dl>
 
 <section id="usage">
-<h2>用法<a class="headerlink" href="#usage" title="Link to this heading">#</a></h2>
+<h2>用法<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <section id="as-bot-method">
-<h3>作为机器人方法<a class="headerlink" href="#as-bot-method" title="Link to this heading">#</a></h3>
+<h3>作为机器人方法<a class="headerlink" href="#as-bot-method" title="Link to this heading">¶</a></h3>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="p">:</span> <span class="n">Message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">send_dice</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="method-as-object">
-<h3>方法作为对象<a class="headerlink" href="#method-as-object" title="Link to this heading">#</a></h3>
+<h3>方法作为对象<a class="headerlink" href="#method-as-object" title="Link to this heading">¶</a></h3>
 <p>导入：</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.methods.send_dice</span> <span class="pre">import</span> <span class="pre">SendDice</span></code></p></li>
 <li><p>alias: <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">aiogram.methods</span> <span class="pre">import</span> <span class="pre">SendDice</span></code></p></li>
 </ul>
 <section id="with-specific-bot">
-<h4>使用特定的机器人<a class="headerlink" href="#with-specific-bot" title="Link to this heading">#</a></h4>
+<h4>使用特定的机器人<a class="headerlink" href="#with-specific-bot" title="Link to this heading">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span><span class="p">:</span> <span class="n">Message</span> <span class="o">=</span> <span class="k">await</span> <span class="n">bot</span><span class="p">(</span><span class="n">SendDice</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
 <section id="as-reply-into-webhook-in-handler">
-<h4>作为处理程序的Webhook回复<a class="headerlink" href="#as-reply-into-webhook-in-handler" title="Link to this heading">#</a></h4>
+<h4>作为处理程序的Webhook回复<a class="headerlink" href="#as-reply-into-webhook-in-handler" title="Link to this heading">¶</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">SendDice</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="as-shortcut-from-received-object">
-<h3>作为从接收的对象的快捷方式<a class="headerlink" href="#as-shortcut-from-received-object" title="Link to this heading">#</a></h3>
+<h3>作为从接收的对象的快捷方式<a class="headerlink" href="#as-shortcut-from-received-object" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference internal" href="../types/message.html#aiogram.types.message.Message.answer_dice" title="aiogram.types.message.Message.answer_dice"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.message.Message.answer_dice()</span></code></a></p></li>
 <li><p><a class="reference internal" href="../types/message.html#aiogram.types.message.Message.reply_dice" title="aiogram.types.message.Message.reply_dice"><code class="xref py py-meth docutils literal notranslate"><span class="pre">aiogram.types.message.Message.reply_dice()</span></code></a></p></li>
@@ -771,11 +794,13 @@
 <li><a class="reference internal" href="#">发送骰子</a><ul>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice"><code class="docutils literal notranslate"><span class="pre">SendDice</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.chat_id"><code class="docutils literal notranslate"><span class="pre">SendDice.chat_id</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.business_connection_id"><code class="docutils literal notranslate"><span class="pre">SendDice.business_connection_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.message_thread_id"><code class="docutils literal notranslate"><span class="pre">SendDice.message_thread_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.emoji"><code class="docutils literal notranslate"><span class="pre">SendDice.emoji</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendDice.disable_notification</span></code></a></li>
-<li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.protect_content"><code class="docutils literal notranslate"><span class="pre">SendDice.protect_content</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendDice.model_computed_fields</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendDice.model_post_init()</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.protect_content"><code class="docutils literal notranslate"><span class="pre">SendDice.protect_content</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendDice.reply_parameters</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendDice.reply_markup</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_dice.SendDice.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendDice.allow_sending_without_reply</span></code></a></li>
@@ -803,8 +828,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>

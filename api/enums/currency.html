@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="骰子表情符号" href="dice_emoji.html" /><link rel="prev" title="内容类型" href="content_type.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>货币 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>货币 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../methods/delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_member.html">获取聊天成员</a></li>
@@ -597,440 +607,440 @@
         </div>
         <article role="main">
           <section id="module-aiogram.enums.currency">
-<span id="currency"></span><h1>货币<a class="headerlink" href="#module-aiogram.enums.currency" title="Link to this heading">#</a></h1>
+<span id="currency"></span><h1>货币<a class="headerlink" href="#module-aiogram.enums.currency" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.enums.currency.</span></span><span class="sig-name descname"><span class="pre">Currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/enums/currency.html#Currency"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.enums.currency.Currency" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.enums.currency.</span></span><span class="sig-name descname"><span class="pre">Currency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/enums/currency.html#Currency"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.enums.currency.Currency" title="Link to this definition">¶</a></dt>
 <dd><p>Telegram Bot API支持的货币</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/payments#supported-currencies">https://core.telegram.org/bots/payments#supported-currencies</a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.AED">
-<span class="sig-name descname"><span class="pre">AED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AED'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AED" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">AED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AED'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AED" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.AFN">
-<span class="sig-name descname"><span class="pre">AFN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AFN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AFN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">AFN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AFN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AFN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.ALL">
-<span class="sig-name descname"><span class="pre">ALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ALL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ALL" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ALL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ALL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ALL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.AMD">
-<span class="sig-name descname"><span class="pre">AMD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AMD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AMD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">AMD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AMD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AMD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.ARS">
-<span class="sig-name descname"><span class="pre">ARS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ARS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ARS" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ARS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ARS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ARS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.AUD">
-<span class="sig-name descname"><span class="pre">AUD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AUD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AUD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">AUD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AUD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AUD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.AZN">
-<span class="sig-name descname"><span class="pre">AZN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AZN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AZN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">AZN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AZN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.AZN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BAM">
-<span class="sig-name descname"><span class="pre">BAM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BAM'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BAM" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BAM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BAM'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BAM" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BDT">
-<span class="sig-name descname"><span class="pre">BDT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BDT'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BDT" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BDT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BDT'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BDT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BGN">
-<span class="sig-name descname"><span class="pre">BGN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BGN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BGN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BGN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BGN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BGN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BND">
-<span class="sig-name descname"><span class="pre">BND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BND'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BND" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BND'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BND" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BOB">
-<span class="sig-name descname"><span class="pre">BOB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BOB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BOB" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BOB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BOB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BOB" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BRL">
-<span class="sig-name descname"><span class="pre">BRL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BRL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BRL" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BRL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BRL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BRL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.BYN">
-<span class="sig-name descname"><span class="pre">BYN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BYN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BYN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BYN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'BYN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.BYN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.CAD">
-<span class="sig-name descname"><span class="pre">CAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CAD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CAD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CAD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CAD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.CHF">
-<span class="sig-name descname"><span class="pre">CHF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CHF'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CHF" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CHF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CHF'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CHF" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.CLP">
-<span class="sig-name descname"><span class="pre">CLP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CLP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CLP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CLP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CLP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CLP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.CNY">
-<span class="sig-name descname"><span class="pre">CNY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CNY'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CNY" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CNY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CNY'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CNY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.COP">
-<span class="sig-name descname"><span class="pre">COP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'COP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.COP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">COP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'COP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.COP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.CRC">
-<span class="sig-name descname"><span class="pre">CRC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CRC'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CRC" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CRC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CRC'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CRC" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.CZK">
-<span class="sig-name descname"><span class="pre">CZK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CZK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CZK" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">CZK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CZK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.CZK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.DKK">
-<span class="sig-name descname"><span class="pre">DKK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DKK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.DKK" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">DKK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DKK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.DKK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.DOP">
-<span class="sig-name descname"><span class="pre">DOP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DOP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.DOP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">DOP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DOP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.DOP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.DZD">
-<span class="sig-name descname"><span class="pre">DZD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DZD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.DZD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">DZD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'DZD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.DZD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.EGP">
-<span class="sig-name descname"><span class="pre">EGP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EGP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.EGP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">EGP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EGP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.EGP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.ETB">
-<span class="sig-name descname"><span class="pre">ETB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ETB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ETB" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ETB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ETB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ETB" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.EUR">
-<span class="sig-name descname"><span class="pre">EUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EUR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.EUR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">EUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'EUR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.EUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.GBP">
-<span class="sig-name descname"><span class="pre">GBP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GBP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.GBP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">GBP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GBP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.GBP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.GEL">
-<span class="sig-name descname"><span class="pre">GEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GEL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.GEL" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">GEL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GEL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.GEL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.GTQ">
-<span class="sig-name descname"><span class="pre">GTQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GTQ'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.GTQ" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">GTQ</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GTQ'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.GTQ" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.HKD">
-<span class="sig-name descname"><span class="pre">HKD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HKD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HKD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">HKD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HKD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HKD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.HNL">
-<span class="sig-name descname"><span class="pre">HNL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HNL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HNL" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">HNL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HNL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HNL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.HRK">
-<span class="sig-name descname"><span class="pre">HRK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HRK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HRK" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">HRK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HRK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HRK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.HUF">
-<span class="sig-name descname"><span class="pre">HUF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HUF'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HUF" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">HUF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'HUF'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.HUF" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.IDR">
-<span class="sig-name descname"><span class="pre">IDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IDR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.IDR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">IDR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'IDR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.IDR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.ILS">
-<span class="sig-name descname"><span class="pre">ILS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ILS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ILS" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ILS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ILS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ILS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.INR">
-<span class="sig-name descname"><span class="pre">INR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'INR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.INR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">INR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'INR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.INR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.ISK">
-<span class="sig-name descname"><span class="pre">ISK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ISK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ISK" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ISK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ISK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ISK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.JMD">
-<span class="sig-name descname"><span class="pre">JMD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'JMD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.JMD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">JMD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'JMD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.JMD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.JPY">
-<span class="sig-name descname"><span class="pre">JPY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'JPY'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.JPY" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">JPY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'JPY'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.JPY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.KES">
-<span class="sig-name descname"><span class="pre">KES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KES'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KES" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">KES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KES'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KES" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.KGS">
-<span class="sig-name descname"><span class="pre">KGS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KGS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KGS" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">KGS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KGS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KGS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.KRW">
-<span class="sig-name descname"><span class="pre">KRW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KRW'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KRW" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">KRW</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KRW'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KRW" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.KZT">
-<span class="sig-name descname"><span class="pre">KZT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KZT'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KZT" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">KZT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'KZT'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.KZT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.LBP">
-<span class="sig-name descname"><span class="pre">LBP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LBP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.LBP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">LBP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LBP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.LBP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.LKR">
-<span class="sig-name descname"><span class="pre">LKR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LKR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.LKR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">LKR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LKR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.LKR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MAD">
-<span class="sig-name descname"><span class="pre">MAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MAD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MAD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MAD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MAD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MDL">
-<span class="sig-name descname"><span class="pre">MDL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MDL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MDL" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MDL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MDL'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MDL" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MNT">
-<span class="sig-name descname"><span class="pre">MNT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MNT'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MNT" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MNT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MNT'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MNT" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MUR">
-<span class="sig-name descname"><span class="pre">MUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MUR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MUR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MUR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MUR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MUR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MVR">
-<span class="sig-name descname"><span class="pre">MVR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MVR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MVR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MVR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MVR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MVR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MXN">
-<span class="sig-name descname"><span class="pre">MXN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MXN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MXN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MXN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MXN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MXN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MYR">
-<span class="sig-name descname"><span class="pre">MYR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MYR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MYR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MYR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MYR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MYR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.MZN">
-<span class="sig-name descname"><span class="pre">MZN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MZN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MZN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">MZN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'MZN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.MZN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.NGN">
-<span class="sig-name descname"><span class="pre">NGN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NGN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NGN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">NGN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NGN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NGN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.NIO">
-<span class="sig-name descname"><span class="pre">NIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NIO'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NIO" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">NIO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NIO'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NIO" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.NOK">
-<span class="sig-name descname"><span class="pre">NOK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NOK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NOK" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">NOK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NOK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NOK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.NPR">
-<span class="sig-name descname"><span class="pre">NPR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NPR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NPR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">NPR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NPR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NPR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.NZD">
-<span class="sig-name descname"><span class="pre">NZD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NZD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NZD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">NZD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NZD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.NZD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.PAB">
-<span class="sig-name descname"><span class="pre">PAB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PAB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PAB" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PAB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PAB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PAB" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.PEN">
-<span class="sig-name descname"><span class="pre">PEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PEN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PEN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PEN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PEN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.PHP">
-<span class="sig-name descname"><span class="pre">PHP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PHP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PHP" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PHP</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PHP'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PHP" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.PKR">
-<span class="sig-name descname"><span class="pre">PKR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PKR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PKR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PKR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PKR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PKR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.PLN">
-<span class="sig-name descname"><span class="pre">PLN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PLN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PLN" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PLN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PLN'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PLN" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.PYG">
-<span class="sig-name descname"><span class="pre">PYG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PYG'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PYG" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">PYG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'PYG'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.PYG" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.QAR">
-<span class="sig-name descname"><span class="pre">QAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'QAR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.QAR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">QAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'QAR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.QAR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.RON">
-<span class="sig-name descname"><span class="pre">RON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RON'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.RON" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">RON</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RON'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.RON" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.RSD">
-<span class="sig-name descname"><span class="pre">RSD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RSD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.RSD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">RSD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RSD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.RSD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.RUB">
-<span class="sig-name descname"><span class="pre">RUB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RUB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.RUB" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">RUB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'RUB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.RUB" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.SAR">
-<span class="sig-name descname"><span class="pre">SAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SAR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.SAR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">SAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SAR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.SAR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.SEK">
-<span class="sig-name descname"><span class="pre">SEK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SEK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.SEK" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">SEK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SEK'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.SEK" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.SGD">
-<span class="sig-name descname"><span class="pre">SGD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SGD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.SGD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">SGD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'SGD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.SGD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.THB">
-<span class="sig-name descname"><span class="pre">THB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'THB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.THB" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">THB</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'THB'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.THB" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.TJS">
-<span class="sig-name descname"><span class="pre">TJS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TJS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TJS" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">TJS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TJS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TJS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.TRY">
-<span class="sig-name descname"><span class="pre">TRY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TRY'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TRY" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">TRY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TRY'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TRY" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.TTD">
-<span class="sig-name descname"><span class="pre">TTD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TTD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TTD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">TTD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TTD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TTD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.TWD">
-<span class="sig-name descname"><span class="pre">TWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TWD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TWD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">TWD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TWD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TWD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.TZS">
-<span class="sig-name descname"><span class="pre">TZS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TZS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TZS" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">TZS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'TZS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.TZS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.UAH">
-<span class="sig-name descname"><span class="pre">UAH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UAH'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UAH" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">UAH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UAH'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UAH" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.UGX">
-<span class="sig-name descname"><span class="pre">UGX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UGX'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UGX" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">UGX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UGX'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UGX" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.USD">
-<span class="sig-name descname"><span class="pre">USD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.USD" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">USD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'USD'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.USD" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.UYU">
-<span class="sig-name descname"><span class="pre">UYU</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UYU'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UYU" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">UYU</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UYU'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UYU" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.UZS">
-<span class="sig-name descname"><span class="pre">UZS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UZS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UZS" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">UZS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UZS'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.UZS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.VND">
-<span class="sig-name descname"><span class="pre">VND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VND'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.VND" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">VND</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'VND'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.VND" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.YER">
-<span class="sig-name descname"><span class="pre">YER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'YER'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.YER" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">YER</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'YER'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.YER" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.enums.currency.Currency.ZAR">
-<span class="sig-name descname"><span class="pre">ZAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ZAR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ZAR" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ZAR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ZAR'</span></em><a class="headerlink" href="#aiogram.enums.currency.Currency.ZAR" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1193,8 +1203,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>

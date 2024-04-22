@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="存储" href="storages.html" /><link rel="prev" title="网络钩子(Webhook)" href="../webhook.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>有限状态机(FSM) - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>有限状态机(FSM) - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat_member.html">获取聊天成员</a></li>
@@ -597,7 +607,7 @@
         </div>
         <article role="main">
           <section id="finite-state-machine">
-<span id="id1"></span><h1>有限状态机(FSM)<a class="headerlink" href="#finite-state-machine" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>有限状态机(FSM)<a class="headerlink" href="#finite-state-machine" title="Link to this heading">¶</a></h1>
 <blockquote>
 <div><p>有限状态机（FSM）或有限状态自动机（FSA，复数：automata）、有限自动机或简称状态机，是一种计算数学模型。</p>
 <p>它是一种抽象的机器，在任何给定时间内都可以处于有限状态中的一种状态。FSM 可以根据某些输入从一种状态转换到另一种状态；从一种状态转换到另一种状态称为转换。</p>
@@ -605,12 +615,12 @@
 <hr><p>来源: <a class="reference external" href="wiki">WikiPedia</a></p>
 </div></blockquote>
 <section id="usage-example">
-<h2>使用示例<a class="headerlink" href="#usage-example" title="Link to this heading">#</a></h2>
+<h2>使用示例<a class="headerlink" href="#usage-example" title="Link to this heading">¶</a></h2>
 <p>并非机器人的所有功能都可以作为单个处理程序实现，例如，您需要在单独的步骤中收集用户的一些数据，您需要使用FSM。</p>
 <img alt="FSM示例" src="../../_images/fsm_example.png" />
 <p>让我们看看如何一步一步地做到这一点</p>
 <section id="step-by-step">
-<h3>一步一步<a class="headerlink" href="#step-by-step" title="Link to this heading">#</a></h3>
+<h3>一步一步<a class="headerlink" href="#step-by-step" title="Link to this heading">¶</a></h3>
 <p>在处理任何状态之前，您需要指定要处理的状态类型</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Form</span><span class="p">(</span><span class="n">StatesGroup</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
@@ -725,7 +735,7 @@
 </div>
 </section>
 <section id="complete-example">
-<h3>完整示例<a class="headerlink" href="#complete-example" title="Link to this heading">#</a></h3>
+<h3>完整示例<a class="headerlink" href="#complete-example" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kn">import</span> <span class="nn">asyncio</span>
 <span class="linenos">  2</span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="linenos">  3</span><span class="kn">import</span> <span class="nn">sys</span>
@@ -867,7 +877,7 @@
 </section>
 </section>
 <section id="read-more">
-<h2>阅读更多<a class="headerlink" href="#read-more" title="Link to this heading">#</a></h2>
+<h2>阅读更多<a class="headerlink" href="#read-more" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="storages.html">存储</a><ul>
@@ -1028,8 +1038,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>

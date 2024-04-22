@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="例外情况" href="exception.html" /><link rel="prev" title="魔法数据(MagicData)" href="magic_data.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>回调数据工厂和过滤器 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>回调数据工厂和过滤器 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../api/types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_chat_member.html">获取聊天成员</a></li>
@@ -597,16 +607,16 @@
         </div>
         <article role="main">
           <section id="callback-data-factory-filter">
-<span id="callback-data-factory"></span><h1>回调数据工厂和过滤器<a class="headerlink" href="#callback-data-factory-filter" title="Link to this heading">#</a></h1>
+<span id="callback-data-factory"></span><h1>回调数据工厂和过滤器<a class="headerlink" href="#callback-data-factory-filter" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.filters.callback_data.CallbackData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.filters.callback_data.</span></span><span class="sig-name descname"><span class="pre">CallbackData</span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.filters.callback_data.</span></span><span class="sig-name descname"><span class="pre">CallbackData</span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData" title="Link to this definition">¶</a></dt>
 <dd><p>回调数据包装器的基类</p>
 <p>该类应作为用户自定义回调的超类使用。</p>
 <p>定义前缀时需要输入类关键字 <code class="code docutils literal notranslate"><span class="pre">prefix</span></code>，定义分隔符时也可以输入参数 <code class="code docutils literal notranslate"><span class="pre">sep</span></code> （默认为 <code class="code docutils literal notranslate"><span class="pre">:</span></code>）。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.filters.callback_data.CallbackData.pack">
-<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData.pack"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.pack" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData.pack"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.pack" title="Link to this definition">¶</a></dt>
 <dd><p>生成回调数据字符串</p>
 <dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
@@ -617,7 +627,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.filters.callback_data.CallbackData.unpack">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unpack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData.unpack"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.unpack" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unpack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData.unpack"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.unpack" title="Link to this definition">¶</a></dt>
 <dd><p>解析回调数据字符串</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
@@ -631,7 +641,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="aiogram.filters.callback_data.CallbackData.filter">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">MagicFilter</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CallbackQueryFilter</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData.filter"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.filter" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rule</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">MagicFilter</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">CallbackQueryFilter</span></span></span><a class="reference internal" href="../../_modules/aiogram/filters/callback_data.html#CallbackData.filter"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.filter" title="Link to this definition">¶</a></dt>
 <dd><p>使用规则为回调查询生成过滤器</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
@@ -645,14 +655,14 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.filters.callback_data.CallbackData.model_computed_fields">
-<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.model_computed_fields" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.filters.callback_data.CallbackData.model_computed_fields" title="Link to this definition">¶</a></dt>
 <dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
 </dd></dl>
 
 </dd></dl>
 
 <section id="usage">
-<h2>用法<a class="headerlink" href="#usage" title="Link to this heading">#</a></h2>
+<h2>用法<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
 <p>创建 <code class="code docutils literal notranslate"><span class="pre">CallbackData</span></code> 的子类：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyCallback</span><span class="p">(</span><span class="n">CallbackData</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;my&quot;</span><span class="p">):</span>
     <span class="n">foo</span><span class="p">:</span> <span class="nb">str</span>
@@ -729,7 +739,7 @@
 </div>
 </section>
 <section id="known-limitations">
-<h2>已知限制<a class="headerlink" href="#known-limitations" title="Link to this heading">#</a></h2>
+<h2>已知限制<a class="headerlink" href="#known-limitations" title="Link to this heading">¶</a></h2>
 <p>允许的类型及其子类：</p>
 <ul class="simple">
 <li><p><code class="code docutils literal notranslate"><span class="pre">str</span></code></p></li>
@@ -825,8 +835,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>

@@ -5,8 +5,8 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="类型" href="../types/index.html" /><link rel="prev" title="aiohttp" href="aiohttp.html" />
 
-    <!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>客户端中间件 - aiogram 3.4.1 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
+        <title>客户端中间件 - aiogram 3.5.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -125,7 +125,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.4.1 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.5.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -151,7 +151,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.4.1 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +174,7 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="../types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope.html">命令范围</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_command_scope_all_chat_administrators.html">群聊管理员命令范围</a></li>
@@ -186,6 +187,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_description.html">介绍</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_name.html">名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/bot_short_description.html">签名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_connection.html">BusinessConnection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_intro.html">BusinessIntro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_location.html">BusinessLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_messages_deleted.html">BusinessMessagesDeleted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours.html">BusinessOpeningHours</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/business_opening_hours_interval.html">BusinessOpeningHoursInterval</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/chat_administrator_rights.html">聊天管理员权限</a></li>
@@ -275,6 +282,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_keyboard_remove.html">删除回复键盘</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/reply_parameters.html">回复参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/response_parameters.html">响应参数</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/shared_user.html">SharedUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/story.html">故事</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/switch_inline_query_chosen_chat.html">选择内联查询选择的聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/text_quote.html">文本引用</a></li>
@@ -365,6 +373,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../methods/delete_sticker_set.html">删除贴纸集</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_custom_emoji_stickers.html">获取自定义表情贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_sticker_set.html">获取贴纸集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/replace_sticker_in_set.html">replaceStickerInSet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/send_sticker.html">发送贴纸</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/set_custom_emoji_sticker_set_thumbnail.html">设置自定义表情贴纸集缩略图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/set_sticker_emoji_list.html">设置贴纸表情列表</a></li>
@@ -396,6 +405,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../methods/export_chat_invite_link.html">导出聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/forward_message.html">转发消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/forward_messages.html">转发多条消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_business_connection.html">getBusinessConnection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_chat.html">获取聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_administrators.html">获取聊天管理员</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_chat_member.html">获取聊天成员</a></li>
@@ -597,7 +607,7 @@
         </div>
         <article role="main">
           <section id="client-session-middlewares">
-<h1>客户端中间件<a class="headerlink" href="#client-session-middlewares" title="Link to this heading">#</a></h1>
+<h1>客户端中间件<a class="headerlink" href="#client-session-middlewares" title="Link to this heading">¶</a></h1>
 <p>在某些情况下，您可能希望向客户会话中添加一些中间件，以自定义客户端的行为。</p>
 <p>一些有用的案例是：</p>
 <ul class="simple">
@@ -608,15 +618,15 @@
 </ul>
 <p>所以，你可以使用客户端会话中间件。客户端会话中间件是一个接收请求和下一个要调用的中间件的函数（或可调用类）。中间件可以修改请求，然后调用下一个中间件继续请求处理。</p>
 <section id="how-to-register-client-session-middleware">
-<h2>如何注册客户端会话中间件？<a class="headerlink" href="#how-to-register-client-session-middleware" title="Link to this heading">#</a></h2>
+<h2>如何注册客户端会话中间件？<a class="headerlink" href="#how-to-register-client-session-middleware" title="Link to this heading">¶</a></h2>
 <section id="register-using-register-method">
-<h3>使用register方法注册<a class="headerlink" href="#register-using-register-method" title="Link to this heading">#</a></h3>
+<h3>使用register方法注册<a class="headerlink" href="#register-using-register-method" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">bot</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">middleware</span><span class="p">(</span><span class="n">RequestLogging</span><span class="p">(</span><span class="n">ignore_methods</span><span class="o">=</span><span class="p">[</span><span class="n">GetUpdates</span><span class="p">]))</span>
 </pre></div>
 </div>
 </section>
 <section id="register-using-decorator">
-<h3>使用装饰器进行注册<a class="headerlink" href="#register-using-decorator" title="Link to this heading">#</a></h3>
+<h3>使用装饰器进行注册<a class="headerlink" href="#register-using-decorator" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@bot</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">middleware</span><span class="p">()</span>
 <span class="k">async</span> <span class="k">def</span> <span class="nf">my_middleware</span><span class="p">(</span>
     <span class="n">make_request</span><span class="p">:</span> <span class="n">NextRequestMiddlewareType</span><span class="p">[</span><span class="n">TelegramType</span><span class="p">],</span>
@@ -630,9 +640,9 @@
 </section>
 </section>
 <section id="example">
-<h2>例子<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<h2>例子<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
 <section id="class-based-session-middleware">
-<h3>基于类的会话中间件<a class="headerlink" href="#class-based-session-middleware" title="Link to this heading">#</a></h3>
+<h3>基于类的会话中间件<a class="headerlink" href="#class-based-session-middleware" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">RequestLogging</span><span class="p">(</span><span class="n">BaseRequestMiddleware</span><span class="p">):</span>
 <span class="linenos"> 2</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignore_methods</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Type</span><span class="p">[</span><span class="n">TelegramMethod</span><span class="p">[</span><span class="n">Any</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="linenos"> 3</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -663,7 +673,7 @@
 </div>
 </section>
 <section id="function-based-session-middleware">
-<h3>基于函数的会话中间件<a class="headerlink" href="#function-based-session-middleware" title="Link to this heading">#</a></h3>
+<h3>基于函数的会话中间件<a class="headerlink" href="#function-based-session-middleware" title="Link to this heading">¶</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
     <span class="n">make_request</span><span class="p">:</span> <span class="n">NextRequestMiddlewareType</span><span class="p">[</span><span class="n">TelegramType</span><span class="p">],</span>
@@ -758,8 +768,8 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=cfceb4e6"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+</div><script src="../../_static/documentation_options.js?v=424a1c66"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
