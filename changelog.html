@@ -608,19 +608,18 @@
         <article role="main">
           <section id="changelog">
 <span id="aiogram-changes"></span><h1>更新日志<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
-<section id="release-unreleased-draft-2024-04-22">
-<h2>3.5.0 [UNRELEASED DRAFT] (2024-04-22)<a class="headerlink" href="#release-unreleased-draft-2024-04-22" title="Link to this heading">¶</a></h2>
+<section id="release-unreleased-draft-2024-04-23">
+<h2><a href="#id499"><span class="problematic" id="id500">|发布|</span></a> [未发布草案] (2024-04-23)<a class="headerlink" href="#release-unreleased-draft-2024-04-23" title="Link to this heading">¶</a></h2>
 <section id="features">
 <h3>特性<a class="headerlink" href="#features" title="Link to this heading">¶</a></h3>
 <ul>
-<li><p>Added <strong>message_thread_id</strong> parameter to <strong>ChatActionSender</strong> class methods.
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1437">#1437</a></p></li>
-<li><p>Added context manager interface to Bot instance, from now you can use:</p>
+<li><p>在 <strong>ChatActionSender</strong> 中添加了 <strong>message_thread_id</strong> 的支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1249">#1249</a></p></li>
+<li><p>为机器人实例添加了上下文管理器接口，从现在起您可以使用该接口：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">with</span> <span class="n">Bot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="k">as</span> <span class="n">bot</span><span class="p">:</span>
     <span class="o">...</span>
 </pre></div>
 </div>
-<p>instead of</p>
+<p>而不是</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">with</span> <span class="n">Bot</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">context</span><span class="p">():</span>
     <span class="o">...</span>
 </pre></div>
@@ -639,8 +638,7 @@
 </ul>
 <p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1424">#1424</a></p>
 </li>
-<li><p>Fixed poll answer FSM context by handling <code class="code docutils literal notranslate"><span class="pre">voter_chat</span></code> for <code class="code docutils literal notranslate"><span class="pre">poll_answer</span></code> event
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1436">#1436</a></p></li>
+<li><p>通过处理 <code class="code docutils literal notranslate"><span class="pre">poll_answer</span></code> 事件的 <code class="code docutils literal notranslate"><span class="pre">voter_chat</span></code> 修正了投票答案 FSM 上下文 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1436">#1436</a></p></li>
 </ul>
 </section>
 <section id="improved-documentation">
@@ -652,10 +650,8 @@
 <section id="misc">
 <h3>其他<a class="headerlink" href="#misc" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p>Added full support of <a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-31-2024">Bot API 7.2</a>
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1444">#1444</a></p></li>
-<li><p>Loosened pydantic version upper restriction from <code class="docutils literal notranslate"><span class="pre">&lt;2.7</span></code> to <a href="#id7"><span class="problematic" id="id8">``</span></a>&lt;2.8``4.4
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1460">#1460</a></p></li>
+<li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-31-2024">Bot API 7.2</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1444">#1444</a> 的全面支持</p></li>
+<li><p>将 pydantic 版本上限从 <code class="docutils literal notranslate"><span class="pre">&lt;2.7</span></code> 放宽到 <code class="docutils literal notranslate"><span class="pre">&lt;2.8</span></code> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1460">#1460</a></p></li>
 </ul>
 </section>
 </section>
@@ -1000,9 +996,7 @@
 <li><p>完全支持了 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-9-2023">Bot API 6.6</a></p>
 <div class="admonition danger">
 <p class="admonition-title">危险</p>
-<p>Note that this issue has breaking changes described in the Bot API changelog,
-this changes is not breaking in the API but breaking inside aiogram because
-Beta stage is not finished.</p>
+<p>请注意，该问题涉及机器人应用程序接口更新日志中描述的破坏性更改，这些更改不是在应用程序接口中破坏的，而是在 aiogram 内部破坏的，因为 Beta 阶段尚未完成。</p>
 </div>
 <p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1139">#1139</a></p>
 </li>
@@ -2087,7 +2081,7 @@ Beta stage is not finished.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">更新日志</a><ul>
-<li><a class="reference internal" href="#release-unreleased-draft-2024-04-22">3.5.0 [UNRELEASED DRAFT] (2024-04-22)</a><ul>
+<li><a class="reference internal" href="#release-unreleased-draft-2024-04-23">|发布| [未发布草案] (2024-04-23)</a><ul>
 <li><a class="reference internal" href="#features">特性</a></li>
 <li><a class="reference internal" href="#bugfixes">错误修复</a></li>
 <li><a class="reference internal" href="#improved-documentation">改进的文档</a></li>

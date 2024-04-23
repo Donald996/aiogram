@@ -608,8 +608,8 @@
         <article role="main">
           <section id="aiohttp">
 <h1>aiohttp<a class="headerlink" href="#aiohttp" title="Link to this heading">¶</a></h1>
-<p>AiohttpSession代表了 <a class="reference external" href="https://pypi.org/project/aiohttp/">aiohttp</a> 中的 <cite>ClientSession</cite> 的包装类。</p>
-<p>目前 <cite>AiohttpSession</cite> 是 <cite>aiogram.Bot</cite> 中使用的默认会话。</p>
+<p>AiohttpSession 代表了 <a class="reference external" href="https://pypi.org/project/aiohttp/">aiohttp</a> 中的 <cite>ClientSession</cite> 的包装类</p>
+<p>目前 <cite>AiohttpSession</cite> 是 <cite>aiogram.Bot</cite> 中使用的默认会话</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.client.session.aiohttp.AiohttpSession">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.client.session.aiohttp.</span></span><span class="sig-name descname"><span class="pre">AiohttpSession</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proxy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">BasicAuth</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">BasicAuth</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/client/session/aiohttp.html#AiohttpSession"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.client.session.aiohttp.AiohttpSession" title="Link to this definition">¶</a></dt>
@@ -626,8 +626,8 @@
 </div>
 </section>
 <section id="proxy-requests-in-aiohttpsession">
-<h2>AiohttpSession中的代理请求<a class="headerlink" href="#proxy-requests-in-aiohttpsession" title="Link to this heading">¶</a></h2>
-<p>为了使用AiohttpSession与代理连接器，你必须安装 <a class="reference external" href="https://pypi.org/project/aiohttp-socks">aiohttp-socks</a></p>
+<h2>AiohttpSession 中的代理请求<a class="headerlink" href="#proxy-requests-in-aiohttpsession" title="Link to this heading">¶</a></h2>
+<p>为了使用 AiohttpSession 与代理，你必须安装 <a class="reference external" href="https://pypi.org/project/aiohttp-socks">aiohttp-socks</a></p>
 <p>将会话绑定到机器人：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiogram</span> <span class="kn">import</span> <span class="n">Bot</span>
 <span class="kn">from</span> <span class="nn">aiogram.client.session.aiohttp</span> <span class="kn">import</span> <span class="n">AiohttpSession</span>
@@ -638,11 +638,11 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>仅支持以下协议：http（隧道）、socks4（a）、socks5，就像aiohttp_socks <a class="reference external" href="https://github.com/romis2012/aiohttp-socks/blob/master/README.md">文档</a> 声称的那样。</p>
+<p>仅支持以下协议：http（隧道）、socks4（a）、socks5，就像 <a class="reference external" href="https://github.com/romis2012/aiohttp-socks/blob/master/README.md">aiohttp_socks 文档</a> 声称的那样。</p>
 </div>
 <section id="authorization">
 <h3>授权<a class="headerlink" href="#authorization" title="Link to this heading">¶</a></h3>
-<p>代理授权凭证可以在代理URL中指定，或作为 <code class="xref py py-obj docutils literal notranslate"><span class="pre">aiohttp.BasicAuth</span></code> 的实例包含登录和密码。</p>
+<p>代理授权凭证可以在代理 URL 中指定，或作为 <code class="xref py py-obj docutils literal notranslate"><span class="pre">aiohttp.BasicAuth</span></code> 的实例包含登录和密码。</p>
 <p>考虑一些例子：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiohttp</span> <span class="kn">import</span> <span class="n">BasicAuth</span>
 <span class="kn">from</span> <span class="nn">aiogram.client.session.aiohttp</span> <span class="kn">import</span> <span class="n">AiohttpSession</span>
@@ -651,7 +651,7 @@
 <span class="n">session</span> <span class="o">=</span> <span class="n">AiohttpSession</span><span class="p">(</span><span class="n">proxy</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;protocol://host:port&quot;</span><span class="p">,</span> <span class="n">auth</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>或者简单地在URL中包含你的基本身份验证凭据</p>
+<p>或者简单地在 URL 中包含你的基本身份验证凭据</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">session</span> <span class="o">=</span> <span class="n">AiohttpSession</span><span class="p">(</span><span class="n">proxy</span><span class="o">=</span><span class="s2">&quot;protocol://user:password@host:port&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -661,9 +661,9 @@
 </div>
 </section>
 <section id="proxy-chains">
-<h3>代理链<a class="headerlink" href="#proxy-chains" title="Link to this heading">¶</a></h3>
-<p>由于 <a class="reference external" href="https://pypi.org/project/aiohttp-socks/">aiohttp-socks</a> 支持代理链，因此你能够在aiogram中使用它们</p>
-<p>链式代理的例子：</p>
+<h3>多个代理<a class="headerlink" href="#proxy-chains" title="Link to this heading">¶</a></h3>
+<p>由于 <a class="reference external" href="https://pypi.org/project/aiohttp-socks/">aiohttp-socks</a> 支持多个代理，因此你能够在 aiogram 中使用它们</p>
+<p>多个代理的例子：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiohttp</span> <span class="kn">import</span> <span class="n">BasicAuth</span>
 <span class="kn">from</span> <span class="nn">aiogram.client.session.aiohttp</span> <span class="kn">import</span> <span class="n">AiohttpSession</span>
 
@@ -739,9 +739,9 @@
 <li><a class="reference internal" href="#">aiohttp</a><ul>
 <li><a class="reference internal" href="#aiogram.client.session.aiohttp.AiohttpSession"><code class="docutils literal notranslate"><span class="pre">AiohttpSession</span></code></a></li>
 <li><a class="reference internal" href="#usage-example">用法示例</a></li>
-<li><a class="reference internal" href="#proxy-requests-in-aiohttpsession">AiohttpSession中的代理请求</a><ul>
+<li><a class="reference internal" href="#proxy-requests-in-aiohttpsession">AiohttpSession 中的代理请求</a><ul>
 <li><a class="reference internal" href="#authorization">授权</a></li>
-<li><a class="reference internal" href="#proxy-chains">代理链</a></li>
+<li><a class="reference internal" href="#proxy-chains">多个代理</a></li>
 </ul>
 </li>
 </ul>
