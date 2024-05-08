@@ -5,10 +5,10 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="安装" href="install.html" />
 
-    <!-- Generated with Sphinx 7.3.7 and Furo 2024.01.29 -->
-        <title>aiogram 3.5.0 文档</title>
+    <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>aiogram 3.7.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
     <link rel="stylesheet" type="text/css" href="_static/stylesheets/extra.css?v=040759bd" />
@@ -70,7 +70,7 @@
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
       <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -85,7 +85,7 @@
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
     </svg>
@@ -93,7 +93,7 @@
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
       <path d="M13 12h5" />
@@ -101,6 +101,60 @@
       <path d="M13 18h1" />
       <path d="M13 9h4" />
       <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
     </svg>
   </symbol>
 </svg>
@@ -114,6 +168,8 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
 
 
 <div class="page">
@@ -125,13 +181,14 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">aiogram 3.5.0 文档</div></a>
+      <a href="#"><div class="brand">aiogram 3.7.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
         <button class="theme-toggle">
           <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
@@ -151,7 +208,7 @@
     <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.5.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -174,6 +231,15 @@
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/types/index.html">类型</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of 类型</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="api/types/animation.html">动图</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/audio.html">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_fill.html">BackgroundFill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_fill_freeform_gradient.html">BackgroundFillFreeformGradient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_fill_gradient.html">BackgroundFillGradient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_fill_solid.html">BackgroundFillSolid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_type.html">BackgroundType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_type_chat_theme.html">BackgroundTypeChatTheme</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_type_fill.html">BackgroundTypeFill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_type_pattern.html">BackgroundTypePattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/background_type_wallpaper.html">BackgroundTypeWallpaper</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/birthdate.html">Birthdate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/bot_command.html">命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/bot_command_scope.html">命令范围</a></li>
@@ -196,6 +262,7 @@
 <li class="toctree-l3"><a class="reference internal" href="api/types/callback_query.html">回调查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat.html">聊天</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_administrator_rights.html">聊天管理员权限</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_background.html">ChatBackground</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost.html">聊天助力添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_added.html">聊天助力已添加</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_removed.html">聊天助力移除</a></li>
@@ -204,6 +271,7 @@
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_giveaway.html">聊天助力来源 Giveaway</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_source_premium.html">聊天助力来源 Premium</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_boost_updated.html">聊天助力更新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/chat_full_info.html">ChatFullInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_invite_link.html">聊天邀请链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_join_request.html">聊天加入请求</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/chat_location.html">聊天位置</a></li>
@@ -245,6 +313,7 @@
 <li class="toctree-l3"><a class="reference internal" href="api/types/input_media_document.html">输入媒体文件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/input_media_photo.html">输入媒体照片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/input_media_video.html">输入媒体视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/input_poll_option.html">InputPollOption</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button.html">键盘按钮</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button_poll_type.html">键盘按钮投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/keyboard_button_request_chat.html">键盘按钮请求对话框</a></li>
@@ -591,11 +660,17 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/index.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
 <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
@@ -605,7 +680,7 @@
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <article role="main">
+        <article role="main" id="furo-main-content">
           <section id="aiogram">
 <h1>aiogram<a class="headerlink" href="#aiogram" title="Link to this heading">¶</a></h1>
 <a class="reference external image-reference" href="https://opensource.org/licenses/MIT"><img alt="MIT 许可" src="https://img.shields.io/pypi/l/aiogram.svg?style=flat-square" /></a>
@@ -631,7 +706,7 @@
 <li><p>异步（<a class="reference external" href="https://docs.python.org/3/library/asyncio.html">asyncio docs</a>，<span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-0492/"><strong>PEP 492</strong></a>）</p></li>
 <li><p>具有类型提示 (<span class="target" id="index-5"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>) 可与 <a class="reference external" href="http://mypy-lang.org/">mypy</a> 一起使用</p></li>
 <li><p>支持 <a class="reference external" href="https://www.pypy.org/">PyPy</a></p></li>
-<li><p>支持 <a class="reference external" href="https://core.telegram.org/bots/api">Telegram Bot API 7.2</a>，并可快速更新至最新版本的 Bot API</p></li>
+<li><p>Supports <a class="reference external" href="https://core.telegram.org/bots/api">Telegram Bot API 7.3</a> and gets fast updates to the latest versions of the Bot API</p></li>
 <li><p>Telegram Bot应用程序接口集成代码是 <a class="reference external" href="https://github.com/aiogram/tg-codegen">autogenerated</a> ，当应用程序接口更新时可轻松重新生成</p></li>
 <li><p>路由器更新（蓝图）</p></li>
 <li><p>有限状态机</p></li>
@@ -784,6 +859,7 @@
 <li class="toctree-l2"><a class="reference internal" href="migration_2_to_3.html#sending-files">发送文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration_2_to_3.html#webhook">Webhook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration_2_to_3.html#telegram-api-server">Telegram API 服务器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration_2_to_3.html#telegram-objects-transformation-to-dict-to-json-from-json">Telegram objects transformation (to dict, to json, from json)</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">Bot API</a><ul>
@@ -982,198 +1058,207 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">更新日志</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#release-unreleased-draft-2024-04-23">|发布| [未发布草案] (2024-04-23)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#release-unreleased-draft-2024-05-08">3.7.0 [UNRELEASED DRAFT] (2024-05-08)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#features">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#bugfixes">错误修复</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">3.6.0 (2024-05-06)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id3">特性</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#improved-documentation">改进的文档</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id6">3.5.0 (2024-04-23)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id7">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#bugfixes">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id13">改进的文档</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#misc">其他</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id10">3.4.1 (2024-02-17)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id11">错误修复</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id13">3.4.0 (2024-02-16)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id14">特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id17">3.4.1 (2024-02-17)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#id18">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id21">改进的文档</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id23">3.3.0 (2023-12-31)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id24">特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id20">3.4.0 (2024-02-16)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id21">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id25">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id28">改进的文档</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id26">3.2.0 (2023-11-24)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id27">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id30">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id34">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id39">其他</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id30">3.3.0 (2023-12-31)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id31">特性</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id48">3.1.1 (2023-09-25)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id49">错误修复</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id33">3.2.0 (2023-11-24)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id34">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id37">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id41">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id46">其他</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id51">3.1.0 (2023-09-22)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id52">特性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id55">3.1.1 (2023-09-25)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#id56">错误修复</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id59">3.0.0 (2023-09-01)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id60">错误修复</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id58">3.1.0 (2023-09-22)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id59">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id63">错误修复</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id66">3.0.0 (2023-09-01)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id67">错误修复</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#rc2-2023-08-18">3.0.0rc2 (2023-08-18)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id67">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id71">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id79">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id74">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id78">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id86">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#rc1-2023-08-06">3.0.0rc1 (2023-08-06)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id82">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id86">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id89">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id91">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id89">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id93">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id96">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id98">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b9-2023-07-30">3.0.0b9 (2023-07-30)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id94">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id97">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id100">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id101">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id104">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id107">改进的文档</a></li>
 <li class="toctree-l3"><a class="reference internal" href="changelog.html#deprecations-and-removals">弃用和移除</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b8-2023-07-17">3.0.0b8 (2023-07-17)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id103">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id111">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id119">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id121">弃用和移除</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id123">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id110">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id118">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id126">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id128">弃用和移除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id130">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b7-2023-02-18">3.0.0b7 (2023-02-18)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id131">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id135">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id138">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id138">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id142">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id145">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b6-2022-11-18">3.0.0b6（2022年11月18日）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id146">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id151">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id154">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id158">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id153">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id158">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id161">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id165">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b5-2022-10-02">3.0.0b5 (2022-10-02)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id161">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id166">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id171">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id173">弃用和移除</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id175">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id168">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id173">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id178">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id180">弃用和移除</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id182">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b4-2022-08-14">3.0.0b4 (2022-08-14)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id177">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id182">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id187">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id184">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id189">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id194">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b3-2022-04-19">3.0.0b3 (2022-04-19)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id196">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id199">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id204">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id203">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id206">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id211">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b2-2022-02-19">3.0.0b2 (2022-02-19)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id209">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id213">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id216">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id216">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id220">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id223">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b1-2021-12-12">3.0.0b1（2021年12月12日）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id220">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id222">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id224">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id227">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id229">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id231">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#a18-2021-11-10">3.0.0a18 (2021-11-10)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id229">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id234">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id238">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id236">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id241">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id245">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#a17-2021-09-24">3.0.0a17 (2021-09-24)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id243">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id250">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#a16-2021-09-22">3.0.0a16 (2021-09-22)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id246">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id249">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id253">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id256">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#a15-2021-09-10">3.0.0a15 (2021-09-10)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id254">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id256">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id258">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id261">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id263">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id265">其他</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#a14-2021-08-17">3.0.0a14 (2021-08-17)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id263">特性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id266">错误修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id268">改进的文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="changelog.html#id270">其他</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id270">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id273">错误修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id275">改进的文档</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id277">其他</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id274">2.14.3 (2021-07-21)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id277">2.14.2 (2021-07-26)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id281">2.14 (2021-07-27)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id292">2.13 (2021-04-28)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id304">2.12.1 (2021-03-22)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id313">2.12（2021-03-14）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id337">2.11.2 (2021-11-10)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id339">2.11.1 (2021-11-10)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id344">2.11 (2021-11-08)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id347">2.10.1 (2021-09-14)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id349">2.10 (2021-09-13)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id385">2.9.2 (2021-06-13)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id388">2.9 (2021-06-08)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id399">2.8 (2021-04-26)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id401">2.7 (2021-04-07)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id408">2.6.1 (2021-01-25)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id411">2.6 (2021-01-23)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id414">2.5.3 (2021-01-05)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id418">2.5.2 (2021-01-01)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id419">2.5.1 (2021-01-01)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id420">2.5（2021年1月1日）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id428">2.4 (2021-10-29)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id441">2.3 (2021-08-16)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id452">2.2 (2021-06-09)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id455">2.1 (2021-04-18)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id464">2.0.1（2021年12月31日）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id467">2.0 (2021-10-28)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id468">1.4 (2021-08-03)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id470">1.3.3 (2021-07-16)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id471">1.3.2 (2021-05-27)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id474">1.3.1 (2018-05-27)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id475">1.3 (2021-04-22)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id476">1.2.3 (2018-04-14) =&gt; 1.2.3（2018年04月14日）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id477">1.2.2 (2018-04-08)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id478">1.2.1 (2018-03-25)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id484">1.2 (2018-02-23)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id485">1.1 (2018-01-27)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id486">1.0.4（2018-01-10）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id487">1.0.3 (2018-01-07)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id488">1.0.2 (2017-11-29)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id489">1.0.1 （2017年11月21日）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id491">1.0 (2017-11-19)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id492">0.4.1 (2017-08-03)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id493">0.4 (2017-08-05)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id494">0.3.4 (2017-08-04)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id495">0.3.3 (2017-07-05)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id496">0.3.2 (2017-07-04)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id497">0.3.1 (2017-07-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id281">2.14.3 (2021-07-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id284">2.14.2 (2021-07-26)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id288">2.14 (2021-07-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id299">2.13 (2021-04-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id311">2.12.1 (2021-03-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id320">2.12（2021-03-14）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id344">2.11.2 (2021-11-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id346">2.11.1 (2021-11-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id351">2.11 (2021-11-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id354">2.10.1 (2021-09-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id356">2.10 (2021-09-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id392">2.9.2 (2021-06-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id395">2.9 (2021-06-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id406">2.8 (2021-04-26)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id408">2.7 (2021-04-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id415">2.6.1 (2021-01-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id418">2.6 (2021-01-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id421">2.5.3 (2021-01-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id425">2.5.2 (2021-01-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id426">2.5.1 (2021-01-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id427">2.5（2021年1月1日）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id435">2.4 (2021-10-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id448">2.3 (2021-08-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id459">2.2 (2021-06-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id462">2.1 (2021-04-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id471">2.0.1（2021年12月31日）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id474">2.0 (2021-10-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id475">1.4 (2021-08-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id477">1.3.3 (2021-07-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id478">1.3.2 (2021-05-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id481">1.3.1 (2018-05-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id482">1.3 (2021-04-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id483">1.2.3 (2018-04-14) =&gt; 1.2.3（2018年04月14日）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id484">1.2.2 (2018-04-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id485">1.2.1 (2018-03-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id491">1.2 (2018-02-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id492">1.1 (2018-01-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id493">1.0.4（2018-01-10）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id494">1.0.3 (2018-01-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id495">1.0.2 (2017-11-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id496">1.0.1 （2017年11月21日）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id498">1.0 (2017-11-19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id499">0.4.1 (2017-08-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id500">0.4 (2017-08-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id501">0.3.4 (2017-08-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id502">0.3.3 (2017-07-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id503">0.3.2 (2017-07-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id504">0.3.1 (2017-07-04)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="changelog.html#b1-2017-06-00">0.2b1 (2017年06月00日)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html#id498">0.1（2017-06-03）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id505">0.1（2017-06-03）</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">贡献</a><ul>
@@ -1264,10 +1349,10 @@
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=424a1c66"></script>
+</div><script src="_static/documentation_options.js?v=a7be3313"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="_static/scripts/furo.js?v=4e2eecee"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/translations.js?v=beaddf03"></script>
