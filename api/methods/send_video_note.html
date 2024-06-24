@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="发送语音" href="send_voice.html" /><link rel="prev" title="发送视频" href="send_video.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>发送视频笔记 - aiogram 3.7.0 文档</title>
+        <title>发送视频笔记 - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -637,6 +652,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">更新日志</a></li>
@@ -686,7 +702,7 @@
 <p>Returns: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Message</span></code></p>
 <dl class="py class" id="module-aiogram.methods.send_video_note">
 <dt class="sig sig-object py" id="aiogram.methods.send_video_note.SendVideoNote">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.send_video_note.</span></span><span class="sig-name descname"><span class="pre">SendVideoNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_note:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">business_connection_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">~aiogram.types.reply_parameters.ReplyParameters</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove</span> <span class="pre">|</span> <span class="pre">~aiogram.types.force_reply.ForceReply</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/send_video_note.html#SendVideoNote"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.send_video_note.SendVideoNote" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.send_video_note.</span></span><span class="sig-name descname"><span class="pre">SendVideoNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">video_note:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">business_connection_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_thread_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_notification:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protect_content:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('protect_content')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_effect_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_parameters:</span> <span class="pre">~aiogram.types.reply_parameters.ReplyParameters</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_markup.ReplyKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">~aiogram.types.reply_keyboard_remove.ReplyKeyboardRemove</span> <span class="pre">|</span> <span class="pre">~aiogram.types.force_reply.ForceReply</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sending_without_reply:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to_message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/send_video_note.html#SendVideoNote"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.send_video_note.SendVideoNote" title="Link to this definition">¶</a></dt>
 <dd><p>截至`v.4.0 &lt;<a class="reference external" href="https://telegram.org/blog/video-messages-and-telescope">https://telegram.org/blog/video-messages-and-telescope</a>&gt;`_, 电报客户端支持长达1分钟的圆角方形MPEG4视频。使用此方法发送视频消息。成功时，将返回已发送的 <a class="reference internal" href="../types/message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#sendvideonote">https://core.telegram.org/bots/api#sendvideonote</a></p>
 <dl class="py attribute">
@@ -754,6 +770,12 @@ method.</p>
 <dt class="sig sig-object py" id="aiogram.methods.send_video_note.SendVideoNote.protect_content">
 <span class="sig-name descname"><span class="pre">protect_content</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_video_note.SendVideoNote.protect_content" title="Link to this definition">¶</a></dt>
 <dd><p>保护已发送的消息内容免受转发和保存</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.send_video_note.SendVideoNote.message_effect_id">
+<span class="sig-name descname"><span class="pre">message_effect_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.send_video_note.SendVideoNote.message_effect_id" title="Link to this definition">¶</a></dt>
+<dd><p>Unique identifier of the message effect to be added to the message; for private chats only</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -897,6 +919,7 @@ method.</p>
 <li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.model_post_init()</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.disable_notification</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.protect_content"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.protect_content</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.message_effect_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.reply_parameters</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.reply_markup</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.send_video_note.SendVideoNote.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.allow_sending_without_reply</span></code></a></li>
@@ -924,7 +947,7 @@ method.</p>
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../../_static/documentation_options.js?v=eca36101"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=4e2eecee"></script>

@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="索引" href="../../../genindex.html" /><link rel="search" title="搜索" href="../../../search.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>aiogram.types.pre_checkout_query - aiogram 3.7.0 文档</title>
+        <title>aiogram.types.pre_checkout_query - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../../../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -207,7 +207,7 @@
     <img class="sidebar-logo" src="../../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -423,10 +423,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/callback_game.html">回调游戏</a></li>
@@ -550,6 +560,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_updates.html">获取更新</a></li>
@@ -579,14 +591,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -636,6 +651,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">更新日志</a></li>
@@ -703,7 +719,7 @@
     <span class="n">from_user</span><span class="p">:</span> <span class="n">User</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">alias</span><span class="o">=</span><span class="s2">&quot;from&quot;</span><span class="p">)</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;User who sent the query&quot;&quot;&quot;</span>
     <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Three-letter ISO 4217 `currency &lt;https://core.telegram.org/bots/payments#supported-currencies&gt;`_ code&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Three-letter ISO 4217 `currency &lt;https://core.telegram.org/bots/payments#supported-currencies&gt;`_ code, or &#39;XTR&#39; for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_&quot;&quot;&quot;</span>
     <span class="n">total_amount</span><span class="p">:</span> <span class="nb">int</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Total price in the *smallest units* of the currency (integer, **not** float/double). For example, for a price of :code:`US$ 1.45` pass :code:`amount = 145`. See the *exp* parameter in `currencies.json &lt;https://core.telegram.org/bots/payments/currencies.json&gt;`_, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).&quot;&quot;&quot;</span>
     <span class="n">invoice_payload</span><span class="p">:</span> <span class="nb">str</span>
@@ -811,7 +827,7 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../../../_static/documentation_options.js?v=eca36101"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=4e2eecee"></script>

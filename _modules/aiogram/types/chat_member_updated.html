@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><link rel="index" title="索引" href="../../../genindex.html" /><link rel="search" title="搜索" href="../../../search.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>aiogram.types.chat_member_updated - aiogram 3.7.0 文档</title>
+        <title>aiogram.types.chat_member_updated - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -180,7 +180,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../../../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -207,7 +207,7 @@
     <img class="sidebar-logo" src="../../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -423,10 +423,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/types/callback_game.html">回调游戏</a></li>
@@ -550,6 +560,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/methods/get_updates.html">获取更新</a></li>
@@ -579,14 +591,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../api/enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../api/enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../api/upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../api/defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -636,6 +651,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">更新日志</a></li>
@@ -687,7 +703,6 @@
 <span class="kn">from</span> <span class="nn">.custom</span> <span class="kn">import</span> <span class="n">DateTime</span>
 
 <span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">.input_poll_option</span> <span class="kn">import</span> <span class="n">InputPollOption</span>
     <span class="kn">from</span> <span class="nn">..methods</span> <span class="kn">import</span> <span class="p">(</span>
         <span class="n">SendAnimation</span><span class="p">,</span>
         <span class="n">SendAudio</span><span class="p">,</span>
@@ -722,6 +737,7 @@
     <span class="kn">from</span> <span class="nn">.input_media_document</span> <span class="kn">import</span> <span class="n">InputMediaDocument</span>
     <span class="kn">from</span> <span class="nn">.input_media_photo</span> <span class="kn">import</span> <span class="n">InputMediaPhoto</span>
     <span class="kn">from</span> <span class="nn">.input_media_video</span> <span class="kn">import</span> <span class="n">InputMediaVideo</span>
+    <span class="kn">from</span> <span class="nn">.input_poll_option</span> <span class="kn">import</span> <span class="n">InputPollOption</span>
     <span class="kn">from</span> <span class="nn">.labeled_price</span> <span class="kn">import</span> <span class="n">LabeledPrice</span>
     <span class="kn">from</span> <span class="nn">.link_preview_options</span> <span class="kn">import</span> <span class="n">LinkPreviewOptions</span>
     <span class="kn">from</span> <span class="nn">.message_entity</span> <span class="kn">import</span> <span class="n">MessageEntity</span>
@@ -767,7 +783,7 @@
     <span class="n">invite_link</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ChatInviteLink</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. Chat invite link, which was used by the user to join the chat; for joining by invite link events only.&quot;&quot;&quot;</span>
     <span class="n">via_join_request</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. True, if the user joined the chat after sending a direct join request and being approved by an administrator&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. True, if the user joined the chat after sending a direct join request without using an invite link and being approved by an administrator&quot;&quot;&quot;</span>
     <span class="n">via_chat_folder_invite_link</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;*Optional*. True, if the user joined the chat via a chat folder invite link&quot;&quot;&quot;</span>
 
@@ -832,6 +848,7 @@
         <span class="p">),</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -861,6 +878,7 @@
 <span class="sd">        :param link_preview_options: Link preview generation options for the message</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -883,6 +901,7 @@
             <span class="n">link_preview_options</span><span class="o">=</span><span class="n">link_preview_options</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -906,9 +925,13 @@
         <span class="n">caption</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">parse_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;parse_mode&quot;</span><span class="p">),</span>
         <span class="n">caption_entities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">MessageEntity</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">show_caption_above_media</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span>
+            <span class="s2">&quot;show_caption_above_media&quot;</span>
+        <span class="p">),</span>
         <span class="n">has_spoiler</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -937,9 +960,11 @@
 <span class="sd">        :param caption: Animation caption (may also be used when resending animation by *file_id*), 0-1024 characters after entities parsing</span>
 <span class="sd">        :param parse_mode: Mode for parsing entities in the animation caption. See `formatting options &lt;https://core.telegram.org/bots/api#formatting-options&gt;`_ for more details.</span>
 <span class="sd">        :param caption_entities: A JSON-serialized list of special entities that appear in the caption, which can be specified instead of *parse_mode*</span>
+<span class="sd">        :param show_caption_above_media: Pass :code:`True`, if the caption must be shown above the message media</span>
 <span class="sd">        :param has_spoiler: Pass :code:`True` if the animation needs to be covered with a spoiler animation</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -963,9 +988,11 @@
             <span class="n">caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
             <span class="n">parse_mode</span><span class="o">=</span><span class="n">parse_mode</span><span class="p">,</span>
             <span class="n">caption_entities</span><span class="o">=</span><span class="n">caption_entities</span><span class="p">,</span>
+            <span class="n">show_caption_above_media</span><span class="o">=</span><span class="n">show_caption_above_media</span><span class="p">,</span>
             <span class="n">has_spoiler</span><span class="o">=</span><span class="n">has_spoiler</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -990,6 +1017,7 @@
         <span class="n">thumbnail</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InputFile</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1021,6 +1049,7 @@
 <span class="sd">        :param thumbnail: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail&#39;s width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can&#39;t be reused and can be only uploaded as a new file, so you can pass &#39;attach://&lt;file_attach_name&gt;&#39; if the thumbnail was uploaded using multipart/form-data under &lt;file_attach_name&gt;. :ref:`More information on Sending Files » &lt;sending-files&gt;`</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1046,6 +1075,7 @@
             <span class="n">thumbnail</span><span class="o">=</span><span class="n">thumbnail</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1066,6 +1096,7 @@
         <span class="n">vcard</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1092,6 +1123,7 @@
 <span class="sd">        :param vcard: Additional data about the contact in the form of a `vCard &lt;https://en.wikipedia.org/wiki/VCard&gt;`_, 0-2048 bytes</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1113,6 +1145,7 @@
             <span class="n">vcard</span><span class="o">=</span><span class="n">vcard</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1135,6 +1168,7 @@
         <span class="n">disable_content_type_detection</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1163,6 +1197,7 @@
 <span class="sd">        :param disable_content_type_detection: Disables automatic server-side content type detection for files uploaded using multipart/form-data</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1186,6 +1221,7 @@
             <span class="n">disable_content_type_detection</span><span class="o">=</span><span class="n">disable_content_type_detection</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1203,6 +1239,7 @@
         <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">allow_sending_without_reply</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1224,6 +1261,7 @@
 <span class="sd">        :param message_thread_id: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_. If empty, one &#39;Play game_title&#39; button will be shown. If not empty, the first button must launch the game.</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1242,6 +1280,7 @@
             <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1257,10 +1296,10 @@
         <span class="n">title</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">payload</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-        <span class="n">provider_token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">currency</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">prices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">LabeledPrice</span><span class="p">],</span>
         <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">provider_token</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">max_tip_amount</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">suggested_tip_amounts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">start_parameter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1278,6 +1317,7 @@
         <span class="n">is_flexible</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">allow_sending_without_reply</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1297,11 +1337,11 @@
 <span class="sd">        :param title: Product name, 1-32 characters</span>
 <span class="sd">        :param description: Product description, 1-255 characters</span>
 <span class="sd">        :param payload: Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the user, use for your internal processes.</span>
-<span class="sd">        :param provider_token: Payment provider token, obtained via `@BotFather &lt;https://t.me/botfather&gt;`_</span>
-<span class="sd">        :param currency: Three-letter ISO 4217 currency code, see `more on currencies &lt;https://core.telegram.org/bots/payments#supported-currencies&gt;`_</span>
-<span class="sd">        :param prices: Price breakdown, a JSON-serialized list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)</span>
+<span class="sd">        :param currency: Three-letter ISO 4217 currency code, see `more on currencies &lt;https://core.telegram.org/bots/payments#supported-currencies&gt;`_. Pass &#39;XTR&#39; for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param prices: Price breakdown, a JSON-serialized list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.). Must contain exactly one item for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
 <span class="sd">        :param message_thread_id: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only</span>
-<span class="sd">        :param max_tip_amount: The maximum accepted amount for tips in the *smallest units* of the currency (integer, **not** float/double). For example, for a maximum tip of :code:`US$ 1.45` pass :code:`max_tip_amount = 145`. See the *exp* parameter in `currencies.json &lt;https://core.telegram.org/bots/payments/currencies.json&gt;`_, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0</span>
+<span class="sd">        :param provider_token: Payment provider token, obtained via `@BotFather &lt;https://t.me/botfather&gt;`_. Pass an empty string for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param max_tip_amount: The maximum accepted amount for tips in the *smallest units* of the currency (integer, **not** float/double). For example, for a maximum tip of :code:`US$ 1.45` pass :code:`max_tip_amount = 145`. See the *exp* parameter in `currencies.json &lt;https://core.telegram.org/bots/payments/currencies.json&gt;`_, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies). Defaults to 0. Not supported for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
 <span class="sd">        :param suggested_tip_amounts: A JSON-serialized array of suggested amounts of tips in the *smallest units* of the currency (integer, **not** float/double). At most 4 suggested tip amounts can be specified. The suggested tip amounts must be positive, passed in a strictly increased order and must not exceed *max_tip_amount*.</span>
 <span class="sd">        :param start_parameter: Unique deep-linking parameter. If left empty, **forwarded copies** of the sent message will have a *Pay* button, allowing multiple users to pay directly from the forwarded message, using the same invoice. If non-empty, forwarded copies of the sent message will have a *URL* button with a deep link to the bot (instead of a *Pay* button), with the value used as the start parameter</span>
 <span class="sd">        :param provider_data: JSON-serialized data about the invoice, which will be shared with the payment provider. A detailed description of required fields should be provided by the payment provider.</span>
@@ -1309,15 +1349,16 @@
 <span class="sd">        :param photo_size: Photo size in bytes</span>
 <span class="sd">        :param photo_width: Photo width</span>
 <span class="sd">        :param photo_height: Photo height</span>
-<span class="sd">        :param need_name: Pass :code:`True` if you require the user&#39;s full name to complete the order</span>
-<span class="sd">        :param need_phone_number: Pass :code:`True` if you require the user&#39;s phone number to complete the order</span>
-<span class="sd">        :param need_email: Pass :code:`True` if you require the user&#39;s email address to complete the order</span>
-<span class="sd">        :param need_shipping_address: Pass :code:`True` if you require the user&#39;s shipping address to complete the order</span>
-<span class="sd">        :param send_phone_number_to_provider: Pass :code:`True` if the user&#39;s phone number should be sent to provider</span>
-<span class="sd">        :param send_email_to_provider: Pass :code:`True` if the user&#39;s email address should be sent to provider</span>
-<span class="sd">        :param is_flexible: Pass :code:`True` if the final price depends on the shipping method</span>
+<span class="sd">        :param need_name: Pass :code:`True` if you require the user&#39;s full name to complete the order. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param need_phone_number: Pass :code:`True` if you require the user&#39;s phone number to complete the order. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param need_email: Pass :code:`True` if you require the user&#39;s email address to complete the order. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param need_shipping_address: Pass :code:`True` if you require the user&#39;s shipping address to complete the order. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param send_phone_number_to_provider: Pass :code:`True` if the user&#39;s phone number should be sent to the provider. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param send_email_to_provider: Pass :code:`True` if the user&#39;s email address should be sent to the provider. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
+<span class="sd">        :param is_flexible: Pass :code:`True` if the final price depends on the shipping method. Ignored for payments in `Telegram Stars &lt;https://t.me/BotNews/90&gt;`_.</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_. If empty, one &#39;Pay :code:`total price`&#39; button will be shown. If not empty, the first button must be a Pay button.</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1334,10 +1375,10 @@
             <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span>
             <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span>
             <span class="n">payload</span><span class="o">=</span><span class="n">payload</span><span class="p">,</span>
-            <span class="n">provider_token</span><span class="o">=</span><span class="n">provider_token</span><span class="p">,</span>
             <span class="n">currency</span><span class="o">=</span><span class="n">currency</span><span class="p">,</span>
             <span class="n">prices</span><span class="o">=</span><span class="n">prices</span><span class="p">,</span>
             <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
+            <span class="n">provider_token</span><span class="o">=</span><span class="n">provider_token</span><span class="p">,</span>
             <span class="n">max_tip_amount</span><span class="o">=</span><span class="n">max_tip_amount</span><span class="p">,</span>
             <span class="n">suggested_tip_amounts</span><span class="o">=</span><span class="n">suggested_tip_amounts</span><span class="p">,</span>
             <span class="n">start_parameter</span><span class="o">=</span><span class="n">start_parameter</span><span class="p">,</span>
@@ -1355,6 +1396,7 @@
             <span class="n">is_flexible</span><span class="o">=</span><span class="n">is_flexible</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1377,6 +1419,7 @@
         <span class="n">proximity_alert_radius</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1405,6 +1448,7 @@
 <span class="sd">        :param proximity_alert_radius: For live locations, a maximum distance for proximity alerts about approaching another chat member, in meters. Must be between 1 and 100000 if specified.</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1428,6 +1472,7 @@
             <span class="n">proximity_alert_radius</span><span class="o">=</span><span class="n">proximity_alert_radius</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1445,6 +1490,7 @@
         <span class="n">message_thread_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">allow_sending_without_reply</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_to_message_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -1465,6 +1511,7 @@
 <span class="sd">        :param message_thread_id: Unique identifier for the target message thread (topic) of the forum; for forum supergroups only</span>
 <span class="sd">        :param disable_notification: Sends messages `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent messages from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
 <span class="sd">        :param reply_to_message_id: If the messages are a reply, ID of the original message</span>
@@ -1482,6 +1529,7 @@
             <span class="n">message_thread_id</span><span class="o">=</span><span class="n">message_thread_id</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
             <span class="n">reply_to_message_id</span><span class="o">=</span><span class="n">reply_to_message_id</span><span class="p">,</span>
@@ -1499,9 +1547,13 @@
         <span class="n">caption</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">parse_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;parse_mode&quot;</span><span class="p">),</span>
         <span class="n">caption_entities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">MessageEntity</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">show_caption_above_media</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span>
+            <span class="s2">&quot;show_caption_above_media&quot;</span>
+        <span class="p">),</span>
         <span class="n">has_spoiler</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1526,9 +1578,11 @@
 <span class="sd">        :param caption: Photo caption (may also be used when resending photos by *file_id*), 0-1024 characters after entities parsing</span>
 <span class="sd">        :param parse_mode: Mode for parsing entities in the photo caption. See `formatting options &lt;https://core.telegram.org/bots/api#formatting-options&gt;`_ for more details.</span>
 <span class="sd">        :param caption_entities: A JSON-serialized list of special entities that appear in the caption, which can be specified instead of *parse_mode*</span>
+<span class="sd">        :param show_caption_above_media: Pass :code:`True`, if the caption must be shown above the message media</span>
 <span class="sd">        :param has_spoiler: Pass :code:`True` if the photo needs to be covered with a spoiler animation</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1548,9 +1602,11 @@
             <span class="n">caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
             <span class="n">parse_mode</span><span class="o">=</span><span class="n">parse_mode</span><span class="p">,</span>
             <span class="n">caption_entities</span><span class="o">=</span><span class="n">caption_entities</span><span class="p">,</span>
+            <span class="n">show_caption_above_media</span><span class="o">=</span><span class="n">show_caption_above_media</span><span class="p">,</span>
             <span class="n">has_spoiler</span><span class="o">=</span><span class="n">has_spoiler</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1581,6 +1637,7 @@
         <span class="n">is_closed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1617,6 +1674,7 @@
 <span class="sd">        :param is_closed: Pass :code:`True` if the poll needs to be immediately closed. This can be useful for poll preview.</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1648,6 +1706,7 @@
             <span class="n">is_closed</span><span class="o">=</span><span class="n">is_closed</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1665,6 +1724,7 @@
         <span class="n">emoji</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1688,6 +1748,7 @@
 <span class="sd">        :param emoji: Emoji on which the dice throw animation is based. Currently, must be one of &#39;🎲&#39;, &#39;🎯&#39;, &#39;🏀&#39;, &#39;⚽&#39;, &#39;🎳&#39;, or &#39;🎰&#39;. Dice can have values 1-6 for &#39;🎲&#39;, &#39;🎯&#39; and &#39;🎳&#39;, values 1-5 for &#39;🏀&#39; and &#39;⚽&#39;, and values 1-64 for &#39;🎰&#39;. Defaults to &#39;🎲&#39;</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1706,6 +1767,7 @@
             <span class="n">emoji</span><span class="o">=</span><span class="n">emoji</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1724,6 +1786,7 @@
         <span class="n">emoji</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1748,6 +1811,7 @@
 <span class="sd">        :param emoji: Emoji associated with the sticker; only for just uploaded stickers</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1767,6 +1831,7 @@
             <span class="n">emoji</span><span class="o">=</span><span class="n">emoji</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1791,6 +1856,7 @@
         <span class="n">google_place_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1821,6 +1887,7 @@
 <span class="sd">        :param google_place_type: Google Places type of the venue. (See `supported types &lt;https://developers.google.com/places/web-service/supported_types&gt;`_.)</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1846,6 +1913,7 @@
             <span class="n">google_place_type</span><span class="o">=</span><span class="n">google_place_type</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1868,10 +1936,14 @@
         <span class="n">caption</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">parse_mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;parse_mode&quot;</span><span class="p">),</span>
         <span class="n">caption_entities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">MessageEntity</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">show_caption_above_media</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span>
+            <span class="s2">&quot;show_caption_above_media&quot;</span>
+        <span class="p">),</span>
         <span class="n">has_spoiler</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">supports_streaming</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1900,10 +1972,12 @@
 <span class="sd">        :param caption: Video caption (may also be used when resending videos by *file_id*), 0-1024 characters after entities parsing</span>
 <span class="sd">        :param parse_mode: Mode for parsing entities in the video caption. See `formatting options &lt;https://core.telegram.org/bots/api#formatting-options&gt;`_ for more details.</span>
 <span class="sd">        :param caption_entities: A JSON-serialized list of special entities that appear in the caption, which can be specified instead of *parse_mode*</span>
+<span class="sd">        :param show_caption_above_media: Pass :code:`True`, if the caption must be shown above the message media</span>
 <span class="sd">        :param has_spoiler: Pass :code:`True` if the video needs to be covered with a spoiler animation</span>
 <span class="sd">        :param supports_streaming: Pass :code:`True` if the uploaded video is suitable for streaming</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1927,10 +2001,12 @@
             <span class="n">caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
             <span class="n">parse_mode</span><span class="o">=</span><span class="n">parse_mode</span><span class="p">,</span>
             <span class="n">caption_entities</span><span class="o">=</span><span class="n">caption_entities</span><span class="p">,</span>
+            <span class="n">show_caption_above_media</span><span class="o">=</span><span class="n">show_caption_above_media</span><span class="p">,</span>
             <span class="n">has_spoiler</span><span class="o">=</span><span class="n">has_spoiler</span><span class="p">,</span>
             <span class="n">supports_streaming</span><span class="o">=</span><span class="n">supports_streaming</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -1951,6 +2027,7 @@
         <span class="n">thumbnail</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">InputFile</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -1977,6 +2054,7 @@
 <span class="sd">        :param thumbnail: Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side. The thumbnail should be in JPEG format and less than 200 kB in size. A thumbnail&#39;s width and height should not exceed 320. Ignored if the file is not uploaded using multipart/form-data. Thumbnails can&#39;t be reused and can be only uploaded as a new file, so you can pass &#39;attach://&lt;file_attach_name&gt;&#39; if the thumbnail was uploaded using multipart/form-data under &lt;file_attach_name&gt;. :ref:`More information on Sending Files » &lt;sending-files&gt;`</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -1998,6 +2076,7 @@
             <span class="n">thumbnail</span><span class="o">=</span><span class="n">thumbnail</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -2019,6 +2098,7 @@
         <span class="n">duration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">disable_notification</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">protect_content</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Default</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Default</span><span class="p">(</span><span class="s2">&quot;protect_content&quot;</span><span class="p">),</span>
+        <span class="n">message_effect_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ReplyParameters</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">reply_markup</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
             <span class="n">Union</span><span class="p">[</span><span class="n">InlineKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span> <span class="n">ReplyKeyboardRemove</span><span class="p">,</span> <span class="n">ForceReply</span><span class="p">]</span>
@@ -2046,6 +2126,7 @@
 <span class="sd">        :param duration: Duration of the voice message in seconds</span>
 <span class="sd">        :param disable_notification: Sends the message `silently &lt;https://telegram.org/blog/channels-2-0#silent-messages&gt;`_. Users will receive a notification with no sound.</span>
 <span class="sd">        :param protect_content: Protects the contents of the sent message from forwarding and saving</span>
+<span class="sd">        :param message_effect_id: Unique identifier of the message effect to be added to the message; for private chats only</span>
 <span class="sd">        :param reply_parameters: Description of the message to reply to</span>
 <span class="sd">        :param reply_markup: Additional interface options. A JSON-serialized object for an `inline keyboard &lt;https://core.telegram.org/bots/features#inline-keyboards&gt;`_, `custom reply keyboard &lt;https://core.telegram.org/bots/features#keyboards&gt;`_, instructions to remove a reply keyboard or to force a reply from the user</span>
 <span class="sd">        :param allow_sending_without_reply: Pass :code:`True` if the message should be sent even if the specified replied-to message is not found</span>
@@ -2068,6 +2149,7 @@
             <span class="n">duration</span><span class="o">=</span><span class="n">duration</span><span class="p">,</span>
             <span class="n">disable_notification</span><span class="o">=</span><span class="n">disable_notification</span><span class="p">,</span>
             <span class="n">protect_content</span><span class="o">=</span><span class="n">protect_content</span><span class="p">,</span>
+            <span class="n">message_effect_id</span><span class="o">=</span><span class="n">message_effect_id</span><span class="p">,</span>
             <span class="n">reply_parameters</span><span class="o">=</span><span class="n">reply_parameters</span><span class="p">,</span>
             <span class="n">reply_markup</span><span class="o">=</span><span class="n">reply_markup</span><span class="p">,</span>
             <span class="n">allow_sending_without_reply</span><span class="o">=</span><span class="n">allow_sending_without_reply</span><span class="p">,</span>
@@ -2108,7 +2190,7 @@
       
     </aside>
   </div>
-</div><script src="../../../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../../../_static/documentation_options.js?v=eca36101"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/scripts/furo.js?v=4e2eecee"></script>

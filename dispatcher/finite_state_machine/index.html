@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="存储" href="storages.html" /><link rel="prev" title="网络钩子(Webhook)" href="../webhook.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>有限状态机(FSM) - aiogram 3.7.0 文档</title>
+        <title>有限状态机(FSM) - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/types/callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/methods/get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">处理事件</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -637,6 +652,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">更新日志</a></li>
@@ -818,135 +834,140 @@
 <span class="linenos">  5</span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
 <span class="linenos">  6</span>
 <span class="linenos">  7</span><span class="kn">from</span> <span class="nn">aiogram</span> <span class="kn">import</span> <span class="n">Bot</span><span class="p">,</span> <span class="n">Dispatcher</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Router</span><span class="p">,</span> <span class="n">html</span>
-<span class="linenos">  8</span><span class="kn">from</span> <span class="nn">aiogram.enums</span> <span class="kn">import</span> <span class="n">ParseMode</span>
-<span class="linenos">  9</span><span class="kn">from</span> <span class="nn">aiogram.filters</span> <span class="kn">import</span> <span class="n">Command</span><span class="p">,</span> <span class="n">CommandStart</span>
-<span class="linenos"> 10</span><span class="kn">from</span> <span class="nn">aiogram.fsm.context</span> <span class="kn">import</span> <span class="n">FSMContext</span>
-<span class="linenos"> 11</span><span class="kn">from</span> <span class="nn">aiogram.fsm.state</span> <span class="kn">import</span> <span class="n">State</span><span class="p">,</span> <span class="n">StatesGroup</span>
-<span class="linenos"> 12</span><span class="kn">from</span> <span class="nn">aiogram.types</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="linenos"> 13</span>    <span class="n">KeyboardButton</span><span class="p">,</span>
-<span class="linenos"> 14</span>    <span class="n">Message</span><span class="p">,</span>
-<span class="linenos"> 15</span>    <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span>
-<span class="linenos"> 16</span>    <span class="n">ReplyKeyboardRemove</span><span class="p">,</span>
-<span class="linenos"> 17</span><span class="p">)</span>
-<span class="linenos"> 18</span>
-<span class="linenos"> 19</span><span class="n">TOKEN</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;BOT_TOKEN&quot;</span><span class="p">)</span>
-<span class="linenos"> 20</span>
-<span class="linenos"> 21</span><span class="n">form_router</span> <span class="o">=</span> <span class="n">Router</span><span class="p">()</span>
-<span class="linenos"> 22</span>
+<span class="linenos">  8</span><span class="kn">from</span> <span class="nn">aiogram.client.default</span> <span class="kn">import</span> <span class="n">DefaultBotProperties</span>
+<span class="linenos">  9</span><span class="kn">from</span> <span class="nn">aiogram.enums</span> <span class="kn">import</span> <span class="n">ParseMode</span>
+<span class="linenos"> 10</span><span class="kn">from</span> <span class="nn">aiogram.filters</span> <span class="kn">import</span> <span class="n">Command</span><span class="p">,</span> <span class="n">CommandStart</span>
+<span class="linenos"> 11</span><span class="kn">from</span> <span class="nn">aiogram.fsm.context</span> <span class="kn">import</span> <span class="n">FSMContext</span>
+<span class="linenos"> 12</span><span class="kn">from</span> <span class="nn">aiogram.fsm.state</span> <span class="kn">import</span> <span class="n">State</span><span class="p">,</span> <span class="n">StatesGroup</span>
+<span class="linenos"> 13</span><span class="kn">from</span> <span class="nn">aiogram.types</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 14</span>    <span class="n">KeyboardButton</span><span class="p">,</span>
+<span class="linenos"> 15</span>    <span class="n">Message</span><span class="p">,</span>
+<span class="linenos"> 16</span>    <span class="n">ReplyKeyboardMarkup</span><span class="p">,</span>
+<span class="linenos"> 17</span>    <span class="n">ReplyKeyboardRemove</span><span class="p">,</span>
+<span class="linenos"> 18</span><span class="p">)</span>
+<span class="linenos"> 19</span>
+<span class="linenos"> 20</span><span class="n">TOKEN</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;BOT_TOKEN&quot;</span><span class="p">)</span>
+<span class="linenos"> 21</span>
+<span class="linenos"> 22</span><span class="n">form_router</span> <span class="o">=</span> <span class="n">Router</span><span class="p">()</span>
 <span class="linenos"> 23</span>
-<span class="linenos"> 24</span><span class="k">class</span> <span class="nc">Form</span><span class="p">(</span><span class="n">StatesGroup</span><span class="p">):</span>
-<span class="linenos"> 25</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
-<span class="linenos"> 26</span>    <span class="n">like_bots</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
-<span class="linenos"> 27</span>    <span class="n">language</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
-<span class="linenos"> 28</span>
+<span class="linenos"> 24</span>
+<span class="linenos"> 25</span><span class="k">class</span> <span class="nc">Form</span><span class="p">(</span><span class="n">StatesGroup</span><span class="p">):</span>
+<span class="linenos"> 26</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
+<span class="linenos"> 27</span>    <span class="n">like_bots</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
+<span class="linenos"> 28</span>    <span class="n">language</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
 <span class="linenos"> 29</span>
-<span class="linenos"> 30</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">CommandStart</span><span class="p">())</span>
-<span class="linenos"> 31</span><span class="k">async</span> <span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 32</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="linenos"> 33</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
-<span class="linenos"> 34</span>        <span class="s2">&quot;Hi there! What&#39;s your name?&quot;</span><span class="p">,</span>
-<span class="linenos"> 35</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
-<span class="linenos"> 36</span>    <span class="p">)</span>
-<span class="linenos"> 37</span>
+<span class="linenos"> 30</span>
+<span class="linenos"> 31</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">CommandStart</span><span class="p">())</span>
+<span class="linenos"> 32</span><span class="k">async</span> <span class="k">def</span> <span class="nf">command_start</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 33</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="linenos"> 34</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
+<span class="linenos"> 35</span>        <span class="s2">&quot;Hi there! What&#39;s your name?&quot;</span><span class="p">,</span>
+<span class="linenos"> 36</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
+<span class="linenos"> 37</span>    <span class="p">)</span>
 <span class="linenos"> 38</span>
-<span class="linenos"> 39</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Command</span><span class="p">(</span><span class="s2">&quot;cancel&quot;</span><span class="p">))</span>
-<span class="linenos"> 40</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;cancel&quot;</span><span class="p">)</span>
-<span class="linenos"> 41</span><span class="k">async</span> <span class="k">def</span> <span class="nf">cancel_handler</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 42</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos"> 43</span><span class="sd">    Allow user to cancel any action</span>
-<span class="linenos"> 44</span><span class="sd">    &quot;&quot;&quot;</span>
-<span class="linenos"> 45</span>    <span class="n">current_state</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span>
-<span class="linenos"> 46</span>    <span class="k">if</span> <span class="n">current_state</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 47</span>        <span class="k">return</span>
-<span class="linenos"> 48</span>
-<span class="linenos"> 49</span>    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Cancelling state </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">current_state</span><span class="p">)</span>
-<span class="linenos"> 50</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="linenos"> 51</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
-<span class="linenos"> 52</span>        <span class="s2">&quot;Cancelled.&quot;</span><span class="p">,</span>
-<span class="linenos"> 53</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
-<span class="linenos"> 54</span>    <span class="p">)</span>
-<span class="linenos"> 55</span>
+<span class="linenos"> 39</span>
+<span class="linenos"> 40</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Command</span><span class="p">(</span><span class="s2">&quot;cancel&quot;</span><span class="p">))</span>
+<span class="linenos"> 41</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;cancel&quot;</span><span class="p">)</span>
+<span class="linenos"> 42</span><span class="k">async</span> <span class="k">def</span> <span class="nf">cancel_handler</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 43</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 44</span><span class="sd">    Allow user to cancel any action</span>
+<span class="linenos"> 45</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos"> 46</span>    <span class="n">current_state</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">get_state</span><span class="p">()</span>
+<span class="linenos"> 47</span>    <span class="k">if</span> <span class="n">current_state</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 48</span>        <span class="k">return</span>
+<span class="linenos"> 49</span>
+<span class="linenos"> 50</span>    <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Cancelling state </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">current_state</span><span class="p">)</span>
+<span class="linenos"> 51</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos"> 52</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
+<span class="linenos"> 53</span>        <span class="s2">&quot;Cancelled.&quot;</span><span class="p">,</span>
+<span class="linenos"> 54</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
+<span class="linenos"> 55</span>    <span class="p">)</span>
 <span class="linenos"> 56</span>
-<span class="linenos"> 57</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-<span class="linenos"> 58</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_name</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 59</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">update_data</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="linenos"> 60</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">)</span>
-<span class="linenos"> 61</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
-<span class="linenos"> 62</span>        <span class="sa">f</span><span class="s2">&quot;Nice to meet you, </span><span class="si">{</span><span class="n">html</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="si">}</span><span class="s2">!</span><span class="se">\n</span><span class="s2">Did you like to write bots?&quot;</span><span class="p">,</span>
-<span class="linenos"> 63</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardMarkup</span><span class="p">(</span>
-<span class="linenos"> 64</span>            <span class="n">keyboard</span><span class="o">=</span><span class="p">[</span>
-<span class="linenos"> 65</span>                <span class="p">[</span>
-<span class="linenos"> 66</span>                    <span class="n">KeyboardButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Yes&quot;</span><span class="p">),</span>
-<span class="linenos"> 67</span>                    <span class="n">KeyboardButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;No&quot;</span><span class="p">),</span>
-<span class="linenos"> 68</span>                <span class="p">]</span>
-<span class="linenos"> 69</span>            <span class="p">],</span>
-<span class="linenos"> 70</span>            <span class="n">resize_keyboard</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="linenos"> 71</span>        <span class="p">),</span>
-<span class="linenos"> 72</span>    <span class="p">)</span>
-<span class="linenos"> 73</span>
+<span class="linenos"> 57</span>
+<span class="linenos"> 58</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="linenos"> 59</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_name</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 60</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">update_data</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="linenos"> 61</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">)</span>
+<span class="linenos"> 62</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
+<span class="linenos"> 63</span>        <span class="sa">f</span><span class="s2">&quot;Nice to meet you, </span><span class="si">{</span><span class="n">html</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="si">}</span><span class="s2">!</span><span class="se">\n</span><span class="s2">Did you like to write bots?&quot;</span><span class="p">,</span>
+<span class="linenos"> 64</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardMarkup</span><span class="p">(</span>
+<span class="linenos"> 65</span>            <span class="n">keyboard</span><span class="o">=</span><span class="p">[</span>
+<span class="linenos"> 66</span>                <span class="p">[</span>
+<span class="linenos"> 67</span>                    <span class="n">KeyboardButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Yes&quot;</span><span class="p">),</span>
+<span class="linenos"> 68</span>                    <span class="n">KeyboardButton</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;No&quot;</span><span class="p">),</span>
+<span class="linenos"> 69</span>                <span class="p">]</span>
+<span class="linenos"> 70</span>            <span class="p">],</span>
+<span class="linenos"> 71</span>            <span class="n">resize_keyboard</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="linenos"> 72</span>        <span class="p">),</span>
+<span class="linenos"> 73</span>    <span class="p">)</span>
 <span class="linenos"> 74</span>
-<span class="linenos"> 75</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;no&quot;</span><span class="p">)</span>
-<span class="linenos"> 76</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_dont_like_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 77</span>    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
-<span class="linenos"> 78</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="linenos"> 79</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
-<span class="linenos"> 80</span>        <span class="s2">&quot;Not bad not terrible.</span><span class="se">\n</span><span class="s2">See you soon.&quot;</span><span class="p">,</span>
-<span class="linenos"> 81</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
-<span class="linenos"> 82</span>    <span class="p">)</span>
-<span class="linenos"> 83</span>    <span class="k">await</span> <span class="n">show_summary</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="linenos"> 84</span>
+<span class="linenos"> 75</span>
+<span class="linenos"> 76</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;no&quot;</span><span class="p">)</span>
+<span class="linenos"> 77</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_dont_like_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 78</span>    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">get_data</span><span class="p">()</span>
+<span class="linenos"> 79</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos"> 80</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span>
+<span class="linenos"> 81</span>        <span class="s2">&quot;Not bad not terrible.</span><span class="se">\n</span><span class="s2">See you soon.&quot;</span><span class="p">,</span>
+<span class="linenos"> 82</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
+<span class="linenos"> 83</span>    <span class="p">)</span>
+<span class="linenos"> 84</span>    <span class="k">await</span> <span class="n">show_summary</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="linenos"> 85</span>
-<span class="linenos"> 86</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">)</span>
-<span class="linenos"> 87</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_like_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 88</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
-<span class="linenos"> 89</span>
-<span class="linenos"> 90</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
-<span class="linenos"> 91</span>        <span class="s2">&quot;Cool! I&#39;m too!</span><span class="se">\n</span><span class="s2">What programming language did you use for it?&quot;</span><span class="p">,</span>
-<span class="linenos"> 92</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
-<span class="linenos"> 93</span>    <span class="p">)</span>
-<span class="linenos"> 94</span>
+<span class="linenos"> 86</span>
+<span class="linenos"> 87</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">,</span> <span class="n">F</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+<span class="linenos"> 88</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_like_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 89</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">set_state</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+<span class="linenos"> 90</span>
+<span class="linenos"> 91</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
+<span class="linenos"> 92</span>        <span class="s2">&quot;Cool! I&#39;m too!</span><span class="se">\n</span><span class="s2">What programming language did you use for it?&quot;</span><span class="p">,</span>
+<span class="linenos"> 93</span>        <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">(),</span>
+<span class="linenos"> 94</span>    <span class="p">)</span>
 <span class="linenos"> 95</span>
-<span class="linenos"> 96</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">)</span>
-<span class="linenos"> 97</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_unknown_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos"> 98</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="s2">&quot;I don&#39;t understand you :(&quot;</span><span class="p">)</span>
-<span class="linenos"> 99</span>
+<span class="linenos"> 96</span>
+<span class="linenos"> 97</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">like_bots</span><span class="p">)</span>
+<span class="linenos"> 98</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_unknown_write_bots</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos"> 99</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="s2">&quot;I don&#39;t understand you :(&quot;</span><span class="p">)</span>
 <span class="linenos">100</span>
-<span class="linenos">101</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
-<span class="linenos">102</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_language</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos">103</span>    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">update_data</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="linenos">104</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<span class="linenos">105</span>
-<span class="linenos">106</span>    <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
-<span class="linenos">107</span>        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
-<span class="linenos">108</span>            <span class="s2">&quot;Python, you say? That&#39;s the language that makes my circuits light up! 😉&quot;</span>
-<span class="linenos">109</span>        <span class="p">)</span>
-<span class="linenos">110</span>
-<span class="linenos">111</span>    <span class="k">await</span> <span class="n">show_summary</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-<span class="linenos">112</span>
+<span class="linenos">101</span>
+<span class="linenos">102</span><span class="nd">@form_router</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="n">Form</span><span class="o">.</span><span class="n">language</span><span class="p">)</span>
+<span class="linenos">103</span><span class="k">async</span> <span class="k">def</span> <span class="nf">process_language</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">FSMContext</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">104</span>    <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">update_data</span><span class="p">(</span><span class="n">language</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="linenos">105</span>    <span class="k">await</span> <span class="n">state</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">106</span>
+<span class="linenos">107</span>    <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">casefold</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;python&quot;</span><span class="p">:</span>
+<span class="linenos">108</span>        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span>
+<span class="linenos">109</span>            <span class="s2">&quot;Python, you say? That&#39;s the language that makes my circuits light up! 😉&quot;</span>
+<span class="linenos">110</span>        <span class="p">)</span>
+<span class="linenos">111</span>
+<span class="linenos">112</span>    <span class="k">await</span> <span class="n">show_summary</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">message</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
 <span class="linenos">113</span>
-<span class="linenos">114</span><span class="k">async</span> <span class="k">def</span> <span class="nf">show_summary</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">positive</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="linenos">115</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
-<span class="linenos">116</span>    <span class="n">language</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;language&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;something unexpected&gt;&quot;</span><span class="p">)</span>
-<span class="linenos">117</span>    <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;I&#39;ll keep in mind that, </span><span class="si">{</span><span class="n">html</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
-<span class="linenos">118</span>    <span class="n">text</span> <span class="o">+=</span> <span class="p">(</span>
-<span class="linenos">119</span>        <span class="sa">f</span><span class="s2">&quot;you like to write bots with </span><span class="si">{</span><span class="n">html</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">language</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
-<span class="linenos">120</span>        <span class="k">if</span> <span class="n">positive</span>
-<span class="linenos">121</span>        <span class="k">else</span> <span class="s2">&quot;you don&#39;t like to write bots, so sad...&quot;</span>
-<span class="linenos">122</span>    <span class="p">)</span>
-<span class="linenos">123</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">())</span>
-<span class="linenos">124</span>
+<span class="linenos">114</span>
+<span class="linenos">115</span><span class="k">async</span> <span class="k">def</span> <span class="nf">show_summary</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">positive</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="linenos">116</span>    <span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+<span class="linenos">117</span>    <span class="n">language</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;language&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;something unexpected&gt;&quot;</span><span class="p">)</span>
+<span class="linenos">118</span>    <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;I&#39;ll keep in mind that, </span><span class="si">{</span><span class="n">html</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="si">}</span><span class="s2">, &quot;</span>
+<span class="linenos">119</span>    <span class="n">text</span> <span class="o">+=</span> <span class="p">(</span>
+<span class="linenos">120</span>        <span class="sa">f</span><span class="s2">&quot;you like to write bots with </span><span class="si">{</span><span class="n">html</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">language</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
+<span class="linenos">121</span>        <span class="k">if</span> <span class="n">positive</span>
+<span class="linenos">122</span>        <span class="k">else</span> <span class="s2">&quot;you don&#39;t like to write bots, so sad...&quot;</span>
+<span class="linenos">123</span>    <span class="p">)</span>
+<span class="linenos">124</span>    <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">answer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">reply_markup</span><span class="o">=</span><span class="n">ReplyKeyboardRemove</span><span class="p">())</span>
 <span class="linenos">125</span>
-<span class="linenos">126</span><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-<span class="linenos">127</span>    <span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">parse_mode</span><span class="o">=</span><span class="n">ParseMode</span><span class="o">.</span><span class="n">HTML</span><span class="p">)</span>
-<span class="linenos">128</span>    <span class="n">dp</span> <span class="o">=</span> <span class="n">Dispatcher</span><span class="p">()</span>
-<span class="linenos">129</span>    <span class="n">dp</span><span class="o">.</span><span class="n">include_router</span><span class="p">(</span><span class="n">form_router</span><span class="p">)</span>
+<span class="linenos">126</span>
+<span class="linenos">127</span><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="linenos">128</span>    <span class="c1"># Initialize Bot instance with default bot properties which will be passed to all API calls</span>
+<span class="linenos">129</span>    <span class="n">bot</span> <span class="o">=</span> <span class="n">Bot</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="n">TOKEN</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">DefaultBotProperties</span><span class="p">(</span><span class="n">parse_mode</span><span class="o">=</span><span class="n">ParseMode</span><span class="o">.</span><span class="n">HTML</span><span class="p">))</span>
 <span class="linenos">130</span>
-<span class="linenos">131</span>    <span class="k">await</span> <span class="n">dp</span><span class="o">.</span><span class="n">start_polling</span><span class="p">(</span><span class="n">bot</span><span class="p">)</span>
+<span class="linenos">131</span>    <span class="n">dp</span> <span class="o">=</span> <span class="n">Dispatcher</span><span class="p">()</span>
 <span class="linenos">132</span>
-<span class="linenos">133</span>
-<span class="linenos">134</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<span class="linenos">135</span>    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
-<span class="linenos">136</span>    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+<span class="linenos">133</span>    <span class="n">dp</span><span class="o">.</span><span class="n">include_router</span><span class="p">(</span><span class="n">form_router</span><span class="p">)</span>
+<span class="linenos">134</span>
+<span class="linenos">135</span>    <span class="c1"># Start event dispatching</span>
+<span class="linenos">136</span>    <span class="k">await</span> <span class="n">dp</span><span class="o">.</span><span class="n">start_polling</span><span class="p">(</span><span class="n">bot</span><span class="p">)</span>
+<span class="linenos">137</span>
+<span class="linenos">138</span>
+<span class="linenos">139</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos">140</span>    <span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="linenos">141</span>    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
 </pre></div>
 </div>
 </section>
@@ -1125,7 +1146,7 @@
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../../_static/documentation_options.js?v=eca36101"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=4e2eecee"></script>

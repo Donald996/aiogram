@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="贡献" href="contributing.html" /><link rel="prev" title="深度链接" href="utils/deep_linking.html" />
+<link rel="index" title="索引" href="genindex.html" /><link rel="search" title="搜索" href="search.html" /><link rel="next" title="贡献" href="contributing.html" /><link rel="prev" title="Telegram object serialization" href="utils/serialization.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>更新日志 - aiogram 3.7.0 文档</title>
+        <title>更新日志 - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="api/types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/types/callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="api/methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/methods/get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="api/enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="api/enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="api/download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -637,6 +652,7 @@
 <li class="toctree-l2"><a class="reference internal" href="utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">更新日志</a></li>
@@ -683,37 +699,164 @@
         <article role="main" id="furo-main-content">
           <section id="changelog">
 <span id="aiogram-changes"></span><h1>更新日志<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
-<section id="release-unreleased-draft-2024-05-08">
-<h2>3.7.0 [UNRELEASED DRAFT] (2024-05-08)<a class="headerlink" href="#release-unreleased-draft-2024-05-08" title="Link to this heading">¶</a></h2>
-<section id="features">
-<h3>特性<a class="headerlink" href="#features" title="Link to this heading">¶</a></h3>
+<section id="upcoming-update-2024-06-24">
+<h2>[UPCOMING UPDATE] (2024-06-24)<a class="headerlink" href="#upcoming-update-2024-06-24" title="Link to this heading">¶</a></h2>
+<section id="improved-documentation">
+<h3>改进的文档<a class="headerlink" href="#improved-documentation" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p>Added new storage <code class="code docutils literal notranslate"><span class="pre">aiogram.fsm.storage.MongoStorage</span></code> for Finite State Machine based on Mongo DB (using <code class="code docutils literal notranslate"><span class="pre">motor</span></code> library)
-<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1434">#1434</a></p></li>
+<li><p>Corrected typo.
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1519">#1519</a></p></li>
 </ul>
 </section>
 </section>
 <section id="id2">
-<h2>3.6.0 (2024-05-06)<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
-<section id="id3">
-<h3>特性<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<h2>3.8.0 (2024-06-19)<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<section id="features">
+<h3>特性<a class="headerlink" href="#features" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>Added utility to safely deserialize any Telegram object or method to a JSON-compatible object (dict).
+(<a class="reference internal" href="utils/serialization.html#serialization-tool"><span class="std std-ref">&gt;&gt; Read more</span></a>)
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1450">#1450</a></p></li>
+<li><p>Added full support of <a class="reference external" href="https://core.telegram.org/bots/api-changelog#june-18-2024">Bot API 7.5</a></p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Added the classes <a class="reference internal" href="api/types/star_transactions.html#aiogram.types.star_transactions.StarTransactions" title="aiogram.types.star_transactions.StarTransactions"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.star_transactions.StarTransactions</span></code></a>,</dt><dd><p><a class="reference internal" href="api/types/star_transaction.html#aiogram.types.star_transaction.StarTransaction" title="aiogram.types.star_transaction.StarTransaction"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.star_transaction.StarTransaction</span></code></a>,
+<a class="reference internal" href="api/types/transaction_partner.html#aiogram.types.transaction_partner.TransactionPartner" title="aiogram.types.transaction_partner.TransactionPartner"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.transaction_partner.TransactionPartner</span></code></a>
+and <a class="reference internal" href="api/types/revenue_withdrawal_state.html#aiogram.types.revenue_withdrawal_state.RevenueWithdrawalState" title="aiogram.types.revenue_withdrawal_state.RevenueWithdrawalState"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.revenue_withdrawal_state.RevenueWithdrawalState</span></code></a>,
+containing information about Telegram Star transactions involving the bot.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added the method <a class="reference internal" href="api/methods/get_star_transactions.html#aiogram.methods.get_star_transactions.GetStarTransactions" title="aiogram.methods.get_star_transactions.GetStarTransactions"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.get_star_transactions.GetStarTransactions</span></code></a></dt><dd><p>that can be used to get the list of all Telegram Star transactions for the bot.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added support for callback buttons in</dt><dd><p><a class="reference internal" href="api/types/inline_keyboard_markup.html#aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup" title="aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span></code></a>
+for messages sent on behalf of a business account.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added support for callback queries originating from a message sent</dt><dd><p>on behalf of a business account.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added the parameter <code class="code docutils literal notranslate"><span class="pre">business_connection_id</span></code> to the methods</dt><dd><p><a class="reference internal" href="api/methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText" title="aiogram.methods.edit_message_text.EditMessageText"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.edit_message_text.EditMessageText</span></code></a>,
+<a class="reference internal" href="api/methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia" title="aiogram.methods.edit_message_media.EditMessageMedia"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.edit_message_media.EditMessageMedia</span></code></a>,
+<a class="reference internal" href="api/methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption" title="aiogram.methods.edit_message_caption.EditMessageCaption"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.edit_message_caption.EditMessageCaption</span></code></a>,
+<a class="reference internal" href="api/methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation" title="aiogram.methods.edit_message_live_location.EditMessageLiveLocation"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.edit_message_live_location.EditMessageLiveLocation</span></code></a>,
+<a class="reference internal" href="api/methods/stop_message_live_location.html#aiogram.methods.stop_message_live_location.StopMessageLiveLocation" title="aiogram.methods.stop_message_live_location.StopMessageLiveLocation"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.stop_message_live_location.StopMessageLiveLocation</span></code></a>
+and <a class="reference internal" href="api/methods/edit_message_reply_markup.html#aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup" title="aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup</span></code></a>,
+allowing the bot to edit business messages.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Added the parameter <code class="code docutils literal notranslate"><span class="pre">business_connection_id</span></code> to the method</dt><dd><p><a class="reference internal" href="api/methods/stop_poll.html#aiogram.methods.stop_poll.StopPoll" title="aiogram.methods.stop_poll.StopPoll"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.methods.stop_poll.StopPoll</span></code></a>,
+allowing the bot to stop polls it sent on behalf of a business account.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/1518">#1518</a></p>
+</li>
+</ul>
+</section>
+<section id="bugfixes">
+<h3>错误修复<a class="headerlink" href="#bugfixes" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Increased DNS cache ttl setting to aiohttp session as a workaround for DNS resolution issues in aiohttp.
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1500">#1500</a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>改进的文档<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed MongoStorage section in the documentation by adding extra dependency to ReadTheDocs configuration.
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1501">#1501</a></p></li>
+<li><p>Added information about dependency changes to the <code class="code docutils literal notranslate"><span class="pre">2.x</span> <span class="pre">--&gt;</span> <span class="pre">3.x</span></code> migration guide.
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1504">#1504</a></p></li>
+</ul>
+</section>
+<section id="misc">
+<h3>其他<a class="headerlink" href="#misc" title="Link to this heading">¶</a></h3>
+<ul>
+<li><p>[Only for contributors] Fail redis and mongo tests if incorrect URI provided + some storages tests refactoring</p>
+<p>If incorrect URIs provided to “–redis” and/or “–mongo” options tests should fail with errors instead of skipping.
+Otherwise the next scenario is possible:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>developer breaks RedisStorage and/or MongoStorage code</p></li>
+<li><p>tests are run with incorrect redis and/or mongo URIsprovided by “–redis” and “–mongo” options (for example, wrong port specified)</p></li>
+<li><p>tests pass because skipping doesn’t fail tests run</p></li>
+<li><p>developer or reviewer doesn’t notice that redis and/or mongo tests were skipped</p></li>
+<li><p>broken code gets in codebase</p></li>
+</ol>
+</div></blockquote>
+<p>Also some refactorings done (related with storages and storages tests).
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1510">#1510</a></p>
+</li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h2>3.7.0 (2024-05-31)<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<section id="id11">
+<h3>特性<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Added new storage <code class="code docutils literal notranslate"><span class="pre">aiogram.fsm.storage.MongoStorage</span></code> for Finite State Machine based on Mongo DB (using <code class="code docutils literal notranslate"><span class="pre">motor</span></code> library)
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1434">#1434</a></p></li>
+<li><p>Added full support of <a class="reference external" href="https://core.telegram.org/bots/api-changelog#may-28-2024">Bot API 7.4</a>
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1498">#1498</a></p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>错误修复<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Fixed wrong <code class="code docutils literal notranslate"><span class="pre">MarkdownV2</span></code> custom emoji parsing in <code class="code docutils literal notranslate"><span class="pre">aiogram.utils.text_decorations</span></code>
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1496">#1496</a></p></li>
+</ul>
+</section>
+<section id="deprecations-and-removals">
+<h3>弃用和移除<a class="headerlink" href="#deprecations-and-removals" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Removed deprecated arguments from Bot class
+<code class="code docutils literal notranslate"><span class="pre">parse_mode</span></code>, <code class="code docutils literal notranslate"><span class="pre">disable_web_page_preview</span></code>, <code class="code docutils literal notranslate"><span class="pre">protect_content</span></code> as previously announced in v3.4.0.
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1494">#1494</a></p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>其他<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Improved code consistency and readability in code examples by refactoring imports, adjusting the base webhook URL, modifying bot instance initialization to utilize DefaultBotProperties, and updating router message handlers.
+<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1482">#1482</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id19">
+<h2>3.6.0 (2024-05-06)<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h2>
+<section id="id20">
+<h3>特性<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Added full support of <a class="reference external" href="https://core.telegram.org/bots/api-changelog#may-6-2024">Bot API 7.3</a>
 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1480">#1480</a></p></li>
 </ul>
 </section>
-<section id="improved-documentation">
-<h3>改进的文档<a class="headerlink" href="#improved-documentation" title="Link to this heading">¶</a></h3>
+<section id="id22">
+<h3>改进的文档<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Added telegram objects transformation block in 2.x -&gt; 3.x migration guide
 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1412">#1412</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id6">
-<h2>3.5.0 (2024-04-23)<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h2>
-<section id="id7">
-<h3>特性<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<section id="id24">
+<h2>3.5.0 (2024-04-23)<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h2>
+<section id="id25">
+<h3>特性<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>在 <strong>ChatActionSender</strong> 中添加了 <strong>message_thread_id</strong> 的支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1249">#1249</a></p></li>
 <li><p>为机器人实例添加了上下文管理器接口，从现在起您可以使用该接口：</p>
@@ -730,8 +873,8 @@
 </li>
 </ul>
 </section>
-<section id="bugfixes">
-<h3>错误修复<a class="headerlink" href="#bugfixes" title="Link to this heading">¶</a></h3>
+<section id="id28">
+<h3>错误修复<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
 <ul>
 <li><ul class="simple">
 <li><p><strong>WebAppUser 类字段</strong> ：为 <cite>WebAppUser</cite> 类添加了缺失的 <cite>is_premium</cite> 、 <cite>added_to_attachment_menu</cite> 和 <cite>allows_write_to_pm</cite> 字段，以便与 Telegram API 保持一致。</p></li>
@@ -745,14 +888,14 @@
 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1458">#1458</a></p></li>
 </ul>
 </section>
-<section id="id13">
-<h3>改进的文档<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<section id="id32">
+<h3>改进的文档<a class="headerlink" href="#id32" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>在 WebApp 文档中添加了 WebAppChat 类，更新了 WebApp 文档的 uk_UA 本地化。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1433">#1433</a></p></li>
 </ul>
 </section>
-<section id="misc">
-<h3>其他<a class="headerlink" href="#misc" title="Link to this heading">¶</a></h3>
+<section id="id34">
+<h3>其他<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-31-2024">Bot API 7.2</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1444">#1444</a> 的全面支持</p></li>
 <li><p>Loosened pydantic version upper restriction from <code class="docutils literal notranslate"><span class="pre">&lt;2.7</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;2.8</span></code>
@@ -760,19 +903,19 @@
 </ul>
 </section>
 </section>
-<section id="id17">
-<h2>3.4.1 (2024-02-17)<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h2>
-<section id="id18">
-<h3>错误修复<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<section id="id37">
+<h2>3.4.1 (2024-02-17)<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h2>
+<section id="id38">
+<h3>错误修复<a class="headerlink" href="#id38" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修正了 <code class="code docutils literal notranslate"><span class="pre">LinkPreviewOptions</span></code> 类的 JSON 序列化，当它作为机器人范围的默认选项传递时。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1418">#1418</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id20">
-<h2>3.4.0 (2024-02-16)<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h2>
-<section id="id21">
-<h3>特性<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<section id="id40">
+<h2>3.4.0 (2024-02-16)<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h2>
+<section id="id41">
+<h3>特性<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>重构了机器人范围内的全局项，如 <code class="code docutils literal notranslate"><span class="pre">parse_mode</span></code>、<code class="code docutils literal notranslate"><span class="pre">disable_web_page_preview</span></code> 等，使其更加灵活。</p>
 <div class="admonition warning">
@@ -796,24 +939,24 @@
 </li>
 </ul>
 </section>
-<section id="id25">
-<h3>错误修复<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<section id="id45">
+<h3>错误修复<a class="headerlink" href="#id45" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>更新 KeyboardBuilder 实用程序，修复按钮方法的类型提示，将不同标记类型的限制调整到实际值。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1399">#1399</a></p></li>
 <li><p>新增了新的 <code class="code docutils literal notranslate"><span class="pre">reply_parameters</span></code> 参数到 <code class="code docutils literal notranslate"><span class="pre">message.send_copy</span></code> ，因为它没有被添加在那里 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1403">#1403</a></p></li>
 </ul>
 </section>
-<section id="id28">
-<h3>改进的文档<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+<section id="id48">
+<h3>改进的文档<a class="headerlink" href="#id48" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>在文档中添加 <cite>使用复数形式</cite> 的概念 Utils -&gt; 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1395">#1395</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id30">
-<h2>3.3.0 (2023-12-31)<a class="headerlink" href="#id30" title="Link to this heading">¶</a></h2>
-<section id="id31">
-<h3>特性<a class="headerlink" href="#id31" title="Link to this heading">¶</a></h3>
+<section id="id50">
+<h2>3.3.0 (2023-12-31)<a class="headerlink" href="#id50" title="Link to this heading">¶</a></h2>
+<section id="id51">
+<h3>特性<a class="headerlink" href="#id51" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>完全支持 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-29-2023">Bot API 7.0</a> 已添加</p>
 <ul class="simple">
@@ -832,25 +975,25 @@
 </ul>
 </section>
 </section>
-<section id="id33">
-<h2>3.2.0 (2023-11-24)<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h2>
-<section id="id34">
-<h3>特性<a class="headerlink" href="#id34" title="Link to this heading">¶</a></h3>
+<section id="id53">
+<h2>3.2.0 (2023-11-24)<a class="headerlink" href="#id53" title="Link to this heading">¶</a></h2>
+<section id="id54">
+<h3>特性<a class="headerlink" href="#id54" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>引入场景功能，帮助您使用有限状态机简化用户交互。了解有关 👉 <a class="reference internal" href="dispatcher/finite_state_machine/scene.html#scenes"><span class="std std-ref">Scenes</span></a>. <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1280">#1280</a></p></li>
 <li><p>添加了新的FSM策略 <code class="code docutils literal notranslate"><span class="pre">CHAT_TOPIC</span></code>，它为聊天中的整个主题设置状态，也适用于私人消息和没有话题的常规群组。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1343">#1343</a></p></li>
 </ul>
 </section>
-<section id="id37">
-<h3>错误修复<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<section id="id57">
+<h3>错误修复<a class="headerlink" href="#id57" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 快捷方式中 <code class="code docutils literal notranslate"><span class="pre">parse_mode</span></code> 参数。默认情况下禁用。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1332">#1332</a></p></li>
 <li><p>新增了从过滤器获取处理程序标志的功能。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1360">#1360</a></p></li>
 <li><p>修复了一个情况，在没有默认值的情况下无法解析 <code class="code docutils literal notranslate"><span class="pre">CallbackData</span></code> 的问题。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1368">#1368</a></p></li>
 </ul>
 </section>
-<section id="id41">
-<h3>改进的文档<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
+<section id="id61">
+<h3>改进的文档<a class="headerlink" href="#id61" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>已纠正语法错误，改进了句子结构，对迁移2.x-3.x进行了翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1302">#1302</a></p></li>
 <li><p>模块命名中的小错字，以及一些语法问题。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1340">#1340</a></p></li>
@@ -858,8 +1001,8 @@
 <li><p>在中间件文档中进行了小的拼写错误更正。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1353">#1353</a></p></li>
 </ul>
 </section>
-<section id="id46">
-<h3>其他<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
+<section id="id66">
+<h3>其他<a class="headerlink" href="#id66" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>修复测试中的资源警告，重写了 <code class="code docutils literal notranslate"><span class="pre">RedisEventsIsolation</span></code> fixture，以使用来自 <code class="code docutils literal notranslate"><span class="pre">RedisStorage</span></code> 的 Redis 连接 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1320">#1320</a></p></li>
 <li><p>更新了依赖关系，增加了最低所需版本：</p>
@@ -880,37 +1023,37 @@
 </ul>
 </section>
 </section>
-<section id="id55">
-<h2>3.1.1 (2023-09-25)<a class="headerlink" href="#id55" title="Link to this heading">¶</a></h2>
-<section id="id56">
-<h3>错误修复<a class="headerlink" href="#id56" title="Link to this heading">¶</a></h3>
+<section id="id75">
+<h2>3.1.1 (2023-09-25)<a class="headerlink" href="#id75" title="Link to this heading">¶</a></h2>
+<section id="id76">
+<h3>错误修复<a class="headerlink" href="#id76" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复了 <cite>pydantic</cite> 版本小于 2.4，因为2.4有重大变更。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1322">#1322</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id58">
-<h2>3.1.0 (2023-09-22)<a class="headerlink" href="#id58" title="Link to this heading">¶</a></h2>
-<section id="id59">
-<h3>特性<a class="headerlink" href="#id59" title="Link to this heading">¶</a></h3>
+<section id="id78">
+<h2>3.1.0 (2023-09-22)<a class="headerlink" href="#id78" title="Link to this heading">¶</a></h2>
+<section id="id79">
+<h3>特性<a class="headerlink" href="#id79" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>已添加对负载自定义编码器/解码器的支持（也适用于深链接）。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1262">#1262</a></p></li>
 <li><p>为媒体组构建添加了  <code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.utils.input_media.MediaGroupBuilder</span></code>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1293">#1293</a></p></li>
 <li><p>增加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#september-22-2023">Bot API 6.9</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1319">#1319</a> 的完整支持</p></li>
 </ul>
 </section>
-<section id="id63">
-<h3>错误修复<a class="headerlink" href="#id63" title="Link to this heading">¶</a></h3>
+<section id="id83">
+<h3>错误修复<a class="headerlink" href="#id83" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>为 <cite>InlineKeyboardBuilder</cite> 和 <cite>ReplyKeyboardBuilder</cite> 添加了实际参数提示。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1303">#1303</a></p></li>
 <li><p>固定了事件隔离的优先级，现在用户状态只有在锁定后才会被加载。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1317">#1317</a></p></li>
 </ul>
 </section>
 </section>
-<section id="id66">
-<h2>3.0.0 (2023-09-01)<a class="headerlink" href="#id66" title="Link to this heading">¶</a></h2>
-<section id="id67">
-<h3>错误修复<a class="headerlink" href="#id67" title="Link to this heading">¶</a></h3>
+<section id="id86">
+<h2>3.0.0 (2023-09-01)<a class="headerlink" href="#id86" title="Link to this heading">¶</a></h2>
+<section id="id87">
+<h3>错误修复<a class="headerlink" href="#id87" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>将 <code class="code docutils literal notranslate"><span class="pre">datetime.datetime</span></code> 替换为 <cite>DateTime</cite> 类型封装器，以使转储的 JSON 对象与通过 Telegram 发送的数据更兼容。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1277">#1277</a></p></li>
 <li><p>修正了可解释为 <cite>False</cite> (如 <cite>0</cite>)的值的魔法 <code class="code docutils literal notranslate"><span class="pre">.as_(…)</span></code> 操作。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1281">#1281</a></p></li>
@@ -923,16 +1066,16 @@
 </section>
 <section id="rc2-2023-08-18">
 <h2>3.0.0rc2 (2023-08-18)<a class="headerlink" href="#rc2-2023-08-18" title="Link to this heading">¶</a></h2>
-<section id="id74">
-<h3>错误修复<a class="headerlink" href="#id74" title="Link to this heading">¶</a></h3>
+<section id="id94">
+<h3>错误修复<a class="headerlink" href="#id94" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复了丢失的消息内容类型（<code class="code docutils literal notranslate"><span class="pre">ContentType.USER_SHARED</span></code>，<code class="code docutils literal notranslate"><span class="pre">ContentType.CHAT_SHARED</span></code>) <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1252">#1252</a></p></li>
 <li><p>修复了嵌套的标签、货币符号和电子邮件消息实体在另一个实体内部时未正确解析的问题。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1259">#1259</a></p></li>
 <li><p>将全局过滤器检查放到路由器中，以便在处理程序中像在其他地方一样有机会传递上下文信息 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1266">#1266</a></p></li>
 </ul>
 </section>
-<section id="id78">
-<h3>改进的文档<a class="headerlink" href="#id78" title="Link to this heading">¶</a></h3>
+<section id="id98">
+<h3>改进的文档<a class="headerlink" href="#id98" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>添加了错误处理示例 <cite>examples/error_handling.py</cite> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1099">#1099</a></p></li>
 <li><p>添加了关于跳过待定更新的几句话 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1251">#1251</a></p></li>
@@ -943,8 +1086,8 @@
 <li><p>TelegramEventObserver 的 filter 方法的文档字符串中删除了额外的参数，并修复了I18n文档中的拼写错误。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1268">#1268</a></p></li>
 </ul>
 </section>
-<section id="id86">
-<h3>其他<a class="headerlink" href="#id86" title="Link to this heading">¶</a></h3>
+<section id="id106">
+<h3>其他<a class="headerlink" href="#id106" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>在分发器中增强了警告消息，当更新类型未知时，包含了更新的 JSON 转储。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1269">#1269</a></p></li>
 <li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#august-18-2023">Bot API 6.8</a> 的支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1275">#1275</a></p></li>
@@ -953,8 +1096,8 @@
 </section>
 <section id="rc1-2023-08-06">
 <h2>3.0.0rc1 (2023-08-06)<a class="headerlink" href="#rc1-2023-08-06" title="Link to this heading">¶</a></h2>
-<section id="id89">
-<h3>特性<a class="headerlink" href="#id89" title="Link to this heading">¶</a></h3>
+<section id="id109">
+<h3>特性<a class="headerlink" href="#id109" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>添加了货币枚举。您可以像这样使用它：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aiogram.enums</span> <span class="kn">import</span> <span class="n">Currency</span>
@@ -972,8 +1115,8 @@
 <li><p>在ChatActionSender中添加了message_thread_id的支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1249">#1249</a></p></li>
 </ul>
 </section>
-<section id="id93">
-<h3>错误修复<a class="headerlink" href="#id93" title="Link to this heading">¶</a></h3>
+<section id="id113">
+<h3>错误修复<a class="headerlink" href="#id113" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>修复了手动将 “bot” 键传递到调度程序工作流数据时的轮询启动 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1242">#1242</a></p></li>
 <li><p>为丢失的快捷方式添加了代码生成配置：</p>
@@ -986,14 +1129,14 @@
 </li>
 </ul>
 </section>
-<section id="id96">
-<h3>改进的文档<a class="headerlink" href="#id96" title="Link to this heading">¶</a></h3>
+<section id="id116">
+<h3>改进的文档<a class="headerlink" href="#id116" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>添加了关于webhook和轮询模式的文档。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1241">#1241</a></p></li>
 </ul>
 </section>
-<section id="id98">
-<h3>其他<a class="headerlink" href="#id98" title="Link to this heading">¶</a></h3>
+<section id="id118">
+<h3>其他<a class="headerlink" href="#id118" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>重做了 InputFile 读取，删除了 <code class="code docutils literal notranslate"><span class="pre">__aiter__</span></code> 方法，并在 <code class="code docutils literal notranslate"><span class="pre">.read(…)</span></code> 方法中添加了 <cite>bot.Bot</cite> 参数：Bot` 参数到 <code class="code docutils literal notranslate"><span class="pre">.read(…)</span></code> 方法，因此，从现在起 URLInputFile 可以在不指定 bot 实例的情况下使用。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1238">#1238</a></p></li>
 <li><p>代码生成的 <code class="code docutils literal notranslate"><span class="pre">__init__</span></code> 类型和方法中的类型提示，使 IDE 无需额外的 pydantic 插件就能满意 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1245">#1245</a></p></li>
@@ -1002,29 +1145,29 @@
 </section>
 <section id="b9-2023-07-30">
 <h2>3.0.0b9 (2023-07-30)<a class="headerlink" href="#b9-2023-07-30" title="Link to this heading">¶</a></h2>
-<section id="id101">
-<h3>特性<a class="headerlink" href="#id101" title="Link to this heading">¶</a></h3>
+<section id="id121">
+<h3>特性<a class="headerlink" href="#id121" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>为  <a class="reference internal" href="api/types/chat_member_updated.html#aiogram.types.chat_member_updated.ChatMemberUpdated" title="aiogram.types.chat_member_updated.ChatMemberUpdated"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.chat_member_updated.ChatMemberUpdated</span></code></a> 添加了新的快捷方式，用于向聊天室发送成员加入/离开的消息。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1234">#1234</a></p></li>
 <li><p>为  <a class="reference internal" href="api/types/chat_join_request.html#aiogram.types.chat_join_request.ChatJoinRequest" title="aiogram.types.chat_join_request.ChatJoinRequest"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.chat_join_request.ChatJoinRequest</span></code></a> 添加了新的快捷方式，以便更容易地向想要加入聊天室的用户发送消息。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1235">#1235</a></p></li>
 </ul>
 </section>
-<section id="id104">
-<h3>错误修复<a class="headerlink" href="#id104" title="Link to this heading">¶</a></h3>
+<section id="id124">
+<h3>错误修复<a class="headerlink" href="#id124" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>在 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 快捷方式中修复了机器人分配问题 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1232">#1232</a></p></li>
 <li><p>已添加模型验证，以便在字段验证前移除 UNSET。为了正确处理使用 <cite>UNSET</cite> 作为哨兵值的 parse_mode，这一更改是必要的。如果不移除 <cite>UNSET</cite> ，从 Bot.method_name 传递到模型初始化时就会产生问题。 <cite>UNSET</cite> 也被添加到键入中。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1233">#1233</a></p></li>
 <li><p>将pydantic更新至2.1，并修复了一些bug</p></li>
 </ul>
 </section>
-<section id="id107">
-<h3>改进的文档<a class="headerlink" href="#id107" title="Link to this heading">¶</a></h3>
+<section id="id127">
+<h3>改进的文档<a class="headerlink" href="#id127" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>改进文档，添加基本迁移指南（稍后将扩展） <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1143">#1143</a></p></li>
 </ul>
 </section>
-<section id="deprecations-and-removals">
-<h3>弃用和移除<a class="headerlink" href="#deprecations-and-removals" title="Link to this heading">¶</a></h3>
+<section id="id129">
+<h3>弃用和移除<a class="headerlink" href="#id129" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>从以前使用过的所有位置中移除对上下文实例 (Bot.get_current) 的使用。这是为了避免在错误的地方使用上下文实例。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1230">#1230</a></p></li>
 </ul>
@@ -1032,8 +1175,8 @@
 </section>
 <section id="b8-2023-07-17">
 <h2>3.0.0b8 (2023-07-17)<a class="headerlink" href="#b8-2023-07-17" title="Link to this heading">¶</a></h2>
-<section id="id110">
-<h3>特性<a class="headerlink" href="#id110" title="Link to this heading">¶</a></h3>
+<section id="id131">
+<h3>特性<a class="headerlink" href="#id131" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>在路由器中添加了使用自定义事件的可能性（如果路由器不支持自定义事件，它不会中断，并将其传递给包含的路由器）。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/1147">#1147</a></p></li>
 <li><p>为论坛主题添加了对FSM的支持。</p>
@@ -1065,8 +1208,8 @@
 <li><p>新增了将自定义头部传递给 <code class="xref py py-class docutils literal notranslate"><span class="pre">URLInputFile</span></code> 对象的可能性 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1191">#1191</a></p></li>
 </ul>
 </section>
-<section id="id118">
-<h3>错误修复<a class="headerlink" href="#id118" title="Link to this heading">¶</a></h3>
+<section id="id139">
+<h3>错误修复<a class="headerlink" href="#id139" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>在InlineQueryResult枚举的结果类型中，将InlineQueryResultCachedMpeg4Gif和InlineQueryResultMpeg4Gif的类型更改为更符合文档的正确类型。</p>
 <p>更改用于实体解析的正则表达式为更正确的 (<code class="code docutils literal notranslate"><span class="pre">InlineQueryResultType.yml</span></code>). <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1146">#1146</a></p>
@@ -1081,22 +1224,22 @@
 </li>
 </ul>
 </section>
-<section id="id126">
-<h3>改进的文档<a class="headerlink" href="#id126" title="Link to this heading">¶</a></h3>
+<section id="id147">
+<h3>改进的文档<a class="headerlink" href="#id147" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修改了 <code class="code docutils literal notranslate"><span class="pre">upload_file</span></code> 的小语法错误 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1133">#1133</a></p></li>
 </ul>
 </section>
-<section id="id128">
-<h3>弃用和移除<a class="headerlink" href="#id128" title="Link to this heading">¶</a></h3>
+<section id="id149">
+<h3>弃用和移除<a class="headerlink" href="#id149" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>因为计划在几个版本前删除此过滤器，所以已经删除了文本过滤器。</p>
 <p>使用 <code class="code docutils literal notranslate"><span class="pre">F.text</span></code> 而不是 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1170">#1170</a></p>
 </li>
 </ul>
 </section>
-<section id="id130">
-<h3>其他<a class="headerlink" href="#id130" title="Link to this heading">¶</a></h3>
+<section id="id151">
+<h3>其他<a class="headerlink" href="#id151" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>完全支持了 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#march-9-2023">Bot API 6.6</a></p>
 <div class="admonition danger">
@@ -1167,8 +1310,8 @@
 </pre></div>
 </div>
 </div>
-<section id="id138">
-<h3>特性<a class="headerlink" href="#id138" title="Link to this heading">¶</a></h3>
+<section id="id159">
+<h3>特性<a class="headerlink" href="#id159" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>添加了缺失的快捷方式，新的枚举，重新设计了旧的东西</p>
 <p><strong>Breaking</strong> 所有先前添加的枚举都在新位置重新生成 - <cite>aiogram.enums</cite> 而不是 <cite>aiogram.types</cite></p>
@@ -1233,15 +1376,15 @@
 <li><p>添加了一种方法，允许您紧凑地注册路由器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1117">＃1117</a></p></li>
 </ul>
 </section>
-<section id="id142">
-<h3>错误修复<a class="headerlink" href="#id142" title="Link to this heading">¶</a></h3>
+<section id="id163">
+<h3>错误修复<a class="headerlink" href="#id163" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>检查下载文件 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/816">#816</a> 时的状态码</p></li>
 <li><p>修复了 <a class="reference internal" href="dispatcher/filters/command.html#aiogram.filters.command.Command" title="aiogram.filters.command.Command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.filters.command.Command</span></code></a> 过滤器中的 <cite>ignore_case</cite> 参数 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1106">#1106</a></p></li>
 </ul>
 </section>
-<section id="id145">
-<h3>其他<a class="headerlink" href="#id145" title="Link to this heading">¶</a></h3>
+<section id="id166">
+<h3>其他<a class="headerlink" href="#id166" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>与名为 <a class="reference external" href="https://github.com/aiogram/butcher">Butcher</a> 的新代码生成器集成。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1069">#1069</a></p></li>
 <li><p>完全支持 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-30-2022">Bot API 6.4</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1088">#1088</a></p></li>
@@ -1261,8 +1404,8 @@
 </section>
 <section id="b6-2022-11-18">
 <h2>3.0.0b6（2022年11月18日）<a class="headerlink" href="#b6-2022-11-18" title="Link to this heading">¶</a></h2>
-<section id="id153">
-<h3>特性<a class="headerlink" href="#id153" title="Link to this heading">¶</a></h3>
+<section id="id174">
+<h3>特性<a class="headerlink" href="#id174" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>(再次)增加了使用 <em>and</em>/<em>or</em> 操作符组合筛选器的可能性。</p>
 <p>在“<a class="reference internal" href="dispatcher/filters/index.html#combining-filters"><span class="std std-ref">Combining filters</span></a>”文档部分中阅读更多内容 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1018">#1018</a></p>
@@ -1288,8 +1431,8 @@
 <li><p>添加了对 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#november-5-2022">Bot API 6.3</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1057">#1057</a> 的完全支持</p></li>
 </ul>
 </section>
-<section id="id158">
-<h3>错误修复<a class="headerlink" href="#id158" title="Link to this heading">¶</a></h3>
+<section id="id179">
+<h3>错误修复<a class="headerlink" href="#id179" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">Message.send_invoice</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">Message.reply_invoice</span></code>，添加了丢失的参数 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1047">#1047</a></p></li>
 <li><p>修复了复制和转发功能：</p>
@@ -1301,16 +1444,16 @@
 </li>
 </ul>
 </section>
-<section id="id161">
-<h3>改进的文档<a class="headerlink" href="#id161" title="Link to this heading">¶</a></h3>
+<section id="id182">
+<h3>改进的文档<a class="headerlink" href="#id182" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>在 index.po 中修复了 UA 翻译 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1017">#1017</a></p></li>
 <li><p>修复 <code class="code docutils literal notranslate"><span class="pre">Message</span></code>, <code class="code docutils literal notranslate"><span class="pre">reply_media_group</span></code> 以及 <code class="code docutils literal notranslate"><span class="pre">answer_media_group</span></code> 方法的类型标注 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1029">#1029</a></p></li>
 <li><p>移除了一个旧的现在不起作用的功能 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1060">#1060</a></p></li>
 </ul>
 </section>
-<section id="id165">
-<h3>其他<a class="headerlink" href="#id165" title="Link to this heading">¶</a></h3>
+<section id="id186">
+<h3>其他<a class="headerlink" href="#id186" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>在 Python 3.11 上启用了测试 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1044">#1044</a></p></li>
 <li><p>由于在某些情况下，没有更新ca证书的系统上对Bot API的请求会因为 <code class="code docutils literal notranslate"><span class="pre">[SSL:</span> <span class="pre">CERTIFICATE_VERIFY_FAILED]</span> <span class="pre">certificate</span> <span class="pre">verify</span> <span class="pre">failed:</span> <span class="pre">self</span> <span class="pre">signed</span> <span class="pre">certificate</span> <span class="pre">in</span> <span class="pre">certificate</span> <span class="pre">chain</span></code> 而失败，因此添加了一个必需的依赖 <code class="code docutils literal notranslate"><span class="pre">certifi</span></code>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1066">#1066</a></p></li>
@@ -1319,8 +1462,8 @@
 </section>
 <section id="b5-2022-10-02">
 <h2>3.0.0b5 (2022-10-02)<a class="headerlink" href="#b5-2022-10-02" title="Link to this heading">¶</a></h2>
-<section id="id168">
-<h3>特性<a class="headerlink" href="#id168" title="Link to this heading">¶</a></h3>
+<section id="id189">
+<h3>特性<a class="headerlink" href="#id189" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>增加对PyPy的支持并在PyPy下运行测试 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/985">#985</a></p></li>
 <li><p>将消息文本添加到aiogram异常表示 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/988">#988</a></p></li>
@@ -1328,8 +1471,8 @@
 <li><p>当服务器响应无法被反序列化时，添加了更详细的错误。 这个功能将有助于调试来自服务器的意外响应。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1014">#1014</a></p></li>
 </ul>
 </section>
-<section id="id173">
-<h3>错误修复<a class="headerlink" href="#id173" title="Link to this heading">¶</a></h3>
+<section id="id194">
+<h3>错误修复<a class="headerlink" href="#id194" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>重做了错误事件，引入了  <a class="reference internal" href="dispatcher/errors.html#aiogram.types.error_event.ErrorEvent" title="aiogram.types.error_event.ErrorEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.error_event.ErrorEvent</span></code></a> 对象。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/898">#898</a></p></li>
 <li><p>修正了在 <cite>aiogram.utils.markdown</cite> 模块中的 markdown 转义问题 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/903">#903</a></p></li>
@@ -1337,20 +1480,20 @@
 <li><p>修复了命令解析中的空&#64;提及，现在将是None而不是空字符串 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/1013">#1013</a></p></li>
 </ul>
 </section>
-<section id="id178">
-<h3>改进的文档<a class="headerlink" href="#id178" title="Link to this heading">¶</a></h3>
+<section id="id199">
+<h3>改进的文档<a class="headerlink" href="#id199" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>初始化文档翻译（添加了乌克兰语） <a class="reference external" href="https://github.com/aiogram/aiogram/issues/925">＃925</a></p></li>
 </ul>
 </section>
-<section id="id180">
-<h3>弃用和移除<a class="headerlink" href="#id180" title="Link to this heading">¶</a></h3>
+<section id="id201">
+<h3>弃用和移除<a class="headerlink" href="#id201" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>根据相关问题描述，移除了过滤器工厂。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/942">#942</a></p></li>
 </ul>
 </section>
-<section id="id182">
-<h3>其他<a class="headerlink" href="#id182" title="Link to this heading">¶</a></h3>
+<section id="id203">
+<h3>其他<a class="headerlink" href="#id203" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>现在 Router/Dispatcher 只接受关键字参数。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/982">#982</a></p></li>
 </ul>
@@ -1358,8 +1501,8 @@
 </section>
 <section id="b4-2022-08-14">
 <h2>3.0.0b4 (2022-08-14)<a class="headerlink" href="#b4-2022-08-14" title="Link to this heading">¶</a></h2>
-<section id="id184">
-<h3>特性<a class="headerlink" href="#id184" title="Link to this heading">¶</a></h3>
+<section id="id205">
+<h3>特性<a class="headerlink" href="#id205" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>为 Telegram BotAPI 在 sendChatAction 请求中使用的常量添加类帮助程序 ChatAction。在我看来，这将帮助用户，并且还将提高与 2.x 版本的兼容性，其中类似的类被称为“ChatActions”。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/803">#803</a></p></li>
 <li><p>增加了将过滤器组合或反转结果的可能性</p>
@@ -1376,8 +1519,8 @@
 <li><p>为“Chat”对象添加了“full_name”快捷方式`#929 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/929">https://github.com/aiogram/aiogram/issues/929</a>&gt;`_</p></li>
 </ul>
 </section>
-<section id="id189">
-<h3>错误修复<a class="headerlink" href="#id189" title="Link to this heading">¶</a></h3>
+<section id="id210">
+<h3>错误修复<a class="headerlink" href="#id210" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>API方法中的联合类型强制转换的误报问题已经修复。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/901">#901</a></p></li>
 <li><p>增加了3个缺失的内容类型：</p>
@@ -1392,8 +1535,8 @@
 <li><p>修复了 RedisEventIsolation 中锁定参数的默认设置。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/972">#972</a></p></li>
 </ul>
 </section>
-<section id="id194">
-<h3>其他<a class="headerlink" href="#id194" title="Link to this heading">¶</a></h3>
+<section id="id215">
+<h3>其他<a class="headerlink" href="#id215" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>限制包括带有字符串 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/896">#896</a></p></li>
 <li><p>将CommandPatterType改为CommandPatternType在`aiogram/dispatcher/filters/command.py`中 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/907">#907</a></p></li>
@@ -1418,15 +1561,15 @@
 </section>
 <section id="b3-2022-04-19">
 <h2>3.0.0b3 (2022-04-19)<a class="headerlink" href="#b3-2022-04-19" title="Link to this heading">¶</a></h2>
-<section id="id203">
-<h3>特性<a class="headerlink" href="#id203" title="Link to this heading">¶</a></h3>
+<section id="id224">
+<h3>特性<a class="headerlink" href="#id224" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>增加了作为处理程序参数获取命令魔术结果的可能性 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/889">#889</a></p></li>
 <li><p>完整支持`Telegram Bot API 6.0 &lt;<a class="reference external" href="https://core.telegram.org/bots/api-changelog#april-16-2022">https://core.telegram.org/bots/api-changelog#april-16-2022</a>&gt;`_ <a class="reference external" href="https://github.com/aiogram/aiogram/issues/890">#890</a></p></li>
 </ul>
 </section>
-<section id="id206">
-<h3>错误修复<a class="headerlink" href="#id206" title="Link to this heading">¶</a></h3>
+<section id="id227">
+<h3>错误修复<a class="headerlink" href="#id227" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复了I18n延迟代理。禁用了缓存。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/839">#839</a></p></li>
 <li><p>增加了对spoiler消息实体的解析 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/865">#865</a></p></li>
@@ -1434,8 +1577,8 @@
 <li><p>修复了CallbackData工厂解析IntEnum’s <a class="reference external" href="https://github.com/aiogram/aiogram/issues/885">#885</a></p></li>
 </ul>
 </section>
-<section id="id211">
-<h3>其他<a class="headerlink" href="#id211" title="Link to this heading">¶</a></h3>
+<section id="id232">
+<h3>其他<a class="headerlink" href="#id232" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>已添加自动检查，以确保拉取请求在**CHANGES**目录中添加了变更描述 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/873">#873</a></p></li>
 <li><p>更改了 <code class="code docutils literal notranslate"><span class="pre">Message.html_text</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">Message.md_text</span></code> 属性的行为，当消息没有文本时。将使用空字符串而不是引发错误。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/874">#874</a></p></li>
@@ -1446,8 +1589,8 @@
 </section>
 <section id="b2-2022-02-19">
 <h2>3.0.0b2 (2022-02-19)<a class="headerlink" href="#b2-2022-02-19" title="Link to this heading">¶</a></h2>
-<section id="id216">
-<h3>特性<a class="headerlink" href="#id216" title="Link to this heading">¶</a></h3>
+<section id="id237">
+<h3>特性<a class="headerlink" href="#id237" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>增加了将额外的参数传递到aiohttp webhook处理程序中的可能性，以便在处理程序内部使用这些参数，就像在轮询模式中可能的那样。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/785">#785</a></p></li>
 <li><p>通过装饰器添加处理程序标志的可能性（类似于`pytest.mark`装饰器，但是`aiogram.flags`）`#836 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/836">https://github.com/aiogram/aiogram/issues/836</a>&gt;`_</p></li>
@@ -1456,15 +1599,15 @@
 </li>
 </ul>
 </section>
-<section id="id220">
-<h3>错误修复<a class="headerlink" href="#id220" title="Link to this heading">¶</a></h3>
+<section id="id241">
+<h3>错误修复<a class="headerlink" href="#id241" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>StateFilter中序列的意外行为已修复。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/791">#791</a></p></li>
 <li><p>修正了异常筛选器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/827">#827</a></p></li>
 </ul>
 </section>
-<section id="id223">
-<h3>其他<a class="headerlink" href="#id223" title="Link to this heading">¶</a></h3>
+<section id="id244">
+<h3>其他<a class="headerlink" href="#id244" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>用于处理事件的记录器名称已更改为:code:<cite>aiogram.events</cite>。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/830">#830</a></p></li>
 <li><p>完全支持Telegram Bot API 5.6和5.7的增加`#835 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/835">https://github.com/aiogram/aiogram/issues/835</a>&gt;`_</p></li>
@@ -1474,8 +1617,8 @@
 </section>
 <section id="b1-2021-12-12">
 <h2>3.0.0b1（2021年12月12日）<a class="headerlink" href="#b1-2021-12-12" title="Link to this heading">¶</a></h2>
-<section id="id227">
-<h3>特性<a class="headerlink" href="#id227" title="Link to this heading">¶</a></h3>
+<section id="id248">
+<h3>特性<a class="headerlink" href="#id248" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>为MagicFilter添加了名为:code:<a href="#id1"><span class="problematic" id="id2">`</span></a>as_`的新自定义操作</p>
 <p>现在您可以使用它作为处理程序参数来获得魔法过滤器结果</p>
@@ -1497,14 +1640,14 @@
 </li>
 </ul>
 </section>
-<section id="id229">
-<h3>错误修复<a class="headerlink" href="#id229" title="Link to this heading">¶</a></h3>
+<section id="id250">
+<h3>错误修复<a class="headerlink" href="#id250" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复：在`aiogram/dispatcher/handler`中缺少了`ChatMemberHandler`的引入 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/751">#751</a></p></li>
 </ul>
 </section>
-<section id="id231">
-<h3>其他<a class="headerlink" href="#id231" title="Link to this heading">¶</a></h3>
+<section id="id252">
+<h3>其他<a class="headerlink" href="#id252" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>请检查RedisStorage键生成器中的:code:<cite>destiny</cite>，以防没有启用:code:<cite>with_destiny</cite>。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/776">#776</a></p></li>
 <li><p>已经完全支持 <a class="reference external" href="https://core.telegram.org/bots/api-changelog#december-7-2021">Bot API 5.5</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/777">#777</a></p></li>
@@ -1515,8 +1658,8 @@
 </section>
 <section id="a18-2021-11-10">
 <h2>3.0.0a18 (2021-11-10)<a class="headerlink" href="#a18-2021-11-10" title="Link to this heading">¶</a></h2>
-<section id="id236">
-<h3>特性<a class="headerlink" href="#id236" title="Link to this heading">¶</a></h3>
+<section id="id257">
+<h3>特性<a class="headerlink" href="#id257" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>Breaking: 改变了会话中间件的签名 Breaking: 将 AiohttpSession.make_request 方法参数从 call 重命名为 method，以匹配基类中的命名 添加了用于记录输出请求的中间件 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/716">#716</a></p></li>
 <li><p>改进了对筛选器解析错误的描述。例如，当您尝试将错误类型的参数传递给筛选器，但不知道为什么筛选器未解析时，现在您可以收到这样的错误：</p>
@@ -1541,16 +1684,16 @@
 </li>
 </ul>
 </section>
-<section id="id241">
-<h3>错误修复<a class="headerlink" href="#id241" title="Link to this heading">¶</a></h3>
+<section id="id262">
+<h3>错误修复<a class="headerlink" href="#id262" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复了错误处理程序中的 I18n 上下文 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/726">#726</a></p></li>
 <li><p>修复了在发出关闭之前bot会话关闭的问题`#734 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/734">https://github.com/aiogram/aiogram/issues/734</a>&gt;`_</p></li>
 <li><p>修复：绑定过滤器解析不需要子路由器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/736">#736</a></p></li>
 </ul>
 </section>
-<section id="id245">
-<h3>其他<a class="headerlink" href="#id245" title="Link to this heading">¶</a></h3>
+<section id="id266">
+<h3>其他<a class="headerlink" href="#id266" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>在Python 3.10上启用了测试，移除了`async_lru`依赖项（与Python 3.10不兼容），并用保护属性替换了使用`#719 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/719">https://github.com/aiogram/aiogram/issues/719</a>&gt;`_</p></li>
 <li><p>将 README.md 转换为 README.rst 并将其用作文档的基本文件 <cite>#725</cite> &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/725">https://github.com/aiogram/aiogram/issues/725</a>&gt;</p></li>
@@ -1567,8 +1710,8 @@
 </section>
 <section id="a17-2021-09-24">
 <h2>3.0.0a17 (2021-09-24)<a class="headerlink" href="#a17-2021-09-24" title="Link to this heading">¶</a></h2>
-<section id="id250">
-<h3>其他<a class="headerlink" href="#id250" title="Link to this heading">¶</a></h3>
+<section id="id271">
+<h3>其他<a class="headerlink" href="#id271" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>已添加 <code class="code docutils literal notranslate"><span class="pre">html_text</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">md_text</span></code> 到消息对象 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/708">#708</a></p></li>
 <li><p>重构了I18n，为I18n引擎和当前语言环境添加了上下文管理器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/709">#709</a></p></li>
@@ -1577,8 +1720,8 @@
 </section>
 <section id="a16-2021-09-22">
 <h2>3.0.0a16 (2021-09-22)<a class="headerlink" href="#a16-2021-09-22" title="Link to this heading">¶</a></h2>
-<section id="id253">
-<h3>特性<a class="headerlink" href="#id253" title="Link to this heading">¶</a></h3>
+<section id="id274">
+<h3>特性<a class="headerlink" href="#id274" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>增加了本地 Bot API 服务器文件下载的支持</p>
 <p>当本地API启用时，文件可以通过`bot.download`/<a class="reference external" href="https://github.com/aiogram/aiogram/issues/698">bot.download_file`方法下载。`#698</a></p>
@@ -1586,8 +1729,8 @@
 <li><p>实现了 I18n &amp; L10n 支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/701">#701</a></p></li>
 </ul>
 </section>
-<section id="id256">
-<h3>其他<a class="headerlink" href="#id256" title="Link to this heading">¶</a></h3>
+<section id="id277">
+<h3>其他<a class="headerlink" href="#id277" title="Link to this heading">¶</a></h3>
 <ul>
 <li><p>被测试和文档覆盖的键盘构建工具 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/699">#699</a></p></li>
 <li><p>重大消息!!! 重构并重命名异常。</p>
@@ -1607,20 +1750,20 @@
 </section>
 <section id="a15-2021-09-10">
 <h2>3.0.0a15 (2021-09-10)<a class="headerlink" href="#a15-2021-09-10" title="Link to this heading">¶</a></h2>
-<section id="id261">
-<h3>特性<a class="headerlink" href="#id261" title="Link to this heading">¶</a></h3>
+<section id="id282">
+<h3>特性<a class="headerlink" href="#id282" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>能够遍历StatesGroup中的所有状态。Aiogram已经在状态组中添加了检查，因此这是一个相关特性。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/666">#666</a></p></li>
 </ul>
 </section>
-<section id="id263">
-<h3>错误修复<a class="headerlink" href="#id263" title="Link to this heading">¶</a></h3>
+<section id="id284">
+<h3>错误修复<a class="headerlink" href="#id284" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>修复了 <a href="#id1"><span class="problematic" id="id2">:class:`aiogram.utils.keyboard.KeyboardBuilder`中的类型检查错误 `#674 &lt;https://github.com/aiogram/aiogram/issues/674&gt;`_</span></a></p></li>
 </ul>
 </section>
-<section id="id265">
-<h3>其他<a class="headerlink" href="#id265" title="Link to this heading">¶</a></h3>
+<section id="id286">
+<h3>其他<a class="headerlink" href="#id286" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>默认情况下禁用ContentType过滤器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/668">#668</a></p></li>
 <li><p>将更新类型检测功能从 Dispatcher 移动到 Update 对象 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/669">#669</a></p></li>
@@ -1631,27 +1774,27 @@
 </section>
 <section id="a14-2021-08-17">
 <h2>3.0.0a14 (2021-08-17)<a class="headerlink" href="#a14-2021-08-17" title="Link to this heading">¶</a></h2>
-<section id="id270">
-<h3>特性<a class="headerlink" href="#id270" title="Link to this heading">¶</a></h3>
+<section id="id291">
+<h3>特性<a class="headerlink" href="#id291" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>为消息`#662 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/662">https://github.com/aiogram/aiogram/issues/662</a>&gt;`添加编辑/删除回复标记的别名</p></li>
 <li><p>重新设计了外部中间件链。防止在每个嵌套路由器中多次调用外部中间件。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/664">#664</a></p></li>
 </ul>
 </section>
-<section id="id273">
-<h3>错误修复<a class="headerlink" href="#id273" title="Link to this heading">¶</a></h3>
+<section id="id294">
+<h3>错误修复<a class="headerlink" href="#id294" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>为 AnswerInlineQuery 方法中的 InputMessageContent 准备解析模式 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/660">#660</a></p></li>
 </ul>
 </section>
-<section id="id275">
-<h3>改进的文档<a class="headerlink" href="#id275" title="Link to this heading">¶</a></h3>
+<section id="id296">
+<h3>改进的文档<a class="headerlink" href="#id296" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>集成了 <code class="code docutils literal notranslate"><span class="pre">towncrier</span></code> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/602">#602</a></p></li>
 </ul>
 </section>
-<section id="id277">
-<h3>其他<a class="headerlink" href="#id277" title="Link to this heading">¶</a></h3>
+<section id="id298">
+<h3>其他<a class="headerlink" href="#id298" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>新增了`.editorconfig` <a class="reference external" href="https://github.com/aiogram/aiogram/issues/650">#650</a></p></li>
 <li><p>Redis存储加速全局变量 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/651">#651</a></p></li>
@@ -1659,21 +1802,21 @@
 </ul>
 </section>
 </section>
-<section id="id281">
-<h2>2.14.3 (2021-07-21)<a class="headerlink" href="#id281" title="Link to this heading">¶</a></h2>
+<section id="id302">
+<h2>2.14.3 (2021-07-21)<a class="headerlink" href="#id302" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复了通过添加可定制对象序列化机制来检测 <code class="code docutils literal notranslate"><span class="pre">ChatMember</span></code> 类型 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/624">#624</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/623">#623</a>)</p></li>
 </ul>
 </section>
-<section id="id284">
-<h2>2.14.2 (2021-07-26)<a class="headerlink" href="#id284" title="Link to this heading">¶</a></h2>
+<section id="id305">
+<h2>2.14.2 (2021-07-26)<a class="headerlink" href="#id305" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>固定 <code class="code docutils literal notranslate"><span class="pre">MemoryStorage</span></code> 清理程序 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/619">#619</a>)</p></li>
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">I18nMiddleware</span></code> 中未使用的默认语言环境 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/562">#562</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/563">#563</a>)</p></li>
 </ul>
 </section>
-<section id="id288">
-<h2>2.14 (2021-07-27)<a class="headerlink" href="#id288" title="Link to this heading">¶</a></h2>
+<section id="id309">
+<h2>2.14 (2021-07-27)<a class="headerlink" href="#id309" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Bot API 5.3的全面支持 (#610, #614)</p></li>
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">Message.send_copy</span></code> 方法在投票方面的问题 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/603">#603</a>)</p></li>
@@ -1684,8 +1827,8 @@
 <li><p>改进了`MongoStorage`：从`aiogram_data`集合中删除空数据文档，以节省内存。 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/609">#609</a>)</p></li>
 </ul>
 </section>
-<section id="id299">
-<h2>2.13 (2021-04-28)<a class="headerlink" href="#id299" title="Link to this heading">¶</a></h2>
+<section id="id320">
+<h2>2.13 (2021-04-28)<a class="headerlink" href="#id320" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>增加了对 Bot API 5.2 的全面支持（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/572">#572</a>）</p></li>
 <li><p>在 <code class="code docutils literal notranslate"><span class="pre">sendInvoice</span></code> 方法调用中修复了 <code class="code docutils literal notranslate"><span class="pre">provider_data</span></code> 参数的使用</p></li>
@@ -1699,8 +1842,8 @@
 <li><p>增加了在轮询模式中使用 <code class="code docutils literal notranslate"><span class="pre">allowed_updates</span></code> 参数的可能性 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/564">#564</a>)</p></li>
 </ul>
 </section>
-<section id="id311">
-<h2>2.12.1 (2021-03-22)<a class="headerlink" href="#id311" title="Link to this heading">¶</a></h2>
+<section id="id332">
+<h2>2.12.1 (2021-03-22)<a class="headerlink" href="#id332" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>固定 <code class="code docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">值应该是</span> <span class="pre">'User'</span> <span class="pre">的实例，而不是</span> <span class="pre">'NoneType'</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/527">#527</a>)</p></li>
 <li><p>增加了缺失的:code:<cite>Chat.message_auto_delete_time</cite> 字段 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/535">#535</a>)</p></li>
@@ -1712,8 +1855,8 @@
 <li><p>在框架代码中删除了冗余的定义 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/531">#531</a>)</p></li>
 </ul>
 </section>
-<section id="id320">
-<h2>2.12（2021-03-14）<a class="headerlink" href="#id320" title="Link to this heading">¶</a></h2>
+<section id="id341">
+<h2>2.12（2021-03-14）<a class="headerlink" href="#id341" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>完全支持Telegram Bot API 5.1 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/519">#519</a>)</p></li>
 <li><p>修复了发送音频文件和文档的播放列表 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/465">#465</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/468">#468</a>)</p></li>
@@ -1734,15 +1877,15 @@
 <li><p>在文件和示例中修复了一些拼写错误 (#489, #490, #498, #504, #514)。</p></li>
 </ul>
 </section>
-<section id="id344">
-<h2>2.11.2 (2021-11-10)<a class="headerlink" href="#id344" title="Link to this heading">¶</a></h2>
+<section id="id365">
+<h2>2.11.2 (2021-11-10)<a class="headerlink" href="#id365" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>固定默认解析模式</p></li>
 <li><p>已将丢失的“supports_streaming”参数添加到answer_video方法`#462 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/462">https://github.com/aiogram/aiogram/issues/462</a>&gt;`_</p></li>
 </ul>
 </section>
-<section id="id346">
-<h2>2.11.1 (2021-11-10)<a class="headerlink" href="#id346" title="Link to this heading">¶</a></h2>
+<section id="id367">
+<h2>2.11.1 (2021-11-10)<a class="headerlink" href="#id367" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>固定文件URL模板</p></li>
 <li><p>修复API调用中MessageEntity序列化的问题 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/457">#457</a></p></li>
@@ -1751,8 +1894,8 @@
 <li><p>添加了缺少的参数以提升ChatMember别名 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/458">#458</a>)</p></li>
 </ul>
 </section>
-<section id="id351">
-<h2>2.11 (2021-11-08)<a class="headerlink" href="#id351" title="Link to this heading">¶</a></h2>
+<section id="id372">
+<h2>2.11 (2021-11-08)<a class="headerlink" href="#id372" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>完全支持了 Telegram 机器人 API 5.0 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/454">#454</a>)</p></li>
 <li><dl class="simple">
@@ -1766,14 +1909,14 @@
 <li><p><cite>ChatType.SUPER_GROUP</cite> 重命名为 <code class="code docutils literal notranslate"><span class="pre">ChatType.SUPERGROUP</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/438">#438</a>)</p></li>
 </ul>
 </section>
-<section id="id354">
-<h2>2.10.1 (2021-09-14)<a class="headerlink" href="#id354" title="Link to this heading">¶</a></h2>
+<section id="id375">
+<h2>2.10.1 (2021-09-14)<a class="headerlink" href="#id375" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复了在执行器中获取asyncio事件循环的关键bug。(<a class="reference external" href="https://github.com/aiogram/aiogram/issues/424">#424</a>) <code class="code docutils literal notranslate"><span class="pre">AttributeError:</span> <span class="pre">'NoneType'</span> <span class="pre">object</span> <span class="pre">has</span> <span class="pre">no</span> <span class="pre">attribute</span> <span class="pre">'run_until_complete'</span></code></p></li>
 </ul>
 </section>
-<section id="id356">
-<h2>2.10 (2021-09-13)<a class="headerlink" href="#id356" title="Link to this heading">¶</a></h2>
+<section id="id377">
+<h2>2.10 (2021-09-13)<a class="headerlink" href="#id377" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>不需要翻译</p></li>
 <li><p>重大变化：用 motor 替换了 aiomongo (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/368">#368</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/380">#380</a>)</p></li>
@@ -1814,15 +1957,15 @@
 <li><p>美化自述文件，更新下载统计徽章 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/406">#406</a>)</p></li>
 </ul>
 </section>
-<section id="id392">
-<h2>2.9.2 (2021-06-13)<a class="headerlink" href="#id392" title="Link to this heading">¶</a></h2>
+<section id="id413">
+<h2>2.9.2 (2021-06-13)<a class="headerlink" href="#id413" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复 <code class="code docutils literal notranslate"><span class="pre">Message.get_full_command()</span></code> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/352">#352</a></p></li>
 <li><p>修复了 markdown 工具 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/353">#353</a></p></li>
 </ul>
 </section>
-<section id="id395">
-<h2>2.9 (2021-06-08)<a class="headerlink" href="#id395" title="Link to this heading">¶</a></h2>
+<section id="id416">
+<h2>2.9 (2021-06-08)<a class="headerlink" href="#id416" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>完全支持Telegram Bot API 4.9</p></li>
 <li><p>在 poll_answer 更新时修复了用户上下文 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/322">#322</a>)</p></li>
@@ -1834,15 +1977,15 @@
 <li><p>增加获取机器人id的功能，而不需要调用 <code class="code docutils literal notranslate"><span class="pre">get_me</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/296">#296</a>)。</p></li>
 </ul>
 </section>
-<section id="id406">
-<h2>2.8 (2021-04-26)<a class="headerlink" href="#id406" title="Link to this heading">¶</a></h2>
+<section id="id427">
+<h2>2.8 (2021-04-26)<a class="headerlink" href="#id427" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>增加了对Bot API 4.8的全面支持</p></li>
 <li><p>新增了 <code class="code docutils literal notranslate"><span class="pre">Message.answer_dice</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">Message.reply_dice</span></code> 方法 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/306">#306</a>)</p></li>
 </ul>
 </section>
-<section id="id408">
-<h2>2.7 (2021-04-07)<a class="headerlink" href="#id408" title="Link to this heading">¶</a></h2>
+<section id="id429">
+<h2>2.7 (2021-04-07)<a class="headerlink" href="#id429" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>增加了对Bot API 4.7的全面支持（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/294">#294</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/289">#289</a>)</p></li>
 <li><p>为send_animation方法添加了默认解析模式 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/293">#293</a> <a class="reference external" href="https://github.com/aiogram/aiogram/issues/292">#292</a>)</p></li>
@@ -1851,24 +1994,24 @@
 <li><p>小的改变和其他小的改进</p></li>
 </ul>
 </section>
-<section id="id415">
-<h2>2.6.1 (2021-01-25)<a class="headerlink" href="#id415" title="Link to this heading">¶</a></h2>
+<section id="id436">
+<h2>2.6.1 (2021-01-25)<a class="headerlink" href="#id436" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复了 <code class="code docutils literal notranslate"><span class="pre">KeyboardButton</span></code> 初始化程序，增加了 <code class="code docutils literal notranslate"><span class="pre">request_poll</span></code> 参数（#266 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/266">https://github.com/aiogram/aiogram/issues/266</a>&gt;`_）</p></li>
 <li><p>增加了用于投票类型的辅助功能（<code class="code docutils literal notranslate"><span class="pre">aiogram.types.PollType</span></code>）</p></li>
 <li><p>更新了Telegram_object <code class="code docutils literal notranslate"><span class="pre">.as_*</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">.to_*</span></code> 方法的行为。它不再改变对象本身。 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/247">#247</a>)</p></li>
 </ul>
 </section>
-<section id="id418">
-<h2>2.6 (2021-01-23)<a class="headerlink" href="#id418" title="Link to this heading">¶</a></h2>
+<section id="id439">
+<h2>2.6 (2021-01-23)<a class="headerlink" href="#id439" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Telegram机器人API v4.6（投票2.0）的全面支持 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/265">#265</a></p></li>
 <li><p>添加了新的过滤器 - IsContactSender (commit)</p></li>
 <li><p>修复了代理额外依赖的版本 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/262">#262</a></p></li>
 </ul>
 </section>
-<section id="id421">
-<h2>2.5.3 (2021-01-05)<a class="headerlink" href="#id421" title="Link to this heading">¶</a></h2>
+<section id="id442">
+<h2>2.5.3 (2021-01-05)<a class="headerlink" href="#id442" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/aiogram/aiogram/issues/255">#255</a> 更新了CallbackData工厂的有效性检查。对非拉丁符号更加正确</p></li>
 <li><p>#256 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/256">https://github.com/aiogram/aiogram/issues/256</a>&gt; Fixed <code class="code docutils literal notranslate"><span class="pre">renamed_argument</span></code> decorator error
@@ -1876,20 +2019,20 @@
 <li><p>#257 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/257">https://github.com/aiogram/aiogram/issues/257</a>&gt;  进一步修复CommandStart过滤器</p></li>
 </ul>
 </section>
-<section id="id425">
-<h2>2.5.2 (2021-01-01)<a class="headerlink" href="#id425" title="Link to this heading">¶</a></h2>
+<section id="id446">
+<h2>2.5.2 (2021-01-01)<a class="headerlink" href="#id446" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>把 <code class="code docutils literal notranslate"><span class="pre">quote_html</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">escape_md</span></code> 函数传回</p></li>
 </ul>
 </section>
-<section id="id426">
-<h2>2.5.1 (2021-01-01)<a class="headerlink" href="#id426" title="Link to this heading">¶</a></h2>
+<section id="id447">
+<h2>2.5.1 (2021-01-01)<a class="headerlink" href="#id447" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修正 <code class="code docutils literal notranslate"><span class="pre">CommandStart</span></code> 过滤器</p></li>
 </ul>
 </section>
-<section id="id427">
-<h2>2.5（2021年1月1日）<a class="headerlink" href="#id427" title="Link to this heading">¶</a></h2>
+<section id="id448">
+<h2>2.5（2021年1月1日）<a class="headerlink" href="#id448" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>增加了对Telegram Bot API 4.5的完整支持（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/250">#250</a>、 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/251">#251</a>）</p></li>
 <li><p>#239 &lt;<a class="reference external" href="https://github.com/aiogram/aiogram/issues/239">https://github.com/aiogram/aiogram/issues/239</a>&gt;`_ 修复了 <code class="code docutils literal notranslate"><span class="pre">check_token</span></code> 方法</p></li>
@@ -1900,8 +2043,8 @@
 <li><p>其他小的更改和细微的改进（<a class="reference external" href="https://github.com/aiogram/aiogram/issues/223">#223</a> 和其他…)</p></li>
 </ul>
 </section>
-<section id="id435">
-<h2>2.4 (2021-10-29)<a class="headerlink" href="#id435" title="Link to this heading">¶</a></h2>
+<section id="id456">
+<h2>2.4 (2021-10-29)<a class="headerlink" href="#id456" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>新增 Message.send_copy 方法（转发消息但不实际转发）</p></li>
 <li><p>安全关闭aiohttp客户端会话（应用程序关闭时不再出现异常）.</p></li>
@@ -1918,8 +2061,8 @@
 <li><p>修复错误的完成顺序。<a class="reference external" href="https://github.com/aiogram/aiogram/issues/217">#217</a></p></li>
 </ul>
 </section>
-<section id="id448">
-<h2>2.3 (2021-08-16)<a class="headerlink" href="#id448" title="Link to this heading">¶</a></h2>
+<section id="id469">
+<h2>2.3 (2021-08-16)<a class="headerlink" href="#id469" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Telegram Bot API 4.4 的全面支持</p></li>
 <li><p>固定 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/143">#143</a></p></li>
@@ -1933,8 +2076,8 @@
 <li><p>实现了节流装饰器 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/181">#181</a></p></li>
 </ul>
 </section>
-<section id="id459">
-<h2>2.2 (2021-06-09)<a class="headerlink" href="#id459" title="Link to this heading">¶</a></h2>
+<section id="id480">
+<h2>2.2 (2021-06-09)<a class="headerlink" href="#id480" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>提供最新的Telegram Bot API（4.3）</p></li>
 <li><p>更新了用于过滤器的文档</p></li>
@@ -1942,8 +2085,8 @@
 <li><p>重要提示：在RedisStorage2中，<cite>update_bucket`中的拼写错误已经修正：:code:`data</cite> -&gt; <code class="code docutils literal notranslate"><span class="pre">bucket</span></code> (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/132">#132</a>)</p></li>
 </ul>
 </section>
-<section id="id462">
-<h2>2.1 (2021-04-18)<a class="headerlink" href="#id462" title="Link to this heading">¶</a></h2>
+<section id="id483">
+<h2>2.1 (2021-04-18)<a class="headerlink" href="#id483" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>实现了来自 Telegram Bot API 4.2 的所有新功能</p></li>
 <li><p><cite>ChatMember`和`ChatMemberStatus`的`is_member`和`is_admin`方法已重命名为`is_chat_member`和`is_chat_admin</cite></p></li>
@@ -1959,8 +2102,8 @@
 <li><p>其他小的更改和细微的改进</p></li>
 </ul>
 </section>
-<section id="id471">
-<h2>2.0.1（2021年12月31日）<a class="headerlink" href="#id471" title="Link to this heading">¶</a></h2>
+<section id="id492">
+<h2>2.0.1（2021年12月31日）<a class="headerlink" href="#id492" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>实现了回调数据工厂（<a class="reference external" href="https://github.com/aiogram/aiogram/blob/master/examples/callback_data_factory.py">示例</a>）</p></li>
 <li><p>实现了从上下文回答内联查询的方法，并且可以向消息回复动画。 <a class="reference external" href="https://github.com/aiogram/aiogram/issues/85">#85</a></p></li>
@@ -1968,20 +2111,20 @@
 <li><p>更多的例外情况 (<code class="code docutils literal notranslate"><span class="pre">ChatIdIsEmpty</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">NotEnoughRightsToRestrict</span></code>)</p></li>
 </ul>
 </section>
-<section id="id474">
-<h2>2.0 (2021-10-28)<a class="headerlink" href="#id474" title="Link to this heading">¶</a></h2>
+<section id="id495">
+<h2>2.0 (2021-10-28)<a class="headerlink" href="#id495" title="Link to this heading">¶</a></h2>
 <p>这个更新将导致与Python 3.6的向后兼容性中断，并且只能与Python 3.7+一起使用：- contextvars（PEP-567）; - 注解的新语法（PEP-563）。</p>
 <p>变更：- 使用 contextvars 替代 <code class="code docutils literal notranslate"><span class="pre">aiogram.utils.context</span></code>；- 实现了过滤器工厂；- 实现了新的过滤器机制；- 允许在 CommandsFilter 中自定义命令前缀；- 实现了将过滤器的结果（作为字典）作为处理程序中的 kwargs 传递的机制（类似 pytest 中的 fixtures）；- 实现了状态组特性；- 实现了FSM存储的代理；- 更改了文件上传机制；- 实现了从URL上传文件的管道；- 实现了I18n中间件；- 错误处理程序现在只应接受两个参数（当前更新和异常）；- 对于Socks4/5代理，使用 <code class="code docutils literal notranslate"><span class="pre">aiohttp_socks</span></code> 替代 <code class="code docutils literal notranslate"><span class="pre">aiosocksy</span></code>；- types.ContentType 被分为 <code class="code docutils literal notranslate"><span class="pre">types.ContentType</span></code> 和 <code class="code docutils literal notranslate"><span class="pre">types.ContentTypes</span></code>；- 允许使用 rapidjson 替代 ujson/json；- bot 和 dispatcher 对象中的 <code class="code docutils literal notranslate"><span class="pre">.current()</span></code> 方法更名为 <code class="code docutils literal notranslate"><span class="pre">get_current()</span></code>;</p>
 <p>完整的更改日志 - 您可以在迁移FAQ中阅读有关此版本的更多详细信息: <a class="reference external" href="https://aiogram.readthedocs.io/en/latest/migration_1_to_2.html">https://aiogram.readthedocs.io/en/latest/migration_1_to_2.html</a></p>
 </section>
-<section id="id475">
-<h2>1.4 (2021-08-03)<a class="headerlink" href="#id475" title="Link to this heading">¶</a></h2>
+<section id="id496">
+<h2>1.4 (2021-08-03)<a class="headerlink" href="#id496" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Bot API 4.0 (<a class="reference external" href="https://github.com/aiogram/aiogram/issues/57">#57</a>)</p></li>
 </ul>
 </section>
-<section id="id477">
-<h2>1.3.3 (2021-07-16)<a class="headerlink" href="#id477" title="Link to this heading">¶</a></h2>
+<section id="id498">
+<h2>1.3.3 (2021-07-16)<a class="headerlink" href="#id498" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复了标记实体的解析；</p></li>
 <li><p>增加了更多的API异常;</p></li>
@@ -1990,8 +2133,8 @@
 <li><p>其他小的变动和细微的改进。</p></li>
 </ul>
 </section>
-<section id="id478">
-<h2>1.3.2 (2021-05-27)<a class="headerlink" href="#id478" title="Link to this heading">¶</a></h2>
+<section id="id499">
+<h2>1.3.2 (2021-05-27)<a class="headerlink" href="#id499" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复了轮询进程崩溃的问题。 (我认为)</p></li>
 <li><p>根据机器人API文档，在输入查询结果中添加了parse_mode字段。</p></li>
@@ -2004,26 +2147,26 @@
 <li><p>修复后的RethinkDBStorage</p></li>
 </ul>
 </section>
-<section id="id481">
-<h2>1.3.1 (2018-05-27)<a class="headerlink" href="#id481" title="Link to this heading">¶</a></h2>
+<section id="id502">
+<h2>1.3.1 (2018-05-27)<a class="headerlink" href="#id502" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id482">
-<h2>1.3 (2021-04-22)<a class="headerlink" href="#id482" title="Link to this heading">¶</a></h2>
+<section id="id503">
+<h2>1.3 (2021-04-22)<a class="headerlink" href="#id503" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>允许使用Socks5代理（需要手动安装 <code class="code docutils literal notranslate"><span class="pre">aiosocksy</span></code>）。</p></li>
 <li><p>重构:code:<cite>aiogram.utils.executor</cite> 模块。</p></li>
 <li><p>【警告】更新后的需求列表。</p></li>
 </ul>
 </section>
-<section id="id483">
-<h2>1.2.3 (2018-04-14) =&gt; 1.2.3（2018年04月14日）<a class="headerlink" href="#id483" title="Link to this heading">¶</a></h2>
+<section id="id504">
+<h2>1.2.3 (2018-04-14) =&gt; 1.2.3（2018年04月14日）<a class="headerlink" href="#id504" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>API错误的修复检测</p></li>
 <li><p>修复了与 pip 10.0.0 的 <code class="code docutils literal notranslate"><span class="pre">setup.py</span></code> 兼容性</p></li>
 </ul>
 </section>
-<section id="id484">
-<h2>1.2.2 (2018-04-08)<a class="headerlink" href="#id484" title="Link to this heading">¶</a></h2>
+<section id="id505">
+<h2>1.2.2 (2018-04-08)<a class="headerlink" href="#id505" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>添加了更多的错误类型。</p></li>
 <li><p>已实现 <code class="code docutils literal notranslate"><span class="pre">InputFile.from_url(url:</span> <span class="pre">str)</span></code> 方法，用于下载文件。</p></li>
@@ -2031,8 +2174,8 @@
 <li><p>其他小的变动和细微的改进。</p></li>
 </ul>
 </section>
-<section id="id485">
-<h2>1.2.1 (2018-03-25)<a class="headerlink" href="#id485" title="Link to this heading">¶</a></h2>
+<section id="id506">
+<h2>1.2.1 (2018-03-25)<a class="headerlink" href="#id506" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>修复了处理地点的 [<a class="reference external" href="https://github.com/aiogram/aiogram/issues/27">#27</a>, <a class="reference external" href="https://github.com/aiogram/aiogram/issues/26">#26</a>]</p></li>
 <li><p>已将parse_mode添加到所有媒体（Bot API 3.6支持）[<a class="reference external" href="https://github.com/aiogram/aiogram/issues/23">#23</a>]</p></li>
@@ -2041,8 +2184,8 @@
 <li><p>其他错误和错别字修复以及小的改进。</p></li>
 </ul>
 </section>
-<section id="id491">
-<h2>1.2 (2018-02-23)<a class="headerlink" href="#id491" title="Link to this heading">¶</a></h2>
+<section id="id512">
+<h2>1.2 (2018-02-23)<a class="headerlink" href="#id512" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>提供 Telegram 机器人 API 3.6 完整版本</p></li>
 <li><p>修复关键错误： <code class="code docutils literal notranslate"><span class="pre">致命的Python错误：PyImport_GetModuleDict：没有模块字典！</span></code></p></li>
@@ -2051,8 +2194,8 @@
 <li><p>其他错误修复和小的改进。</p></li>
 </ul>
 </section>
-<section id="id492">
-<h2>1.1 (2018-01-27)<a class="headerlink" href="#id492" title="Link to this heading">¶</a></h2>
+<section id="id513">
+<h2>1.1 (2018-01-27)<a class="headerlink" href="#id513" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>增加了更多的数据类型方法（比如：<cite>message.reply_sticker(…)</cite> 或 <cite>file.download(…)</cite>）</p></li>
 <li><p>文档的错别字修正</p></li>
@@ -2063,11 +2206,11 @@
 <li><p>为FSM增加了RethinkDB存储 (<code class="code docutils literal notranslate"><span class="pre">aiogram.contrib.fsm_storage.rethinkdb</span></code>)</p></li>
 </ul>
 </section>
-<section id="id493">
-<h2>1.0.4（2018-01-10）<a class="headerlink" href="#id493" title="Link to this heading">¶</a></h2>
+<section id="id514">
+<h2>1.0.4（2018-01-10）<a class="headerlink" href="#id514" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id494">
-<h2>1.0.3 (2018-01-07)<a class="headerlink" href="#id494" title="Link to this heading">¶</a></h2>
+<section id="id515">
+<h2>1.0.3 (2018-01-07)<a class="headerlink" href="#id515" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>添加了中间件机制。</p></li>
 <li><p>添加了中间件和限流管理器的示例。</p></li>
@@ -2076,11 +2219,11 @@
 <li><p>小修复和其他轻微改进。</p></li>
 </ul>
 </section>
-<section id="id495">
-<h2>1.0.2 (2017-11-29)<a class="headerlink" href="#id495" title="Link to this heading">¶</a></h2>
+<section id="id516">
+<h2>1.0.2 (2017-11-29)<a class="headerlink" href="#id516" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id496">
-<h2>1.0.1 （2017年11月21日）<a class="headerlink" href="#id496" title="Link to this heading">¶</a></h2>
+<section id="id517">
+<h2>1.0.1 （2017年11月21日）<a class="headerlink" href="#id517" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>实现了`:code:<cite>types.InputFile</cite>，以便更轻松地发送本地文件</p></li>
 <li><p>危险！单词汇总中的拼写错误已经修复。现在，标记为已弃用的所有带有该单词的方法和原始方法都已更名为轮询。在更新之前，请在你的代码中进行检查！</p></li>
@@ -2088,8 +2231,8 @@
 <li><p>已添加媒体组的 <a class="reference external" href="https://github.com/aiogram/aiogram/blob/master/examples/media_group.py">示例</a> .</p></li>
 </ul>
 </section>
-<section id="id498">
-<h2>1.0 (2017-11-19)<a class="headerlink" href="#id498" title="Link to this heading">¶</a></h2>
+<section id="id519">
+<h2>1.0 (2017-11-19)<a class="headerlink" href="#id519" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>改进的数据类型序列化/反序列化机制（加快速度）。</p></li>
 <li><p>完全重写了所有的Telegram数据类型。</p></li>
@@ -2104,29 +2247,29 @@
 <li><p>从Bitbucket迁移到Github。</p></li>
 </ul>
 </section>
-<section id="id499">
-<h2>0.4.1 (2017-08-03)<a class="headerlink" href="#id499" title="Link to this heading">¶</a></h2>
+<section id="id520">
+<h2>0.4.1 (2017-08-03)<a class="headerlink" href="#id520" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id500">
-<h2>0.4 (2017-08-05)<a class="headerlink" href="#id500" title="Link to this heading">¶</a></h2>
+<section id="id521">
+<h2>0.4 (2017-08-05)<a class="headerlink" href="#id521" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id501">
-<h2>0.3.4 (2017-08-04)<a class="headerlink" href="#id501" title="Link to this heading">¶</a></h2>
+<section id="id522">
+<h2>0.3.4 (2017-08-04)<a class="headerlink" href="#id522" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id502">
-<h2>0.3.3 (2017-07-05)<a class="headerlink" href="#id502" title="Link to this heading">¶</a></h2>
+<section id="id523">
+<h2>0.3.3 (2017-07-05)<a class="headerlink" href="#id523" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id503">
-<h2>0.3.2 (2017-07-04)<a class="headerlink" href="#id503" title="Link to this heading">¶</a></h2>
+<section id="id524">
+<h2>0.3.2 (2017-07-04)<a class="headerlink" href="#id524" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id504">
-<h2>0.3.1 (2017-07-04)<a class="headerlink" href="#id504" title="Link to this heading">¶</a></h2>
+<section id="id525">
+<h2>0.3.1 (2017-07-04)<a class="headerlink" href="#id525" title="Link to this heading">¶</a></h2>
 </section>
 <section id="b1-2017-06-00">
 <h2>0.2b1 (2017年06月00日)<a class="headerlink" href="#b1-2017-06-00" title="Link to this heading">¶</a></h2>
 </section>
-<section id="id505">
-<h2>0.1（2017-06-03）<a class="headerlink" href="#id505" title="Link to this heading">¶</a></h2>
+<section id="id526">
+<h2>0.1（2017-06-03）<a class="headerlink" href="#id526" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -2144,14 +2287,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="utils/deep_linking.html">
+          <a class="prev-page" href="utils/serialization.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">深度链接</div>
+                <div class="title">Telegram object serialization</div>
                 
               </div>
             </a>
@@ -2186,207 +2329,221 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">更新日志</a><ul>
-<li><a class="reference internal" href="#release-unreleased-draft-2024-05-08">3.7.0 [UNRELEASED DRAFT] (2024-05-08)</a><ul>
-<li><a class="reference internal" href="#features">特性</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#id2">3.6.0 (2024-05-06)</a><ul>
-<li><a class="reference internal" href="#id3">特性</a></li>
+<li><a class="reference internal" href="#upcoming-update-2024-06-24">[UPCOMING UPDATE] (2024-06-24)</a><ul>
 <li><a class="reference internal" href="#improved-documentation">改进的文档</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id6">3.5.0 (2024-04-23)</a><ul>
-<li><a class="reference internal" href="#id7">特性</a></li>
+<li><a class="reference internal" href="#id2">3.8.0 (2024-06-19)</a><ul>
+<li><a class="reference internal" href="#features">特性</a></li>
 <li><a class="reference internal" href="#bugfixes">错误修复</a></li>
-<li><a class="reference internal" href="#id13">改进的文档</a></li>
+<li><a class="reference internal" href="#id6">改进的文档</a></li>
 <li><a class="reference internal" href="#misc">其他</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id17">3.4.1 (2024-02-17)</a><ul>
-<li><a class="reference internal" href="#id18">错误修复</a></li>
+<li><a class="reference internal" href="#id10">3.7.0 (2024-05-31)</a><ul>
+<li><a class="reference internal" href="#id11">特性</a></li>
+<li><a class="reference internal" href="#id14">错误修复</a></li>
+<li><a class="reference internal" href="#deprecations-and-removals">弃用和移除</a></li>
+<li><a class="reference internal" href="#id17">其他</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id20">3.4.0 (2024-02-16)</a><ul>
-<li><a class="reference internal" href="#id21">特性</a></li>
-<li><a class="reference internal" href="#id25">错误修复</a></li>
-<li><a class="reference internal" href="#id28">改进的文档</a></li>
+<li><a class="reference internal" href="#id19">3.6.0 (2024-05-06)</a><ul>
+<li><a class="reference internal" href="#id20">特性</a></li>
+<li><a class="reference internal" href="#id22">改进的文档</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id30">3.3.0 (2023-12-31)</a><ul>
-<li><a class="reference internal" href="#id31">特性</a></li>
+<li><a class="reference internal" href="#id24">3.5.0 (2024-04-23)</a><ul>
+<li><a class="reference internal" href="#id25">特性</a></li>
+<li><a class="reference internal" href="#id28">错误修复</a></li>
+<li><a class="reference internal" href="#id32">改进的文档</a></li>
+<li><a class="reference internal" href="#id34">其他</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id33">3.2.0 (2023-11-24)</a><ul>
-<li><a class="reference internal" href="#id34">特性</a></li>
-<li><a class="reference internal" href="#id37">错误修复</a></li>
-<li><a class="reference internal" href="#id41">改进的文档</a></li>
-<li><a class="reference internal" href="#id46">其他</a></li>
+<li><a class="reference internal" href="#id37">3.4.1 (2024-02-17)</a><ul>
+<li><a class="reference internal" href="#id38">错误修复</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id55">3.1.1 (2023-09-25)</a><ul>
-<li><a class="reference internal" href="#id56">错误修复</a></li>
+<li><a class="reference internal" href="#id40">3.4.0 (2024-02-16)</a><ul>
+<li><a class="reference internal" href="#id41">特性</a></li>
+<li><a class="reference internal" href="#id45">错误修复</a></li>
+<li><a class="reference internal" href="#id48">改进的文档</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id58">3.1.0 (2023-09-22)</a><ul>
-<li><a class="reference internal" href="#id59">特性</a></li>
-<li><a class="reference internal" href="#id63">错误修复</a></li>
+<li><a class="reference internal" href="#id50">3.3.0 (2023-12-31)</a><ul>
+<li><a class="reference internal" href="#id51">特性</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id66">3.0.0 (2023-09-01)</a><ul>
-<li><a class="reference internal" href="#id67">错误修复</a></li>
+<li><a class="reference internal" href="#id53">3.2.0 (2023-11-24)</a><ul>
+<li><a class="reference internal" href="#id54">特性</a></li>
+<li><a class="reference internal" href="#id57">错误修复</a></li>
+<li><a class="reference internal" href="#id61">改进的文档</a></li>
+<li><a class="reference internal" href="#id66">其他</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id75">3.1.1 (2023-09-25)</a><ul>
+<li><a class="reference internal" href="#id76">错误修复</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id78">3.1.0 (2023-09-22)</a><ul>
+<li><a class="reference internal" href="#id79">特性</a></li>
+<li><a class="reference internal" href="#id83">错误修复</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id86">3.0.0 (2023-09-01)</a><ul>
+<li><a class="reference internal" href="#id87">错误修复</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#rc2-2023-08-18">3.0.0rc2 (2023-08-18)</a><ul>
-<li><a class="reference internal" href="#id74">错误修复</a></li>
-<li><a class="reference internal" href="#id78">改进的文档</a></li>
-<li><a class="reference internal" href="#id86">其他</a></li>
+<li><a class="reference internal" href="#id94">错误修复</a></li>
+<li><a class="reference internal" href="#id98">改进的文档</a></li>
+<li><a class="reference internal" href="#id106">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#rc1-2023-08-06">3.0.0rc1 (2023-08-06)</a><ul>
-<li><a class="reference internal" href="#id89">特性</a></li>
-<li><a class="reference internal" href="#id93">错误修复</a></li>
-<li><a class="reference internal" href="#id96">改进的文档</a></li>
-<li><a class="reference internal" href="#id98">其他</a></li>
+<li><a class="reference internal" href="#id109">特性</a></li>
+<li><a class="reference internal" href="#id113">错误修复</a></li>
+<li><a class="reference internal" href="#id116">改进的文档</a></li>
+<li><a class="reference internal" href="#id118">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b9-2023-07-30">3.0.0b9 (2023-07-30)</a><ul>
-<li><a class="reference internal" href="#id101">特性</a></li>
-<li><a class="reference internal" href="#id104">错误修复</a></li>
-<li><a class="reference internal" href="#id107">改进的文档</a></li>
-<li><a class="reference internal" href="#deprecations-and-removals">弃用和移除</a></li>
+<li><a class="reference internal" href="#id121">特性</a></li>
+<li><a class="reference internal" href="#id124">错误修复</a></li>
+<li><a class="reference internal" href="#id127">改进的文档</a></li>
+<li><a class="reference internal" href="#id129">弃用和移除</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b8-2023-07-17">3.0.0b8 (2023-07-17)</a><ul>
-<li><a class="reference internal" href="#id110">特性</a></li>
-<li><a class="reference internal" href="#id118">错误修复</a></li>
-<li><a class="reference internal" href="#id126">改进的文档</a></li>
-<li><a class="reference internal" href="#id128">弃用和移除</a></li>
-<li><a class="reference internal" href="#id130">其他</a></li>
+<li><a class="reference internal" href="#id131">特性</a></li>
+<li><a class="reference internal" href="#id139">错误修复</a></li>
+<li><a class="reference internal" href="#id147">改进的文档</a></li>
+<li><a class="reference internal" href="#id149">弃用和移除</a></li>
+<li><a class="reference internal" href="#id151">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b7-2023-02-18">3.0.0b7 (2023-02-18)</a><ul>
-<li><a class="reference internal" href="#id138">特性</a></li>
-<li><a class="reference internal" href="#id142">错误修复</a></li>
-<li><a class="reference internal" href="#id145">其他</a></li>
+<li><a class="reference internal" href="#id159">特性</a></li>
+<li><a class="reference internal" href="#id163">错误修复</a></li>
+<li><a class="reference internal" href="#id166">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b6-2022-11-18">3.0.0b6（2022年11月18日）</a><ul>
-<li><a class="reference internal" href="#id153">特性</a></li>
-<li><a class="reference internal" href="#id158">错误修复</a></li>
-<li><a class="reference internal" href="#id161">改进的文档</a></li>
-<li><a class="reference internal" href="#id165">其他</a></li>
+<li><a class="reference internal" href="#id174">特性</a></li>
+<li><a class="reference internal" href="#id179">错误修复</a></li>
+<li><a class="reference internal" href="#id182">改进的文档</a></li>
+<li><a class="reference internal" href="#id186">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b5-2022-10-02">3.0.0b5 (2022-10-02)</a><ul>
-<li><a class="reference internal" href="#id168">特性</a></li>
-<li><a class="reference internal" href="#id173">错误修复</a></li>
-<li><a class="reference internal" href="#id178">改进的文档</a></li>
-<li><a class="reference internal" href="#id180">弃用和移除</a></li>
-<li><a class="reference internal" href="#id182">其他</a></li>
+<li><a class="reference internal" href="#id189">特性</a></li>
+<li><a class="reference internal" href="#id194">错误修复</a></li>
+<li><a class="reference internal" href="#id199">改进的文档</a></li>
+<li><a class="reference internal" href="#id201">弃用和移除</a></li>
+<li><a class="reference internal" href="#id203">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b4-2022-08-14">3.0.0b4 (2022-08-14)</a><ul>
-<li><a class="reference internal" href="#id184">特性</a></li>
-<li><a class="reference internal" href="#id189">错误修复</a></li>
-<li><a class="reference internal" href="#id194">其他</a></li>
+<li><a class="reference internal" href="#id205">特性</a></li>
+<li><a class="reference internal" href="#id210">错误修复</a></li>
+<li><a class="reference internal" href="#id215">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b3-2022-04-19">3.0.0b3 (2022-04-19)</a><ul>
-<li><a class="reference internal" href="#id203">特性</a></li>
-<li><a class="reference internal" href="#id206">错误修复</a></li>
-<li><a class="reference internal" href="#id211">其他</a></li>
+<li><a class="reference internal" href="#id224">特性</a></li>
+<li><a class="reference internal" href="#id227">错误修复</a></li>
+<li><a class="reference internal" href="#id232">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b2-2022-02-19">3.0.0b2 (2022-02-19)</a><ul>
-<li><a class="reference internal" href="#id216">特性</a></li>
-<li><a class="reference internal" href="#id220">错误修复</a></li>
-<li><a class="reference internal" href="#id223">其他</a></li>
+<li><a class="reference internal" href="#id237">特性</a></li>
+<li><a class="reference internal" href="#id241">错误修复</a></li>
+<li><a class="reference internal" href="#id244">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#b1-2021-12-12">3.0.0b1（2021年12月12日）</a><ul>
-<li><a class="reference internal" href="#id227">特性</a></li>
-<li><a class="reference internal" href="#id229">错误修复</a></li>
-<li><a class="reference internal" href="#id231">其他</a></li>
+<li><a class="reference internal" href="#id248">特性</a></li>
+<li><a class="reference internal" href="#id250">错误修复</a></li>
+<li><a class="reference internal" href="#id252">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#a18-2021-11-10">3.0.0a18 (2021-11-10)</a><ul>
-<li><a class="reference internal" href="#id236">特性</a></li>
-<li><a class="reference internal" href="#id241">错误修复</a></li>
-<li><a class="reference internal" href="#id245">其他</a></li>
+<li><a class="reference internal" href="#id257">特性</a></li>
+<li><a class="reference internal" href="#id262">错误修复</a></li>
+<li><a class="reference internal" href="#id266">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#a17-2021-09-24">3.0.0a17 (2021-09-24)</a><ul>
-<li><a class="reference internal" href="#id250">其他</a></li>
+<li><a class="reference internal" href="#id271">其他</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#a16-2021-09-22">3.0.0a16 (2021-09-22)</a><ul>
-<li><a class="reference internal" href="#id253">特性</a></li>
-<li><a class="reference internal" href="#id256">其他</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#a15-2021-09-10">3.0.0a15 (2021-09-10)</a><ul>
-<li><a class="reference internal" href="#id261">特性</a></li>
-<li><a class="reference internal" href="#id263">错误修复</a></li>
-<li><a class="reference internal" href="#id265">其他</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#a14-2021-08-17">3.0.0a14 (2021-08-17)</a><ul>
-<li><a class="reference internal" href="#id270">特性</a></li>
-<li><a class="reference internal" href="#id273">错误修复</a></li>
-<li><a class="reference internal" href="#id275">改进的文档</a></li>
+<li><a class="reference internal" href="#id274">特性</a></li>
 <li><a class="reference internal" href="#id277">其他</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id281">2.14.3 (2021-07-21)</a></li>
-<li><a class="reference internal" href="#id284">2.14.2 (2021-07-26)</a></li>
-<li><a class="reference internal" href="#id288">2.14 (2021-07-27)</a></li>
-<li><a class="reference internal" href="#id299">2.13 (2021-04-28)</a></li>
-<li><a class="reference internal" href="#id311">2.12.1 (2021-03-22)</a></li>
-<li><a class="reference internal" href="#id320">2.12（2021-03-14）</a></li>
-<li><a class="reference internal" href="#id344">2.11.2 (2021-11-10)</a></li>
-<li><a class="reference internal" href="#id346">2.11.1 (2021-11-10)</a></li>
-<li><a class="reference internal" href="#id351">2.11 (2021-11-08)</a></li>
-<li><a class="reference internal" href="#id354">2.10.1 (2021-09-14)</a></li>
-<li><a class="reference internal" href="#id356">2.10 (2021-09-13)</a></li>
-<li><a class="reference internal" href="#id392">2.9.2 (2021-06-13)</a></li>
-<li><a class="reference internal" href="#id395">2.9 (2021-06-08)</a></li>
-<li><a class="reference internal" href="#id406">2.8 (2021-04-26)</a></li>
-<li><a class="reference internal" href="#id408">2.7 (2021-04-07)</a></li>
-<li><a class="reference internal" href="#id415">2.6.1 (2021-01-25)</a></li>
-<li><a class="reference internal" href="#id418">2.6 (2021-01-23)</a></li>
-<li><a class="reference internal" href="#id421">2.5.3 (2021-01-05)</a></li>
-<li><a class="reference internal" href="#id425">2.5.2 (2021-01-01)</a></li>
-<li><a class="reference internal" href="#id426">2.5.1 (2021-01-01)</a></li>
-<li><a class="reference internal" href="#id427">2.5（2021年1月1日）</a></li>
-<li><a class="reference internal" href="#id435">2.4 (2021-10-29)</a></li>
-<li><a class="reference internal" href="#id448">2.3 (2021-08-16)</a></li>
-<li><a class="reference internal" href="#id459">2.2 (2021-06-09)</a></li>
-<li><a class="reference internal" href="#id462">2.1 (2021-04-18)</a></li>
-<li><a class="reference internal" href="#id471">2.0.1（2021年12月31日）</a></li>
-<li><a class="reference internal" href="#id474">2.0 (2021-10-28)</a></li>
-<li><a class="reference internal" href="#id475">1.4 (2021-08-03)</a></li>
-<li><a class="reference internal" href="#id477">1.3.3 (2021-07-16)</a></li>
-<li><a class="reference internal" href="#id478">1.3.2 (2021-05-27)</a></li>
-<li><a class="reference internal" href="#id481">1.3.1 (2018-05-27)</a></li>
-<li><a class="reference internal" href="#id482">1.3 (2021-04-22)</a></li>
-<li><a class="reference internal" href="#id483">1.2.3 (2018-04-14) =&gt; 1.2.3（2018年04月14日）</a></li>
-<li><a class="reference internal" href="#id484">1.2.2 (2018-04-08)</a></li>
-<li><a class="reference internal" href="#id485">1.2.1 (2018-03-25)</a></li>
-<li><a class="reference internal" href="#id491">1.2 (2018-02-23)</a></li>
-<li><a class="reference internal" href="#id492">1.1 (2018-01-27)</a></li>
-<li><a class="reference internal" href="#id493">1.0.4（2018-01-10）</a></li>
-<li><a class="reference internal" href="#id494">1.0.3 (2018-01-07)</a></li>
-<li><a class="reference internal" href="#id495">1.0.2 (2017-11-29)</a></li>
-<li><a class="reference internal" href="#id496">1.0.1 （2017年11月21日）</a></li>
-<li><a class="reference internal" href="#id498">1.0 (2017-11-19)</a></li>
-<li><a class="reference internal" href="#id499">0.4.1 (2017-08-03)</a></li>
-<li><a class="reference internal" href="#id500">0.4 (2017-08-05)</a></li>
-<li><a class="reference internal" href="#id501">0.3.4 (2017-08-04)</a></li>
-<li><a class="reference internal" href="#id502">0.3.3 (2017-07-05)</a></li>
-<li><a class="reference internal" href="#id503">0.3.2 (2017-07-04)</a></li>
-<li><a class="reference internal" href="#id504">0.3.1 (2017-07-04)</a></li>
+<li><a class="reference internal" href="#a15-2021-09-10">3.0.0a15 (2021-09-10)</a><ul>
+<li><a class="reference internal" href="#id282">特性</a></li>
+<li><a class="reference internal" href="#id284">错误修复</a></li>
+<li><a class="reference internal" href="#id286">其他</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a14-2021-08-17">3.0.0a14 (2021-08-17)</a><ul>
+<li><a class="reference internal" href="#id291">特性</a></li>
+<li><a class="reference internal" href="#id294">错误修复</a></li>
+<li><a class="reference internal" href="#id296">改进的文档</a></li>
+<li><a class="reference internal" href="#id298">其他</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id302">2.14.3 (2021-07-21)</a></li>
+<li><a class="reference internal" href="#id305">2.14.2 (2021-07-26)</a></li>
+<li><a class="reference internal" href="#id309">2.14 (2021-07-27)</a></li>
+<li><a class="reference internal" href="#id320">2.13 (2021-04-28)</a></li>
+<li><a class="reference internal" href="#id332">2.12.1 (2021-03-22)</a></li>
+<li><a class="reference internal" href="#id341">2.12（2021-03-14）</a></li>
+<li><a class="reference internal" href="#id365">2.11.2 (2021-11-10)</a></li>
+<li><a class="reference internal" href="#id367">2.11.1 (2021-11-10)</a></li>
+<li><a class="reference internal" href="#id372">2.11 (2021-11-08)</a></li>
+<li><a class="reference internal" href="#id375">2.10.1 (2021-09-14)</a></li>
+<li><a class="reference internal" href="#id377">2.10 (2021-09-13)</a></li>
+<li><a class="reference internal" href="#id413">2.9.2 (2021-06-13)</a></li>
+<li><a class="reference internal" href="#id416">2.9 (2021-06-08)</a></li>
+<li><a class="reference internal" href="#id427">2.8 (2021-04-26)</a></li>
+<li><a class="reference internal" href="#id429">2.7 (2021-04-07)</a></li>
+<li><a class="reference internal" href="#id436">2.6.1 (2021-01-25)</a></li>
+<li><a class="reference internal" href="#id439">2.6 (2021-01-23)</a></li>
+<li><a class="reference internal" href="#id442">2.5.3 (2021-01-05)</a></li>
+<li><a class="reference internal" href="#id446">2.5.2 (2021-01-01)</a></li>
+<li><a class="reference internal" href="#id447">2.5.1 (2021-01-01)</a></li>
+<li><a class="reference internal" href="#id448">2.5（2021年1月1日）</a></li>
+<li><a class="reference internal" href="#id456">2.4 (2021-10-29)</a></li>
+<li><a class="reference internal" href="#id469">2.3 (2021-08-16)</a></li>
+<li><a class="reference internal" href="#id480">2.2 (2021-06-09)</a></li>
+<li><a class="reference internal" href="#id483">2.1 (2021-04-18)</a></li>
+<li><a class="reference internal" href="#id492">2.0.1（2021年12月31日）</a></li>
+<li><a class="reference internal" href="#id495">2.0 (2021-10-28)</a></li>
+<li><a class="reference internal" href="#id496">1.4 (2021-08-03)</a></li>
+<li><a class="reference internal" href="#id498">1.3.3 (2021-07-16)</a></li>
+<li><a class="reference internal" href="#id499">1.3.2 (2021-05-27)</a></li>
+<li><a class="reference internal" href="#id502">1.3.1 (2018-05-27)</a></li>
+<li><a class="reference internal" href="#id503">1.3 (2021-04-22)</a></li>
+<li><a class="reference internal" href="#id504">1.2.3 (2018-04-14) =&gt; 1.2.3（2018年04月14日）</a></li>
+<li><a class="reference internal" href="#id505">1.2.2 (2018-04-08)</a></li>
+<li><a class="reference internal" href="#id506">1.2.1 (2018-03-25)</a></li>
+<li><a class="reference internal" href="#id512">1.2 (2018-02-23)</a></li>
+<li><a class="reference internal" href="#id513">1.1 (2018-01-27)</a></li>
+<li><a class="reference internal" href="#id514">1.0.4（2018-01-10）</a></li>
+<li><a class="reference internal" href="#id515">1.0.3 (2018-01-07)</a></li>
+<li><a class="reference internal" href="#id516">1.0.2 (2017-11-29)</a></li>
+<li><a class="reference internal" href="#id517">1.0.1 （2017年11月21日）</a></li>
+<li><a class="reference internal" href="#id519">1.0 (2017-11-19)</a></li>
+<li><a class="reference internal" href="#id520">0.4.1 (2017-08-03)</a></li>
+<li><a class="reference internal" href="#id521">0.4 (2017-08-05)</a></li>
+<li><a class="reference internal" href="#id522">0.3.4 (2017-08-04)</a></li>
+<li><a class="reference internal" href="#id523">0.3.3 (2017-07-05)</a></li>
+<li><a class="reference internal" href="#id524">0.3.2 (2017-07-04)</a></li>
+<li><a class="reference internal" href="#id525">0.3.1 (2017-07-04)</a></li>
 <li><a class="reference internal" href="#b1-2017-06-00">0.2b1 (2017年06月00日)</a></li>
-<li><a class="reference internal" href="#id505">0.1（2017-06-03）</a></li>
+<li><a class="reference internal" href="#id526">0.1（2017-06-03）</a></li>
 </ul>
 </li>
 </ul>
@@ -2398,7 +2555,7 @@
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="_static/documentation_options.js?v=eca36101"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=4e2eecee"></script>

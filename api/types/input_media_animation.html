@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="输入媒体音频" href="input_media_audio.html" /><link rel="prev" title="输入媒体" href="input_media.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>输入媒体动画 - aiogram 3.7.0 文档</title>
+        <title>输入媒体动画 - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../methods/get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -637,6 +652,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">更新日志</a></li>
@@ -685,7 +701,7 @@
 <span id="inputmediaanimation"></span><h1>输入媒体动画<a class="headerlink" href="#module-aiogram.types.input_media_animation" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="aiogram.types.input_media_animation.InputMediaAnimation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.input_media_animation.</span></span><span class="sig-name descname"><span class="pre">InputMediaAnimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type:</span> <span class="pre">~typing.Literal[InputMediaType.ANIMATION]</span> <span class="pre">=</span> <span class="pre">InputMediaType.ANIMATION</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">media:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.types.input_file.InputFile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption_entities:</span> <span class="pre">~typing.List[~aiogram.types.message_entity.MessageEntity]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_spoiler:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/input_media_animation.html#InputMediaAnimation"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.input_media_animation.InputMediaAnimation" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.types.input_media_animation.</span></span><span class="sig-name descname"><span class="pre">InputMediaAnimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type:</span> <span class="pre">~typing.Literal[InputMediaType.ANIMATION]</span> <span class="pre">=</span> <span class="pre">InputMediaType.ANIMATION</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">media:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.types.input_file.InputFile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail:</span> <span class="pre">~aiogram.types.input_file.InputFile</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption_entities:</span> <span class="pre">~typing.List[~aiogram.types.message_entity.MessageEntity]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_caption_above_media:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('show_caption_above_media')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">has_spoiler:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/types/input_media_animation.html#InputMediaAnimation"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.types.input_media_animation.InputMediaAnimation" title="Link to this definition">¶</a></dt>
 <dd><p>代表要发送的动画文件（不带音频的GIF或H.264/MPEG-4 AVC视频）。</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#inputmediaanimation">https://core.telegram.org/bots/api#inputmediaanimation</a></p>
 <dl class="py attribute">
@@ -719,6 +735,12 @@
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.types.input_media_animation.InputMediaAnimation.caption_entities">
+<span class="sig-name descname"><span class="pre">caption_entities</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><span class="pre">MessageEntity</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.input_media_animation.InputMediaAnimation.caption_entities" title="Link to this definition">¶</a></dt>
+<dd><p><em>Optional</em>. 在标题中出现的特殊实体列表，可以指定而不是 <em>parse_mode</em></p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.types.input_media_animation.InputMediaAnimation.model_computed_fields">
 <span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.types.input_media_animation.InputMediaAnimation.model_computed_fields" title="Link to this definition">¶</a></dt>
 <dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
@@ -732,9 +754,9 @@ method.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="aiogram.types.input_media_animation.InputMediaAnimation.caption_entities">
-<span class="sig-name descname"><span class="pre">caption_entities</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><span class="pre">MessageEntity</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.input_media_animation.InputMediaAnimation.caption_entities" title="Link to this definition">¶</a></dt>
-<dd><p><em>Optional</em>. 在标题中出现的特殊实体列表，可以指定而不是 <em>parse_mode</em></p>
+<dt class="sig sig-object py" id="aiogram.types.input_media_animation.InputMediaAnimation.show_caption_above_media">
+<span class="sig-name descname"><span class="pre">show_caption_above_media</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.types.input_media_animation.InputMediaAnimation.show_caption_above_media" title="Link to this definition">¶</a></dt>
+<dd><p><em>Optional</em>. Pass <code class="code docutils literal notranslate"><span class="pre">True</span></code>, if the caption must be shown above the message media</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -827,9 +849,10 @@ method.</p>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.thumbnail"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.thumbnail</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.caption"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.caption</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.parse_mode"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.parse_mode</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.caption_entities"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.caption_entities</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.model_post_init"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.model_post_init()</span></code></a></li>
-<li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.caption_entities"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.caption_entities</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.show_caption_above_media</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.width"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.width</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.height"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.height</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.types.input_media_animation.InputMediaAnimation.duration"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.duration</span></code></a></li>
@@ -847,7 +870,7 @@ method.</p>
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../../_static/documentation_options.js?v=eca36101"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=4e2eecee"></script>

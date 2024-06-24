@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../../genindex.html" /><link rel="search" title="搜索" href="../../search.html" /><link rel="next" title="停止发送实时位置" href="stop_message_live_location.html" /><link rel="prev" title="编辑消息回复标记" href="edit_message_reply_markup.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>编辑消息文本 - aiogram 3.7.0 文档</title>
+        <title>编辑消息文本 - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="../../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../types/callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -637,6 +652,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../changelog.html">更新日志</a></li>
@@ -686,13 +702,19 @@
 <p>Returns: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Union[Message,</span> <span class="pre">bool]</span></code></p>
 <dl class="py class" id="module-aiogram.methods.edit_message_text">
 <dt class="sig sig-object py" id="aiogram.methods.edit_message_text.EditMessageText">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.edit_message_text.</span></span><span class="sig-name descname"><span class="pre">EditMessageText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_message_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities:</span> <span class="pre">~typing.List[~aiogram.types.message_entity.MessageEntity]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_preview_options:</span> <span class="pre">~aiogram.types.link_preview_options.LinkPreviewOptions</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_web_page_preview:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('link_preview_is_disabled')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/edit_message_text.html#EditMessageText"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText" title="Link to this definition">¶</a></dt>
-<dd><p>使用此方法编辑文本和“游戏 &lt;<a class="reference external" href="https://core.telegram.org/bots/api#games">https://core.telegram.org/bots/api#games</a>&gt;`_”消息。成功时，若被编辑的消息不是内联消息，则返回被编辑的  <a class="reference internal" href="../types/message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a>，否则返回 <code class="code docutils literal notranslate"><span class="pre">True</span></code>。</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.methods.edit_message_text.</span></span><span class="sig-name descname"><span class="pre">EditMessageText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">business_connection_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id:</span> <span class="pre">int</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_message_id:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parse_mode:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('parse_mode')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities:</span> <span class="pre">~typing.List[~aiogram.types.message_entity.MessageEntity]</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_preview_options:</span> <span class="pre">~aiogram.types.link_preview_options.LinkPreviewOptions</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_markup:</span> <span class="pre">~aiogram.types.inline_keyboard_markup.InlineKeyboardMarkup</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_web_page_preview:</span> <span class="pre">bool</span> <span class="pre">|</span> <span class="pre">~aiogram.client.default.Default</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">&lt;Default('link_preview_is_disabled')&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">**extra_data:</span> <span class="pre">~typing.Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/aiogram/methods/edit_message_text.html#EditMessageText"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText" title="Link to this definition">¶</a></dt>
+<dd><p>Use this method to edit text and <a class="reference external" href="https://core.telegram.org/bots/api#games">game</a> messages. On success, if the edited message is not an inline message, the edited <a class="reference internal" href="../types/message.html#aiogram.types.message.Message" title="aiogram.types.message.Message"><code class="xref py py-class docutils literal notranslate"><span class="pre">aiogram.types.message.Message</span></code></a> is returned, otherwise <code class="code docutils literal notranslate"><span class="pre">True</span></code> is returned. Note that business messages that were not sent by the bot and do not contain an inline keyboard can only be edited within <strong>48 hours</strong> from the time they were sent.</p>
 <p>Source: <a class="reference external" href="https://core.telegram.org/bots/api#editmessagetext">https://core.telegram.org/bots/api#editmessagetext</a></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.edit_message_text.EditMessageText.text">
 <span class="sig-name descname"><span class="pre">text</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText.text" title="Link to this definition">¶</a></dt>
 <dd><p>消息的新文本，实体解析后1-4096个字符</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.edit_message_text.EditMessageText.business_connection_id">
+<span class="sig-name descname"><span class="pre">business_connection_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText.business_connection_id" title="Link to this definition">¶</a></dt>
+<dd><p>Unique identifier of the business connection on behalf of which the message to be edited was sent</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -714,12 +736,6 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="aiogram.methods.edit_message_text.EditMessageText.parse_mode">
-<span class="sig-name descname"><span class="pre">parse_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText.parse_mode" title="Link to this definition">¶</a></dt>
-<dd><p>消息文本中实体解析的模式。有关更多细节，请参阅`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="aiogram.methods.edit_message_text.EditMessageText.model_computed_fields">
 <span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText.model_computed_fields" title="Link to this definition">¶</a></dt>
 <dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
@@ -730,6 +746,12 @@
 <span class="sig-name descname"><span class="pre">model_post_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_ModelMetaclass__context</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText.model_post_init" title="Link to this definition">¶</a></dt>
 <dd><p>We need to both initialize private attributes and call the user-defined model_post_init
 method.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aiogram.methods.edit_message_text.EditMessageText.parse_mode">
+<span class="sig-name descname"><span class="pre">parse_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Default</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#aiogram.methods.edit_message_text.EditMessageText.parse_mode" title="Link to this definition">¶</a></dt>
+<dd><p>消息文本中实体解析的模式。有关更多细节，请参阅`格式选项&lt;<a class="reference external" href="https://core.telegram.org/bots/api#formatting-options">https://core.telegram.org/bots/api#formatting-options</a>&gt;`_。</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -856,12 +878,13 @@ method.</p>
 <li><a class="reference internal" href="#">编辑消息文本</a><ul>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText"><code class="docutils literal notranslate"><span class="pre">EditMessageText</span></code></a><ul>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.text"><code class="docutils literal notranslate"><span class="pre">EditMessageText.text</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.business_connection_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.business_connection_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.chat_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.chat_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.message_id</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.inline_message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.inline_message_id</span></code></a></li>
-<li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.parse_mode"><code class="docutils literal notranslate"><span class="pre">EditMessageText.parse_mode</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">EditMessageText.model_computed_fields</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.model_post_init"><code class="docutils literal notranslate"><span class="pre">EditMessageText.model_post_init()</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.parse_mode"><code class="docutils literal notranslate"><span class="pre">EditMessageText.parse_mode</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.entities"><code class="docutils literal notranslate"><span class="pre">EditMessageText.entities</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.link_preview_options"><code class="docutils literal notranslate"><span class="pre">EditMessageText.link_preview_options</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.methods.edit_message_text.EditMessageText.reply_markup"><code class="docutils literal notranslate"><span class="pre">EditMessageText.reply_markup</span></code></a></li>
@@ -889,7 +912,7 @@ method.</p>
       
     </aside>
   </div>
-</div><script src="../../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../../_static/documentation_options.js?v=eca36101"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/furo.js?v=4e2eecee"></script>

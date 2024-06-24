@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="机器人" href="bot.html" /><link rel="prev" title="迁移常见问题解答（2.x -&gt; 3.0）" href="../migration_2_to_3.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>Bot API - aiogram 3.7.0 文档</title>
+        <title>Bot API - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types/callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="methods/get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -637,6 +652,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../utils/formatting.html">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../utils/media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../utils/deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils/serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">更新日志</a></li>
@@ -1874,9 +1890,10 @@
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.thumbnail"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.thumbnail</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.caption"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.parse_mode"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.parse_mode</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.caption_entities"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.caption_entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.model_post_init"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.caption_entities"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.width"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.width</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.height"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.height</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_animation.html#aiogram.types.input_media_animation.InputMediaAnimation.duration"><code class="docutils literal notranslate"><span class="pre">InputMediaAnimation.duration</span></code></a></li>
@@ -1922,10 +1939,11 @@
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.type"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.type</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.media"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.caption"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.caption</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.parse_mode"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.model_post_init"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.parse_mode"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.caption_entities"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_photo.html#aiogram.types.input_media_photo.InputMediaPhoto.has_spoiler"><code class="docutils literal notranslate"><span class="pre">InputMediaPhoto.has_spoiler</span></code></a></li>
 </ul>
 </li>
@@ -1941,6 +1959,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.caption_entities"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.caption_entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.model_post_init"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.width"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.width</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.height"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.height</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_media_video.html#aiogram.types.input_media_video.InputMediaVideo.duration"><code class="docutils literal notranslate"><span class="pre">InputMediaVideo.duration</span></code></a></li>
@@ -2145,6 +2164,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.text"><code class="docutils literal notranslate"><span class="pre">Message.text</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.entities"><code class="docutils literal notranslate"><span class="pre">Message.entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.link_preview_options"><code class="docutils literal notranslate"><span class="pre">Message.link_preview_options</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.effect_id"><code class="docutils literal notranslate"><span class="pre">Message.effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.animation"><code class="docutils literal notranslate"><span class="pre">Message.animation</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.audio"><code class="docutils literal notranslate"><span class="pre">Message.audio</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.document"><code class="docutils literal notranslate"><span class="pre">Message.document</span></code></a></li>
@@ -2156,6 +2176,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.voice"><code class="docutils literal notranslate"><span class="pre">Message.voice</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.caption"><code class="docutils literal notranslate"><span class="pre">Message.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.caption_entities"><code class="docutils literal notranslate"><span class="pre">Message.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">Message.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.has_media_spoiler"><code class="docutils literal notranslate"><span class="pre">Message.has_media_spoiler</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.contact"><code class="docutils literal notranslate"><span class="pre">Message.contact</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.dice"><code class="docutils literal notranslate"><span class="pre">Message.dice</span></code></a></li>
@@ -2190,9 +2211,9 @@
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.forum_topic_closed"><code class="docutils literal notranslate"><span class="pre">Message.forum_topic_closed</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.forum_topic_reopened"><code class="docutils literal notranslate"><span class="pre">Message.forum_topic_reopened</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.general_forum_topic_hidden"><code class="docutils literal notranslate"><span class="pre">Message.general_forum_topic_hidden</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.general_forum_topic_unhidden"><code class="docutils literal notranslate"><span class="pre">Message.general_forum_topic_unhidden</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Message.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.model_post_init"><code class="docutils literal notranslate"><span class="pre">Message.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.general_forum_topic_unhidden"><code class="docutils literal notranslate"><span class="pre">Message.general_forum_topic_unhidden</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.giveaway_created"><code class="docutils literal notranslate"><span class="pre">Message.giveaway_created</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.giveaway"><code class="docutils literal notranslate"><span class="pre">Message.giveaway</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/message.html#aiogram.types.message.Message.giveaway_winners"><code class="docutils literal notranslate"><span class="pre">Message.giveaway_winners</span></code></a></li>
@@ -2897,6 +2918,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_gif.html#aiogram.types.inline_query_result_cached_gif.InlineQueryResultCachedGif.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedGif.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_gif.html#aiogram.types.inline_query_result_cached_gif.InlineQueryResultCachedGif.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedGif.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_gif.html#aiogram.types.inline_query_result_cached_gif.InlineQueryResultCachedGif.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedGif.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_gif.html#aiogram.types.inline_query_result_cached_gif.InlineQueryResultCachedGif.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedGif.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_gif.html#aiogram.types.inline_query_result_cached_gif.InlineQueryResultCachedGif.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedGif.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_gif.html#aiogram.types.inline_query_result_cached_gif.InlineQueryResultCachedGif.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedGif.input_message_content</span></code></a></li>
 </ul>
@@ -2914,6 +2936,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_mpeg4_gif.html#aiogram.types.inline_query_result_cached_mpeg4_gif.InlineQueryResultCachedMpeg4Gif.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedMpeg4Gif.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_mpeg4_gif.html#aiogram.types.inline_query_result_cached_mpeg4_gif.InlineQueryResultCachedMpeg4Gif.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedMpeg4Gif.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_mpeg4_gif.html#aiogram.types.inline_query_result_cached_mpeg4_gif.InlineQueryResultCachedMpeg4Gif.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedMpeg4Gif.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_mpeg4_gif.html#aiogram.types.inline_query_result_cached_mpeg4_gif.InlineQueryResultCachedMpeg4Gif.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedMpeg4Gif.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_mpeg4_gif.html#aiogram.types.inline_query_result_cached_mpeg4_gif.InlineQueryResultCachedMpeg4Gif.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedMpeg4Gif.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_mpeg4_gif.html#aiogram.types.inline_query_result_cached_mpeg4_gif.InlineQueryResultCachedMpeg4Gif.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedMpeg4Gif.input_message_content</span></code></a></li>
 </ul>
@@ -2927,11 +2950,12 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.photo_file_id"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.photo_file_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.title"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.description"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.description</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_photo.html#aiogram.types.inline_query_result_cached_photo.InlineQueryResultCachedPhoto.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedPhoto.input_message_content</span></code></a></li>
 </ul>
@@ -2958,11 +2982,12 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.video_file_id"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.video_file_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.title"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.description"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.description</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_cached_video.html#aiogram.types.inline_query_result_cached_video.InlineQueryResultCachedVideo.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultCachedVideo.input_message_content</span></code></a></li>
 </ul>
@@ -3048,13 +3073,14 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.gif_width"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.gif_width</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.gif_height"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.gif_height</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.gif_duration"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.gif_duration</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.thumbnail_mime_type"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.thumbnail_mime_type</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.thumbnail_mime_type"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.thumbnail_mime_type</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.title"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_gif.html#aiogram.types.inline_query_result_gif.InlineQueryResultGif.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultGif.input_message_content</span></code></a></li>
 </ul>
@@ -3092,13 +3118,14 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.mpeg4_width"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.mpeg4_width</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.mpeg4_height"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.mpeg4_height</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.mpeg4_duration"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.mpeg4_duration</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.thumbnail_mime_type"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.thumbnail_mime_type</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.thumbnail_mime_type"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.thumbnail_mime_type</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.title"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_mpeg4_gif.html#aiogram.types.inline_query_result_mpeg4_gif.InlineQueryResultMpeg4Gif.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultMpeg4Gif.input_message_content</span></code></a></li>
 </ul>
@@ -3120,6 +3147,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_photo.html#aiogram.types.inline_query_result_photo.InlineQueryResultPhoto.caption"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultPhoto.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_photo.html#aiogram.types.inline_query_result_photo.InlineQueryResultPhoto.parse_mode"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultPhoto.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_photo.html#aiogram.types.inline_query_result_photo.InlineQueryResultPhoto.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultPhoto.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_photo.html#aiogram.types.inline_query_result_photo.InlineQueryResultPhoto.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultPhoto.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_photo.html#aiogram.types.inline_query_result_photo.InlineQueryResultPhoto.reply_markup"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultPhoto.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_photo.html#aiogram.types.inline_query_result_photo.InlineQueryResultPhoto.input_message_content"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultPhoto.input_message_content</span></code></a></li>
 </ul>
@@ -3162,6 +3190,7 @@
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.model_post_init"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.caption_entities"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.video_width"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.video_width</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.video_height"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.video_height</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/inline_query_result_video.html#aiogram.types.inline_query_result_video.InlineQueryResultVideo.video_duration"><code class="docutils literal notranslate"><span class="pre">InlineQueryResultVideo.video_duration</span></code></a></li>
@@ -3218,9 +3247,9 @@
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.title"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.description"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.description</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.payload"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.payload</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.provider_token"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.provider_token</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.currency"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.currency</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.prices"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.prices</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.provider_token"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.provider_token</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.max_tip_amount"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.max_tip_amount</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.suggested_tip_amounts"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.suggested_tip_amounts</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/input_invoice_message_content.html#aiogram.types.input_invoice_message_content.InputInvoiceMessageContent.provider_data"><code class="docutils literal notranslate"><span class="pre">InputInvoiceMessageContent.provider_data</span></code></a></li>
@@ -3594,6 +3623,43 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state.html">RevenueWithdrawalState</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/revenue_withdrawal_state.html#aiogram.types.revenue_withdrawal_state.RevenueWithdrawalState"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalState</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state.html#aiogram.types.revenue_withdrawal_state.RevenueWithdrawalState.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalState.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state.html#aiogram.types.revenue_withdrawal_state.RevenueWithdrawalState.model_post_init"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalState.model_post_init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/revenue_withdrawal_state_failed.html#aiogram.types.revenue_withdrawal_state_failed.RevenueWithdrawalStateFailed"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateFailed</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_failed.html#aiogram.types.revenue_withdrawal_state_failed.RevenueWithdrawalStateFailed.type"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateFailed.type</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_failed.html#aiogram.types.revenue_withdrawal_state_failed.RevenueWithdrawalStateFailed.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateFailed.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_failed.html#aiogram.types.revenue_withdrawal_state_failed.RevenueWithdrawalStateFailed.model_post_init"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateFailed.model_post_init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/revenue_withdrawal_state_pending.html#aiogram.types.revenue_withdrawal_state_pending.RevenueWithdrawalStatePending"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStatePending</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_pending.html#aiogram.types.revenue_withdrawal_state_pending.RevenueWithdrawalStatePending.type"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStatePending.type</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_pending.html#aiogram.types.revenue_withdrawal_state_pending.RevenueWithdrawalStatePending.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStatePending.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_pending.html#aiogram.types.revenue_withdrawal_state_pending.RevenueWithdrawalStatePending.model_post_init"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStatePending.model_post_init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html#aiogram.types.revenue_withdrawal_state_succeeded.RevenueWithdrawalStateSucceeded"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateSucceeded</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html#aiogram.types.revenue_withdrawal_state_succeeded.RevenueWithdrawalStateSucceeded.type"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateSucceeded.type</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html#aiogram.types.revenue_withdrawal_state_succeeded.RevenueWithdrawalStateSucceeded.date"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateSucceeded.date</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html#aiogram.types.revenue_withdrawal_state_succeeded.RevenueWithdrawalStateSucceeded.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateSucceeded.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html#aiogram.types.revenue_withdrawal_state_succeeded.RevenueWithdrawalStateSucceeded.model_post_init"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateSucceeded.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/revenue_withdrawal_state_succeeded.html#aiogram.types.revenue_withdrawal_state_succeeded.RevenueWithdrawalStateSucceeded.url"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateSucceeded.url</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="types/shipping_address.html">送货地址</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types/shipping_address.html#aiogram.types.shipping_address.ShippingAddress"><code class="docutils literal notranslate"><span class="pre">ShippingAddress</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="types/shipping_address.html#aiogram.types.shipping_address.ShippingAddress.country_code"><code class="docutils literal notranslate"><span class="pre">ShippingAddress.country_code</span></code></a></li>
@@ -3632,6 +3698,28 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="types/star_transaction.html">StarTransaction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction"><code class="docutils literal notranslate"><span class="pre">StarTransaction</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.id"><code class="docutils literal notranslate"><span class="pre">StarTransaction.id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.amount"><code class="docutils literal notranslate"><span class="pre">StarTransaction.amount</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.date"><code class="docutils literal notranslate"><span class="pre">StarTransaction.date</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">StarTransaction.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.model_post_init"><code class="docutils literal notranslate"><span class="pre">StarTransaction.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.source"><code class="docutils literal notranslate"><span class="pre">StarTransaction.source</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transaction.html#aiogram.types.star_transaction.StarTransaction.receiver"><code class="docutils literal notranslate"><span class="pre">StarTransaction.receiver</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/star_transactions.html">StarTransactions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/star_transactions.html#aiogram.types.star_transactions.StarTransactions"><code class="docutils literal notranslate"><span class="pre">StarTransactions</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transactions.html#aiogram.types.star_transactions.StarTransactions.transactions"><code class="docutils literal notranslate"><span class="pre">StarTransactions.transactions</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transactions.html#aiogram.types.star_transactions.StarTransactions.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">StarTransactions.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/star_transactions.html#aiogram.types.star_transactions.StarTransactions.model_post_init"><code class="docutils literal notranslate"><span class="pre">StarTransactions.model_post_init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="types/successful_payment.html">成功支付</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types/successful_payment.html#aiogram.types.successful_payment.SuccessfulPayment"><code class="docutils literal notranslate"><span class="pre">SuccessfulPayment</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="types/successful_payment.html#aiogram.types.successful_payment.SuccessfulPayment.currency"><code class="docutils literal notranslate"><span class="pre">SuccessfulPayment.currency</span></code></a></li>
@@ -3643,6 +3731,43 @@
 <li class="toctree-l5"><a class="reference internal" href="types/successful_payment.html#aiogram.types.successful_payment.SuccessfulPayment.provider_payment_charge_id"><code class="docutils literal notranslate"><span class="pre">SuccessfulPayment.provider_payment_charge_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/successful_payment.html#aiogram.types.successful_payment.SuccessfulPayment.shipping_option_id"><code class="docutils literal notranslate"><span class="pre">SuccessfulPayment.shipping_option_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="types/successful_payment.html#aiogram.types.successful_payment.SuccessfulPayment.order_info"><code class="docutils literal notranslate"><span class="pre">SuccessfulPayment.order_info</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner.html">TransactionPartner</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/transaction_partner.html#aiogram.types.transaction_partner.TransactionPartner"><code class="docutils literal notranslate"><span class="pre">TransactionPartner</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner.html#aiogram.types.transaction_partner.TransactionPartner.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">TransactionPartner.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner.html#aiogram.types.transaction_partner.TransactionPartner.model_post_init"><code class="docutils literal notranslate"><span class="pre">TransactionPartner.model_post_init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner_fragment.html">TransactionPartnerFragment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/transaction_partner_fragment.html#aiogram.types.transaction_partner_fragment.TransactionPartnerFragment"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerFragment</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_fragment.html#aiogram.types.transaction_partner_fragment.TransactionPartnerFragment.type"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerFragment.type</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_fragment.html#aiogram.types.transaction_partner_fragment.TransactionPartnerFragment.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerFragment.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_fragment.html#aiogram.types.transaction_partner_fragment.TransactionPartnerFragment.model_post_init"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerFragment.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_fragment.html#aiogram.types.transaction_partner_fragment.TransactionPartnerFragment.withdrawal_state"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerFragment.withdrawal_state</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner_other.html">TransactionPartnerOther</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/transaction_partner_other.html#aiogram.types.transaction_partner_other.TransactionPartnerOther"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerOther</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_other.html#aiogram.types.transaction_partner_other.TransactionPartnerOther.type"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerOther.type</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_other.html#aiogram.types.transaction_partner_other.TransactionPartnerOther.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerOther.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_other.html#aiogram.types.transaction_partner_other.TransactionPartnerOther.model_post_init"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerOther.model_post_init()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="types/transaction_partner_user.html">TransactionPartnerUser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/transaction_partner_user.html#aiogram.types.transaction_partner_user.TransactionPartnerUser"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerUser</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_user.html#aiogram.types.transaction_partner_user.TransactionPartnerUser.type"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerUser.type</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_user.html#aiogram.types.transaction_partner_user.TransactionPartnerUser.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerUser.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_user.html#aiogram.types.transaction_partner_user.TransactionPartnerUser.model_post_init"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerUser.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="types/transaction_partner_user.html#aiogram.types.transaction_partner_user.TransactionPartnerUser.user"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerUser.user</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -3890,6 +4015,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendSticker.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendSticker.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.protect_content"><code class="docutils literal notranslate"><span class="pre">SendSticker.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendSticker.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendSticker.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendSticker.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_sticker.html#aiogram.methods.send_sticker.SendSticker.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendSticker.allow_sending_without_reply</span></code></a></li>
@@ -4216,6 +4342,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.caption_entities"><code class="docutils literal notranslate"><span class="pre">CopyMessage.caption_entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">CopyMessage.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.model_post_init"><code class="docutils literal notranslate"><span class="pre">CopyMessage.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">CopyMessage.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.disable_notification"><code class="docutils literal notranslate"><span class="pre">CopyMessage.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.protect_content"><code class="docutils literal notranslate"><span class="pre">CopyMessage.protect_content</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/copy_message.html#aiogram.methods.copy_message.CopyMessage.reply_parameters"><code class="docutils literal notranslate"><span class="pre">CopyMessage.reply_parameters</span></code></a></li>
@@ -5010,13 +5137,15 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.height"><code class="docutils literal notranslate"><span class="pre">SendAnimation.height</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.thumbnail"><code class="docutils literal notranslate"><span class="pre">SendAnimation.thumbnail</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.caption"><code class="docutils literal notranslate"><span class="pre">SendAnimation.caption</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendAnimation.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendAnimation.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendAnimation.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendAnimation.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.caption_entities"><code class="docutils literal notranslate"><span class="pre">SendAnimation.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">SendAnimation.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.has_spoiler"><code class="docutils literal notranslate"><span class="pre">SendAnimation.has_spoiler</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendAnimation.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.protect_content"><code class="docutils literal notranslate"><span class="pre">SendAnimation.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendAnimation.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendAnimation.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendAnimation.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_animation.html#aiogram.methods.send_animation.SendAnimation.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendAnimation.allow_sending_without_reply</span></code></a></li>
@@ -5052,6 +5181,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.thumbnail"><code class="docutils literal notranslate"><span class="pre">SendAudio.thumbnail</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendAudio.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.protect_content"><code class="docutils literal notranslate"><span class="pre">SendAudio.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendAudio.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendAudio.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendAudio.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_audio.html#aiogram.methods.send_audio.SendAudio.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendAudio.allow_sending_without_reply</span></code></a></li>
@@ -5105,6 +5235,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendContact.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendContact.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.protect_content"><code class="docutils literal notranslate"><span class="pre">SendContact.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendContact.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendContact.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendContact.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_contact.html#aiogram.methods.send_contact.SendContact.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendContact.allow_sending_without_reply</span></code></a></li>
@@ -5130,9 +5261,10 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.message_thread_id"><code class="docutils literal notranslate"><span class="pre">SendDice.message_thread_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.emoji"><code class="docutils literal notranslate"><span class="pre">SendDice.emoji</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendDice.disable_notification</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.protect_content"><code class="docutils literal notranslate"><span class="pre">SendDice.protect_content</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendDice.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendDice.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.protect_content"><code class="docutils literal notranslate"><span class="pre">SendDice.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendDice.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendDice.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendDice.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_dice.html#aiogram.methods.send_dice.SendDice.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendDice.allow_sending_without_reply</span></code></a></li>
@@ -5166,6 +5298,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.disable_content_type_detection"><code class="docutils literal notranslate"><span class="pre">SendDocument.disable_content_type_detection</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendDocument.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.protect_content"><code class="docutils literal notranslate"><span class="pre">SendDocument.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendDocument.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendDocument.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendDocument.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_document.html#aiogram.methods.send_document.SendDocument.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendDocument.allow_sending_without_reply</span></code></a></li>
@@ -5199,6 +5332,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.proximity_alert_radius"><code class="docutils literal notranslate"><span class="pre">SendLocation.proximity_alert_radius</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendLocation.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.protect_content"><code class="docutils literal notranslate"><span class="pre">SendLocation.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendLocation.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendLocation.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendLocation.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_location.html#aiogram.methods.send_location.SendLocation.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendLocation.allow_sending_without_reply</span></code></a></li>
@@ -5227,6 +5361,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.protect_content"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.allow_sending_without_reply</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_media_group.html#aiogram.methods.send_media_group.SendMediaGroup.reply_to_message_id"><code class="docutils literal notranslate"><span class="pre">SendMediaGroup.reply_to_message_id</span></code></a></li>
@@ -5253,10 +5388,11 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendMessage.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.entities"><code class="docutils literal notranslate"><span class="pre">SendMessage.entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.link_preview_options"><code class="docutils literal notranslate"><span class="pre">SendMessage.link_preview_options</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendMessage.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendMessage.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendMessage.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendMessage.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.protect_content"><code class="docutils literal notranslate"><span class="pre">SendMessage.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendMessage.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendMessage.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendMessage.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_message.html#aiogram.methods.send_message.SendMessage.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendMessage.allow_sending_without_reply</span></code></a></li>
@@ -5285,11 +5421,13 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.caption"><code class="docutils literal notranslate"><span class="pre">SendPhoto.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendPhoto.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.caption_entities"><code class="docutils literal notranslate"><span class="pre">SendPhoto.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">SendPhoto.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendPhoto.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendPhoto.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.has_spoiler"><code class="docutils literal notranslate"><span class="pre">SendPhoto.has_spoiler</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendPhoto.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.protect_content"><code class="docutils literal notranslate"><span class="pre">SendPhoto.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendPhoto.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendPhoto.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendPhoto.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_photo.html#aiogram.methods.send_photo.SendPhoto.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendPhoto.allow_sending_without_reply</span></code></a></li>
@@ -5331,6 +5469,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.is_closed"><code class="docutils literal notranslate"><span class="pre">SendPoll.is_closed</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendPoll.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.protect_content"><code class="docutils literal notranslate"><span class="pre">SendPoll.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendPoll.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendPoll.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendPoll.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_poll.html#aiogram.methods.send_poll.SendPoll.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendPoll.allow_sending_without_reply</span></code></a></li>
@@ -5366,6 +5505,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.google_place_type"><code class="docutils literal notranslate"><span class="pre">SendVenue.google_place_type</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendVenue.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.protect_content"><code class="docutils literal notranslate"><span class="pre">SendVenue.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendVenue.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendVenue.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendVenue.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_venue.html#aiogram.methods.send_venue.SendVenue.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendVenue.allow_sending_without_reply</span></code></a></li>
@@ -5396,13 +5536,15 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.thumbnail"><code class="docutils literal notranslate"><span class="pre">SendVideo.thumbnail</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.caption"><code class="docutils literal notranslate"><span class="pre">SendVideo.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendVideo.parse_mode</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.caption_entities"><code class="docutils literal notranslate"><span class="pre">SendVideo.caption_entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendVideo.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendVideo.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.caption_entities"><code class="docutils literal notranslate"><span class="pre">SendVideo.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">SendVideo.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.has_spoiler"><code class="docutils literal notranslate"><span class="pre">SendVideo.has_spoiler</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.supports_streaming"><code class="docutils literal notranslate"><span class="pre">SendVideo.supports_streaming</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendVideo.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.protect_content"><code class="docutils literal notranslate"><span class="pre">SendVideo.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendVideo.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendVideo.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendVideo.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video.html#aiogram.methods.send_video.SendVideo.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendVideo.allow_sending_without_reply</span></code></a></li>
@@ -5434,6 +5576,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.protect_content"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_video_note.html#aiogram.methods.send_video_note.SendVideoNote.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendVideoNote.allow_sending_without_reply</span></code></a></li>
@@ -5461,11 +5604,12 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.caption"><code class="docutils literal notranslate"><span class="pre">SendVoice.caption</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.parse_mode"><code class="docutils literal notranslate"><span class="pre">SendVoice.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.caption_entities"><code class="docutils literal notranslate"><span class="pre">SendVoice.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.duration"><code class="docutils literal notranslate"><span class="pre">SendVoice.duration</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendVoice.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendVoice.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.duration"><code class="docutils literal notranslate"><span class="pre">SendVoice.duration</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendVoice.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.protect_content"><code class="docutils literal notranslate"><span class="pre">SendVoice.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendVoice.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendVoice.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendVoice.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_voice.html#aiogram.methods.send_voice.SendVoice.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendVoice.allow_sending_without_reply</span></code></a></li>
@@ -5922,6 +6066,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="methods/edit_message_caption.html">编辑消息标题</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.business_connection_id"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.chat_id"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.chat_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.inline_message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.inline_message_id</span></code></a></li>
@@ -5930,6 +6075,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.model_post_init"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.model_post_init()</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.parse_mode"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.caption_entities"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.caption_entities</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.show_caption_above_media</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_caption.html#aiogram.methods.edit_message_caption.EditMessageCaption.reply_markup"><code class="docutils literal notranslate"><span class="pre">EditMessageCaption.reply_markup</span></code></a></li>
 </ul>
 </li>
@@ -5949,6 +6095,7 @@
 <li class="toctree-l4"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation.latitude"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation.latitude</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation.longitude"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation.longitude</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation.business_connection_id"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation.chat_id"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation.chat_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_live_location.html#aiogram.methods.edit_message_live_location.EditMessageLiveLocation.inline_message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageLiveLocation.inline_message_id</span></code></a></li>
@@ -5976,10 +6123,11 @@
 <li class="toctree-l3"><a class="reference internal" href="methods/edit_message_media.html">编辑消息媒体</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.media"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.media</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.business_connection_id"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.chat_id"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.chat_id</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.model_post_init"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.inline_message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.inline_message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_media.html#aiogram.methods.edit_message_media.EditMessageMedia.reply_markup"><code class="docutils literal notranslate"><span class="pre">EditMessageMedia.reply_markup</span></code></a></li>
 </ul>
@@ -5998,6 +6146,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="methods/edit_message_reply_markup.html">编辑消息回复标记</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="methods/edit_message_reply_markup.html#aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup"><code class="docutils literal notranslate"><span class="pre">EditMessageReplyMarkup</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_reply_markup.html#aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup.business_connection_id"><code class="docutils literal notranslate"><span class="pre">EditMessageReplyMarkup.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_reply_markup.html#aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup.chat_id"><code class="docutils literal notranslate"><span class="pre">EditMessageReplyMarkup.chat_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_reply_markup.html#aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageReplyMarkup.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_reply_markup.html#aiogram.methods.edit_message_reply_markup.EditMessageReplyMarkup.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">EditMessageReplyMarkup.model_computed_fields</span></code></a></li>
@@ -6021,12 +6170,13 @@
 <li class="toctree-l3"><a class="reference internal" href="methods/edit_message_text.html">编辑消息文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText"><code class="docutils literal notranslate"><span class="pre">EditMessageText</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.text"><code class="docutils literal notranslate"><span class="pre">EditMessageText.text</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.business_connection_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.chat_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.chat_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.inline_message_id"><code class="docutils literal notranslate"><span class="pre">EditMessageText.inline_message_id</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.parse_mode"><code class="docutils literal notranslate"><span class="pre">EditMessageText.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">EditMessageText.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.model_post_init"><code class="docutils literal notranslate"><span class="pre">EditMessageText.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.parse_mode"><code class="docutils literal notranslate"><span class="pre">EditMessageText.parse_mode</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.entities"><code class="docutils literal notranslate"><span class="pre">EditMessageText.entities</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.link_preview_options"><code class="docutils literal notranslate"><span class="pre">EditMessageText.link_preview_options</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/edit_message_text.html#aiogram.methods.edit_message_text.EditMessageText.reply_markup"><code class="docutils literal notranslate"><span class="pre">EditMessageText.reply_markup</span></code></a></li>
@@ -6047,6 +6197,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="methods/stop_message_live_location.html">停止发送实时位置</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="methods/stop_message_live_location.html#aiogram.methods.stop_message_live_location.StopMessageLiveLocation"><code class="docutils literal notranslate"><span class="pre">StopMessageLiveLocation</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/stop_message_live_location.html#aiogram.methods.stop_message_live_location.StopMessageLiveLocation.business_connection_id"><code class="docutils literal notranslate"><span class="pre">StopMessageLiveLocation.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_message_live_location.html#aiogram.methods.stop_message_live_location.StopMessageLiveLocation.chat_id"><code class="docutils literal notranslate"><span class="pre">StopMessageLiveLocation.chat_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_message_live_location.html#aiogram.methods.stop_message_live_location.StopMessageLiveLocation.message_id"><code class="docutils literal notranslate"><span class="pre">StopMessageLiveLocation.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_message_live_location.html#aiogram.methods.stop_message_live_location.StopMessageLiveLocation.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">StopMessageLiveLocation.model_computed_fields</span></code></a></li>
@@ -6073,6 +6224,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_poll.html#aiogram.methods.stop_poll.StopPoll.message_id"><code class="docutils literal notranslate"><span class="pre">StopPoll.message_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_poll.html#aiogram.methods.stop_poll.StopPoll.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">StopPoll.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_poll.html#aiogram.methods.stop_poll.StopPoll.model_post_init"><code class="docutils literal notranslate"><span class="pre">StopPoll.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/stop_poll.html#aiogram.methods.stop_poll.StopPoll.business_connection_id"><code class="docutils literal notranslate"><span class="pre">StopPoll.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/stop_poll.html#aiogram.methods.stop_poll.StopPoll.reply_markup"><code class="docutils literal notranslate"><span class="pre">StopPoll.reply_markup</span></code></a></li>
 </ul>
 </li>
@@ -6165,9 +6317,10 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.business_connection_id"><code class="docutils literal notranslate"><span class="pre">SendGame.business_connection_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.message_thread_id"><code class="docutils literal notranslate"><span class="pre">SendGame.message_thread_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendGame.disable_notification</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.protect_content"><code class="docutils literal notranslate"><span class="pre">SendGame.protect_content</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">SendGame.model_computed_fields</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.model_post_init"><code class="docutils literal notranslate"><span class="pre">SendGame.model_post_init()</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.protect_content"><code class="docutils literal notranslate"><span class="pre">SendGame.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendGame.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendGame.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendGame.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_game.html#aiogram.methods.send_game.SendGame.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendGame.allow_sending_without_reply</span></code></a></li>
@@ -6261,9 +6414,9 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.title"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.description"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.description</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.payload"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.payload</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.provider_token"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.provider_token</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.currency"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.currency</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.prices"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.prices</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.provider_token"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.provider_token</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.max_tip_amount"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.max_tip_amount</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.suggested_tip_amounts"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.suggested_tip_amounts</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/create_invoice_link.html#aiogram.methods.create_invoice_link.CreateInvoiceLink.provider_data"><code class="docutils literal notranslate"><span class="pre">CreateInvoiceLink.provider_data</span></code></a></li>
@@ -6293,16 +6446,53 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="methods/get_star_transactions.html">getStarTransactions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="methods/get_star_transactions.html#aiogram.methods.get_star_transactions.GetStarTransactions"><code class="docutils literal notranslate"><span class="pre">GetStarTransactions</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/get_star_transactions.html#aiogram.methods.get_star_transactions.GetStarTransactions.offset"><code class="docutils literal notranslate"><span class="pre">GetStarTransactions.offset</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/get_star_transactions.html#aiogram.methods.get_star_transactions.GetStarTransactions.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">GetStarTransactions.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/get_star_transactions.html#aiogram.methods.get_star_transactions.GetStarTransactions.model_post_init"><code class="docutils literal notranslate"><span class="pre">GetStarTransactions.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/get_star_transactions.html#aiogram.methods.get_star_transactions.GetStarTransactions.limit"><code class="docutils literal notranslate"><span class="pre">GetStarTransactions.limit</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="methods/get_star_transactions.html#usage">Usage</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/get_star_transactions.html#as-bot-method">As bot method</a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/get_star_transactions.html#method-as-object">Method as object</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="methods/get_star_transactions.html#with-specific-bot">With specific bot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="methods/refund_star_payment.html">refundStarPayment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="methods/refund_star_payment.html#aiogram.methods.refund_star_payment.RefundStarPayment"><code class="docutils literal notranslate"><span class="pre">RefundStarPayment</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/refund_star_payment.html#aiogram.methods.refund_star_payment.RefundStarPayment.user_id"><code class="docutils literal notranslate"><span class="pre">RefundStarPayment.user_id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/refund_star_payment.html#aiogram.methods.refund_star_payment.RefundStarPayment.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">RefundStarPayment.model_computed_fields</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/refund_star_payment.html#aiogram.methods.refund_star_payment.RefundStarPayment.model_post_init"><code class="docutils literal notranslate"><span class="pre">RefundStarPayment.model_post_init()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/refund_star_payment.html#aiogram.methods.refund_star_payment.RefundStarPayment.telegram_payment_charge_id"><code class="docutils literal notranslate"><span class="pre">RefundStarPayment.telegram_payment_charge_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="methods/refund_star_payment.html#usage">Usage</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="methods/refund_star_payment.html#as-bot-method">As bot method</a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/refund_star_payment.html#method-as-object">Method as object</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="methods/refund_star_payment.html#with-specific-bot">With specific bot</a></li>
+<li class="toctree-l6"><a class="reference internal" href="methods/refund_star_payment.html#as-reply-into-webhook-in-handler">As reply into Webhook in handler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="methods/send_invoice.html">发送发票</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice"><code class="docutils literal notranslate"><span class="pre">SendInvoice</span></code></a><ul>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.chat_id"><code class="docutils literal notranslate"><span class="pre">SendInvoice.chat_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.title"><code class="docutils literal notranslate"><span class="pre">SendInvoice.title</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.description"><code class="docutils literal notranslate"><span class="pre">SendInvoice.description</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.payload"><code class="docutils literal notranslate"><span class="pre">SendInvoice.payload</span></code></a></li>
-<li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.provider_token"><code class="docutils literal notranslate"><span class="pre">SendInvoice.provider_token</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.currency"><code class="docutils literal notranslate"><span class="pre">SendInvoice.currency</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.prices"><code class="docutils literal notranslate"><span class="pre">SendInvoice.prices</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.message_thread_id"><code class="docutils literal notranslate"><span class="pre">SendInvoice.message_thread_id</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.provider_token"><code class="docutils literal notranslate"><span class="pre">SendInvoice.provider_token</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.max_tip_amount"><code class="docutils literal notranslate"><span class="pre">SendInvoice.max_tip_amount</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.suggested_tip_amounts"><code class="docutils literal notranslate"><span class="pre">SendInvoice.suggested_tip_amounts</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.start_parameter"><code class="docutils literal notranslate"><span class="pre">SendInvoice.start_parameter</span></code></a></li>
@@ -6322,6 +6512,7 @@
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.is_flexible"><code class="docutils literal notranslate"><span class="pre">SendInvoice.is_flexible</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.disable_notification"><code class="docutils literal notranslate"><span class="pre">SendInvoice.disable_notification</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.protect_content"><code class="docutils literal notranslate"><span class="pre">SendInvoice.protect_content</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.message_effect_id"><code class="docutils literal notranslate"><span class="pre">SendInvoice.message_effect_id</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.reply_parameters"><code class="docutils literal notranslate"><span class="pre">SendInvoice.reply_parameters</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.reply_markup"><code class="docutils literal notranslate"><span class="pre">SendInvoice.reply_markup</span></code></a></li>
 <li class="toctree-l5"><a class="reference internal" href="methods/send_invoice.html#aiogram.methods.send_invoice.SendInvoice.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">SendInvoice.allow_sending_without_reply</span></code></a></li>
@@ -6768,6 +6959,7 @@
 <li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.STRIKETHROUGH"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.STRIKETHROUGH</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.SPOILER"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.SPOILER</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.BLOCKQUOTE"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.BLOCKQUOTE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.EXPANDABLE_BLOCKQUOTE"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.EXPANDABLE_BLOCKQUOTE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.CODE"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.CODE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.PRE"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.PRE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.TEXT_LINK"><code class="docutils literal notranslate"><span class="pre">MessageEntityType.TEXT_LINK</span></code></a></li>
@@ -6827,6 +7019,15 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enums/revenue_withdrawal_state_type.html#aiogram.enums.revenue_withdrawal_state_type.RevenueWithdrawalStateType"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enums/revenue_withdrawal_state_type.html#aiogram.enums.revenue_withdrawal_state_type.RevenueWithdrawalStateType.FAILED"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateType.FAILED</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/revenue_withdrawal_state_type.html#aiogram.enums.revenue_withdrawal_state_type.RevenueWithdrawalStateType.PENDING"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateType.PENDING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/revenue_withdrawal_state_type.html#aiogram.enums.revenue_withdrawal_state_type.RevenueWithdrawalStateType.SUCCEEDED"><code class="docutils literal notranslate"><span class="pre">RevenueWithdrawalStateType.SUCCEEDED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="enums/sticker_format.html">贴纸格式</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="enums/sticker_format.html#aiogram.enums.sticker_format.StickerFormat"><code class="docutils literal notranslate"><span class="pre">StickerFormat</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="enums/sticker_format.html#aiogram.enums.sticker_format.StickerFormat.STATIC"><code class="docutils literal notranslate"><span class="pre">StickerFormat.STATIC</span></code></a></li>
@@ -6853,6 +7054,15 @@
 <li class="toctree-l4"><a class="reference internal" href="enums/topic_icon_color.html#aiogram.enums.topic_icon_color.TopicIconColor.GREEN"><code class="docutils literal notranslate"><span class="pre">TopicIconColor.GREEN</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/topic_icon_color.html#aiogram.enums.topic_icon_color.TopicIconColor.ROSE"><code class="docutils literal notranslate"><span class="pre">TopicIconColor.ROSE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="enums/topic_icon_color.html#aiogram.enums.topic_icon_color.TopicIconColor.RED"><code class="docutils literal notranslate"><span class="pre">TopicIconColor.RED</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="enums/transaction_partner_type.html">TransactionPartnerType</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enums/transaction_partner_type.html#aiogram.enums.transaction_partner_type.TransactionPartnerType"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="enums/transaction_partner_type.html#aiogram.enums.transaction_partner_type.TransactionPartnerType.FRAGMENT"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerType.FRAGMENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/transaction_partner_type.html#aiogram.enums.transaction_partner_type.TransactionPartnerType.OTHER"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerType.OTHER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="enums/transaction_partner_type.html#aiogram.enums.transaction_partner_type.TransactionPartnerType.USER"><code class="docutils literal notranslate"><span class="pre">TransactionPartnerType.USER</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -6927,6 +7137,23 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="defaults.html">Global defaults</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.parse_mode"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.parse_mode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.disable_notification"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.disable_notification</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.protect_content"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.protect_content</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.allow_sending_without_reply"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.allow_sending_without_reply</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.link_preview"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.link_preview</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.link_preview_is_disabled"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.link_preview_is_disabled</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.link_preview_prefer_small_media"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.link_preview_prefer_small_media</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.link_preview_prefer_large_media"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.link_preview_prefer_large_media</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.link_preview_show_above_text"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.link_preview_show_above_text</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="defaults.html#aiogram.client.default.DefaultBotProperties.show_caption_above_media"><code class="docutils literal notranslate"><span class="pre">DefaultBotProperties.show_caption_above_media</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#example">Example</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -6980,7 +7207,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../_static/documentation_options.js?v=eca36101"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=4e2eecee"></script>

@@ -6,7 +6,7 @@
 <link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="next" title="媒体组构建器" href="media_group.html" /><link rel="prev" title="回调应答" href="callback_answer.html" />
 
     <!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
-        <title>格式化 - aiogram 3.7.0 文档</title>
+        <title>格式化 - aiogram 3.8.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -181,7 +181,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../index.html"><div class="brand">aiogram 3.7.0 文档</div></a>
+      <a href="../index.html"><div class="brand">aiogram 3.8.0 文档</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -208,7 +208,7 @@
     <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">aiogram 3.7.0 文档</span>
+  <span class="sidebar-brand-text">aiogram 3.8.0 文档</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
@@ -424,10 +424,20 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/types/labeled_price.html">标记的价格</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/order_info.html">订单信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/pre_checkout_query.html">预结账查询</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/revenue_withdrawal_state.html">RevenueWithdrawalState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/revenue_withdrawal_state_failed.html">RevenueWithdrawalStateFailed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/revenue_withdrawal_state_pending.html">RevenueWithdrawalStatePending</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/revenue_withdrawal_state_succeeded.html">RevenueWithdrawalStateSucceeded</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/shipping_address.html">送货地址</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/shipping_option.html">运输选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/shipping_query.html">查询运输</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/star_transaction.html">StarTransaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/star_transactions.html">StarTransactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/successful_payment.html">成功支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/transaction_partner.html">TransactionPartner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/transaction_partner_fragment.html">TransactionPartnerFragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/transaction_partner_other.html">TransactionPartnerOther</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/types/transaction_partner_user.html">TransactionPartnerUser</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/update.html">更新</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/webhook_info.html">WebhookInfo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/types/callback_game.html">回调游戏</a></li>
@@ -551,6 +561,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/methods/answer_pre_checkout_query.html">回答预结账查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/methods/answer_shipping_query.html">回答shipping查询</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/methods/create_invoice_link.html">创建发票链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/methods/get_star_transactions.html">getStarTransactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/methods/refund_star_payment.html">refundStarPayment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/methods/send_invoice.html">发送发票</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/methods/delete_webhook.html">删除网页链接</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/methods/get_updates.html">获取更新</a></li>
@@ -580,14 +592,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/passport_element_error_type.html">护照元素错误类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/poll_type.html">投票类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/reaction_type_type.html">反应类型类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/enums/revenue_withdrawal_state_type.html">RevenueWithdrawalStateType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/sticker_format.html">贴纸格式</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/sticker_type.html">贴纸类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/topic_icon_color.html">主题图标颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/enums/transaction_partner_type.html">TransactionPartnerType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/enums/update_type.html">更新类型</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../api/download_file.html">下载文件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/upload_file.html">上传文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/defaults.html">Global defaults</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../dispatcher/index.html">处理事件</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of 处理事件</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -637,6 +652,7 @@
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">格式化</a></li>
 <li class="toctree-l2"><a class="reference internal" href="media_group.html">媒体组构建器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="deep_linking.html">深度链接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization.html">Telegram object serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../changelog.html">更新日志</a></li>
@@ -1119,6 +1135,24 @@
 <p>将被包装成类型为 <a class="reference internal" href="../api/enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.CUSTOM_EMOJI" title="aiogram.enums.message_entity_type.MessageEntityType.CUSTOM_EMOJI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.enums.message_entity_type.MessageEntityType.CUSTOM_EMOJI</span></code></a> 的 <a class="reference internal" href="../api/types/message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.types.message_entity.MessageEntity</span></code></a></p>
 </dd></dl>
 
+<dl class="py class">
+<dt class="sig sig-object py" id="aiogram.utils.formatting.BlockQuote">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.utils.formatting.</span></span><span class="sig-name descname"><span class="pre">BlockQuote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aiogram/utils/formatting.html#BlockQuote"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.utils.formatting.BlockQuote" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#aiogram.utils.formatting.Text" title="aiogram.utils.formatting.Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a></p>
+<p>Block quote element.</p>
+<p>Will be wrapped into <a class="reference internal" href="../api/types/message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.types.message_entity.MessageEntity</span></code></a>
+with type <a class="reference internal" href="../api/enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.BLOCKQUOTE" title="aiogram.enums.message_entity_type.MessageEntityType.BLOCKQUOTE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.enums.message_entity_type.MessageEntityType.BLOCKQUOTE</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="aiogram.utils.formatting.ExpandableBlockQuote">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aiogram.utils.formatting.</span></span><span class="sig-name descname"><span class="pre">ExpandableBlockQuote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aiogram/utils/formatting.html#ExpandableBlockQuote"><span class="viewcode-link"><span class="pre">[源代码]</span></span></a><a class="headerlink" href="#aiogram.utils.formatting.ExpandableBlockQuote" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#aiogram.utils.formatting.Text" title="aiogram.utils.formatting.Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a></p>
+<p>Expandable block quote element.</p>
+<p>Will be wrapped into <a class="reference internal" href="../api/types/message_entity.html#aiogram.types.message_entity.MessageEntity" title="aiogram.types.message_entity.MessageEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.types.message_entity.MessageEntity</span></code></a>
+with type <a class="reference internal" href="../api/enums/message_entity_type.html#aiogram.enums.message_entity_type.MessageEntityType.EXPANDABLE_BLOCKQUOTE" title="aiogram.enums.message_entity_type.MessageEntityType.EXPANDABLE_BLOCKQUOTE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aiogram.enums.message_entity_type.MessageEntityType.EXPANDABLE_BLOCKQUOTE</span></code></a></p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -1221,6 +1255,8 @@
 <li><a class="reference internal" href="#aiogram.utils.formatting.TextLink"><code class="docutils literal notranslate"><span class="pre">TextLink</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.formatting.TextMention"><code class="docutils literal notranslate"><span class="pre">TextMention</span></code></a></li>
 <li><a class="reference internal" href="#aiogram.utils.formatting.CustomEmoji"><code class="docutils literal notranslate"><span class="pre">CustomEmoji</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.utils.formatting.BlockQuote"><code class="docutils literal notranslate"><span class="pre">BlockQuote</span></code></a></li>
+<li><a class="reference internal" href="#aiogram.utils.formatting.ExpandableBlockQuote"><code class="docutils literal notranslate"><span class="pre">ExpandableBlockQuote</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -1234,7 +1270,7 @@
       
     </aside>
   </div>
-</div><script src="../_static/documentation_options.js?v=a7be3313"></script>
+</div><script src="../_static/documentation_options.js?v=eca36101"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
